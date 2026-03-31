@@ -10,15 +10,29 @@
   overflow: hidden;
 }
 
+/* 멀티 레이어 glow (시안 2겹 + 퍼플 1겹) */
 .hero::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 50% 0%, rgba(56, 189, 248, 0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 400px at 20% 60%, rgba(56, 189, 248, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 400px at 80% 50%, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 센서 그리드 패턴 (중앙만 visible) */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -28,12 +42,16 @@
   z-index: 1;
 }
 
+/* 그라데이션 타이틀 */
 .hero-title {
   font-size: 4.5rem;
   font-weight: 800;
   letter-spacing: 8px;
-  color: var(--color-accent);
   margin-bottom: 8px;
+  background: linear-gradient(135deg, #38bdf8 0%, #ffffff 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-subtitle {
@@ -52,6 +70,83 @@
   margin: 0 auto;
 }
 
+/* 하이라이트 키워드 pill 뱃지 */
+.hero-highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-highlight-item {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 20px;
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.hero-highlight-sep {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-border-light);
+  flex-shrink: 0;
+}
+
+/* CTA 버튼 */
+.hero-cta {
+  display: inline-block;
+  margin-top: 36px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.hero-cta:hover {
+  background: var(--color-accent-hover);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+/* 스크롤 다운 인디케이터 */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-scroll-arrow {
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid var(--color-text-muted);
+  border-bottom: 2px solid var(--color-text-muted);
+  transform: rotate(45deg);
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: rotate(45deg) translate(0, 0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: rotate(45deg) translate(4px, 4px);
+    opacity: 0.8;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 3rem;
@@ -64,5 +159,23 @@
 
   .hero-description {
     font-size: 0.95rem;
+  }
+
+  .hero-highlights {
+    gap: 10px;
+  }
+
+  .hero-highlight-item {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
+
+  .hero-cta {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  .hero::after {
+    background-size: 40px 40px;
   }
 }

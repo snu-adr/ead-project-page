@@ -2,7 +2,10 @@
   "hero": {
     "title": "EAD",
     "subtitle": "Evolutionary Autonomous Driving",
-    "description": "서울대학교 ADR 연구실이 주도하는 자율주행 프로젝트. 국내 자율주행 업계에 데이터셋과 모델을 공개합니다."
+    "description": "서울대학교 ADR 연구실이 주도하는 자율주행 프로젝트. 국내 자율주행 업계에 데이터셋과 모델을 공개합니다.",
+    "highlights": ["전방위 카메라", "실시간 처리", "오픈소스"],
+    "ctaText": "자세히 보기",
+    "ctaHref": "#roadmap"
   },
   "roadmap": {
     "sectionTitle": "Road Map",
