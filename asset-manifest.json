@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EAD-project-page/static/css/main.074670bd.css",
+    "main.js": "/EAD-project-page/static/js/main.ddd076d9.js",
+    "static/js/453.3b63644b.chunk.js": "/EAD-project-page/static/js/453.3b63644b.chunk.js",
+    "index.html": "/EAD-project-page/index.html",
+    "main.074670bd.css.map": "/EAD-project-page/static/css/main.074670bd.css.map",
+    "main.ddd076d9.js.map": "/EAD-project-page/static/js/main.ddd076d9.js.map",
+    "453.3b63644b.chunk.js.map": "/EAD-project-page/static/js/453.3b63644b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.074670bd.css",
+    "static/js/main.ddd076d9.js"
+  ]
+}
