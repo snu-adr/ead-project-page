@@ -3,13 +3,13 @@ import content from '../data/content.json';
 import '../styles/components/Navbar.css';
 
 const navItems = [
-  { label: 'Road Map', href: '#roadmap' },
+  { label: content.roadmap.sectionTitle, href: '#roadmap' },
   { label: content.dataset.sectionTitle, href: '#dataset' },
   { label: content.model.sectionTitle, href: '#model' },
   { label: content.notice.sectionTitle, href: '#notice' },
-  { label: 'Contributor', href: '#contributor' },
-  { label: 'Alliance', href: '#alliance' },
-  { label: 'Contact', href: '#contact' },
+  { label: content.contributors.sectionTitle, href: '#contributor' },
+  { label: content.alliance.sectionTitle, href: '#alliance' },
+  { label: content.contact.sectionTitle, href: '#contact' },
 ];
 
 const Navbar = () => {

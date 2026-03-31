@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-/* 멀티 레이어 glow (시안 2겹 + 퍼플 1겹) */
+/* ─── 멀티 레이어 glow ─── */
 .hero::before {
   content: '';
   position: absolute;
@@ -22,7 +22,7 @@
   pointer-events: none;
 }
 
-/* 센서 그리드 패턴 (중앙만 visible) */
+/* ─── 센서 그리드 패턴 ─── */
 .hero::after {
   content: '';
   position: absolute;
@@ -36,6 +36,97 @@
   pointer-events: none;
 }
 
+/* ─── BEV 센서 비주얼 ─── */
+.hero-bev {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  pointer-events: none;
+}
+
+/* 동심원 레이더 링 */
+.hero-bev-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(56, 189, 248, 0.08);
+  transform: translate(-50%, -50%);
+}
+
+.hero-bev-ring--1 {
+  width: 200px;
+  height: 200px;
+  border-color: rgba(56, 189, 248, 0.12);
+}
+
+.hero-bev-ring--2 {
+  width: 380px;
+  height: 380px;
+  border-color: rgba(56, 189, 248, 0.07);
+}
+
+.hero-bev-ring--3 {
+  width: 560px;
+  height: 560px;
+  border-color: rgba(56, 189, 248, 0.04);
+}
+
+/* 십자선 */
+.hero-bev-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 560px;
+  height: 560px;
+}
+
+.hero-bev-crosshair::before,
+.hero-bev-crosshair::after {
+  content: '';
+  position: absolute;
+}
+
+/* 세로 십자선 */
+.hero-bev-crosshair::before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(56, 189, 248, 0.06) 30%, rgba(56, 189, 248, 0.06) 70%, transparent 100%);
+}
+
+/* 가로 십자선 */
+.hero-bev-crosshair::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(56, 189, 248, 0.06) 30%, rgba(56, 189, 248, 0.06) 70%, transparent 100%);
+}
+
+/* 회전 스캔 라인 */
+.hero-bev-scan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 1px;
+  transform-origin: 0% 50%;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), transparent);
+  animation: bevScan 8s linear infinite;
+}
+
+@keyframes bevScan {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ─── 콘텐츠 영역 ─── */
 .hero-content {
   max-width: 800px;
   position: relative;
@@ -70,7 +161,7 @@
   margin: 0 auto;
 }
 
-/* 하이라이트 키워드 pill 뱃지 */
+/* ─── 하이라이트 pill 뱃지 ─── */
 .hero-highlights {
   display: flex;
   align-items: center;
@@ -99,7 +190,7 @@
   flex-shrink: 0;
 }
 
-/* CTA 버튼 */
+/* ─── CTA 버튼 ─── */
 .hero-cta {
   display: inline-block;
   margin-top: 36px;
@@ -119,7 +210,7 @@
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
 
-/* 스크롤 다운 인디케이터 */
+/* ─── 스크롤 다운 인디케이터 ─── */
 .hero-scroll-indicator {
   position: absolute;
   bottom: 32px;
@@ -147,6 +238,7 @@
   }
 }
 
+/* ─── 반응형 ─── */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 3rem;
@@ -177,5 +269,34 @@
 
   .hero::after {
     background-size: 40px 40px;
+  }
+
+  .hero-bev {
+    width: 400px;
+    height: 400px;
+  }
+
+  .hero-bev-ring--1 {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-bev-ring--2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-bev-ring--3 {
+    width: 380px;
+    height: 380px;
+  }
+
+  .hero-bev-crosshair {
+    width: 380px;
+    height: 380px;
+  }
+
+  .hero-bev-scan {
+    width: 190px;
   }
 }

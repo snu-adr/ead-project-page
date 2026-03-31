@@ -7,6 +7,15 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero">
+      {/* BEV 센서 비주얼 (CSS-only) */}
+      <div className="hero-bev">
+        <div className="hero-bev-ring hero-bev-ring--1" />
+        <div className="hero-bev-ring hero-bev-ring--2" />
+        <div className="hero-bev-ring hero-bev-ring--3" />
+        <div className="hero-bev-scan" />
+        <div className="hero-bev-crosshair" />
+      </div>
+
       <div className="hero-content">
         <h1 className="hero-title">{title}</h1>
         <p className="hero-subtitle">{subtitle}</p>
