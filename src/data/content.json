@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "title": "EAD",
+    "subtitle": "Evolutionary Autonomous Driving",
+    "description": "서울대학교 ADR 연구실이 주도하는 자율주행 프로젝트. 국내 자율주행 업계에 데이터셋과 모델을 공개합니다."
+  },
+  "roadmap": {
+    "sectionTitle": "Road Map",
+    "sectionSubtitle": "EAD의 발전 로드맵",
+    "versions": [
+      {
+        "version": "v1.0",
+        "title": "Foundation",
+        "period": "2024",
+        "items": [
+          "오픈소스 데이터셋 기반 훈련 및 검증",
+          "전방위 카메라 지원",
+          "전방위 Perception Range",
+          "실제 배포 기준 설계"
+        ],
+        "status": "completed"
+      },
+      {
+        "version": "v2.0",
+        "title": "Expansion",
+        "period": "2025",
+        "items": [
+          "In-house Dataset 구축",
+          "VLM (Vision-Language Model) 통합",
+          "자체 데이터 파이프라인 구축",
+          "Alliance 기업 데이터 통합"
+        ],
+        "status": "upcoming",
+        "badge": "Coming Soon"
+      }
+    ]
+  },
+  "dataset": {
+    "sectionTitle": "데이터셋",
+    "sectionSubtitle": "EAD가 활용하는 데이터셋",
+    "realworld": {
+      "title": "Real-world 데이터셋",
+      "description": "실제 도로 환경에서 취득한 데이터셋입니다."
+    },
+    "closedloop": {
+      "title": "Closed-loop 데이터셋",
+      "description": "시뮬레이션 기반 폐쇄 루프 데이터셋입니다."
+    }
+  },
+  "model": {
+    "sectionTitle": "모델",
+    "sectionSubtitle": "EAD 모델의 구조와 특징",
+    "comparison": {
+      "title": "기존 연구용 모델과의 차이",
+      "items": [
+        {
+          "category": "카메라",
+          "research": "3대",
+          "ead": "전방위"
+        },
+        {
+          "category": "Perception Range",
+          "research": "전방 32m",
+          "ead": "전방위"
+        },
+        {
+          "category": "설계 기준",
+          "research": "벤치마크 성능",
+          "ead": "실제 배포"
+        }
+      ]
+    },
+    "encoder": {
+      "title": "인코더 (Encoder)",
+      "description": "인코더 Concept 설명이 들어갑니다.",
+      "videoUrl": null
+    },
+    "decoder": {
+      "title": "디코더 (Decoder)",
+      "description": "디코더 Concept 설명이 들어갑니다.",
+      "videoUrl": null
+    }
+  },
+  "notice": {
+    "sectionTitle": "공지사항",
+    "sectionSubtitle": "EAD 프로젝트의 최신 소식",
+    "items": [
+      {
+        "date": "2024-01-01",
+        "title": "EAD v1.0 개발 완료",
+        "content": "EAD v1.0의 개발이 완료되었습니다."
+      }
+    ]
+  },
+  "contributors": {
+    "sectionTitle": "Contributor",
+    "sectionSubtitle": "EAD 프로젝트에 기여하는 사람들",
+    "members": [
+      {
+        "name": "홍길동",
+        "role": "Project Lead"
+      },
+      {
+        "name": "김철수",
+        "role": "Researcher"
+      }
+    ]
+  },
+  "alliance": {
+    "sectionTitle": "Alliance",
+    "sectionSubtitle": "EAD와 함께하는 파트너",
+    "partners": [
+      { "name": "HL Klemove", "logo": null },
+      { "name": "A2Z", "logo": null },
+      { "name": "Rideflux", "logo": null },
+      { "name": "LG전자", "logo": null },
+      { "name": "노타", "logo": null }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Contact",
+    "sectionSubtitle": "EAD 프로젝트에 대해 문의하세요",
+    "email": "contact@example.com",
+    "github": "https://github.com/example/ead",
+    "address": "서울대학교 ADR 연구실"
+  }
+}
