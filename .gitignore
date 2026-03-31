@@ -23,3 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 CLAUDE.md
+
+# Glance MCP sessions/screenshots
+.browser-sessions/
+
+# MCP config
+.mcp.json

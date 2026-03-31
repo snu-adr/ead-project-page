@@ -7,123 +7,110 @@
   text-align: center;
   padding: 0 24px;
   position: relative;
-  overflow: hidden;
 }
 
-/* ─── 멀티 레이어 glow ─── */
+/* ─── 배경 안개 (다층 glow) ─── */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 600px 400px at 50% 0%, rgba(56, 189, 248, 0.10) 0%, transparent 70%),
-    radial-gradient(ellipse 400px 400px at 20% 60%, rgba(56, 189, 248, 0.04) 0%, transparent 70%),
-    radial-gradient(ellipse 400px 400px at 80% 50%, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
+    radial-gradient(ellipse 25% 20% at 50% 47%, rgba(56, 189, 248, 0.18) 0%, transparent 100%),
+    radial-gradient(ellipse 30% 25% at 50% 48%, rgba(167, 139, 250, 0.05) 0%, transparent 100%),
+    radial-gradient(ellipse 38% 30% at 50% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 100%);
   pointer-events: none;
+  animation: fogPulse 6s ease-in-out infinite alternate;
 }
 
-/* ─── 센서 그리드 패턴 ─── */
-.hero::after {
-  content: '';
+@keyframes fogPulse {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+/* ─── 도로 원근 비주얼 ─── */
+.hero-road {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 0%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 0%, transparent 70%);
   pointer-events: none;
+  overflow: hidden;
 }
 
-/* ─── BEV 센서 비주얼 ─── */
-.hero-bev {
+/* 도로 표면 — 비활성 (glow는 hero::before에서 처리) */
+.hero-road-surface {
+  display: none;
+}
+
+/* 공통 차선 스타일 */
+.hero-road-lane {
   position: absolute;
-  top: 50%;
+  top: 48%;
+  left: 50%;
+  width: 2px;
+  height: 52%;
+  transform-origin: top center;
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.30) 70%, rgba(56, 189, 248, 0.0) 100%);
+}
+
+/* 내측 차선 */
+.hero-road-lane--left {
+  transform: rotate(-18deg);
+}
+
+.hero-road-lane--right {
+  transform: rotate(18deg);
+}
+
+/* 외측 차선 — 넓게 벌어짐, 더 투명 */
+.hero-road-lane--left-outer {
+  transform: rotate(-38deg);
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.18) 60%, rgba(56, 189, 248, 0.0) 100%);
+}
+
+.hero-road-lane--right-outer {
+  transform: rotate(38deg);
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.18) 60%, rgba(56, 189, 248, 0.0) 100%);
+}
+
+/* 중앙 점선 — 소실점에서 하단으로 */
+.hero-road-dash {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 52%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(56, 189, 248, 0.45) 0px,
+    rgba(56, 189, 248, 0.45) 16px,
+    transparent 16px,
+    transparent 40px
+  );
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,1) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,1) 100%);
+  animation: roadDash 1.5s linear infinite;
+}
+
+@keyframes roadDash {
+  from { background-position: 0 0; }
+  to { background-position: 0 40px; }
+}
+
+/* 소실점 glow */
+.hero-road-glow {
+  position: absolute;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  pointer-events: none;
-}
-
-/* 동심원 레이더 링 */
-.hero-bev-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: 1px solid rgba(56, 189, 248, 0.08);
-  transform: translate(-50%, -50%);
-}
-
-.hero-bev-ring--1 {
-  width: 200px;
-  height: 200px;
-  border-color: rgba(56, 189, 248, 0.12);
-}
-
-.hero-bev-ring--2 {
-  width: 380px;
-  height: 380px;
-  border-color: rgba(56, 189, 248, 0.07);
-}
-
-.hero-bev-ring--3 {
-  width: 560px;
-  height: 560px;
-  border-color: rgba(56, 189, 248, 0.04);
-}
-
-/* 십자선 */
-.hero-bev-crosshair {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 560px;
-  height: 560px;
-}
-
-.hero-bev-crosshair::before,
-.hero-bev-crosshair::after {
-  content: '';
-  position: absolute;
-}
-
-/* 세로 십자선 */
-.hero-bev-crosshair::before {
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent 0%, rgba(56, 189, 248, 0.06) 30%, rgba(56, 189, 248, 0.06) 70%, transparent 100%);
-}
-
-/* 가로 십자선 */
-.hero-bev-crosshair::after {
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right, transparent 0%, rgba(56, 189, 248, 0.06) 30%, rgba(56, 189, 248, 0.06) 70%, transparent 100%);
-}
-
-/* 회전 스캔 라인 */
-.hero-bev-scan {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 280px;
-  height: 1px;
-  transform-origin: 0% 50%;
-  background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), transparent);
-  animation: bevScan 8s linear infinite;
-}
-
-@keyframes bevScan {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  background: rgba(56, 189, 248, 1);
+  box-shadow:
+    0 0 20px rgba(56, 189, 248, 0.8),
+    0 0 60px rgba(56, 189, 248, 0.5),
+    0 0 140px rgba(56, 189, 248, 0.25),
+    0 0 300px rgba(56, 189, 248, 0.10);
 }
 
 /* ─── 콘텐츠 영역 ─── */
@@ -131,83 +118,76 @@
   max-width: 800px;
   position: relative;
   z-index: 1;
+  background: none;
+  padding: 48px 64px;
+  border-radius: 24px;
 }
 
 /* 그라데이션 타이틀 */
 .hero-title {
-  font-size: 4.5rem;
+  font-size: 7rem;
   font-weight: 800;
-  letter-spacing: 8px;
-  margin-bottom: 8px;
+  letter-spacing: 16px;
+  text-indent: 16px;
+  margin-bottom: 12px;
   background: linear-gradient(135deg, #38bdf8 0%, #ffffff 50%, #a78bfa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: heroFadeUp 0.8s ease-out both;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 500;
-  color: var(--color-text-light);
-  margin-bottom: 24px;
-  letter-spacing: 2px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: heroFadeUp 0.8s ease-out 0.15s both;
+}
+
+.hero-affiliation {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 1.5px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding: 4px 14px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  border-radius: 16px;
+  background: rgba(100, 116, 139, 0.08);
+  animation: heroFadeUp 0.8s ease-out 0.3s both;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  margin: 28px auto;
+  opacity: 0.6;
 }
 
 .hero-description {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
+  font-size: 1rem;
+  color: var(--color-text-light);
   line-height: 1.8;
   max-width: 600px;
   margin: 0 auto;
-}
-
-/* ─── 하이라이트 pill 뱃지 ─── */
-.hero-highlights {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 32px;
-  flex-wrap: wrap;
-}
-
-.hero-highlight-item {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-accent);
-  letter-spacing: 1px;
-  padding: 6px 16px;
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 20px;
-  background: rgba(56, 189, 248, 0.06);
-}
-
-.hero-highlight-sep {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--color-border-light);
-  flex-shrink: 0;
-}
-
-/* ─── CTA 버튼 ─── */
-.hero-cta {
-  display: inline-block;
-  margin-top: 36px;
-  padding: 12px 32px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-bg);
-  background: var(--color-accent);
-  border-radius: 8px;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  transition: background 0.2s, box-shadow 0.2s;
-}
-
-.hero-cta:hover {
-  background: var(--color-accent-hover);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  animation: heroFadeUp 0.8s ease-out 0.5s both;
 }
 
 /* ─── 스크롤 다운 인디케이터 ─── */
@@ -221,8 +201,8 @@
 .hero-scroll-arrow {
   width: 24px;
   height: 24px;
-  border-right: 2px solid var(--color-text-muted);
-  border-bottom: 2px solid var(--color-text-muted);
+  border-right: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
   transform: rotate(45deg);
   animation: scrollBounce 2s ease-in-out infinite;
 }
@@ -230,73 +210,46 @@
 @keyframes scrollBounce {
   0%, 100% {
     transform: rotate(45deg) translate(0, 0);
-    opacity: 0.4;
+    opacity: 0.5;
   }
   50% {
     transform: rotate(45deg) translate(4px, 4px);
-    opacity: 0.8;
+    opacity: 1.0;
   }
 }
 
 /* ─── 반응형 ─── */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3rem;
-    letter-spacing: 4px;
+    font-size: 4.5rem;
+    letter-spacing: 8px;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .hero-description {
     font-size: 0.95rem;
   }
 
-  .hero-highlights {
-    gap: 10px;
-  }
-
-  .hero-highlight-item {
-    font-size: 0.8rem;
-    padding: 5px 12px;
-  }
-
-  .hero-cta {
-    padding: 10px 24px;
+  .hero-description {
     font-size: 0.9rem;
   }
 
-  .hero::after {
-    background-size: 40px 40px;
+  .hero-content {
+    padding: 32px 24px;
   }
 
-  .hero-bev {
-    width: 400px;
-    height: 400px;
+  .hero-road-lane--left {
+    transform: rotate(-14deg);
   }
 
-  .hero-bev-ring--1 {
-    width: 140px;
-    height: 140px;
+  .hero-road-lane--right {
+    transform: rotate(14deg);
   }
 
-  .hero-bev-ring--2 {
-    width: 260px;
-    height: 260px;
+  .hero-road-lane--left-outer {
+    transform: rotate(-30deg);
   }
 
-  .hero-bev-ring--3 {
-    width: 380px;
-    height: 380px;
-  }
-
-  .hero-bev-crosshair {
-    width: 380px;
-    height: 380px;
-  }
-
-  .hero-bev-scan {
-    width: 190px;
+  .hero-road-lane--right-outer {
+    transform: rotate(30deg);
   }
 }
