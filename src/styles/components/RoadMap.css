@@ -1,5 +1,6 @@
 /* Full-width background wrapper */
 .roadmap-wrapper {
+  position: relative;
   background: linear-gradient(
     180deg,
     var(--color-bg) 0%,
@@ -17,22 +18,41 @@
   padding: 20px 0 40px;
 }
 
-/* Central vertical line */
+/* Central vertical line — dashed, animated downward (matches Hero center lane) */
 .timeline-line {
   position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(56, 189, 248, 0.45) 0px,
+    rgba(56, 189, 248, 0.45) 16px,
+    transparent 16px,
+    transparent 40px
+  );
+  mask-image: linear-gradient(
     180deg,
     transparent 0%,
-    var(--color-accent) 10%,
-    var(--color-accent) 90%,
+    rgba(0,0,0,1) 10%,
+    rgba(0,0,0,1) 90%,
     transparent 100%
   );
-  opacity: 0.3;
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0,0,0,1) 10%,
+    rgba(0,0,0,1) 90%,
+    transparent 100%
+  );
   transform: translateX(-50%);
+  animation: roadDash 1.5s linear infinite;
+}
+
+@keyframes roadDash {
+  from { background-position: 0 0; }
+  to { background-position: 0 40px; }
 }
 
 /* Each timeline entry */
@@ -242,6 +262,114 @@
     rgba(56, 189, 248, 0.1),
     rgba(56, 189, 248, 0.3)
   );
+}
+
+/* ─── BEV 배경 (중앙선 따라 상하행 자동차) ─── */
+.roadmap-bev {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* 섹션 콘텐츠가 BEV 위에 오도록 */
+.roadmap-wrapper section {
+  position: relative;
+  z-index: 1;
+}
+
+/* BEV 자동차 — 탑뷰 바운딩 박스 */
+.bev-car {
+  position: absolute;
+  width: 64px;
+  height: 124px;
+  border-radius: 5px;
+  opacity: 0;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* 좌측 차선 — 하행 */
+.bev-car--down {
+  left: calc(50% - 120px);
+  border: 1.5px solid rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.06);
+}
+
+/* 우측 차선 — 상행 */
+.bev-car--up {
+  left: calc(50% + 56px);
+  border: 1.5px solid rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.06);
+}
+
+/* 개별 차량 — 하행 (속도 동일 12s, 딜레이로 간격) */
+.bev-car--d1 {
+  animation: bevCarDown 12s linear infinite;
+}
+
+.bev-car--d2 {
+  animation: bevCarDown 12s linear infinite 4s;
+}
+
+.bev-car--d3 {
+  animation: bevCarDown 12s linear infinite 8s;
+}
+
+/* 개별 차량 — 상행 (속도 동일 12s, 딜레이로 간격) */
+.bev-car--u1 {
+  animation: bevCarUp 12s linear infinite 2s;
+}
+
+.bev-car--u2 {
+  animation: bevCarUp 12s linear infinite 6s;
+}
+
+.bev-car--u3 {
+  animation: bevCarUp 12s linear infinite 10s;
+}
+
+/* 하행 — 위에서 아래로, 하단 근처에서 fade out */
+@keyframes bevCarDown {
+  0% {
+    top: -80px;
+    opacity: 0;
+  }
+  2% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    top: calc(100% + 80px);
+    opacity: 0;
+  }
+}
+
+/* 상행 — 아래에서 위로, 상단 근처에서 fade out */
+@keyframes bevCarUp {
+  0% {
+    top: calc(100% + 80px);
+    opacity: 0;
+  }
+  2% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    top: -80px;
+    opacity: 0;
+  }
 }
 
 /* Mobile: single column layout */

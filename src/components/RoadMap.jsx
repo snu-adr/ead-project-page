@@ -41,6 +41,18 @@ const RoadMap = () => {
 
   return (
     <div className="roadmap-wrapper">
+      {/* BEV 배경 — 중앙선 따라 상하행 자동차 */}
+      <div className="roadmap-bev" aria-hidden="true">
+        {/* 좌측 차선 (하행) */}
+        <div className="bev-car bev-car--down bev-car--d1" />
+        <div className="bev-car bev-car--down bev-car--d2" />
+        <div className="bev-car bev-car--down bev-car--d3" />
+        {/* 우측 차선 (상행) */}
+        <div className="bev-car bev-car--up bev-car--u1" />
+        <div className="bev-car bev-car--up bev-car--u2" />
+        <div className="bev-car bev-car--up bev-car--u3" />
+      </div>
+
       <section id="roadmap">
         <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
         <div className="roadmap-timeline">
