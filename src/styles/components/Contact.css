@@ -1,28 +1,48 @@
-.contact-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 500px;
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.contact-item {
+.contact-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  text-align: center;
+  gap: 16px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 36px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15), 0 0 40px rgba(56, 189, 248, 0.05);
+  border-color: var(--color-border-light);
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  opacity: 0.6;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
 }
 
 .contact-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-accent);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  min-width: 80px;
+  letter-spacing: 2px;
 }
 
 .contact-value {
   color: var(--color-text-light);
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .contact-value a {
@@ -33,4 +53,15 @@
 
 .contact-value a:hover {
   color: var(--color-accent-hover);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-card {
+    padding: 28px 20px;
+  }
 }

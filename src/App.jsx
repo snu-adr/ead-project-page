@@ -17,11 +17,17 @@ function App() {
       <main>
         <Hero />
         <RoadMap />
-        <Dataset />
+        <div className="section-alt">
+          <Dataset />
+        </div>
         <Model />
-        <Notice />
+        <div className="section-alt">
+          <Notice />
+        </div>
         <Contributor />
-        <Alliance />
+        <div className="section-alt">
+          <Alliance />
+        </div>
         <Contact />
       </main>
     </div>

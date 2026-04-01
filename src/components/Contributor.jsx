@@ -14,8 +14,10 @@ const Contributor = () => {
       <div className="contributor-grid fade-in" ref={ref}>
         {members.map((member, i) => (
           <div key={i} className="contributor-card">
-            <div className="contributor-avatar">
-              {member.name.charAt(0)}
+            <div className="contributor-avatar-wrapper">
+              <div className="contributor-avatar">
+                {member.name.charAt(0)}
+              </div>
             </div>
             <h3>{member.name}</h3>
             <p>{member.role}</p>

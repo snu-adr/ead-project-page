@@ -8,6 +8,7 @@
   --color-text-muted: #6b7280;
   --color-accent: #38bdf8;
   --color-accent-hover: #7dd3fc;
+  --color-accent-purple: #a78bfa;
   --color-highlight: #e94560;
   --color-border: #1e293b;
   --color-border-light: #374151;
@@ -42,25 +43,39 @@ section {
   margin: 0 auto;
 }
 
-/* Section Title */
+/* ─── Section Title ─── */
 .section-title {
-  margin-bottom: 48px;
+  margin-bottom: 56px;
+  position: relative;
 }
 
 .section-title h2 {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   color: var(--color-text);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), transparent);
 }
 
 .section-title p {
-  color: var(--color-text-light);
-  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  margin-top: 12px;
 }
 
-/* Video */
+/* ─── Video ─── */
 .video-embed {
   position: relative;
   width: 100%;
@@ -80,10 +95,10 @@ section {
 
 .video-placeholder {
   width: 100%;
-  padding-top: 56.25%;
+  padding-top: 40%;
   position: relative;
-  background-color: var(--color-bg-alt);
-  border: 2px dashed var(--color-border-light);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.03) 0%, rgba(167, 139, 250, 0.03) 100%);
+  border: 1px dashed var(--color-border);
   border-radius: 12px;
 }
 
@@ -93,14 +108,22 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
 }
 
-/* Card */
+/* ─── Card ─── */
 .card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 24px;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  border-color: var(--color-border-light);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
@@ -108,11 +131,11 @@ section {
   color: var(--color-text);
 }
 
-/* Scroll Fade-in Animation */
+/* ─── Scroll Fade-in Animation ─── */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .fade-in.visible {
@@ -120,13 +143,28 @@ section {
   transform: translateY(0);
 }
 
-/* Responsive */
+/* ─── Section Alternating Background ─── */
+.section-alt {
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    var(--color-bg-alt) 10%,
+    var(--color-bg-alt) 90%,
+    var(--color-bg) 100%
+  );
+}
+
+/* ─── Responsive ─── */
 @media (max-width: 768px) {
   section {
     padding: 60px 16px;
   }
 
   .section-title h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
   }
 }
