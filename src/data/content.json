@@ -4,7 +4,12 @@
     "subtitle": "Evolutionary Autonomous Driving",
     "affiliation": "서울대학교 ADR 연구실",
     "description": "국내 자율주행 기술 격차를 줄이기 위해, 서울대 ADR 연구실이 실배포 기준으로 설계한 자율주행 모델과 데이터셋을 공개합니다.",
-    "highlights": ["전방위 카메라", "실배포 설계", "오픈소스"]
+    "highlights": ["전방위 카메라", "실배포 설계", "오픈소스"],
+    "stats": [
+      { "value": "360°", "label": "Perception" },
+      { "value": "5+", "label": "Partners" },
+      { "value": "v1.0", "label": "Released" }
+    ]
   },
   "roadmap": {
     "sectionTitle": "로드맵",

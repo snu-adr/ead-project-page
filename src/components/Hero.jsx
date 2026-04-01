@@ -3,7 +3,7 @@ import content from '../data/content.json';
 import '../styles/components/Hero.css';
 
 const Hero = () => {
-  const { title, subtitle, affiliation, description } = content.hero;
+  const { title, subtitle, affiliation, description, stats } = content.hero;
 
   return (
     <section id="hero" className="hero">
@@ -45,6 +45,17 @@ const Hero = () => {
         {affiliation && <p className="hero-affiliation">{affiliation}</p>}
         <div className="hero-divider" />
         <p className="hero-description">{description}</p>
+
+        {stats && stats.length > 0 && (
+          <div className="hero-stats">
+            {stats.map((stat, i) => (
+              <div key={i} className="hero-stat">
+                <span className="hero-stat-value">{stat.value}</span>
+                <span className="hero-stat-label">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="hero-bottom-fade" />
