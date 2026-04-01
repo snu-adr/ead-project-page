@@ -5,12 +5,12 @@ import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Notice.css';
 
 const Notice = () => {
-  const { sectionTitle, sectionSubtitle, items } = content.notice;
+  const { sectionTitle, sectionTag, sectionSubtitle, items } = content.notice;
   const ref = useScrollFadeIn();
 
   return (
     <section id="notice">
-      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
+      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="notice-list fade-in" ref={ref}>
         {items.map((item, i) => (
           <div key={i} className="notice-item">

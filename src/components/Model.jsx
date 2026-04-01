@@ -6,7 +6,7 @@ import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Model.css';
 
 const Model = () => {
-  const { sectionTitle, sectionSubtitle, comparison, encoder, decoder } = content.model;
+  const { sectionTitle, sectionTag, sectionSubtitle, comparison, encoder, decoder } = content.model;
   const refComparison = useScrollFadeIn();
   const refEncoder = useScrollFadeIn();
   const refDecoder = useScrollFadeIn();
@@ -15,7 +15,7 @@ const Model = () => {
     <div className="model-wrapper">
       <div className="model-grid-bg" aria-hidden="true" />
       <section id="model">
-        <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
+        <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
 
         <div className="model-comparison fade-in" ref={refComparison}>
           <h3>{comparison.title}</h3>

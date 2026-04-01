@@ -5,13 +5,13 @@ import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
 import '../styles/components/Alliance.css';
 
 const Alliance = () => {
-  const { sectionTitle, sectionSubtitle, partners } = content.alliance;
+  const { sectionTitle, sectionTag, sectionSubtitle, partners } = content.alliance;
   const ref = useStaggeredFadeIn();
 
   return (
     <section id="alliance">
       <div className="centered">
-        <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
+        <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       </div>
       <div className="alliance-showcase stagger-fade-in" ref={ref}>
         <div className="alliance-names">

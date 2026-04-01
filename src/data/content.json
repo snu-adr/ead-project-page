@@ -8,6 +8,7 @@
   },
   "roadmap": {
     "sectionTitle": "로드맵",
+    "sectionTag": "ROADMAP",
     "sectionSubtitle": "EAD의 발전 로드맵",
     "versions": [
       {
@@ -39,6 +40,7 @@
   },
   "dataset": {
     "sectionTitle": "데이터셋",
+    "sectionTag": "DATASET",
     "sectionSubtitle": "EAD가 활용하는 데이터셋",
     "realworld": {
       "title": "Real-world 데이터셋",
@@ -51,6 +53,7 @@
   },
   "model": {
     "sectionTitle": "모델",
+    "sectionTag": "MODEL",
     "sectionSubtitle": "EAD 모델의 구조와 특징",
     "comparison": {
       "title": "기존 연구용 모델과의 차이",
@@ -85,6 +88,7 @@
   },
   "notice": {
     "sectionTitle": "공지사항",
+    "sectionTag": "NOTICE",
     "sectionSubtitle": "EAD 프로젝트의 최신 소식",
     "items": [
       {
@@ -96,6 +100,7 @@
   },
   "contributors": {
     "sectionTitle": "기여자",
+    "sectionTag": "CONTRIBUTORS",
     "sectionSubtitle": "EAD 프로젝트에 기여하는 사람들",
     "members": [
       {
@@ -110,6 +115,7 @@
   },
   "alliance": {
     "sectionTitle": "얼라이언스",
+    "sectionTag": "ALLIANCE",
     "sectionSubtitle": "EAD와 함께하는 파트너",
     "partners": [
       { "name": "HL Klemove", "logo": null },
@@ -121,6 +127,7 @@
   },
   "contact": {
     "sectionTitle": "연락처",
+    "sectionTag": "CONTACT",
     "sectionSubtitle": "EAD 프로젝트에 대해 문의하세요",
     "email": "contact@example.com",
     "github": "https://github.com/example/ead",

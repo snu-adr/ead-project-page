@@ -49,6 +49,17 @@ section {
   position: relative;
 }
 
+.section-tag {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
 .section-title h2 {
   font-family: var(--font-heading);
   font-size: 2.2rem;

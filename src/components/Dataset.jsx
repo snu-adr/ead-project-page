@@ -5,12 +5,12 @@ import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
 import '../styles/components/Dataset.css';
 
 const Dataset = () => {
-  const { sectionTitle, sectionSubtitle, realworld, closedloop } = content.dataset;
+  const { sectionTitle, sectionTag, sectionSubtitle, realworld, closedloop } = content.dataset;
   const ref = useStaggeredFadeIn();
 
   return (
     <section id="dataset">
-      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
+      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="dataset-grid stagger-fade-in" ref={ref}>
         {/* Real-world Dataset Card */}
         <div className="dataset-card">

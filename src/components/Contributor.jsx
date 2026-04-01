@@ -5,12 +5,12 @@ import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
 import '../styles/components/Contributor.css';
 
 const Contributor = () => {
-  const { sectionTitle, sectionSubtitle, members } = content.contributors;
+  const { sectionTitle, sectionTag, sectionSubtitle, members } = content.contributors;
   const ref = useStaggeredFadeIn();
 
   return (
     <section id="contributor">
-      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
+      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="contributor-grid stagger-fade-in" ref={ref}>
         {members.map((member, i) => (
           <div key={i} className="contributor-card">

@@ -5,12 +5,12 @@ import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
 import '../styles/components/Contact.css';
 
 const Contact = () => {
-  const { sectionTitle, sectionSubtitle, email, github, address } = content.contact;
+  const { sectionTitle, sectionTag, sectionSubtitle, email, github, address } = content.contact;
   const ref = useStaggeredFadeIn();
 
   return (
     <section id="contact">
-      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} centered />
+      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} centered />
       <div className="contact-grid stagger-fade-in" ref={ref}>
         <div className="contact-card">
           <span className="contact-icon">@</span>
