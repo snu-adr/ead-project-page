@@ -35,7 +35,7 @@
 }
 
 .notice-item h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--color-text);
@@ -50,6 +50,13 @@
   color: var(--color-text-light);
   font-size: 0.95rem;
   line-height: 1.7;
+}
+
+.notice-item .notice-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 #notice {
