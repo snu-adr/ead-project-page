@@ -1,69 +1,114 @@
-.alliance-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+/* ── Alliance Section ── */
+
+.alliance-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  margin-top: 12px;
 }
 
-.alliance-card {
-  position: relative;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 40px 28px;
-  text-align: center;
+/* ── Partner Names Row ── */
+
+.alliance-names {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 120px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 32px 40px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
 }
 
-.alliance-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.alliance-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 24px rgba(56, 189, 248, 0.12), 0 8px 24px rgba(0, 0, 0, 0.3);
-  border-color: rgba(56, 189, 248, 0.2);
-}
-
-.alliance-card:hover::before {
-  opacity: 1;
-}
-
-.alliance-card span {
-  font-size: 1.1rem;
+.alliance-name {
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--color-text-muted);
-  letter-spacing: 1.5px;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 28px;
+  cursor: default;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
 }
 
-.alliance-card:hover span {
-  color: var(--color-text);
-  text-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+.alliance-name:hover {
+  color: var(--color-accent);
+  text-shadow: 0 0 24px rgba(56, 189, 248, 0.35), 0 0 48px rgba(56, 189, 248, 0.15);
+  transform: scale(1.06);
 }
 
-.alliance-card img {
-  max-width: 120px;
-  max-height: 40px;
-  object-fit: contain;
-  filter: grayscale(100%) brightness(1.5);
-  opacity: 0.7;
-  transition: opacity 0.3s, filter 0.3s;
+.alliance-separator {
+  display: inline-block;
+  width: 1px;
+  height: 24px;
+  background: var(--color-border-light);
+  flex-shrink: 0;
+  opacity: 0.5;
 }
 
-.alliance-card:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
+/* ── Count Badge ── */
+
+.alliance-badge {
+  display: flex;
+  justify-content: center;
+}
+
+.alliance-badge span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 20px;
+  background: rgba(56, 189, 248, 0.05);
+}
+
+/* ── Decorative Divider ── */
+
+.alliance-divider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border-light), transparent);
+}
+
+.alliance-divider-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4), 0 0 40px rgba(56, 189, 248, 0.15);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+  .alliance-names {
+    flex-direction: column;
+    gap: 4px;
+    padding: 24px 20px;
+  }
+
+  .alliance-separator {
+    width: 40px;
+    height: 1px;
+  }
+
+  .alliance-name {
+    font-size: 1.15rem;
+    padding: 10px 16px;
+    letter-spacing: 1.5px;
+  }
 }
