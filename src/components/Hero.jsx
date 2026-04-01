@@ -38,6 +38,8 @@ const Hero = () => {
         <p className="hero-description">{description}</p>
       </div>
 
+      <div className="hero-bottom-fade" />
+
       <div className="hero-scroll-indicator">
         <span className="hero-scroll-text">Scroll</span>
         <div className="hero-scroll-line" />

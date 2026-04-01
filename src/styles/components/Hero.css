@@ -8,6 +8,19 @@
   padding: 0 24px;
   position: relative;
   overflow: hidden;
+  margin-bottom: -1px;
+}
+
+/* 하단 그라데이션 — 다음 섹션과 자연스러운 전환 */
+.hero-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* ─── 배경 안개 (다층 glow) ─── */
