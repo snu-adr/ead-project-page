@@ -1,17 +1,17 @@
 import React from 'react';
 import content from '../data/content.json';
 import SectionTitle from './common/SectionTitle';
-import useScrollFadeIn from '../hooks/useScrollFadeIn';
+import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
 import '../styles/components/Dataset.css';
 
 const Dataset = () => {
   const { sectionTitle, sectionSubtitle, realworld, closedloop } = content.dataset;
-  const ref = useScrollFadeIn();
+  const ref = useStaggeredFadeIn();
 
   return (
     <section id="dataset">
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
-      <div className="dataset-grid fade-in" ref={ref}>
+      <div className="dataset-grid stagger-fade-in" ref={ref}>
         <div className="dataset-card">
           <h3>{realworld.title}</h3>
           <p>{realworld.description}</p>
