@@ -71,6 +71,92 @@
   pointer-events: none;
 }
 
+/* ─── BEV 레이더 비주얼 ─── */
+.hero-radar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+}
+
+.hero-radar-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(56, 189, 248, 0.08);
+}
+
+.hero-radar-ring--1 {
+  width: 200px;
+  height: 200px;
+  border-color: rgba(56, 189, 248, 0.12);
+}
+
+.hero-radar-ring--2 {
+  width: 340px;
+  height: 340px;
+  border-color: rgba(56, 189, 248, 0.07);
+}
+
+.hero-radar-ring--3 {
+  width: 480px;
+  height: 480px;
+  border-color: rgba(56, 189, 248, 0.04);
+}
+
+.hero-radar-cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+}
+
+.hero-radar-cross::before,
+.hero-radar-cross::after {
+  content: '';
+  position: absolute;
+  background: rgba(56, 189, 248, 0.04);
+}
+
+.hero-radar-cross::before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.hero-radar-cross::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.hero-radar-scan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  height: 2px;
+  transform-origin: left center;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), transparent);
+  animation: radarScan 8s linear infinite;
+}
+
+@keyframes radarScan {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 /* ─── 도로 원근 비주얼 ─── */
 .hero-road {
   position: absolute;
@@ -318,6 +404,17 @@
   .hero-content {
     padding: 32px 24px;
   }
+
+  .hero-radar {
+    width: 320px;
+    height: 320px;
+  }
+
+  .hero-radar-ring--1 { width: 130px; height: 130px; }
+  .hero-radar-ring--2 { width: 220px; height: 220px; }
+  .hero-radar-ring--3 { width: 310px; height: 310px; }
+  .hero-radar-cross { width: 310px; height: 310px; }
+  .hero-radar-scan { width: 155px; }
 
   .hero-road-lane--left {
     transform: rotate(-14deg);
