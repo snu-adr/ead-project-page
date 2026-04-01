@@ -2,6 +2,35 @@
    Model Section — Comparison Table & Cards
    ============================================= */
 
+/* --- Full-width wrapper with BEV grid background --- */
+.model-wrapper {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    rgba(56, 189, 248, 0.02) 30%,
+    rgba(56, 189, 248, 0.02) 70%,
+    var(--color-bg) 100%
+  );
+}
+
+.model-wrapper section {
+  position: relative;
+  z-index: 1;
+}
+
+.model-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0,0,0,0.3) 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0,0,0,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
 /* --- Comparison Block --- */
 .model-comparison {
   margin-bottom: 56px;
@@ -146,6 +175,10 @@
 .model-section .video-placeholder {
   border-radius: 12px;
   overflow: hidden;
+}
+
+.model-section .video-placeholder {
+  padding-top: 22%;
 }
 
 /* --- Responsive: 768px --- */
