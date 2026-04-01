@@ -125,5 +125,8 @@
     "email": "contact@example.com",
     "github": "https://github.com/example/ead",
     "address": "서울대학교 ADR 연구실"
+  },
+  "footer": {
+    "copyright": "© 2026 EAD — Evolutionary Autonomous Driving. 서울대학교 ADR 연구실."
   }
 }

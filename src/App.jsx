@@ -9,6 +9,7 @@ import Notice from './components/Notice';
 import Contributor from './components/Contributor';
 import Alliance from './components/Alliance';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -28,8 +29,10 @@ function App() {
         <div className="section-alt">
           <Alliance />
         </div>
+        <div className="section-divider" />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
