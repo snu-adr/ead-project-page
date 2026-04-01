@@ -7,7 +7,10 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <p className="footer-copyright">{copyright}</p>
+      <div className="footer-inner">
+        <span className="footer-logo">{content.hero.title}</span>
+        <p className="footer-copyright">{copyright}</p>
+      </div>
     </footer>
   );
 }
