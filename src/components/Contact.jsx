@@ -10,7 +10,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
+      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} centered />
       <div className="contact-grid stagger-fade-in" ref={ref}>
         <div className="contact-card">
           <span className="contact-icon">@</span>
