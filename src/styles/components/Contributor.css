@@ -1,3 +1,8 @@
+#contributor {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .contributor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
