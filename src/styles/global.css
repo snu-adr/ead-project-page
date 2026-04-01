@@ -154,6 +154,15 @@ section {
   );
 }
 
+/* ─── Section Divider ─── */
+.section-divider {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
   section {

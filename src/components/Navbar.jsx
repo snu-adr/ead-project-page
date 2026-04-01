@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import content from '../data/content.json';
 import '../styles/components/Navbar.css';
 
@@ -14,13 +14,22 @@ const navItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleClick = () => {
     setIsOpen(false);
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar-container">
         <a className="navbar-logo" href="#hero">{content.hero.title}</a>
         <button
