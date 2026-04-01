@@ -15,10 +15,21 @@ const navItems = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      const sections = navItems.map(item => item.href.slice(1));
+      let current = '';
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 120) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -44,7 +55,13 @@ const Navbar = () => {
         <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href} onClick={handleClick}>{item.label}</a>
+              <a
+                href={item.href}
+                onClick={handleClick}
+                className={activeSection === item.href.slice(1) ? 'active' : ''}
+              >
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>
