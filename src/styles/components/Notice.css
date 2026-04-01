@@ -5,7 +5,7 @@
 }
 
 .notice-item {
-  background: var(--color-bg-card);
+  background: linear-gradient(160deg, var(--color-bg-card) 0%, rgba(56, 189, 248, 0.02) 100%);
   border: 1px solid var(--color-border);
   border-left: 3px solid var(--color-accent);
   border-radius: 12px;
