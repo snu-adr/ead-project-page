@@ -612,6 +612,17 @@
 
 /* --- Responsive: 768px --- */
 @media (max-width: 768px) {
+  .model-flow-diagram {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 16px;
+  }
+
+  .model-flow-inputs {
+    flex-direction: row;
+    gap: 8px;
+  }
+
   .comparison-cards {
     flex-direction: column;
     gap: 0;
