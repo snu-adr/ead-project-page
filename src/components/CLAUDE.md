@@ -41,5 +41,5 @@ App.jsx
 
 ## 커스텀 훅
 
-- `useScrollFadeIn` (`src/hooks/useScrollFadeIn.js`): IntersectionObserver 기반, 요소가 뷰포트에 진입하면 `visible` 클래스 추가. threshold 0.1, 한 번만 트리거.
-- `useStaggeredFadeIn` (`src/hooks/useStaggeredFadeIn.js`): IntersectionObserver 기반, 자식 요소에 순차적으로 `visible` 클래스 추가.
+- `useScrollFadeIn` (`src/hooks/useScrollFadeIn.js`): IntersectionObserver 기반, 요소가 뷰포트에 진입하면 `visible` 추가, 벗어나면 제거 (양방향 트리거). threshold 0.1.
+- `useStaggeredFadeIn` (`src/hooks/useStaggeredFadeIn.js`): IntersectionObserver 기반, 자식 요소에 순차적으로 `visible` 클래스 추가. 한 번만 트리거 (unobserve 호출). threshold 파라미터 지원.
