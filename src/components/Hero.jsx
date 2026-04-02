@@ -49,7 +49,7 @@ const Hero = () => {
         )}
       </div>
 
-      <div className="hero-bottom-fade" />
+      <div className="hero-bottom-fade" aria-hidden="true" />
 
       <div className="hero-scroll-indicator" aria-hidden="true">
         <span className="hero-scroll-text">Scroll</span>

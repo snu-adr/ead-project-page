@@ -38,7 +38,7 @@ const Model = () => {
             </div>
 
             {/* VS divider */}
-            <div className="comparison-vs">
+            <div className="comparison-vs" aria-hidden="true">
               <div className="comparison-vs__line" />
               <span className="comparison-vs__text">VS</span>
               <div className="comparison-vs__line" />
