@@ -103,13 +103,6 @@
   line-height: 1.7;
 }
 
-.notice-item .notice-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
 #notice {
   padding-top: 60px;
   padding-bottom: 60px;
