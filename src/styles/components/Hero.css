@@ -171,7 +171,7 @@
   max-width: 800px;
   position: relative;
   z-index: 1;
-  padding: 48px 64px;
+  padding: 48px 64px 100px;
 }
 
 /* 그라데이션 타이틀 */

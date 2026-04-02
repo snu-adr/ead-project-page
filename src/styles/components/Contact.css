@@ -1,5 +1,10 @@
 /* ── Contact Section — Prose Style ── */
 
+#contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .contact-prose {
   max-width: 700px;
   margin: 0 auto;
