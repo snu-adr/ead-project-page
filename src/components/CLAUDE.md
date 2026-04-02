@@ -11,7 +11,7 @@
 | Model.jsx | 이전 연구 vs EAD 비교 카드 + 모델 구조 패널 + 데모 영상 2개 | `model.*` |
 | Notice.jsx | 공지사항 목록 (날짜순, 컴팩트) | `notice.*` |
 | Contributor.jsx | 기여자: flex wrap 그리드 (9명), Project Lead 카드만 시안 테마로 시각 강조 | `contributors.*` |
-| Alliance.jsx | 협력사 무한 마키 스크롤 (오른쪽→왼쪽) | `alliance.*` |
+| Alliance.jsx | 협력사 무한 마키 스크롤 (오른쪽→왼쪽). partners를 두 번 렌더링: 첫 번째는 실제(aria 포함), 두 번째는 무한 스크롤용 복사본(`aria-hidden="true"`, `alt=""`) | `alliance.*` |
 | Contact.jsx | 연락처 — 이메일/GitHub 두 개의 클릭 가능 카드 레이아웃 (중앙 정렬) | `contact.*` |
 | Footer.jsx | 하단 푸터 (저작권 텍스트) | `footer.*` |
 
