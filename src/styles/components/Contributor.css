@@ -1,5 +1,5 @@
 #contributor {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 80px;
 }
 
@@ -72,5 +72,38 @@
   text-transform: uppercase;
   font-weight: 500;
   opacity: 0.7;
+}
+
+/* Project Lead card — visually elevated */
+.contributor-card--lead {
+  background: linear-gradient(160deg, rgba(56, 189, 248, 0.08) 0%, rgba(167, 139, 250, 0.05) 100%);
+  border-color: rgba(56, 189, 248, 0.35);
+  flex: 0 1 220px;
+}
+
+.contributor-card--lead:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.15), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contributor-card--lead h3 {
+  color: var(--color-accent);
+}
+
+.contributor-card--lead p {
+  opacity: 1;
+  color: var(--color-accent-purple);
+}
+
+.contributor-card--lead .contributor-avatar-wrapper {
+  background: linear-gradient(135deg, #38bdf8, #a78bfa, #38bdf8);
+  background-size: 200% 200%;
+  animation: lead-gradient 4s ease infinite;
+}
+
+@keyframes lead-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
