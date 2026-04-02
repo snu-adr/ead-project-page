@@ -23,8 +23,9 @@ const RoadMapEntry = ({ v, index }) => {
         </div>
         <h3 className="roadmap-card-title">{v.title}</h3>
         <span className="roadmap-period">{v.period}</span>
+        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
         <ul className="roadmap-items" role="list">
-          {v.items.map((item, i) => (
+          {v.items.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>

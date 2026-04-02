@@ -8,18 +8,15 @@ const Alliance = () => {
   const { sectionTitle, sectionTag, sectionSubtitle, partners } = content.alliance;
   const ref = useScrollFadeIn();
 
-  // Duplicate partners for seamless infinite scroll
-  const marqueeItems = [...partners, ...partners];
-
   return (
     <section id="alliance">
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} centered />
       <div className="alliance-marquee-wrapper fade-in" ref={ref}>
-        <div className="alliance-marquee-fade alliance-marquee-fade--left" />
-        <div className="alliance-marquee">
+        <div className="alliance-marquee-fade alliance-marquee-fade--left" aria-hidden="true" />
+        <div className="alliance-marquee" aria-label="협력사 목록">
           <div className="alliance-marquee-track">
-            {marqueeItems.map((partner, i) => (
-              <div key={i} className="alliance-marquee-item">
+            {partners.map((partner) => (
+              <div key={partner.name} className="alliance-marquee-item">
                 {partner.logo ? (
                   <img
                     src={require(`../assets/logos/${partner.logo}`)}
@@ -32,9 +29,24 @@ const Alliance = () => {
                 )}
               </div>
             ))}
+            {/* Duplicate for seamless infinite scroll — hidden from screen readers */}
+            {partners.map((partner) => (
+              <div key={`dup-${partner.name}`} className="alliance-marquee-item" aria-hidden="true">
+                {partner.logo ? (
+                  <img
+                    src={require(`../assets/logos/${partner.logo}`)}
+                    alt=""
+                    className="alliance-logo"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="alliance-name">{partner.name}</span>
+                )}
+              </div>
+            ))}
           </div>
         </div>
-        <div className="alliance-marquee-fade alliance-marquee-fade--right" />
+        <div className="alliance-marquee-fade alliance-marquee-fade--right" aria-hidden="true" />
       </div>
     </section>
   );

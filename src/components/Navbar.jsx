@@ -71,6 +71,7 @@ const Navbar = () => {
           <span />
           <span />
         </button>
+        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
         <ul className={`navbar-links ${isOpen ? 'open' : ''}`} role="list">
           {navItems.map((item) => (
             <li key={item.href}>

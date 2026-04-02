@@ -27,6 +27,7 @@ const Model = () => {
                 <span className="comparison-card__label">{comparison.researchLabel}</span>
                 <span className="comparison-card__badge">{comparison.researchBadge}</span>
               </div>
+              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
               <ul className="comparison-card__list" role="list">
                 {comparison.items.map((item) => (
                   <li key={item.category} className="comparison-card__item">
@@ -50,6 +51,7 @@ const Model = () => {
                 <span className="comparison-card__label">{comparison.eadLabel}</span>
                 <span className="comparison-card__badge">{comparison.eadBadge}</span>
               </div>
+              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
               <ul className="comparison-card__list" role="list">
                 {comparison.items.map((item) => (
                   <li key={item.category} className="comparison-card__item">
@@ -104,6 +106,7 @@ const Model = () => {
                 <span className="model-arch-panel-title">{architecture.encoder.title}</span>
               </div>
               <p className="model-arch-panel-desc">{architecture.encoder.description}</p>
+              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
               <ul className="model-arch-panel-tasks" role="list">
                 {architecture.encoder.tasks.map((t) => (
                   <li key={t}>{t}</li>
@@ -122,6 +125,7 @@ const Model = () => {
                 <span className="model-arch-panel-title">{architecture.decoder.title}</span>
               </div>
               <p className="model-arch-panel-desc">{architecture.decoder.description}</p>
+              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
               <ul className="model-arch-panel-tasks" role="list">
                 {architecture.decoder.tasks.map((t) => (
                   <li key={t}>{t}</li>
