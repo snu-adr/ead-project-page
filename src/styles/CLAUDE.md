@@ -34,6 +34,8 @@ styles/
 | `--color-accent-hover` | #7dd3fc | 강조색 호버 |
 | `--color-accent-purple` | #a78bfa | 보조 강조색 (퍼플) |
 | `--color-highlight` | #e94560 | 하이라이트 (레드) |
+| `--color-warning` | #f97316 | 경고/예정 강조색 (오렌지) — Notice 예정 배지 |
+| `--color-warning-hover` | #fb923c | 경고색 호버 |
 | `--color-border` | #1e293b | 기본 테두리 |
 | `--color-border-light` | #374151 | 밝은 테두리 |
 

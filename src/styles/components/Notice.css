@@ -45,7 +45,7 @@
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.8px;
-  color: #f97316;
+  color: var(--color-warning);
   background: rgba(249, 115, 22, 0.1);
   border: 1px solid rgba(249, 115, 22, 0.3);
   border-radius: 20px;
@@ -54,11 +54,11 @@
 }
 
 .notice-item--upcoming {
-  border-left-color: #f97316;
+  border-left-color: var(--color-warning);
 }
 
 .notice-item--upcoming:hover {
-  border-left-color: #fb923c;
+  border-left-color: var(--color-warning-hover);
   box-shadow: -4px 0 16px rgba(249, 115, 22, 0.1),
               0 4px 12px rgba(0, 0, 0, 0.2);
 }
