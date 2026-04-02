@@ -124,6 +124,7 @@ styles/
 
 - `.roadmap-bev`: 배경 BEV 자동차 컨테이너, `contain: layout style` 적용 (top 애니메이션 레이아웃 영향 격리)
 - `.bev-car`: CSS-only 탑뷰 바운딩 박스, 6개 (하행 3 + 상행 3), `aria-hidden="true"`
+- `.roadmap-card-title`: `display: flex; flex-direction: column` — 내부에 `.roadmap-version` (v1.0 등)과 `.roadmap-title-text` (Foundation 등)이 수직 배치. 두 요소를 하나의 `<h3>` 안에 포함하여 스크린리더가 "v1.0 Foundation"으로 읽도록 함
 
 ## Dataset.css 구조
 
