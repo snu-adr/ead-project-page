@@ -5,7 +5,7 @@ import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Contact.css';
 
 const Contact = () => {
-  const { sectionTitle, sectionTag, sectionSubtitle, email, github, address } = content.contact;
+  const { sectionTitle, sectionTag, sectionSubtitle, emailLabel, githubLabel, email, github, address } = content.contact;
   const ref = useScrollFadeIn();
 
   return (
@@ -20,7 +20,7 @@ const Contact = () => {
             </svg>
           </div>
           <div className="contact-card-body">
-            <span className="contact-card-label">이메일</span>
+            <span className="contact-card-label">{emailLabel}</span>
             <span className="contact-card-value">{email}</span>
           </div>
           <span className="contact-card-arrow">→</span>
@@ -32,7 +32,7 @@ const Contact = () => {
             </svg>
           </div>
           <div className="contact-card-body">
-            <span className="contact-card-label">GitHub</span>
+            <span className="contact-card-label">{githubLabel}</span>
             <span className="contact-card-value">{address}</span>
           </div>
           <span className="contact-card-arrow">→</span>

@@ -189,6 +189,8 @@
     "sectionTag": "CONTACT",
     "sectionSubtitle": "EAD 프로젝트에 대해 문의하세요",
     "body": "EAD 프로젝트에 대한 문의, 협업 제안, 또는 Alliance 참여에 관심이 있으시다면 아래 연락처로 연락해 주세요. 서울대학교 ADR 연구실에서 운영하고 있으며, 이메일(contact@example.com)로 연락하시거나 GitHub(https://github.com/example/ead)에서 프로젝트를 확인하실 수 있습니다.",
+    "emailLabel": "이메일",
+    "githubLabel": "GitHub",
     "email": "contact@example.com",
     "github": "https://github.com/example/ead",
     "address": "서울대학교 ADR 연구실"

@@ -78,6 +78,8 @@ contact
  ├── sectionTag: string
  ├── sectionSubtitle: string
  ├── body: string — 줄글 형식 본문 (이메일/GitHub URL 포함)
+ ├── emailLabel: string — 이메일 카드 라벨 (기본: "이메일")
+ ├── githubLabel: string — GitHub 카드 라벨 (기본: "GitHub")
  ├── email: string
  ├── github: string
  └── address: string
