@@ -80,6 +80,7 @@ styles/
 - hover 시 부드러운 transition (0.2s~0.6s)
 - Alliance: 무한 마키 스크롤 (CSS animation, hover 시 일시정지)
 - 컴포넌트 CSS 파일명은 JSX 파일명과 동일 (PascalCase)
+- **한국어 letter-spacing 규칙**: 한국어 텍스트에 `letter-spacing` 을 적용 시 최대 `0.5px`로 제한. 그 이상(1.5px 등)이면 한글 글자 사이가 시각적으로 분리돼 가독성이 크게 떨어짐. 영문 전용 라벨(ENCODER, DECODER, VS 등)은 2px 이상 허용.
 
 ## Hero.css 특수 효과
 
@@ -99,6 +100,7 @@ styles/
   - `.model-arch-panel--encoder`: 시안 테마 (Object Detection, BEV Map Seg, Occupancy, Vector Map)
   - `.model-arch-panel--decoder`: 퍼플 테마 (Planning, Safety Reasoning)
   - `.model-arch-arrow`: ENCODER→DECODER 가로 화살표 (→, 모바일에서는 ↓)
+- `.model-flow-diagram .model-flow-arrow`: 텍스트 "→" 화살표, 모바일(flex column)에서 `transform: rotate(90deg)`으로 "↓" 방향으로 표시
 - `.model-demos`: 2열 그리드 — Real-world / Simulation 데모
 
 ## Contributor.css 구조
