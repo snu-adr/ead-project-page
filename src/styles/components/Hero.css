@@ -310,6 +310,21 @@
   100% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
 }
 
+/* ─── Reduced Motion: hero entry animations ─── */
+/* The global rule disables animation-duration/iteration, but animation-delay still applies.
+   This ensures heroFadeUp elements are immediately visible without waiting for delays. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-title,
+  .hero-subtitle,
+  .hero-affiliation,
+  .hero-description,
+  .hero-stats {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* ─── 반응형 ─── */
 @media (max-width: 768px) {
   .hero-title {
