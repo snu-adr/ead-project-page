@@ -62,6 +62,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <a className="navbar-logo" href="#hero">{content.hero.title}</a>
         <button
+          type="button"
           className={`navbar-toggle ${isOpen ? 'active' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="내비게이션 메뉴 열기/닫기"
