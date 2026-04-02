@@ -1,6 +1,7 @@
 {
   "hero": {
     "title": "EAD",
+    "sectionLabel": "EAD 프로젝트 소개",
     "subtitle": "Evolutionary Autonomous Driving",
     "affiliation": "서울대학교 ADR 연구실",
     "description": "국내 자율주행 기술 격차를 줄이기 위해, 서울대 ADR 연구실이 실배포 기준으로 설계한 End-to-End 자율주행 모델과 데이터셋을 공개합니다.",

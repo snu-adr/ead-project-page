@@ -3,10 +3,10 @@ import content from '../data/content.json';
 import '../styles/components/Hero.css';
 
 const Hero = () => {
-  const { title, subtitle, affiliation, description, stats } = content.hero;
+  const { title, sectionLabel, subtitle, affiliation, description, stats } = content.hero;
 
   return (
-    <section id="hero" className="hero" aria-label={`${title} 프로젝트 소개`}>
+    <section id="hero" className="hero" aria-label={sectionLabel}>
       {/* 센서 그리드 배경 */}
       <div className="hero-grid" aria-hidden="true" />
 

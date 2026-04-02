@@ -9,6 +9,7 @@
 ```
 hero
  ├── title: string — 프로젝트명
+ ├── sectionLabel: string — `<section>` aria-label (스크린 리더용 섹션 식별자)
  ├── subtitle: string — 한 줄 소개
  ├── affiliation: string — 소속
  ├── description: string — 프로젝트 설명 (E2E 모델 언급 포함)
