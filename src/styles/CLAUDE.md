@@ -91,7 +91,14 @@ styles/
 - `.hero-road`: 도로 원근 비주얼 (차선 4개 + 중앙 점선), glow/레이더 삭제됨
 - `.hero-title`: gradient text (시안→화이트→퍼플, background-clip: text)
 - `.hero-stats`: 핵심 지표 4개 (Perception, Planning, Partners, Release) — `<dl>` 태그로 변경, `.hero-stat-value { order: 1 }` + `.hero-stat-label { order: 2 }` 로 DOM 순서(dt→dd)와 시각 순서(값→레이블)를 분리
-- `@media (prefers-reduced-motion: reduce)` (Hero.css): `.hero-title`, `.hero-subtitle`, `.hero-affiliation`, `.hero-description`, `.hero-stats`, **`.hero-scroll-indicator`** 에 `animation: none !important; opacity: 1 !important` — animation-delay 때문에 1s 지연 없이 즉시 표시되도록 보장
+- `.hero-scroll-line`: `will-change: transform, opacity` (scrollLine 2s infinite 애니메이션)
+- `@media (prefers-reduced-motion: reduce)` (Hero.css): `.hero-title`, `.hero-subtitle`, `.hero-affiliation`, `.hero-description`, `.hero-stats`, **`.hero-scroll-indicator`** 에 `animation: none !important; opacity: 1 !important` — animation-delay 때문에 1s 지연 없이 즉시 표시되도록 보장. `.hero-scroll-line { will-change: auto }` — 애니메이션 비활성 시 GPU 컴포지터 레이어 해제
+
+## Navbar.css 구조
+
+- `backdrop-filter: blur(8px→20px)` — 스크롤 시 glassmorphism 강화
+- 모바일 메뉴: `max-height` + `opacity` + `visibility` 조합으로 부드러운 펼침/접힘 구현
+- `@media (prefers-reduced-motion: reduce)`: `.navbar-links { transition-delay: 0s !important }` — 글로벌 규칙이 `transition-duration`만 0.01ms로 줄이고 `transition-delay`는 건드리지 않아, 메뉴 닫힐 때 visibility가 0.3s 지연 후 hidden되는 접근성 버그 방지
 
 ## Model.css 구조
 
@@ -103,7 +110,7 @@ styles/
   - `.model-arch-panel--decoder`: 퍼플 테마 (Planning, Safety Reasoning)
   - `.model-arch-arrow`: ENCODER→DECODER 가로 화살표 (→, 모바일에서는 ↓)
 - `.model-flow-diagram .model-flow-arrow`: 텍스트 "→" 화살표, 모바일(flex column)에서 `transform: rotate(90deg)`으로 "↓" 방향으로 표시
-- `.model-demos`: 2열 그리드 — Real-world / Simulation 데모
+- `.model-demos`: 2열 그리드 — Real-world / Simulation 데모 (`.model-demo h3` — 헤딩 계층 h2→h3 직계이므로 h3 사용)
 
 ## Contributor.css 구조
 

@@ -33,6 +33,7 @@
 - Model 플로우 다이어그램: `role="img" aria-label="..."` 적용 — 화살표 흐름 전체를 하나의 이미지로 표현
 - Model 비교 카드 컨테이너: `role="group" aria-label={comparison.title}` 적용
 - RoadMap `period` 필드: 4자리 연도면 `<time dateTime={v.period}>`, 아니면 `<span>` 조건부 렌더링
+- **헤딩 계층 규칙**: h2(SectionTitle) → h3(섹션 내 카드/그룹) → h4(카드 내 하위 항목). Model.jsx: 비교 카드 레이블(h4), 아키텍처 패널 제목(h4), 데모 카드 제목(h3 — h2의 직계이므로).
 
 ## 의존 관계
 
