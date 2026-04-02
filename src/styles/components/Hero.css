@@ -355,6 +355,11 @@
     opacity: 1 !important;
     will-change: auto;
   }
+
+  /* Scroll line: animation stops in 0.01ms — release GPU compositor layer */
+  .hero-scroll-line {
+    will-change: auto;
+  }
 }
 
 /* ─── 반응형 ─── */
