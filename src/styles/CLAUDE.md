@@ -90,6 +90,7 @@ styles/
 - `.hero-road`: 도로 원근 비주얼 (차선 4개 + 중앙 점선), glow/레이더 삭제됨
 - `.hero-title`: gradient text (시안→화이트→퍼플, background-clip: text)
 - `.hero-stats`: 핵심 지표 4개 (Perception, Planning, Partners, Release) — `<dl>` 태그로 변경, `.hero-stat-value { order: 1 }` + `.hero-stat-label { order: 2 }` 로 DOM 순서(dt→dd)와 시각 순서(값→레이블)를 분리
+- `@media (prefers-reduced-motion: reduce)` (Hero.css): `.hero-title`, `.hero-subtitle`, `.hero-affiliation`, `.hero-description`, `.hero-stats`, **`.hero-scroll-indicator`** 에 `animation: none !important; opacity: 1 !important` — animation-delay 때문에 1s 지연 없이 즉시 표시되도록 보장
 
 ## Model.css 구조
 
@@ -125,7 +126,7 @@ styles/
 ## RoadMap.css 구조
 
 - `.roadmap-bev`: 배경 BEV 자동차 컨테이너, `contain: layout style` 적용 (top 애니메이션 레이아웃 영향 격리)
-- `.bev-car`: CSS-only 탑뷰 바운딩 박스, 6개 (하행 3 + 상행 3), `aria-hidden="true"`
+- `.bev-car`: CSS-only 탑뷰 바운딩 박스, 6개 (하행 3 + 상행 3), `aria-hidden="true"`, `will-change: top, opacity` 적용 (GPU 컴포지터 힌트)
 - `.roadmap-card-title`: `display: flex; flex-direction: column` — 내부에 `.roadmap-version` (v1.0 등)과 `.roadmap-title-text` (Foundation 등)이 수직 배치. 두 요소를 하나의 `<h3>` 안에 포함하여 스크린리더가 "v1.0 Foundation"으로 읽도록 함
 
 ## Dataset.css 구조
