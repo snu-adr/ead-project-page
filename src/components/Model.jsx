@@ -6,7 +6,7 @@ import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Model.css';
 
 const Model = () => {
-  const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture, demos } = content.model;
+  const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture, demos, videoPlaceholder } = content.model;
   const refComparison = useScrollFadeIn();
   const refArchitecture = useScrollFadeIn();
   const refDemos = useScrollFadeIn();
@@ -136,7 +136,7 @@ const Model = () => {
             <div key={i} className="model-demo">
               <h4>{demo.title}</h4>
               <p>{demo.description}</p>
-              <VideoEmbed url={demo.videoUrl} />
+              <VideoEmbed url={demo.videoUrl} title={demo.title} placeholder={videoPlaceholder} />
             </div>
           ))}
         </div>

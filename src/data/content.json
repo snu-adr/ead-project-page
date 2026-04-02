@@ -123,6 +123,7 @@
         ]
       }
     },
+    "videoPlaceholder": "데모 영상 준비 중",
     "demos": [
       {
         "title": "Real-world Demo",

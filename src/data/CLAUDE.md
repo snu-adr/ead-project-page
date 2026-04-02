@@ -53,6 +53,7 @@ model
  │    ├── diagramPlaceholder: string — "모식도 준비 중" (이미지 삽입 예정)
  │    ├── encoder: { label, title, description, tasks[] } — ENCODER/Perception 패널
  │    └── decoder: { label, title, description, tasks[] } — DECODER/Planning 패널
+ ├── videoPlaceholder: string — 영상 준비 중 플레이스홀더 텍스트 (VideoEmbed에 전달)
  └── demos: [{ title, description, videoUrl }] — Real-world Demo, Simulation Closed-loop Demo
 
 notice

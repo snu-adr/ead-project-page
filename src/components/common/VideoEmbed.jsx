@@ -1,10 +1,10 @@
 import React from 'react';
 
-const VideoEmbed = ({ url, title }) => {
+const VideoEmbed = ({ url, title, placeholder }) => {
   if (!url) {
     return (
       <div className="video-placeholder">
-        <p>{title || '데모 영상 준비 중'}</p>
+        <p>{placeholder || '데모 영상 준비 중'}</p>
       </div>
     );
   }

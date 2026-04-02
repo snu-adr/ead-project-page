@@ -22,11 +22,12 @@ iframe 영상 임베드 또는 플레이스홀더 표시.
 | Prop | 타입 | 필수 | 설명 |
 |------|------|------|------|
 | `url` | string | X | 영상 URL (없으면 플레이스홀더 표시) |
-| `title` | string | X | iframe title 속성 |
+| `title` | string | X | iframe title 속성 (접근성) |
+| `placeholder` | string | X | URL 없을 시 표시할 텍스트 (기본값: "데모 영상 준비 중") |
 
-**사용처**: Model (인코더/디코더 영상)
+**사용처**: Model (Real-world Demo, Simulation Closed-loop Demo)
 
-플레이스홀더: URL 없을 시 회색 박스 + "데모 영상 준비 중" 텍스트. 비율 16:9.
+플레이스홀더: URL 없을 시 회색 박스 + `placeholder` 텍스트. `placeholder` 미제공 시 "데모 영상 준비 중" 폴백. 비율 16:9.
 
 ### Card.jsx
 
