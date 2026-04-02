@@ -157,3 +157,10 @@
     display: none;
   }
 }
+
+/* ── Reduced Motion: remove visibility delay so menu hides from a11y tree instantly ── */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-links {
+    transition-delay: 0s !important;
+  }
+}
