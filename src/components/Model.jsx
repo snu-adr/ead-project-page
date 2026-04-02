@@ -6,7 +6,7 @@ import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Model.css';
 
 const Model = () => {
-  const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture, demos, videoPlaceholder } = content.model;
+  const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture, demos, videoPlaceholder, flowLabels } = content.model;
   const refComparison = useScrollFadeIn();
   const refArchitecture = useScrollFadeIn();
   const refDemos = useScrollFadeIn();
@@ -71,11 +71,11 @@ const Model = () => {
             <div className="model-flow-inputs">
               <div className="model-flow-input-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M3 9a9 9 0 0 1 18 0M3 15a9 9 0 0 0 18 0"/></svg>
-                <span>Camera</span>
+                <span>{flowLabels.camera}</span>
               </div>
               <div className="model-flow-input-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="6" strokeDasharray="2 2"/><circle cx="12" cy="12" r="10" strokeDasharray="3 3"/></svg>
-                <span>LiDAR</span>
+                <span>{flowLabels.lidar}</span>
               </div>
             </div>
             <div className="model-flow-arrow" aria-hidden="true">→</div>
@@ -91,7 +91,7 @@ const Model = () => {
             <div className="model-flow-arrow" aria-hidden="true">→</div>
             <div className="model-flow-output">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M3 12h18M12 5l7 7-7 7"/></svg>
-              <span>Trajectory</span>
+              <span>{flowLabels.trajectory}</span>
             </div>
             <div className="model-flow-caption">{architecture.diagramPlaceholder}</div>
           </div>

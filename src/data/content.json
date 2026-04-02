@@ -124,6 +124,11 @@
       }
     },
     "videoPlaceholder": "데모 영상 준비 중",
+    "flowLabels": {
+      "camera": "Camera",
+      "lidar": "LiDAR",
+      "trajectory": "Trajectory"
+    },
     "demos": [
       {
         "title": "Real-world Demo",
