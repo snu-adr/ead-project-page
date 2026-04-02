@@ -304,6 +304,7 @@
   height: 40px;
   background: linear-gradient(to bottom, var(--color-accent), transparent);
   animation: scrollLine 2s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 @keyframes scrollLine {
