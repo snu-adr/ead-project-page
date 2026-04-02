@@ -14,7 +14,7 @@ const Dataset = () => {
       <div className="dataset-grid stagger-fade-in" ref={ref}>
         {/* Real-world Dataset Card */}
         <div className="dataset-card">
-          <span className="dataset-card-number">01</span>
+          <span className="dataset-card-number" aria-hidden="true">01</span>
           <div className="dataset-card-icon" aria-hidden="true">
             <div className="dataset-icon-realworld">
               <div className="dataset-icon-globe">
@@ -33,7 +33,7 @@ const Dataset = () => {
 
         {/* Closed-loop Dataset Card */}
         <div className="dataset-card">
-          <span className="dataset-card-number">02</span>
+          <span className="dataset-card-number" aria-hidden="true">02</span>
           <div className="dataset-card-icon" aria-hidden="true">
             <div className="dataset-icon-loop">
               <div className="dataset-icon-loop-circle" />
@@ -50,7 +50,7 @@ const Dataset = () => {
 
         {/* In-house Dataset Card — upcoming, muted style */}
         <div className="dataset-card dataset-card--upcoming dataset-card--full">
-          <span className="dataset-card-number">03</span>
+          <span className="dataset-card-number" aria-hidden="true">03</span>
           {inhouse.badge && <span className="dataset-upcoming-badge">{inhouse.badge}</span>}
           <div className="dataset-card-icon" aria-hidden="true">
             <div className="dataset-icon-future">

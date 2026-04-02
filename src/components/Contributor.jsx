@@ -15,7 +15,7 @@ const Contributor = () => {
         {members.map((member, i) => (
           <div key={member.name} className={`contributor-card${member.lead ? ' contributor-card--lead' : ''}`}>
             <div className="contributor-avatar-wrapper" aria-hidden="true">
-              <div className="contributor-avatar">
+              <div className="contributor-avatar" aria-hidden="true">
                 {member.name.charAt(0)}
               </div>
             </div>
