@@ -9,7 +9,7 @@ const RoadMapEntry = ({ v, index }) => {
   const isLeft = index % 2 === 0;
 
   return (
-    <div
+    <article
       className={`roadmap-entry ${isLeft ? 'left' : 'right'} fade-in`}
       ref={ref}
     >
@@ -33,7 +33,7 @@ const RoadMapEntry = ({ v, index }) => {
           <div className="roadmap-status-tag completed-tag">{v.statusLabel}</div>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 

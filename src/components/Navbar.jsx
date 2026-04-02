@@ -72,7 +72,7 @@ const Navbar = () => {
           ref={toggleRef}
           className={`navbar-toggle ${isOpen ? 'active' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="내비게이션 메뉴 열기/닫기"
+          aria-label={isOpen ? "내비게이션 메뉴 닫기" : "내비게이션 메뉴 열기"}
           aria-expanded={isOpen}
           aria-controls="navbar-menu"
         >
