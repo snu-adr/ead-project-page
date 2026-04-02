@@ -28,7 +28,7 @@ const Model = () => {
                 <span className="comparison-card__badge">{comparison.researchBadge}</span>
               </div>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-              <ul className="comparison-card__list" role="list">
+              <ul className="comparison-card__list" role="list" aria-label={`${comparison.researchLabel} 항목`}>
                 {comparison.items.map((item) => (
                   <li key={item.category} className="comparison-card__item">
                     <span className="comparison-card__category">{item.category}</span>
@@ -52,7 +52,7 @@ const Model = () => {
                 <span className="comparison-card__badge">{comparison.eadBadge}</span>
               </div>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-              <ul className="comparison-card__list" role="list">
+              <ul className="comparison-card__list" role="list" aria-label={`${comparison.eadLabel} 항목`}>
                 {comparison.items.map((item) => (
                   <li key={item.category} className="comparison-card__item">
                     <span className="comparison-card__category">{item.category}</span>
