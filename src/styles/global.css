@@ -294,6 +294,30 @@ section {
   border-radius: 4px;
 }
 
+/* ─── Custom Scrollbar (webkit) ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-light) var(--color-bg);
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
   section {
