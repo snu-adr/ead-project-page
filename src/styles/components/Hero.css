@@ -150,6 +150,7 @@
   border-radius: 50%;
   background: rgba(56, 189, 248, 0.6);
   animation: particleFloat linear infinite;
+  will-change: transform, opacity;
 }
 
 .hero-particle--1 { left: 15%; top: 30%; animation-duration: 8s; animation-delay: 0s; }
