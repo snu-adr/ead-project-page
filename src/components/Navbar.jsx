@@ -66,13 +66,14 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="내비게이션 메뉴 열기/닫기"
           aria-expanded={isOpen}
+          aria-controls="navbar-menu"
         >
           <span />
           <span />
           <span />
         </button>
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-        <ul className={`navbar-links ${isOpen ? 'open' : ''}`} role="list">
+        <ul id="navbar-menu" className={`navbar-links ${isOpen ? 'open' : ''}`} role="list">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
