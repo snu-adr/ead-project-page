@@ -20,6 +20,8 @@ styles/
 
 ## CSS 변수 (global.css :root)
 
+> `color-scheme: dark`가 `:root`에 설정됨 — 브라우저 기본 UI 요소(스크롤바 등)를 다크 모드로 처리
+
 ### 색상
 | 변수 | 값 | 용도 |
 |------|-----|------|
@@ -63,9 +65,12 @@ styles/
 
 - `.fade-in` / `.fade-in.visible`: 스크롤 페이드인 애니메이션
 - `.stagger-fade-in` / `.stagger-fade-in.visible`: 자식 요소 순차 페이드인
-- `.video-embed`, `.video-placeholder`: 16:9 비율 영상 임베드
+- `.video-embed`: 16:9 비율 영상 임베드 (padding-top: 56.25%)
+- `.video-placeholder`: 16:9 비율 플레이스홀더 (padding-top: 56.25%, 플레이 아이콘 + 텍스트 중앙 배치)
 - `.card`: 카드 스타일 (배경, 테두리, 패딩, 라운드)
+- `section`: `scroll-margin-top: var(--nav-height)` — 앵커 이동 시 네비게이션 바가 섹션 헤더를 가리지 않도록
 - `:focus-visible`: 키보드 네비게이션 포커스 스타일 (2px 시안 outline, offset 3px)
+- `::-webkit-scrollbar` / `scrollbar-width`: 다크 테마 커스텀 스크롤바 (6px, thin)
 - `@media (prefers-reduced-motion: reduce)`: 모션 민감도 사용자 지원 — 모든 animation/transition 비활성화
 
 ## 스타일 컨벤션
