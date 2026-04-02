@@ -154,7 +154,7 @@
   "contributors": {
     "sectionTitle": "기여자",
     "sectionTag": "CONTRIBUTORS",
-    "sectionSubtitle": "EAD 프로젝트에 기여하는 사람들",
+    "sectionSubtitle": "서울대학교 ADR 연구실 연구팀",
     "members": [
       { "name": "최준원", "role": "Project Lead" },
       { "name": "김정호", "role": "Researcher" },
