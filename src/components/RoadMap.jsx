@@ -23,7 +23,7 @@ const RoadMapEntry = ({ v, index }) => {
         </div>
         <h3 className="roadmap-card-title">{v.title}</h3>
         <span className="roadmap-period">{v.period}</span>
-        <ul className="roadmap-items">
+        <ul className="roadmap-items" role="list">
           {v.items.map((item, i) => (
             <li key={item}>{item}</li>
           ))}

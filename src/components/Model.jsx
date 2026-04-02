@@ -27,7 +27,7 @@ const Model = () => {
                 <span className="comparison-card__label">{comparison.researchLabel}</span>
                 <span className="comparison-card__badge">{comparison.researchBadge}</span>
               </div>
-              <ul className="comparison-card__list">
+              <ul className="comparison-card__list" role="list">
                 {comparison.items.map((item) => (
                   <li key={item.category} className="comparison-card__item">
                     <span className="comparison-card__category">{item.category}</span>
@@ -50,7 +50,7 @@ const Model = () => {
                 <span className="comparison-card__label">{comparison.eadLabel}</span>
                 <span className="comparison-card__badge">{comparison.eadBadge}</span>
               </div>
-              <ul className="comparison-card__list">
+              <ul className="comparison-card__list" role="list">
                 {comparison.items.map((item) => (
                   <li key={item.category} className="comparison-card__item">
                     <span className="comparison-card__category">{item.category}</span>
@@ -104,7 +104,7 @@ const Model = () => {
                 <span className="model-arch-panel-title">{architecture.encoder.title}</span>
               </div>
               <p className="model-arch-panel-desc">{architecture.encoder.description}</p>
-              <ul className="model-arch-panel-tasks">
+              <ul className="model-arch-panel-tasks" role="list">
                 {architecture.encoder.tasks.map((t) => (
                   <li key={t}>{t}</li>
                 ))}
@@ -122,7 +122,7 @@ const Model = () => {
                 <span className="model-arch-panel-title">{architecture.decoder.title}</span>
               </div>
               <p className="model-arch-panel-desc">{architecture.decoder.description}</p>
-              <ul className="model-arch-panel-tasks">
+              <ul className="model-arch-panel-tasks" role="list">
                 {architecture.decoder.tasks.map((t) => (
                   <li key={t}>{t}</li>
                 ))}
