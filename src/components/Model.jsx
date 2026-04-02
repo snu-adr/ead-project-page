@@ -137,11 +137,11 @@ const Model = () => {
 
         <div className="model-demos fade-in" ref={refDemos}>
           {demos.map((demo) => (
-            <div key={demo.title} className="model-demo">
+            <article key={demo.title} className="model-demo">
               <h4>{demo.title}</h4>
               <p>{demo.description}</p>
               <VideoEmbed url={demo.videoUrl} title={demo.title} placeholder={videoPlaceholder} />
-            </div>
+            </article>
           ))}
         </div>
       </section>
