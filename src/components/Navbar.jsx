@@ -14,7 +14,7 @@ const navItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(() => window.scrollY > 50);
   const [activeSection, setActiveSection] = useState('');
   const toggleRef = useRef(null);
 
