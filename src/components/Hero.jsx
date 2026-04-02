@@ -38,14 +38,14 @@ const Hero = () => {
         <p className="hero-description">{description}</p>
 
         {stats && stats.length > 0 && (
-          <div className="hero-stats">
+          <dl className="hero-stats">
             {stats.map((stat) => (
               <div key={stat.label} className="hero-stat">
-                <span className="hero-stat-value">{stat.value}</span>
-                <span className="hero-stat-label">{stat.label}</span>
+                <dt className="hero-stat-label">{stat.label}</dt>
+                <dd className="hero-stat-value">{stat.value}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         )}
       </div>
 

@@ -264,6 +264,7 @@
   color: var(--color-accent);
   letter-spacing: 1px;
   text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  order: 1;
 }
 
 .hero-stat-label {
@@ -272,6 +273,7 @@
   color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 2px;
+  order: 2;
 }
 
 /* ─── 스크롤 다운 인디케이터 (라인 스타일) ─── */

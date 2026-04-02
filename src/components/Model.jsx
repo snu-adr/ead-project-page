@@ -20,7 +20,7 @@ const Model = () => {
         <div className="model-comparison fade-in" ref={refComparison}>
           <h3>{comparison.title}</h3>
 
-          <div className="comparison-cards">
+          <div className="comparison-cards" role="group" aria-label={comparison.title}>
             {/* Previous Research card — muted style */}
             <div className="comparison-card comparison-card--research">
               <div className="comparison-card__header">
@@ -69,7 +69,7 @@ const Model = () => {
           <p>{architecture.description}</p>
 
           {/* Architecture flow diagram */}
-          <div className="model-flow-diagram">
+          <div className="model-flow-diagram" role="img" aria-label="Camera + LiDAR 입력 → ENCODER Perception → DECODER Planning → Trajectory 출력">
             <div className="model-flow-inputs">
               <div className="model-flow-input-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M3 9a9 9 0 0 1 18 0M3 15a9 9 0 0 0 18 0"/></svg>
