@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-accent), #a78bfa, var(--color-accent));
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-purple), var(--color-accent));
   background-size: 200% 100%;
   opacity: 0.6;
   transition: opacity 0.35s ease;
