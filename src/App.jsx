@@ -14,8 +14,9 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
+      <a href="#main-content" className="skip-link">주요 콘텐츠로 건너뛰기</a>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <RoadMap />
         <div className="section-alt">
