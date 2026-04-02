@@ -39,6 +39,8 @@ body {
   line-height: 1.6;
   word-break: keep-all;
   overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 section {
