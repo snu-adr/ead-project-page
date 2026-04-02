@@ -59,7 +59,7 @@ notice
  ├── sectionTitle: string
  ├── sectionTag: string
  ├── sectionSubtitle: string
- └── items: [{ date, badge?, title, content }] — 날짜 내림차순 정렬 / badge 있으면 오렌지 배지 + 주황 좌측 테두리
+ └── items: [{ date, badge?, title, content }] — 날짜 내림차순 정렬 / badge "예정"→오렌지, badge "완료"→시안, badge 없음→기본 시안 좌측 테두리
 
 contributors
  ├── sectionTitle: string
