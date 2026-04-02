@@ -119,8 +119,11 @@
 
 @media (max-width: 768px) {
   .alliance-marquee-item {
-    font-size: 1.1rem;
     padding: 10px 24px;
+  }
+
+  .alliance-name {
+    font-size: 1.1rem;
     letter-spacing: 1.5px;
   }
 
