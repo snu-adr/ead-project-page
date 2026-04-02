@@ -26,15 +26,16 @@ styles/
 | `--color-bg` | #0a0f1a | 기본 배경 |
 | `--color-bg-alt` | #111827 | 대체 배경 |
 | `--color-bg-card` | #1a2235 | 카드 배경 |
-| `--color-bg-nav` | rgba(10,15,26,0.95) | 네비게이션 배경 |
-| `--color-text` | #f1f5f9 | 기본 텍스트 |
-| `--color-text-light` | #cbd5e1 | 보조 텍스트 |
-| `--color-text-muted` | #64748b | 약한 텍스트 |
+| `--color-bg-nav` | rgba(10,15,26,0.9) | 네비게이션 배경 |
+| `--color-text` | #e4e7ec | 기본 텍스트 |
+| `--color-text-light` | #9ca3af | 보조 텍스트 |
+| `--color-text-muted` | #6b7280 | 약한 텍스트 |
 | `--color-accent` | #38bdf8 | 강조색 (시안) |
 | `--color-accent-hover` | #7dd3fc | 강조색 호버 |
+| `--color-accent-purple` | #a78bfa | 보조 강조색 (퍼플) |
 | `--color-highlight` | #e94560 | 하이라이트 (레드) |
 | `--color-border` | #1e293b | 기본 테두리 |
-| `--color-border-light` | #334155 | 밝은 테두리 |
+| `--color-border-light` | #374151 | 밝은 테두리 |
 
 ### 타이포그래피
 | 변수 | 값 |

@@ -15,7 +15,7 @@
   "roadmap": {
     "sectionTitle": "로드맵",
     "sectionTag": "ROADMAP",
-    "sectionSubtitle": "EAD의 발전 로드맵",
+    "sectionSubtitle": "v1.0 출시 완료 — v2.0은 더 크게 확장",
     "versions": [
       {
         "version": "v1.0",
@@ -25,6 +25,7 @@
           "오픈소스 데이터셋 기반 훈련 및 검증",
           "전방위 카메라 + LiDAR 센서 구성",
           "360° Perception 및 E2E Planning",
+          "Camera-Only / LiDAR-Camera 두 가지 구성 제공",
           "실제 배포 기준 설계"
         ],
         "status": "completed",
@@ -47,7 +48,7 @@
   "dataset": {
     "sectionTitle": "데이터셋",
     "sectionTag": "DATASET",
-    "sectionSubtitle": "EAD가 활용하는 데이터셋",
+    "sectionSubtitle": "실도로 + 시뮬레이션, 두 축에서 훈련 및 검증",
     "realworld": {
       "title": "Real-world 데이터셋",
       "badge": "NAVSIM",
@@ -67,7 +68,7 @@
   "model": {
     "sectionTitle": "모델",
     "sectionTag": "MODEL",
-    "sectionSubtitle": "EAD 모델의 구조와 특징",
+    "sectionSubtitle": "실배포 기준으로 설계된 E2E 자율주행 모델",
     "comparison": {
       "title": "이전 연구 모델과의 차이",
       "researchLabel": "Previous Research",
