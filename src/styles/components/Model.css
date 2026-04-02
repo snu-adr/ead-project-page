@@ -585,7 +585,7 @@
     0 0 24px rgba(56, 189, 248, 0.06);
 }
 
-.model-demo h4 {
+.model-demo h3 {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-accent);
