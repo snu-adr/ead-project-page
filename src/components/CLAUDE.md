@@ -12,7 +12,7 @@
 | Notice.jsx | 공지사항 목록 (날짜순, 컴팩트) | `notice.*` |
 | Contributor.jsx | 기여자: Project Lead 별도 행 + Researcher 그리드 | `contributors.*` |
 | Alliance.jsx | 협력사 무한 마키 스크롤 (오른쪽→왼쪽) | `alliance.*` |
-| Contact.jsx | 연락처 줄글 형식 (이메일/GitHub 인라인 링크) | `contact.*` |
+| Contact.jsx | 연락처 — 이메일/GitHub 두 개의 클릭 가능 카드 레이아웃 (중앙 정렬) | `contact.*` |
 | Footer.jsx | 하단 푸터 (저작권 텍스트) | `footer.*` |
 
 ## 공통 패턴

@@ -105,7 +105,9 @@ styles/
 ## Contact.css 구조
 
 - `#contact`: padding 60px (기본 100px보다 축소 — 콘텐츠가 적어 여백 최적화)
-- `.contact-prose`: 줄글 형식, 이메일/GitHub 인라인 링크
+- `.contact-cards`: 중앙 정렬 flex 컨테이너 (max-width: 760px), 두 카드 래핑
+- `.contact-card`: 이메일/GitHub 클릭 카드 (이메일=시안 테마, GitHub=퍼플 테마)
+- `.contact-card-icon`, `.contact-card-label`, `.contact-card-value`, `.contact-card-arrow`: 카드 내부 요소
 
 ## Dataset.css 구조
 
