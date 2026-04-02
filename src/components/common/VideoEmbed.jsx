@@ -15,6 +15,8 @@ const VideoEmbed = ({ url, title }) => {
         src={url}
         title={title}
         allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
       />
     </div>
   );
