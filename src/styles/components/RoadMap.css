@@ -238,6 +238,7 @@
 /* Badge */
 .roadmap-badge {
   display: inline-block;
+  margin-bottom: 8px;
   padding: 4px 14px;
   font-size: 0.75rem;
   font-weight: 600;
