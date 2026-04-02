@@ -13,10 +13,10 @@ const Alliance = () => {
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} centered />
       <div className="alliance-marquee-wrapper fade-in" ref={ref}>
         <div className="alliance-marquee-fade alliance-marquee-fade--left" aria-hidden="true" />
-        <div className="alliance-marquee" aria-label="협력사 목록">
-          <div className="alliance-marquee-track">
+        <div className="alliance-marquee">
+          <div className="alliance-marquee-track" role="list" aria-label="협력사 목록">
             {partners.map((partner) => (
-              <div key={partner.name} className="alliance-marquee-item">
+              <div key={partner.name} className="alliance-marquee-item" role="listitem">
                 {partner.logo ? (
                   <img
                     src={require(`../assets/logos/${partner.logo}`)}
