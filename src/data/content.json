@@ -4,10 +4,16 @@
     "subtitle": "Evolutionary Autonomous Driving",
     "affiliation": "서울대학교 ADR 연구실",
     "description": "국내 자율주행 기술 격차를 줄이기 위해, 서울대 ADR 연구실이 실배포 기준으로 설계한 자율주행 모델과 데이터셋을 공개합니다.",
-    "highlights": ["전방위 카메라", "실배포 설계", "오픈소스"]
+    "highlights": ["전방위 카메라", "실배포 설계", "오픈소스"],
+    "stats": [
+      { "value": "360°", "label": "Perception" },
+      { "value": "5+", "label": "Partners" },
+      { "value": "v1.0", "label": "Released" }
+    ]
   },
   "roadmap": {
     "sectionTitle": "로드맵",
+    "sectionTag": "ROADMAP",
     "sectionSubtitle": "EAD의 발전 로드맵",
     "versions": [
       {
@@ -39,6 +45,7 @@
   },
   "dataset": {
     "sectionTitle": "데이터셋",
+    "sectionTag": "DATASET",
     "sectionSubtitle": "EAD가 활용하는 데이터셋",
     "realworld": {
       "title": "Real-world 데이터셋",
@@ -51,6 +58,7 @@
   },
   "model": {
     "sectionTitle": "모델",
+    "sectionTag": "MODEL",
     "sectionSubtitle": "EAD 모델의 구조와 특징",
     "comparison": {
       "title": "기존 연구용 모델과의 차이",
@@ -85,6 +93,7 @@
   },
   "notice": {
     "sectionTitle": "공지사항",
+    "sectionTag": "NOTICE",
     "sectionSubtitle": "EAD 프로젝트의 최신 소식",
     "items": [
       {
@@ -96,6 +105,7 @@
   },
   "contributors": {
     "sectionTitle": "기여자",
+    "sectionTag": "CONTRIBUTORS",
     "sectionSubtitle": "EAD 프로젝트에 기여하는 사람들",
     "members": [
       {
@@ -110,6 +120,7 @@
   },
   "alliance": {
     "sectionTitle": "얼라이언스",
+    "sectionTag": "ALLIANCE",
     "sectionSubtitle": "EAD와 함께하는 파트너",
     "partners": [
       { "name": "HL Klemove", "logo": null },
@@ -121,9 +132,13 @@
   },
   "contact": {
     "sectionTitle": "연락처",
+    "sectionTag": "CONTACT",
     "sectionSubtitle": "EAD 프로젝트에 대해 문의하세요",
     "email": "contact@example.com",
     "github": "https://github.com/example/ead",
     "address": "서울대학교 ADR 연구실"
+  },
+  "footer": {
+    "copyright": "© 2026 EAD — Evolutionary Autonomous Driving. 서울대학교 ADR 연구실."
   }
 }

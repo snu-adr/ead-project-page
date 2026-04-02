@@ -1,26 +1,35 @@
 import React from 'react';
 import content from '../data/content.json';
 import SectionTitle from './common/SectionTitle';
-import useScrollFadeIn from '../hooks/useScrollFadeIn';
+import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
 import '../styles/components/Alliance.css';
 
 const Alliance = () => {
-  const { sectionTitle, sectionSubtitle, partners } = content.alliance;
-  const ref = useScrollFadeIn();
+  const { sectionTitle, sectionTag, sectionSubtitle, partners } = content.alliance;
+  const ref = useStaggeredFadeIn();
 
   return (
     <section id="alliance">
-      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
-      <div className="alliance-grid fade-in" ref={ref}>
-        {partners.map((partner, i) => (
-          <div key={i} className="alliance-card">
-            {partner.logo ? (
-              <img src={partner.logo} alt={partner.name} />
-            ) : (
-              <span>{partner.name}</span>
-            )}
-          </div>
-        ))}
+      <div className="centered">
+        <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
+      </div>
+      <div className="alliance-showcase stagger-fade-in" ref={ref}>
+        <div className="alliance-names">
+          {partners.map((partner, i) => (
+            <React.Fragment key={i}>
+              <span className="alliance-name">{partner.name}</span>
+              {i < partners.length - 1 && (
+                <span className="alliance-separator" aria-hidden="true" />
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+        <div className="alliance-badge">
+          <span>{partners.length} Partners</span>
+        </div>
+        <div className="alliance-divider" aria-hidden="true">
+          <div className="alliance-divider-glow" />
+        </div>
       </div>
     </section>
   );

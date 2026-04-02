@@ -1,24 +1,53 @@
+#contributor {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .contributor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
 .contributor-card {
-  background: var(--color-bg-card);
+  background: linear-gradient(160deg, var(--color-bg-card) 0%, rgba(167, 139, 250, 0.02) 100%);
   border: 1px solid var(--color-border);
   border-radius: 12px;
-  padding: 24px;
+  padding: 28px 24px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.contributor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.08), 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-border-light);
+}
+
+/* Gradient border wrapper for the avatar */
+.contributor-avatar-wrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(135deg, #38bdf8, #a78bfa);
+  margin: 0 auto 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.contributor-card:hover .contributor-avatar-wrapper {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5), 0 0 40px rgba(167, 139, 250, 0.25);
+}
+
+.contributor-card:hover .contributor-avatar {
+  color: var(--color-accent);
 }
 
 .contributor-avatar {
-  width: 64px;
-  height: 64px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background: var(--color-bg-alt);
-  border: 2px solid var(--color-border-light);
-  margin: 0 auto 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,13 +57,17 @@
 }
 
 .contributor-card h3 {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: var(--color-text);
 }
 
 .contributor-card p {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.7;
 }

@@ -37,7 +37,7 @@ const RoadMapEntry = ({ v, index }) => {
 };
 
 const RoadMap = () => {
-  const { sectionTitle, sectionSubtitle, versions } = content.roadmap;
+  const { sectionTitle, sectionTag, sectionSubtitle, versions } = content.roadmap;
 
   return (
     <div className="roadmap-wrapper">
@@ -54,7 +54,7 @@ const RoadMap = () => {
       </div>
 
       <section id="roadmap">
-        <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} />
+        <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
         <div className="roadmap-timeline">
           <div className="timeline-line" />
           {versions.map((v, index) => (

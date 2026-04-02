@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import content from '../data/content.json';
 import '../styles/components/Navbar.css';
 
@@ -14,13 +14,33 @@ const navItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+
+      const sections = navItems.map(item => item.href.slice(1));
+      let current = '';
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 120) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleClick = () => {
     setIsOpen(false);
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar-container">
         <a className="navbar-logo" href="#hero">{content.hero.title}</a>
         <button
@@ -35,7 +55,13 @@ const Navbar = () => {
         <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href} onClick={handleClick}>{item.label}</a>
+              <a
+                href={item.href}
+                onClick={handleClick}
+                className={activeSection === item.href.slice(1) ? 'active' : ''}
+              >
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>

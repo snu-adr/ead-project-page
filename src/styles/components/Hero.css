@@ -7,6 +7,20 @@
   text-align: center;
   padding: 0 24px;
   position: relative;
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+
+/* 하단 그라데이션 — 다음 섹션과 자연스러운 전환 */
+.hero-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* ─── 배경 안개 (다층 glow) ─── */
@@ -15,16 +29,132 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 25% 20% at 50% 47%, rgba(56, 189, 248, 0.18) 0%, transparent 100%),
-    radial-gradient(ellipse 30% 25% at 50% 48%, rgba(167, 139, 250, 0.05) 0%, transparent 100%),
-    radial-gradient(ellipse 38% 30% at 50% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 100%);
+    radial-gradient(ellipse 30% 25% at 50% 45%, rgba(56, 189, 248, 0.15) 0%, transparent 100%),
+    radial-gradient(ellipse 40% 30% at 50% 48%, rgba(167, 139, 250, 0.06) 0%, transparent 100%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(56, 189, 248, 0.04) 0%, transparent 100%);
   pointer-events: none;
   animation: fogPulse 6s ease-in-out infinite alternate;
 }
 
 @keyframes fogPulse {
-  from { opacity: 0.8; }
+  from { opacity: 0.7; }
   to { opacity: 1; }
+}
+
+/* ─── 스캔 라인 효과 ─── */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(56, 189, 248, 0.03) 50%,
+    transparent 100%
+  );
+  background-size: 100% 6px;
+  background-repeat: repeat;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ─── 센서 그리드 배경 ─── */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,0,0,0.4) 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,0,0,0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── BEV 레이더 비주얼 ─── */
+.hero-radar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+}
+
+.hero-radar-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(56, 189, 248, 0.08);
+}
+
+.hero-radar-ring--1 {
+  width: 200px;
+  height: 200px;
+  border-color: rgba(56, 189, 248, 0.12);
+}
+
+.hero-radar-ring--2 {
+  width: 340px;
+  height: 340px;
+  border-color: rgba(56, 189, 248, 0.07);
+}
+
+.hero-radar-ring--3 {
+  width: 480px;
+  height: 480px;
+  border-color: rgba(56, 189, 248, 0.04);
+}
+
+.hero-radar-cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+}
+
+.hero-radar-cross::before,
+.hero-radar-cross::after {
+  content: '';
+  position: absolute;
+  background: rgba(56, 189, 248, 0.04);
+}
+
+.hero-radar-cross::before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.hero-radar-cross::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.hero-radar-scan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  height: 2px;
+  transform-origin: left center;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), transparent);
+  animation: radarScan 8s linear infinite;
+}
+
+@keyframes radarScan {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* ─── 도로 원근 비주얼 ─── */
@@ -35,59 +165,54 @@
   overflow: hidden;
 }
 
-/* 도로 표면 — 비활성 (glow는 hero::before에서 처리) */
-.hero-road-surface {
-  display: none;
-}
-
 /* 공통 차선 스타일 */
 .hero-road-lane {
   position: absolute;
-  top: 48%;
+  top: 46%;
   left: 50%;
-  width: 2px;
-  height: 52%;
+  width: 1.5px;
+  height: 54%;
   transform-origin: top center;
-  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.30) 70%, rgba(56, 189, 248, 0.0) 100%);
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.25) 60%, rgba(56, 189, 248, 0.0) 100%);
 }
 
 /* 내측 차선 */
 .hero-road-lane--left {
-  transform: rotate(-18deg);
+  transform: rotate(-16deg);
 }
 
 .hero-road-lane--right {
-  transform: rotate(18deg);
+  transform: rotate(16deg);
 }
 
 /* 외측 차선 — 넓게 벌어짐, 더 투명 */
 .hero-road-lane--left-outer {
-  transform: rotate(-38deg);
-  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.18) 60%, rgba(56, 189, 248, 0.0) 100%);
+  transform: rotate(-36deg);
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.12) 50%, rgba(56, 189, 248, 0.0) 100%);
 }
 
 .hero-road-lane--right-outer {
-  transform: rotate(38deg);
-  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.18) 60%, rgba(56, 189, 248, 0.0) 100%);
+  transform: rotate(36deg);
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.12) 50%, rgba(56, 189, 248, 0.0) 100%);
 }
 
 /* 중앙 점선 — 소실점에서 하단으로 */
 .hero-road-dash {
   position: absolute;
-  top: 48%;
+  top: 46%;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
-  height: 52%;
+  height: 54%;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(56, 189, 248, 0.45) 0px,
-    rgba(56, 189, 248, 0.45) 16px,
+    rgba(56, 189, 248, 0.5) 0px,
+    rgba(56, 189, 248, 0.5) 16px,
     transparent 16px,
     transparent 40px
   );
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,1) 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,1) 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,1) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,1) 100%);
   animation: roadDash 1.5s linear infinite;
 }
 
@@ -99,18 +224,54 @@
 /* 소실점 glow */
 .hero-road-glow {
   position: absolute;
-  top: 48%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: rgba(56, 189, 248, 1);
   box-shadow:
-    0 0 20px rgba(56, 189, 248, 0.8),
-    0 0 60px rgba(56, 189, 248, 0.5),
-    0 0 140px rgba(56, 189, 248, 0.25),
-    0 0 300px rgba(56, 189, 248, 0.10);
+    0 0 15px rgba(56, 189, 248, 0.9),
+    0 0 40px rgba(56, 189, 248, 0.6),
+    0 0 100px rgba(56, 189, 248, 0.3),
+    0 0 200px rgba(56, 189, 248, 0.15);
+  animation: glowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 15px rgba(56, 189, 248, 0.9), 0 0 40px rgba(56, 189, 248, 0.6), 0 0 100px rgba(56, 189, 248, 0.3), 0 0 200px rgba(56, 189, 248, 0.15); }
+  to { box-shadow: 0 0 20px rgba(56, 189, 248, 1), 0 0 60px rgba(56, 189, 248, 0.7), 0 0 140px rgba(56, 189, 248, 0.4), 0 0 280px rgba(56, 189, 248, 0.2); }
+}
+
+/* ─── 플로팅 파티클 ─── */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.6);
+  animation: particleFloat linear infinite;
+}
+
+.hero-particle--1 { left: 15%; top: 30%; animation-duration: 8s; animation-delay: 0s; }
+.hero-particle--2 { left: 75%; top: 20%; animation-duration: 10s; animation-delay: 1s; width: 2px; height: 2px; }
+.hero-particle--3 { left: 40%; top: 70%; animation-duration: 7s; animation-delay: 2s; }
+.hero-particle--4 { left: 85%; top: 60%; animation-duration: 9s; animation-delay: 3s; width: 2px; height: 2px; }
+.hero-particle--5 { left: 25%; top: 80%; animation-duration: 11s; animation-delay: 1.5s; }
+.hero-particle--6 { left: 60%; top: 40%; animation-duration: 8.5s; animation-delay: 4s; width: 2px; height: 2px; }
+
+@keyframes particleFloat {
+  0% { opacity: 0; transform: translateY(0) translateX(0); }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { opacity: 0; transform: translateY(-80px) translateX(20px); }
 }
 
 /* ─── 콘텐츠 영역 ─── */
@@ -118,9 +279,7 @@
   max-width: 800px;
   position: relative;
   z-index: 1;
-  background: none;
   padding: 48px 64px;
-  border-radius: 24px;
 }
 
 /* 그라데이션 타이틀 */
@@ -135,6 +294,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: heroFadeUp 0.8s ease-out both;
+  text-shadow: none;
 }
 
 @keyframes heroFadeUp {
@@ -166,10 +326,10 @@
   letter-spacing: 1.5px;
   margin-top: 12px;
   margin-bottom: 0;
-  padding: 4px 14px;
-  border: 1px solid rgba(100, 116, 139, 0.3);
-  border-radius: 16px;
-  background: rgba(100, 116, 139, 0.08);
+  padding: 5px 16px;
+  border: 1px solid rgba(100, 116, 139, 0.25);
+  border-radius: 20px;
+  background: rgba(100, 116, 139, 0.06);
   animation: heroFadeUp 0.8s ease-out 0.3s both;
 }
 
@@ -178,7 +338,7 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
   margin: 28px auto;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .hero-description {
@@ -190,32 +350,70 @@
   animation: heroFadeUp 0.8s ease-out 0.5s both;
 }
 
-/* ─── 스크롤 다운 인디케이터 ─── */
+/* ─── Hero Stats ─── */
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  margin-top: 36px;
+  animation: heroFadeUp 0.8s ease-out 0.7s both;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero-stat-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.hero-stat-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ─── 스크롤 다운 인디케이터 (라인 스타일) ─── */
 .hero-scroll-indicator {
   position: absolute;
-  bottom: 32px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: heroFadeUp 0.8s ease-out 1s both;
 }
 
-.hero-scroll-arrow {
-  width: 24px;
-  height: 24px;
-  border-right: 2px solid var(--color-accent);
-  border-bottom: 2px solid var(--color-accent);
-  transform: rotate(45deg);
-  animation: scrollBounce 2s ease-in-out infinite;
+.hero-scroll-text {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-@keyframes scrollBounce {
-  0%, 100% {
-    transform: rotate(45deg) translate(0, 0);
-    opacity: 0.5;
-  }
-  50% {
-    transform: rotate(45deg) translate(4px, 4px);
-    opacity: 1.0;
-  }
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--color-accent), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
+  50% { opacity: 1; transform: scaleY(1); }
+  100% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
 }
 
 /* ─── 반응형 ─── */
@@ -223,10 +421,12 @@
   .hero-title {
     font-size: 4.5rem;
     letter-spacing: 8px;
+    text-indent: 8px;
   }
 
   .hero-subtitle {
     font-size: 0.95rem;
+    letter-spacing: 2px;
   }
 
   .hero-description {
@@ -236,6 +436,26 @@
   .hero-content {
     padding: 32px 24px;
   }
+
+  .hero-stats {
+    gap: 32px;
+    margin-top: 28px;
+  }
+
+  .hero-stat-value {
+    font-size: 1.3rem;
+  }
+
+  .hero-radar {
+    width: 320px;
+    height: 320px;
+  }
+
+  .hero-radar-ring--1 { width: 130px; height: 130px; }
+  .hero-radar-ring--2 { width: 220px; height: 220px; }
+  .hero-radar-ring--3 { width: 310px; height: 310px; }
+  .hero-radar-cross { width: 310px; height: 310px; }
+  .hero-radar-scan { width: 155px; }
 
   .hero-road-lane--left {
     transform: rotate(-14deg);
@@ -251,5 +471,9 @@
 
   .hero-road-lane--right-outer {
     transform: rotate(30deg);
+  }
+
+  .hero-grid {
+    background-size: 40px 40px;
   }
 }

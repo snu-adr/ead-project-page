@@ -1,35 +1,238 @@
 #dataset {
-  padding-top: 160px;
+  padding-top: 100px;
 }
 
 .dataset-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 32px;
 }
 
+/* ── Card ── */
 .dataset-card {
-  background: var(--color-bg-card);
+  position: relative;
+  background: linear-gradient(160deg, var(--color-bg-card) 0%, rgba(56, 189, 248, 0.03) 100%);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 32px;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.dataset-card h3 {
-  font-size: 1.2rem;
+/* Gradient top border */
+.dataset-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), #a78bfa, var(--color-accent));
+  background-size: 200% 100%;
+  opacity: 0.6;
+  transition: opacity 0.35s ease;
+}
+
+.dataset-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-border-light);
+  box-shadow:
+    0 12px 40px rgba(56, 189, 248, 0.1),
+    0 4px 16px rgba(56, 189, 248, 0.05);
+}
+
+.dataset-card:hover::after {
+  opacity: 1;
+}
+
+/* ── Number label (top-right) ── */
+.dataset-card-number {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  opacity: 0.15;
+  line-height: 1;
+  letter-spacing: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Icon area ── */
+.dataset-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  padding-top: 16px;
+  position: relative;
+}
+
+/* ── Real-world icon: Globe ── */
+.dataset-icon-realworld {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dataset-icon-globe {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.dataset-icon-globe-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.7;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+}
+
+.dataset-icon-globe-ring--tilted {
+  transform: rotateY(60deg);
+  border-style: dashed;
+  opacity: 0.4;
+}
+
+.dataset-icon-globe-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  background: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.6), 0 0 32px rgba(56, 189, 248, 0.3);
+}
+
+/* Subtle orbit animation */
+.dataset-card:hover .dataset-icon-globe-ring--tilted {
+  animation: globeSpin 4s linear infinite;
+}
+
+@keyframes globeSpin {
+  from { transform: rotateY(60deg) rotateZ(0deg); }
+  to   { transform: rotateY(60deg) rotateZ(360deg); }
+}
+
+/* ── Closed-loop icon: Cycle ── */
+.dataset-icon-loop {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.dataset-icon-loop-circle {
+  position: absolute;
+  inset: 0;
+  border: 2.5px dashed var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.55;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+/* Arrows on the loop */
+.dataset-icon-loop-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.dataset-icon-loop-arrow--top {
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid var(--color-accent);
+  filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.5));
+}
+
+.dataset-icon-loop-arrow--bottom {
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--color-accent);
+  filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.5));
+}
+
+/* Subtle rotation on hover */
+.dataset-card:hover .dataset-icon-loop-circle {
+  animation: loopSpin 6s linear infinite;
+}
+
+@keyframes loopSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Card body (text content) ── */
+.dataset-card-body {
+  padding: 8px 36px 36px;
+}
+
+/* Title with left accent line */
+.dataset-card-body h3 {
+  position: relative;
+  font-size: 1.35rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
+  padding-left: 18px;
   color: var(--color-text);
 }
 
-.dataset-card p {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
-  line-height: 1.7;
+.dataset-card-body h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  border-radius: 2px;
+  background: var(--color-accent);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.45);
 }
 
+.dataset-card-body p {
+  color: var(--color-text-light);
+  font-size: 0.97rem;
+  line-height: 1.75;
+  padding-left: 18px;
+}
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
   .dataset-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .dataset-card-icon {
+    height: 100px;
+  }
+
+  .dataset-card-body {
+    padding: 4px 24px 28px;
+  }
+
+  .dataset-card-number {
+    font-size: 2rem;
+    top: 16px;
+    right: 18px;
+  }
+
+  .dataset-card-body h3 {
+    font-size: 1.2rem;
   }
 }
