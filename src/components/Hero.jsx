@@ -6,7 +6,7 @@ const Hero = () => {
   const { title, subtitle, affiliation, description, stats } = content.hero;
 
   return (
-    <section id="hero" className="hero">
+    <section id="hero" className="hero" aria-label="EAD 프로젝트 소개">
       {/* 센서 그리드 배경 */}
       <div className="hero-grid" aria-hidden="true" />
 

@@ -9,7 +9,7 @@ const Alliance = () => {
   const ref = useScrollFadeIn();
 
   return (
-    <section id="alliance">
+    <section id="alliance" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} centered />
       <div className="alliance-marquee-wrapper fade-in" ref={ref}>
         <div className="alliance-marquee-fade alliance-marquee-fade--left" aria-hidden="true" />

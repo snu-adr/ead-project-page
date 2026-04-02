@@ -14,7 +14,7 @@ const Model = () => {
   return (
     <div className="model-wrapper">
       <div className="model-grid-bg" aria-hidden="true" />
-      <section id="model">
+      <section id="model" aria-label={sectionTitle}>
         <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
 
         <div className="model-comparison fade-in" ref={refComparison}>

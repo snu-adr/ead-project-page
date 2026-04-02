@@ -9,7 +9,7 @@ const Notice = () => {
   const ref = useScrollFadeIn();
 
   return (
-    <section id="notice">
+    <section id="notice" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="notice-list fade-in" ref={ref}>
         {items.map((item) => (

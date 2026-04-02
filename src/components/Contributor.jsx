@@ -9,7 +9,7 @@ const Contributor = () => {
   const ref = useStaggeredFadeIn();
 
   return (
-    <section id="contributor">
+    <section id="contributor" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="contributor-grid stagger-fade-in" ref={ref}>
         {members.map((member) => (

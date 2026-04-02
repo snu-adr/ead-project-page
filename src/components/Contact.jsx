@@ -9,7 +9,7 @@ const Contact = () => {
   const ref = useScrollFadeIn();
 
   return (
-    <section id="contact">
+    <section id="contact" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} centered />
       <div className="contact-cards fade-in" ref={ref}>
         <a className="contact-card contact-card--email" href={`mailto:${email}`}>

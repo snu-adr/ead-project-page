@@ -24,7 +24,7 @@ const RoadMapEntry = ({ v, index }) => {
         <h3 className="roadmap-card-title">{v.title}</h3>
         <span className="roadmap-period">{v.period}</span>
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-        <ul className="roadmap-items" role="list">
+        <ul className="roadmap-items" role="list" aria-label={`${v.version} ${v.title} 주요 기능`}>
           {v.items.map((item) => (
             <li key={item}>{item}</li>
           ))}
@@ -54,7 +54,7 @@ const RoadMap = () => {
         <div className="bev-car bev-car--up bev-car--u3" />
       </div>
 
-      <section id="roadmap">
+      <section id="roadmap" aria-label={sectionTitle}>
         <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
         <div className="roadmap-timeline">
           <div className="timeline-line" aria-hidden="true" />

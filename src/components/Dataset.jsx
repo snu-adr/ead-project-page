@@ -9,7 +9,7 @@ const Dataset = () => {
   const ref = useStaggeredFadeIn();
 
   return (
-    <section id="dataset">
+    <section id="dataset" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="dataset-grid stagger-fade-in" ref={ref}>
         {/* Real-world Dataset Card */}
