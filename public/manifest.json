@@ -20,6 +20,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
+  "lang": "ko",
   "theme_color": "#0a0f1a",
   "background_color": "#0a0f1a"
 }

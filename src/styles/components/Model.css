@@ -614,6 +614,10 @@
     padding: 24px 16px 16px;
   }
 
+  .model-flow-diagram .model-flow-arrow {
+    transform: rotate(90deg);
+  }
+
   .model-flow-inputs {
     flex-direction: row;
     gap: 8px;
