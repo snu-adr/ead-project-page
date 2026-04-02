@@ -109,7 +109,8 @@ styles/
 ## Alliance.css 구조
 
 - `.alliance-marquee-wrapper`: 카드 배경 + 좌우 페이드
-- `.alliance-marquee-track`: 무한 스크롤 (25s linear infinite)
+- `.alliance-marquee-track`: 무한 스크롤 (25s linear infinite), `will-change: transform` 적용
+- hover 및 `focus-within` 시 애니메이션 일시정지 (키보드 접근성)
 
 ## Contact.css 구조
 
@@ -117,6 +118,11 @@ styles/
 - `.contact-cards`: 중앙 정렬 flex 컨테이너 (max-width: 760px), 두 카드 래핑
 - `.contact-card`: 이메일/GitHub 클릭 카드 (이메일=시안 테마, GitHub=퍼플 테마)
 - `.contact-card-icon`, `.contact-card-label`, `.contact-card-value`, `.contact-card-arrow`: 카드 내부 요소
+
+## RoadMap.css 구조
+
+- `.roadmap-bev`: 배경 BEV 자동차 컨테이너, `contain: layout style` 적용 (top 애니메이션 레이아웃 영향 격리)
+- `.bev-car`: CSS-only 탑뷰 바운딩 박스, 6개 (하행 3 + 상행 3), `aria-hidden="true"`
 
 ## Dataset.css 구조
 
