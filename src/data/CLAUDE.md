@@ -46,7 +46,7 @@ model
  │    ├── researchBadge: string — "이전 연구 모델"
  │    ├── eadLabel: string — "EAD"
  │    ├── eadBadge: string — "실배포 설계"
- │    └── items: [{ category, research, ead }] — 카메라, LiDAR, Perception Range, Planning, 설계 기준
+ │    └── items: [{ category, research, ead }] — 카메라, LiDAR, Perception Range, 설계 기준 (4 items)
  ├── architecture
  │    ├── title: string
  │    ├── description: string
