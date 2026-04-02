@@ -10,7 +10,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <img src={snuLogo} alt="서울대학교" className="footer-snu-logo" loading="lazy" />
-        <span className="footer-logo">{content.hero.title}</span>
+        <span className="footer-logo" aria-hidden="true">{content.hero.title}</span>
         <p className="footer-copyright">{copyright}</p>
       </div>
     </footer>
