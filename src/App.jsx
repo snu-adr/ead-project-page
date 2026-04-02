@@ -30,7 +30,7 @@ function App() {
         <div className="section-alt">
           <Alliance />
         </div>
-        <div className="section-divider" />
+        <div className="section-divider" aria-hidden="true" />
         <Contact />
       </main>
       <Footer />
