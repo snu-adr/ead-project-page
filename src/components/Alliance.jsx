@@ -13,9 +13,7 @@ const Alliance = () => {
 
   return (
     <section id="alliance">
-      <div className="centered">
-        <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
-      </div>
+      <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} centered />
       <div className="alliance-marquee-wrapper fade-in" ref={ref}>
         <div className="alliance-marquee-fade alliance-marquee-fade--left" />
         <div className="alliance-marquee">

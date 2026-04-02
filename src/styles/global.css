@@ -105,19 +105,6 @@ section {
   transform: translateX(-50%);
 }
 
-.centered .section-title {
-  text-align: center;
-}
-
-.centered .section-title h2 {
-  display: block;
-}
-
-.centered .section-title h2::after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 /* ─── Video ─── */
 .video-embed {
   position: relative;
