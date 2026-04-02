@@ -13,8 +13,11 @@ const Notice = () => {
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="notice-list fade-in" ref={ref}>
         {items.map((item, i) => (
-          <div key={i} className="notice-item">
-            <span className="notice-date">{item.date}</span>
+          <div key={i} className={`notice-item${item.badge ? ' notice-item--upcoming' : ''}`}>
+            <div className="notice-item-meta">
+              <span className="notice-date">{item.date}</span>
+              {item.badge && <span className="notice-badge">{item.badge}</span>}
+            </div>
             <h3>{item.title}</h3>
             <p>{item.content}</p>
           </div>
