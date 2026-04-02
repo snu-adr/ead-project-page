@@ -29,6 +29,10 @@
 - 모든 `<section>` 요소에 `aria-label={sectionTitle}` 적용 — 스크린 리더 landmark 네비게이션 지원
 - 리스트 스타일 제거 `<ul>`에는 VoiceOver 대응을 위해 `role="list"` 추가 + ESLint 예외 주석
 - 목록 컨텍스트가 필요한 경우 `<ul>`에 `aria-label` 추가 (roadmap items, comparison lists)
+- Hero 통계: `<dl>` + `<div>` 그룹 + `<dt class="hero-stat-label">` + `<dd class="hero-stat-value">` 구조 — CSS `order` 속성으로 값(order:1)이 레이블(order:2)보다 먼저 표시
+- Model 플로우 다이어그램: `role="img" aria-label="..."` 적용 — 화살표 흐름 전체를 하나의 이미지로 표현
+- Model 비교 카드 컨테이너: `role="group" aria-label={comparison.title}` 적용
+- RoadMap `period` 필드: 4자리 연도면 `<time dateTime={v.period}>`, 아니면 `<span>` 조건부 렌더링
 
 ## 의존 관계
 

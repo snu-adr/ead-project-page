@@ -88,7 +88,7 @@ styles/
 - `.hero-grid`: 60px 센서 그리드 패턴 (mask-image로 중앙만 visible)
 - `.hero-road`: 도로 원근 비주얼 (차선 4개 + 중앙 점선), glow/레이더 삭제됨
 - `.hero-title`: gradient text (시안→화이트→퍼플, background-clip: text)
-- `.hero-stats`: 핵심 지표 4개 (Perception, Planning, Partners, Release)
+- `.hero-stats`: 핵심 지표 4개 (Perception, Planning, Partners, Release) — `<dl>` 태그로 변경, `.hero-stat-value { order: 1 }` + `.hero-stat-label { order: 2 }` 로 DOM 순서(dt→dd)와 시각 순서(값→레이블)를 분리
 
 ## Model.css 구조
 
@@ -111,6 +111,7 @@ styles/
 - `.alliance-marquee-wrapper`: 카드 배경 + 좌우 페이드
 - `.alliance-marquee-track`: 무한 스크롤 (25s linear infinite), `will-change: transform` 적용
 - hover 및 `focus-within` 시 애니메이션 일시정지 (키보드 접근성)
+- 모바일 반응형: `.alliance-name`에 명시적 `font-size: 1.1rem` 적용 — 부모(`alliance-marquee-item`)의 font-size를 자식이 상속하지 않는 문제 해결
 
 ## Contact.css 구조
 
