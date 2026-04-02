@@ -58,8 +58,9 @@ styles/
 | 크기 | 적용 |
 |------|------|
 | 768px | 주요 모바일 브레이크포인트 (패딩 축소, 폰트 축소, 햄버거 메뉴 전환) |
+| 480px | Hero stats 전용 — `flex-wrap: wrap`으로 2×2 배치 전환. 375px 기기에서 "PERCEPTION" 등 라벨(letter-spacing 2px)이 45px 컨테이너에 overflow하는 버그 방지 |
 
-> 루트 CLAUDE.md에서 1440/1024/768/375px 4단계 정의하나, 현재 구현은 768px만 사용
+> 루트 CLAUDE.md에서 1440/1024/768/375px 4단계 정의하나, 현재 구현은 768px + 480px(Hero stats 전용) 사용
 
 ## 공통 클래스 (global.css)
 
