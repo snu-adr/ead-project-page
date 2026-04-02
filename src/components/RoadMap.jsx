@@ -17,11 +17,11 @@ const RoadMapEntry = ({ v, index }) => {
         <div className="timeline-node-inner" />
       </div>
       <div className={`roadmap-card ${v.status}`}>
-        <div className="roadmap-card-header">
+        <h3 className="roadmap-card-title">
           <span className="roadmap-version">{v.version}</span>
-          {v.badge && <span className="roadmap-badge">{v.badge}</span>}
-        </div>
-        <h3 className="roadmap-card-title">{v.title}</h3>
+          <span className="roadmap-title-text">{v.title}</span>
+        </h3>
+        {v.badge && <span className="roadmap-badge">{v.badge}</span>}
         {/^\d{4}$/.test(v.period)
           ? <time className="roadmap-period" dateTime={v.period}>{v.period}</time>
           : <span className="roadmap-period">{v.period}</span>

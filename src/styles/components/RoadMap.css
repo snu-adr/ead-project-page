@@ -174,10 +174,10 @@
   opacity: 1;
 }
 
-.roadmap-card-header {
+.roadmap-card-title {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  gap: 4px;
   margin-bottom: 8px;
 }
 
@@ -186,13 +186,14 @@
   font-weight: 800;
   color: var(--color-accent);
   letter-spacing: 2px;
+  line-height: 1.1;
 }
 
-.roadmap-card-title {
+.roadmap-title-text {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 4px;
   color: var(--color-text);
+  line-height: 1.2;
 }
 
 .roadmap-period {
@@ -444,7 +445,7 @@
     font-size: 1.4rem;
   }
 
-  .roadmap-card-title {
+  .roadmap-title-text {
     font-size: 1.2rem;
   }
 
