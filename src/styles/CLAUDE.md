@@ -115,6 +115,7 @@ styles/
 - `.alliance-marquee-track`: 무한 스크롤 (25s linear infinite), `will-change: transform` 적용
 - hover 및 `focus-within` 시 애니메이션 일시정지 (키보드 접근성)
 - 모바일 반응형: `.alliance-name`에 명시적 `font-size: 1.1rem` 적용 — 부모(`alliance-marquee-item`)의 font-size를 자식이 상속하지 않는 문제 해결
+- `@media (prefers-reduced-motion: reduce)`: 마키 애니메이션 제거 + `[aria-hidden="true"]` 복사본 `display: none` + `.alliance-marquee { overflow: visible }` — 글로벌 reduced-motion 규칙만으로는 트랙이 `-50%` 위치에 고정되어 절반이 사라지는 버그를 방지
 
 ## Contact.css 구조
 
