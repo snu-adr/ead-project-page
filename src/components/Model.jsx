@@ -78,17 +78,17 @@ const Model = () => {
                 <span>LiDAR</span>
               </div>
             </div>
-            <div className="model-flow-arrow">→</div>
+            <div className="model-flow-arrow" aria-hidden="true">→</div>
             <div className="model-flow-block model-flow-block--encoder">
               <span className="model-flow-block-label">ENCODER</span>
               <span className="model-flow-block-title">Perception</span>
             </div>
-            <div className="model-flow-arrow">→</div>
+            <div className="model-flow-arrow" aria-hidden="true">→</div>
             <div className="model-flow-block model-flow-block--decoder">
               <span className="model-flow-block-label">DECODER</span>
               <span className="model-flow-block-title">Planning</span>
             </div>
-            <div className="model-flow-arrow">→</div>
+            <div className="model-flow-arrow" aria-hidden="true">→</div>
             <div className="model-flow-output">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 12h18M12 5l7 7-7 7"/></svg>
               <span>Trajectory</span>
