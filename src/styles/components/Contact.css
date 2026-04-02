@@ -1,39 +1,133 @@
-/* ── Contact Section — Prose Style ── */
+/* ── Contact Section ── */
 
 #contact {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.contact-prose {
-  max-width: 700px;
+/* Two-card layout */
+.contact-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 760px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.contact-prose p {
-  color: var(--color-text-light);
-  font-size: 1rem;
-  line-height: 1.9;
-  letter-spacing: 0.2px;
-}
-
-.contact-prose a {
-  color: var(--color-accent);
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1 1 280px;
+  max-width: 360px;
+  padding: 28px 32px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--color-text);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
-.contact-prose a:hover {
-  color: var(--color-accent-hover);
-  border-bottom-color: var(--color-accent-hover);
+.contact-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-border-light);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card--email:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 32px rgba(56, 189, 248, 0.08);
+}
+
+.contact-card--github:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  box-shadow: 0 10px 32px rgba(167, 139, 250, 0.08);
+}
+
+/* Icon */
+.contact-card-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card--email .contact-card-icon {
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--color-accent);
+}
+
+.contact-card--github .contact-card-icon {
+  background: rgba(167, 139, 250, 0.1);
+  color: var(--color-accent-purple);
+}
+
+.contact-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Body */
+.contact-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.contact-card-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.contact-card-value {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.contact-card:hover .contact-card-value {
+  color: var(--color-text);
+}
+
+/* Arrow */
+.contact-card-arrow {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contact-card:hover .contact-card-arrow {
+  transform: translateX(4px);
+  color: var(--color-accent);
+}
+
+.contact-card--github:hover .contact-card-arrow {
+  color: var(--color-accent-purple);
 }
 
 @media (max-width: 768px) {
-  .contact-prose p {
-    font-size: 0.95rem;
-    line-height: 1.8;
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: none;
   }
 }
