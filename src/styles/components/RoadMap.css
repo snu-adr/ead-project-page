@@ -47,10 +47,10 @@
     transparent 100%
   );
   transform: translateX(-50%);
-  animation: roadDash 1.5s linear infinite;
+  animation: timelineDash 1.5s linear infinite;
 }
 
-@keyframes roadDash {
+@keyframes timelineDash {
   from { background-position: 0 0; }
   to { background-position: 0 40px; }
 }

@@ -1,0 +1,1 @@
+- [Hero에 pill/CTA 금지](feedback_hero_no_pill_cta.md) — Hero 섹션에 highlight pill과 CTA 버튼 절대 금지
