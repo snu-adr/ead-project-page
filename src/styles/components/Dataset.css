@@ -211,6 +211,19 @@
   padding-left: 18px;
 }
 
+.dataset-benchmark-badge {
+  display: inline-block;
+  margin: 6px 0 10px 18px;
+  padding: 3px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--color-accent);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 20px;
+}
+
 /* ── In-house / Upcoming Card (full-width, spans both columns) ── */
 .dataset-card--full {
   grid-column: 1 / -1;

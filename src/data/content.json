@@ -20,7 +20,7 @@
       {
         "version": "v1.0",
         "title": "Foundation",
-        "period": "2024",
+        "period": "2026",
         "items": [
           "오픈소스 데이터셋 기반 훈련 및 검증",
           "전방위 카메라 + LiDAR 센서 구성",
@@ -32,7 +32,7 @@
       {
         "version": "v2.0",
         "title": "Expansion",
-        "period": "2025",
+        "period": "미정",
         "items": [
           "자체 데이터 파이프라인 구축",
           "Large-scale Dataset 기반 E2E 모델 배포",
@@ -49,11 +49,13 @@
     "sectionSubtitle": "EAD가 활용하는 데이터셋",
     "realworld": {
       "title": "Real-world 데이터셋",
-      "description": "실제 도로 환경에서 취득한 데이터셋으로, NAVSIM 벤치마크를 통해 모델을 훈련하고 검증합니다."
+      "badge": "NAVSIM",
+      "description": "실제 도로 환경에서 취득한 데이터셋입니다. NAVSIM 벤치마크를 기반으로 모델을 훈련하고 검증합니다."
     },
     "closedloop": {
       "title": "Closed-loop 데이터셋",
-      "description": "CARLA 시뮬레이터 기반의 Bench2Drive 벤치마크를 활용한 폐쇄 루프 평가 데이터셋입니다."
+      "badge": "Bench2Drive",
+      "description": "CARLA 시뮬레이터 기반의 폐쇄 루프 평가 데이터셋입니다. Bench2Drive 벤치마크를 통해 실제 주행 환경과 동등한 수준의 평가를 수행합니다."
     },
     "inhouse": {
       "title": "In-house 데이터셋",
@@ -96,7 +98,28 @@
     },
     "architecture": {
       "title": "모델 구조",
-      "description": "EAD는 전방위 카메라와 LiDAR 입력을 통합 인코더로 처리하고, E2E 디코더가 인식부터 경로 계획까지 하나의 네트워크에서 수행합니다."
+      "description": "EAD는 인코더-디코더 구조로 설계됩니다. 인코더가 센서 데이터를 구조화된 환경 표현으로 변환하고, 디코더가 이를 바탕으로 주행 경로를 계획합니다.",
+      "diagramPlaceholder": "모식도 준비 중",
+      "encoder": {
+        "label": "ENCODER",
+        "title": "Perception",
+        "description": "전방위 카메라 + LiDAR 입력을 통합하여 주변 환경을 구조화된 표현으로 변환합니다. Sparse World Model 개념을 차용합니다.",
+        "tasks": [
+          "Object Detection",
+          "BEV Map Segmentation",
+          "Occupancy Prediction",
+          "Vector Map Construction"
+        ]
+      },
+      "decoder": {
+        "label": "DECODER",
+        "title": "Planning",
+        "description": "인코더 출력을 바탕으로 주행 경로 계획과 Safety Reasoning을 End-to-End로 수행합니다.",
+        "tasks": [
+          "경로 계획 (Planning)",
+          "안전 추론 (Safety Reasoning)"
+        ]
+      }
     },
     "demos": [
       {

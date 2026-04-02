@@ -31,9 +31,9 @@ dataset
  ├── sectionTitle: string
  ├── sectionTag: string
  ├── sectionSubtitle: string
- ├── realworld: { title, description } — NAVSIM 벤치마크 언급
- ├── closedloop: { title, description } — Bench2Drive 벤치마크 언급
- └── future: { title, description } — 향후 계획 (In-house Dataset)
+ ├── realworld: { title, badge, description } — badge: "NAVSIM"
+ ├── closedloop: { title, badge, description } — badge: "Bench2Drive"
+ └── inhouse: { title, description, badge } — badge: "Coming Soon"
 
 model
  ├── sectionTitle: string
@@ -46,7 +46,12 @@ model
  │    ├── eadLabel: string — "EAD"
  │    ├── eadBadge: string — "실배포 설계"
  │    └── items: [{ category, research, ead }] — 카메라, LiDAR, Perception Range, Planning, 설계 기준
- ├── architecture: { title, description } — 모델 구조 통합 패널
+ ├── architecture
+ │    ├── title: string
+ │    ├── description: string
+ │    ├── diagramPlaceholder: string — "모식도 준비 중" (이미지 삽입 예정)
+ │    ├── encoder: { label, title, description, tasks[] } — ENCODER/Perception 패널
+ │    └── decoder: { label, title, description, tasks[] } — DECODER/Planning 패널
  └── demos: [{ title, description, videoUrl }] — Real-world Demo, Simulation Closed-loop Demo
 
 notice

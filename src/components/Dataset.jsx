@@ -26,6 +26,7 @@ const Dataset = () => {
           </div>
           <div className="dataset-card-body">
             <h3>{realworld.title}</h3>
+            {realworld.badge && <span className="dataset-benchmark-badge">{realworld.badge}</span>}
             <p>{realworld.description}</p>
           </div>
         </div>
@@ -42,6 +43,7 @@ const Dataset = () => {
           </div>
           <div className="dataset-card-body">
             <h3>{closedloop.title}</h3>
+            {closedloop.badge && <span className="dataset-benchmark-badge">{closedloop.badge}</span>}
             <p>{closedloop.description}</p>
           </div>
         </div>

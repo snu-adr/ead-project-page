@@ -65,6 +65,47 @@ const Model = () => {
         <div className="model-architecture fade-in" ref={refArchitecture}>
           <h3>{architecture.title}</h3>
           <p>{architecture.description}</p>
+
+          {/* Model diagram placeholder */}
+          <div className="model-diagram-placeholder">
+            <div className="model-diagram-placeholder-inner">
+              <span className="model-diagram-placeholder-text">{architecture.diagramPlaceholder}</span>
+            </div>
+          </div>
+
+          {/* Encoder / Decoder panels */}
+          <div className="model-arch-panels">
+            <div className="model-arch-panel model-arch-panel--encoder">
+              <div className="model-arch-panel-header">
+                <span className="model-arch-panel-label">{architecture.encoder.label}</span>
+                <span className="model-arch-panel-title">{architecture.encoder.title}</span>
+              </div>
+              <p className="model-arch-panel-desc">{architecture.encoder.description}</p>
+              <ul className="model-arch-panel-tasks">
+                {architecture.encoder.tasks.map((t, i) => (
+                  <li key={i}>{t}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="model-arch-arrow" aria-hidden="true">
+              <div className="model-arch-arrow-line" />
+              <div className="model-arch-arrow-head" />
+            </div>
+
+            <div className="model-arch-panel model-arch-panel--decoder">
+              <div className="model-arch-panel-header">
+                <span className="model-arch-panel-label">{architecture.decoder.label}</span>
+                <span className="model-arch-panel-title">{architecture.decoder.title}</span>
+              </div>
+              <p className="model-arch-panel-desc">{architecture.decoder.description}</p>
+              <ul className="model-arch-panel-tasks">
+                {architecture.decoder.tasks.map((t, i) => (
+                  <li key={i}>{t}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div className="model-demos fade-in" ref={refDemos}>
