@@ -40,9 +40,9 @@ const Hero = () => {
         {stats && stats.length > 0 && (
           <div className="hero-stats">
             {stats.map((stat) => (
-              <div key={stat.label} className="hero-stat" role="img" aria-label={`${stat.value} ${stat.label}`}>
-                <span className="hero-stat-value" aria-hidden="true">{stat.value}</span>
-                <span className="hero-stat-label" aria-hidden="true">{stat.label}</span>
+              <div key={stat.label} className="hero-stat">
+                <span className="hero-stat-value">{stat.value}</span>
+                <span className="hero-stat-label">{stat.label}</span>
               </div>
             ))}
           </div>
