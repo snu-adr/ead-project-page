@@ -38,7 +38,7 @@ const Hero = () => {
         <p className="hero-description">{description}</p>
 
         {stats && stats.length > 0 && (
-          <dl className="hero-stats">
+          <dl className="hero-stats" aria-label="주요 지표">
             {stats.map((stat) => (
               <div key={stat.label} className="hero-stat">
                 <dt className="hero-stat-label">{stat.label}</dt>
