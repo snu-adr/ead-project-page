@@ -66,11 +66,34 @@ const Model = () => {
           <h3>{architecture.title}</h3>
           <p>{architecture.description}</p>
 
-          {/* Model diagram placeholder */}
-          <div className="model-diagram-placeholder">
-            <div className="model-diagram-placeholder-inner">
-              <span className="model-diagram-placeholder-text">{architecture.diagramPlaceholder}</span>
+          {/* Architecture flow diagram */}
+          <div className="model-flow-diagram">
+            <div className="model-flow-inputs">
+              <div className="model-flow-input-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="3"/><path d="M3 9a9 9 0 0 1 18 0M3 15a9 9 0 0 0 18 0"/></svg>
+                <span>Camera</span>
+              </div>
+              <div className="model-flow-input-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="6" strokeDasharray="2 2"/><circle cx="12" cy="12" r="10" strokeDasharray="3 3"/></svg>
+                <span>LiDAR</span>
+              </div>
             </div>
+            <div className="model-flow-arrow">→</div>
+            <div className="model-flow-block model-flow-block--encoder">
+              <span className="model-flow-block-label">ENCODER</span>
+              <span className="model-flow-block-title">Perception</span>
+            </div>
+            <div className="model-flow-arrow">→</div>
+            <div className="model-flow-block model-flow-block--decoder">
+              <span className="model-flow-block-label">DECODER</span>
+              <span className="model-flow-block-title">Planning</span>
+            </div>
+            <div className="model-flow-arrow">→</div>
+            <div className="model-flow-output">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 12h18M12 5l7 7-7 7"/></svg>
+              <span>Trajectory</span>
+            </div>
+            <div className="model-flow-caption">{architecture.diagramPlaceholder}</div>
           </div>
 
           {/* Encoder / Decoder panels */}
