@@ -340,6 +340,21 @@
     opacity: 1 !important;
     transform: none !important;
   }
+
+  /* Particles have staggered animation-delays (0s–4s): they would flash visible then
+     vanish at unpredictable times. Keep them permanently hidden and release GPU layers. */
+  .hero-particle {
+    animation: none !important;
+    opacity: 0 !important;
+    will-change: auto;
+  }
+
+  /* Fog glow: keep at full opacity (no animated pulse), release GPU layer */
+  .hero::before {
+    animation: none !important;
+    opacity: 1 !important;
+    will-change: auto;
+  }
 }
 
 /* ─── 반응형 ─── */
