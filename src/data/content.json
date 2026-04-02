@@ -143,12 +143,14 @@
     "items": [
       {
         "date": "2026-04-06",
+        "status": "upcoming",
         "badge": "예정",
         "title": "EAD v1.0 공식 발표 예정",
         "content": "EAD v1.0 모델과 데이터셋의 공식 발표가 예정되어 있습니다."
       },
       {
         "date": "2026-03-19",
+        "status": "complete",
         "badge": "완료",
         "title": "FMTC 2026 발표",
         "content": "FMTC 2026에서 EAD 프로젝트의 비전과 기술적 접근 방식을 발표하였습니다."

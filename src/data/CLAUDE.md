@@ -59,7 +59,9 @@ notice
  ├── sectionTitle: string
  ├── sectionTag: string
  ├── sectionSubtitle: string
- └── items: [{ date, badge?, title, content }] — 날짜 내림차순 정렬 / badge "예정"→오렌지, badge "완료"→시안, badge 없음→기본 시안 좌측 테두리
+ └── items: [{ date, status?, badge?, title, content }] — 날짜 내림차순 정렬
+      status: "upcoming"→오렌지 테마, "complete"→시안 테마 (opacity 0.8), 없음→기본 시안
+      badge: 표시할 텍스트 (예: "예정", "완료") — status와 독립적으로 관리
 
 contributors
  ├── sectionTitle: string

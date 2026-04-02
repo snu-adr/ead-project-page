@@ -13,10 +13,10 @@ const Notice = () => {
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="notice-list fade-in" ref={ref}>
         {items.map((item, i) => (
-          <div key={i} className={`notice-item${item.badge === '예정' ? ' notice-item--upcoming' : item.badge === '완료' ? ' notice-item--complete' : ''}`}>
+          <div key={i} className={`notice-item${item.status === 'upcoming' ? ' notice-item--upcoming' : item.status === 'complete' ? ' notice-item--complete' : ''}`}>
             <div className="notice-item-meta">
               <span className="notice-date">{item.date}</span>
-              {item.badge && <span className={`notice-badge${item.badge === '완료' ? ' notice-badge--complete' : ''}`}>{item.badge}</span>}
+              {item.badge && <span className={`notice-badge${item.status === 'complete' ? ' notice-badge--complete' : ''}`}>{item.badge}</span>}
             </div>
             <h3>{item.title}</h3>
             <p>{item.content}</p>
