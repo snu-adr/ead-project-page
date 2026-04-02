@@ -24,7 +24,7 @@ const Model = () => {
             {/* Previous Research card — muted style */}
             <div className="comparison-card comparison-card--research">
               <div className="comparison-card__header">
-                <span className="comparison-card__label">{comparison.researchLabel}</span>
+                <h4 className="comparison-card__label">{comparison.researchLabel}</h4>
                 <span className="comparison-card__badge">{comparison.researchBadge}</span>
               </div>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
@@ -48,7 +48,7 @@ const Model = () => {
             {/* EAD card — bright accent style */}
             <div className="comparison-card comparison-card--ead">
               <div className="comparison-card__header">
-                <span className="comparison-card__label">{comparison.eadLabel}</span>
+                <h4 className="comparison-card__label">{comparison.eadLabel}</h4>
                 <span className="comparison-card__badge">{comparison.eadBadge}</span>
               </div>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}

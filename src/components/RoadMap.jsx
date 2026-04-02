@@ -33,7 +33,7 @@ const RoadMapEntry = ({ v, index }) => {
           ))}
         </ul>
         {v.statusLabel && (
-          <div className="roadmap-status-tag completed-tag">{v.statusLabel}</div>
+          <p className="roadmap-status-tag completed-tag">{v.statusLabel}</p>
         )}
       </div>
     </article>
