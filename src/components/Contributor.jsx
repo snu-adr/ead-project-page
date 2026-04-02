@@ -12,7 +12,7 @@ const Contributor = () => {
     <section id="contributor">
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="contributor-grid stagger-fade-in" ref={ref}>
-        {members.map((member, i) => (
+        {members.map((member) => (
           <div key={member.name} className={`contributor-card${member.lead ? ' contributor-card--lead' : ''}`}>
             <div className="contributor-avatar-wrapper" aria-hidden="true">
               <div className="contributor-avatar" aria-hidden="true">
