@@ -216,8 +216,8 @@ section {
   background: linear-gradient(
     180deg,
     var(--color-bg) 0%,
-    var(--color-bg-alt) 10%,
-    var(--color-bg-alt) 90%,
+    #0e1624 8%,
+    #0e1624 92%,
     var(--color-bg) 100%
   );
 }

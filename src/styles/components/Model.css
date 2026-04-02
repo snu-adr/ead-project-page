@@ -31,9 +31,15 @@
   pointer-events: none;
 }
 
+/* --- Section padding override --- */
+#model {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 /* --- Comparison Block --- */
 .model-comparison {
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
 .model-comparison h3 {
