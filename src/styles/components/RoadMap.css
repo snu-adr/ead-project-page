@@ -115,6 +115,7 @@
 .timeline-node.upcoming .timeline-node-inner {
   background: var(--color-border-light);
   animation: pulse 2s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 @keyframes pulse {
