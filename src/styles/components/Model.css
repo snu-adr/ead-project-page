@@ -479,7 +479,7 @@
 }
 
 .model-arch-panel--decoder .model-arch-panel-label {
-  color: #a78bfa;
+  color: var(--color-accent-purple);
   background: rgba(167, 139, 250, 0.1);
   border: 1px solid rgba(167, 139, 250, 0.25);
 }
@@ -532,7 +532,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #a78bfa;
+  background: var(--color-accent-purple);
   opacity: 0.7;
 }
 
