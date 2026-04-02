@@ -22,7 +22,10 @@ const RoadMapEntry = ({ v, index }) => {
           {v.badge && <span className="roadmap-badge">{v.badge}</span>}
         </div>
         <h3 className="roadmap-card-title">{v.title}</h3>
-        <span className="roadmap-period">{v.period}</span>
+        {/^\d{4}$/.test(v.period)
+          ? <time className="roadmap-period" dateTime={v.period}>{v.period}</time>
+          : <span className="roadmap-period">{v.period}</span>
+        }
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
         <ul className="roadmap-items" role="list" aria-label={`${v.version} ${v.title} 주요 기능`}>
           {v.items.map((item) => (
