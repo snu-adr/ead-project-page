@@ -71,7 +71,7 @@ const Navbar = () => {
           <span />
           <span />
         </button>
-        <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
+        <ul className={`navbar-links ${isOpen ? 'open' : ''}`} role="list">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
