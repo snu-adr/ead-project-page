@@ -71,7 +71,7 @@ styles/
 - `section`: `scroll-margin-top: var(--nav-height)` — 앵커 이동 시 네비게이션 바가 섹션 헤더를 가리지 않도록
 - `:focus-visible`: 키보드 네비게이션 포커스 스타일 (2px 시안 outline, offset 3px)
 - `::-webkit-scrollbar` / `scrollbar-width`: 다크 테마 커스텀 스크롤바 (6px, thin)
-- `@media (prefers-reduced-motion: reduce)`: 모션 민감도 사용자 지원 — 모든 animation/transition 비활성화
+- `@media (prefers-reduced-motion: reduce)`: 모션 민감도 사용자 지원 — 모든 animation/transition 비활성화 + `.fade-in`, `.stagger-fade-in > *` 요소를 즉시 표시 (`opacity: 1 !important`, `transform: none !important`) — 콘텐츠가 절대 숨겨지지 않도록 보장
 
 ## 스타일 컨벤션
 
