@@ -10,7 +10,7 @@
 | Dataset.jsx | 데이터셋 3카드: 실세계(NAVSIM) / 클로즈드루프(Bench2Drive) / 향후 계획 | `dataset.*` |
 | Model.jsx | 이전 연구 vs EAD 비교 카드 + 모델 구조 패널 + 데모 영상 2개 | `model.*` |
 | Notice.jsx | 공지사항 목록 (날짜순, 컴팩트) | `notice.*` |
-| Contributor.jsx | 기여자: Project Lead 별도 행 + Researcher 그리드 | `contributors.*` |
+| Contributor.jsx | 기여자: flex wrap 그리드 (9명), Project Lead 카드만 시안 테마로 시각 강조 | `contributors.*` |
 | Alliance.jsx | 협력사 무한 마키 스크롤 (오른쪽→왼쪽) | `alliance.*` |
 | Contact.jsx | 연락처 — 이메일/GitHub 두 개의 클릭 가능 카드 레이아웃 (중앙 정렬) | `contact.*` |
 | Footer.jsx | 하단 푸터 (저작권 텍스트) | `footer.*` |
@@ -33,7 +33,7 @@ App.jsx
  ├── Dataset.jsx ── common/SectionTitle.jsx (useStaggeredFadeIn + useScrollFadeIn)
  ├── Model.jsx ─── common/SectionTitle.jsx, common/VideoEmbed.jsx
  ├── Notice.jsx ── common/SectionTitle.jsx
- ├── Contributor.jsx ── common/SectionTitle.jsx (useStaggeredFadeIn x2)
+ ├── Contributor.jsx ── common/SectionTitle.jsx (useStaggeredFadeIn)
  ├── Alliance.jsx ── common/SectionTitle.jsx (useScrollFadeIn)
  ├── Contact.jsx ── common/SectionTitle.jsx (useScrollFadeIn)
  └── Footer.jsx
