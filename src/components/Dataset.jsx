@@ -13,7 +13,7 @@ const Dataset = () => {
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="dataset-grid stagger-fade-in" ref={ref}>
         {/* Real-world Dataset Card */}
-        <div className="dataset-card">
+        <article className="dataset-card">
           <span className="dataset-card-number" aria-hidden="true">01</span>
           <div className="dataset-card-icon" aria-hidden="true">
             <div className="dataset-icon-realworld">
@@ -29,10 +29,10 @@ const Dataset = () => {
             {realworld.badge && <span className="dataset-benchmark-badge">{realworld.badge}</span>}
             <p>{realworld.description}</p>
           </div>
-        </div>
+        </article>
 
         {/* Closed-loop Dataset Card */}
-        <div className="dataset-card">
+        <article className="dataset-card">
           <span className="dataset-card-number" aria-hidden="true">02</span>
           <div className="dataset-card-icon" aria-hidden="true">
             <div className="dataset-icon-loop">
@@ -46,10 +46,10 @@ const Dataset = () => {
             {closedloop.badge && <span className="dataset-benchmark-badge">{closedloop.badge}</span>}
             <p>{closedloop.description}</p>
           </div>
-        </div>
+        </article>
 
         {/* In-house Dataset Card — upcoming, muted style */}
-        <div className="dataset-card dataset-card--upcoming dataset-card--full">
+        <article className="dataset-card dataset-card--upcoming dataset-card--full">
           <span className="dataset-card-number" aria-hidden="true">03</span>
           {inhouse.badge && <span className="dataset-upcoming-badge">{inhouse.badge}</span>}
           <div className="dataset-card-icon" aria-hidden="true">
@@ -66,7 +66,7 @@ const Dataset = () => {
             <h3>{inhouse.title}</h3>
             <p>{inhouse.description}</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   );
