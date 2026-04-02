@@ -313,6 +313,19 @@
   100% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
 }
 
+/* ─── Small screen: wrap stats to 2×2 at 480px ─── */
+@media (max-width: 480px) {
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    justify-content: center;
+  }
+
+  .hero-stat {
+    flex: 0 0 calc(50% - 16px);
+  }
+}
+
 /* ─── Reduced Motion: hero entry animations ─── */
 /* The global rule disables animation-duration/iteration, but animation-delay still applies.
    This ensures heroFadeUp elements are immediately visible without waiting for delays. */
