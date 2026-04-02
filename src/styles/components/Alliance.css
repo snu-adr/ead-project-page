@@ -47,6 +47,7 @@
   gap: 0;
   width: max-content;
   animation: marqueeScroll 25s linear infinite;
+  will-change: transform;
 }
 
 @keyframes marqueeScroll {
@@ -108,8 +109,9 @@
   transform: translateY(-50%);
 }
 
-/* Pause on hover */
-.alliance-marquee-wrapper:hover .alliance-marquee-track {
+/* Pause on hover or keyboard focus inside */
+.alliance-marquee-wrapper:hover .alliance-marquee-track,
+.alliance-marquee-wrapper:focus-within .alliance-marquee-track {
   animation-play-state: paused;
 }
 
