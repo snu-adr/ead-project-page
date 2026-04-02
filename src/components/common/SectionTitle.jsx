@@ -6,7 +6,7 @@ const SectionTitle = ({ title, subtitle, tag, centered }) => {
 
   return (
     <div className={`section-title fade-in ${centered ? 'section-title--centered' : ''}`} ref={ref}>
-      {tag && <span className="section-tag">{tag}</span>}
+      {tag && <span className="section-tag" aria-hidden="true">{tag}</span>}
       <h2>{title}</h2>
       {subtitle && <p>{subtitle}</p>}
     </div>
