@@ -297,6 +297,7 @@
   pointer-events: none;
   overflow: hidden;
   z-index: 0;
+  contain: layout style;
 }
 
 /* 섹션 콘텐츠가 BEV 위에 오도록 */
