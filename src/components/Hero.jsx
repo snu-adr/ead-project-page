@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="hero-grid" aria-hidden="true" />
 
       {/* 도로 원근 비주얼 (CSS-only) */}
-      <div className="hero-road">
+      <div className="hero-road" aria-hidden="true">
         <div className="hero-road-lane hero-road-lane--left-outer" />
         <div className="hero-road-lane hero-road-lane--left" />
         <div className="hero-road-lane hero-road-lane--right" />
@@ -34,7 +34,7 @@ const Hero = () => {
         <h1 className="hero-title">{title}</h1>
         <p className="hero-subtitle">{subtitle}</p>
         {affiliation && <p className="hero-affiliation">{affiliation}</p>}
-        <div className="hero-divider" />
+        <div className="hero-divider" aria-hidden="true" />
         <p className="hero-description">{description}</p>
 
         {stats && stats.length > 0 && (
@@ -51,7 +51,7 @@ const Hero = () => {
 
       <div className="hero-bottom-fade" />
 
-      <div className="hero-scroll-indicator">
+      <div className="hero-scroll-indicator" aria-hidden="true">
         <span className="hero-scroll-text">Scroll</span>
         <div className="hero-scroll-line" />
       </div>
