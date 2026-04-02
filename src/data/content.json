@@ -163,7 +163,7 @@
     "sectionTag": "CONTRIBUTORS",
     "sectionSubtitle": "서울대학교 ADR 연구실 연구팀",
     "members": [
-      { "name": "최준원", "role": "Project Lead" },
+      { "name": "최준원", "role": "Project Lead", "lead": true },
       { "name": "김정호", "role": "Researcher" },
       { "name": "방건호", "role": "Researcher" },
       { "name": "백근주", "role": "Researcher" },

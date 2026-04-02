@@ -68,7 +68,7 @@ contributors
  ├── sectionTitle: string
  ├── sectionTag: string
  ├── sectionSubtitle: string
- └── members: [{ name, role }] — Project Lead 1명 + Researcher 8명
+ └── members: [{ name, role, lead? }] — Project Lead 1명(`lead: true`) + Researcher 8명
 
 alliance
  ├── sectionTitle: string
