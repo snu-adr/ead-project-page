@@ -22,7 +22,8 @@ roadmap
  └── versions: array
       ├── version: string — "v1.0", "v2.0"
       ├── status: string — "completed" | "upcoming"
-      ├── badge: string | null — 상태 배지 ("Coming Soon" 등)
+      ├── statusLabel: string | undefined — 완료 시 표시할 텍스트 (예: "출시 완료")
+      ├── badge: string | undefined — 상태 배지 ("Coming Soon" 등)
       ├── title: string — 버전 제목
       ├── period: string — 기간
       └── items: string[] — 세부 항목
@@ -58,7 +59,7 @@ notice
  ├── sectionTitle: string
  ├── sectionTag: string
  ├── sectionSubtitle: string
- └── items: [{ date, title, content }] — 날짜 내림차순 정렬
+ └── items: [{ date, badge?, title, content }] — 날짜 내림차순 정렬 / badge 있으면 오렌지 배지 + 주황 좌측 테두리
 
 contributors
  ├── sectionTitle: string
