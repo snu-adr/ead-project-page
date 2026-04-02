@@ -60,7 +60,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   const handleClick = () => {
-    closeMenu();
+    if (isOpen) closeMenu();
   };
 
   return (
