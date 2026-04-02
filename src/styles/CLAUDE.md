@@ -66,6 +66,7 @@ styles/
 - `.video-embed`, `.video-placeholder`: 16:9 비율 영상 임베드
 - `.card`: 카드 스타일 (배경, 테두리, 패딩, 라운드)
 - `:focus-visible`: 키보드 네비게이션 포커스 스타일 (2px 시안 outline, offset 3px)
+- `@media (prefers-reduced-motion: reduce)`: 모션 민감도 사용자 지원 — 모든 animation/transition 비활성화
 
 ## 스타일 컨벤션
 
