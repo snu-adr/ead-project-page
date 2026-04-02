@@ -115,6 +115,7 @@ styles/
 - `.alliance-marquee-wrapper`: 카드 배경 + 좌우 페이드
 - `.alliance-marquee-track`: 무한 스크롤 (25s linear infinite), `will-change: transform` 적용
 - hover 및 `focus-within` 시 애니메이션 일시정지 (키보드 접근성)
+- `.alliance-name`: `letter-spacing: 0.5px` (한국어 파트너명 포함으로 Korean letter-spacing 규칙 준수, `text-transform: uppercase` 없음)
 - 모바일 반응형: `.alliance-name`에 명시적 `font-size: 1.1rem` 적용 — 부모(`alliance-marquee-item`)의 font-size를 자식이 상속하지 않는 문제 해결
 - `@media (prefers-reduced-motion: reduce)`: 마키 애니메이션 제거 + `[aria-hidden="true"]` 복사본 `display: none` + `.alliance-marquee { overflow: visible }` — 글로벌 reduced-motion 규칙만으로는 트랙이 `-50%` 위치에 고정되어 절반이 사라지는 버그를 방지
 
@@ -128,7 +129,7 @@ styles/
 ## RoadMap.css 구조
 
 - `.roadmap-bev`: 배경 BEV 자동차 컨테이너, `contain: layout style` 적용 (top 애니메이션 레이아웃 영향 격리)
-- `.bev-car`: CSS-only 탑뷰 바운딩 박스, 6개 (하행 3 + 상행 3), `aria-hidden="true"`, `will-change: top, opacity` 적용 (GPU 컴포지터 힌트)
+- `.bev-car`: CSS-only 탑뷰 바운딩 박스, 6개 (하행 3 + 상행 3), `aria-hidden="true"`, `will-change: opacity` 적용 (`top`은 layout 속성으로 GPU compositing 불가, opacity만 힌트 적용)
 - `.roadmap-card-title`: `display: flex; flex-direction: column` — 내부에 `.roadmap-version` (v1.0 등)과 `.roadmap-title-text` (Foundation 등)이 수직 배치. 두 요소를 하나의 `<h3>` 안에 포함하여 스크린리더가 "v1.0 Foundation"으로 읽도록 함
 
 ## Dataset.css 구조
