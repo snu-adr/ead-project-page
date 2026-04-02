@@ -262,14 +262,15 @@
   margin: 12px 0;
 }
 
-/* --- Model Sections (Encoder / Decoder) --- */
-.model-section {
+/* --- Model Architecture Panel --- */
+.model-architecture {
   margin-bottom: 56px;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-left: 3px solid var(--color-accent);
   border-radius: 16px;
-  padding: 32px;
+  padding: 40px;
+  min-height: 400px;
   box-shadow:
     0 4px 24px rgba(0, 0, 0, 0.3),
     0 1px 3px rgba(0, 0, 0, 0.2);
@@ -279,7 +280,7 @@
     transform 0.3s ease;
 }
 
-.model-section:hover {
+.model-architecture:hover {
   border-color: var(--color-border-light);
   border-left-color: var(--color-accent);
   box-shadow:
@@ -288,11 +289,7 @@
   transform: translateY(-2px);
 }
 
-.model-section:last-child {
-  margin-bottom: 0;
-}
-
-.model-section h3 {
+.model-architecture h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -302,8 +299,7 @@
   gap: 10px;
 }
 
-/* Optional accent dot before heading */
-.model-section h3::before {
+.model-architecture h3::before {
   content: '';
   display: inline-block;
   width: 8px;
@@ -314,22 +310,59 @@
   flex-shrink: 0;
 }
 
-.model-section p {
+.model-architecture p {
   color: var(--color-text-light);
   font-size: 0.95rem;
-  margin-bottom: 24px;
+  margin-bottom: 0;
   line-height: 1.8;
 }
 
-/* Video embed inside model sections */
-.model-section .video-embed,
-.model-section .video-placeholder {
+/* --- Model Demos --- */
+.model-demos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.model-demo {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.model-demo:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 24px rgba(56, 189, 248, 0.06);
+}
+
+.model-demo h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.model-demo p {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.model-demo .video-embed,
+.model-demo .video-placeholder {
   border-radius: 12px;
   overflow: hidden;
 }
 
-.model-section .video-placeholder {
-  padding-top: 22%;
+.model-demo .video-placeholder {
+  padding-top: 56.25%;
 }
 
 /* --- Responsive: 768px --- */
@@ -395,18 +428,28 @@
     margin-bottom: 40px;
   }
 
-  .model-section {
+  .model-architecture {
     padding: 24px 20px;
     margin-bottom: 40px;
     border-radius: 12px;
   }
 
-  .model-section h3 {
+  .model-architecture h3 {
     font-size: 1.1rem;
   }
 
-  .model-section p {
+  .model-architecture p {
     font-size: 0.9rem;
     line-height: 1.7;
+  }
+
+  .model-demos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .model-demo {
+    padding: 20px;
+    border-radius: 12px;
   }
 }

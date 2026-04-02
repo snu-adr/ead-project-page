@@ -24,6 +24,13 @@
   gap: 12px;
 }
 
+.footer-snu-logo {
+  height: 32px;
+  width: auto;
+  opacity: 0.4;
+  margin-bottom: 4px;
+}
+
 .footer-logo {
   font-family: var(--font-heading);
   font-size: 1rem;

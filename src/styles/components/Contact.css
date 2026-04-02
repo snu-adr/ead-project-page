@@ -1,67 +1,34 @@
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
+/* ── Contact Section — Prose Style ── */
 
-.contact-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.contact-prose {
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
-  gap: 16px;
-  background: linear-gradient(160deg, var(--color-bg-card) 0%, rgba(56, 189, 248, 0.02) 100%);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 40px 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.contact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15), 0 0 40px rgba(56, 189, 248, 0.05);
-  border-color: var(--color-border-light);
-}
-
-.contact-icon {
-  font-size: 1.4rem;
-  color: var(--color-accent);
-  opacity: 0.6;
-  font-weight: 700;
-  font-family: 'Courier New', monospace;
-}
-
-.contact-label {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.contact-value {
+.contact-prose p {
   color: var(--color-text-light);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: 0.2px;
 }
 
-.contact-value a {
+.contact-prose a {
   color: var(--color-accent);
   text-decoration: none;
-  transition: color 0.2s;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.3);
 }
 
-.contact-value a:hover {
+.contact-prose a:hover {
   color: var(--color-accent-hover);
+  border-bottom-color: var(--color-accent-hover);
 }
 
 @media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .contact-card {
-    padding: 28px 20px;
+  .contact-prose p {
+    font-size: 0.95rem;
+    line-height: 1.8;
   }
 }

@@ -211,6 +211,91 @@
   padding-left: 18px;
 }
 
+/* ── In-house / Upcoming Card (full-width, spans both columns) ── */
+.dataset-card--full {
+  grid-column: 1 / -1;
+}
+
+.dataset-card--upcoming {
+  border-style: dashed;
+  border-color: rgba(100, 116, 139, 0.3);
+  background: linear-gradient(160deg, rgba(17, 24, 39, 0.6) 0%, rgba(30, 41, 59, 0.4) 100%);
+  opacity: 0.6;
+  filter: saturate(0.3);
+  transition: opacity 0.4s ease, filter 0.4s ease, border-color 0.4s ease;
+}
+
+.dataset-card--upcoming:hover {
+  opacity: 0.85;
+  filter: saturate(0.6);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.dataset-card--upcoming::after {
+  background: linear-gradient(90deg, rgba(100, 116, 139, 0.3), rgba(100, 116, 139, 0.5), rgba(100, 116, 139, 0.3));
+  background-size: 200% 100%;
+  opacity: 0.3;
+}
+
+.dataset-card--upcoming .dataset-card-number {
+  opacity: 0.08;
+}
+
+/* Coming Soon badge — keeps color saturation */
+.dataset-upcoming-badge {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  background: rgba(56, 189, 248, 0.1);
+  z-index: 2;
+  filter: saturate(3.3);
+}
+
+/* Future icon: arrow + dots */
+.dataset-icon-future {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dataset-icon-future-arrow {
+  width: 0;
+  height: 0;
+  border-left: 14px solid var(--color-text-muted);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0.4;
+}
+
+.dataset-icon-future-dots {
+  position: absolute;
+  bottom: 8px;
+  display: flex;
+  gap: 6px;
+}
+
+.dataset-icon-future-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+  opacity: 0.4;
+}
+
+.dataset-icon-future-dots span:nth-child(2) { opacity: 0.25; }
+.dataset-icon-future-dots span:nth-child(3) { opacity: 0.15; }
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .dataset-grid {

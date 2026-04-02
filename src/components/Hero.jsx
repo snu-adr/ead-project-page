@@ -17,7 +17,6 @@ const Hero = () => {
         <div className="hero-road-lane hero-road-lane--right" />
         <div className="hero-road-lane hero-road-lane--right-outer" />
         <div className="hero-road-dash" />
-        <div className="hero-road-glow" />
       </div>
 
       {/* 플로팅 파티클 */}
@@ -30,14 +29,6 @@ const Hero = () => {
         <div className="hero-particle hero-particle--6" />
       </div>
 
-      {/* BEV 레이더 비주얼 — 타이틀 뒤 */}
-      <div className="hero-radar" aria-hidden="true">
-        <div className="hero-radar-ring hero-radar-ring--1" />
-        <div className="hero-radar-ring hero-radar-ring--2" />
-        <div className="hero-radar-ring hero-radar-ring--3" />
-        <div className="hero-radar-cross" />
-        <div className="hero-radar-scan" />
-      </div>
 
       <div className="hero-content">
         <h1 className="hero-title">{title}</h1>

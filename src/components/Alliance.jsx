@@ -1,35 +1,41 @@
 import React from 'react';
 import content from '../data/content.json';
 import SectionTitle from './common/SectionTitle';
-import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
+import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Alliance.css';
 
 const Alliance = () => {
   const { sectionTitle, sectionTag, sectionSubtitle, partners } = content.alliance;
-  const ref = useStaggeredFadeIn();
+  const ref = useScrollFadeIn();
+
+  // Duplicate partners for seamless infinite scroll
+  const marqueeItems = [...partners, ...partners];
 
   return (
     <section id="alliance">
       <div className="centered">
         <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       </div>
-      <div className="alliance-showcase stagger-fade-in" ref={ref}>
-        <div className="alliance-names">
-          {partners.map((partner, i) => (
-            <React.Fragment key={i}>
-              <span className="alliance-name">{partner.name}</span>
-              {i < partners.length - 1 && (
-                <span className="alliance-separator" aria-hidden="true" />
-              )}
-            </React.Fragment>
-          ))}
+      <div className="alliance-marquee-wrapper fade-in" ref={ref}>
+        <div className="alliance-marquee-fade alliance-marquee-fade--left" />
+        <div className="alliance-marquee">
+          <div className="alliance-marquee-track">
+            {marqueeItems.map((partner, i) => (
+              <div key={i} className="alliance-marquee-item">
+                {partner.logo ? (
+                  <img
+                    src={require(`../assets/logos/${partner.logo}`)}
+                    alt={partner.name}
+                    className="alliance-logo"
+                  />
+                ) : (
+                  <span className="alliance-name">{partner.name}</span>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="alliance-badge">
-          <span>{partners.length} Partners</span>
-        </div>
-        <div className="alliance-divider" aria-hidden="true">
-          <div className="alliance-divider-glow" />
-        </div>
+        <div className="alliance-marquee-fade alliance-marquee-fade--right" />
       </div>
     </section>
   );

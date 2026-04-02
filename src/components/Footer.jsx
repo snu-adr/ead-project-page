@@ -1,5 +1,6 @@
 import React from 'react';
 import content from '../data/content.json';
+import snuLogo from '../assets/logos/snu.svg';
 import '../styles/components/Footer.css';
 
 function Footer() {
@@ -8,6 +9,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
+        <img src={snuLogo} alt="서울대학교" className="footer-snu-logo" />
         <span className="footer-logo">{content.hero.title}</span>
         <p className="footer-copyright">{copyright}</p>
       </div>

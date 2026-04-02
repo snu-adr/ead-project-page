@@ -3,12 +3,13 @@
     "title": "EAD",
     "subtitle": "Evolutionary Autonomous Driving",
     "affiliation": "서울대학교 ADR 연구실",
-    "description": "국내 자율주행 기술 격차를 줄이기 위해, 서울대 ADR 연구실이 실배포 기준으로 설계한 자율주행 모델과 데이터셋을 공개합니다.",
+    "description": "국내 자율주행 기술 격차를 줄이기 위해, 서울대 ADR 연구실이 실배포 기준으로 설계한 End-to-End 자율주행 모델과 데이터셋을 공개합니다.",
     "highlights": ["전방위 카메라", "실배포 설계", "오픈소스"],
     "stats": [
       { "value": "360°", "label": "Perception" },
+      { "value": "E2E", "label": "Planning" },
       { "value": "5+", "label": "Partners" },
-      { "value": "v1.0", "label": "Released" }
+      { "value": "v1.0", "label": "Release" }
     ]
   },
   "roadmap": {
@@ -22,8 +23,8 @@
         "period": "2024",
         "items": [
           "오픈소스 데이터셋 기반 훈련 및 검증",
-          "전방위 카메라 지원",
-          "전방위 Perception Range",
+          "전방위 카메라 + LiDAR 센서 구성",
+          "360° Perception 및 E2E Planning",
           "실제 배포 기준 설계"
         ],
         "status": "completed"
@@ -33,10 +34,9 @@
         "title": "Expansion",
         "period": "2025",
         "items": [
-          "In-house Dataset 구축",
-          "VLM (Vision-Language Model) 통합",
           "자체 데이터 파이프라인 구축",
-          "Alliance 기업 데이터 통합"
+          "Large-scale Dataset 기반 E2E 모델 배포",
+          "VLM (Vision-Language Model) 통합"
         ],
         "status": "upcoming",
         "badge": "Coming Soon"
@@ -49,11 +49,16 @@
     "sectionSubtitle": "EAD가 활용하는 데이터셋",
     "realworld": {
       "title": "Real-world 데이터셋",
-      "description": "실제 도로 환경에서 취득한 데이터셋입니다."
+      "description": "실제 도로 환경에서 취득한 데이터셋으로, NAVSIM 벤치마크를 통해 모델을 훈련하고 검증합니다."
     },
     "closedloop": {
       "title": "Closed-loop 데이터셋",
-      "description": "시뮬레이션 기반 폐쇄 루프 데이터셋입니다."
+      "description": "CARLA 시뮬레이터 기반의 Bench2Drive 벤치마크를 활용한 폐쇄 루프 평가 데이터셋입니다."
+    },
+    "inhouse": {
+      "title": "In-house 데이터셋",
+      "description": "자체 데이터 파이프라인을 통해 직접 취득하는 실도로 주행 데이터셋입니다. 대규모 데이터를 기반으로 모델을 고도화하고, 국내 도로 환경에 최적화된 학습 데이터를 구축합니다.",
+      "badge": "Coming Soon"
     }
   },
   "model": {
@@ -61,17 +66,26 @@
     "sectionTag": "MODEL",
     "sectionSubtitle": "EAD 모델의 구조와 특징",
     "comparison": {
-      "title": "기존 연구용 모델과의 차이",
+      "title": "이전 연구 모델과의 차이",
+      "researchLabel": "Previous Research",
+      "researchBadge": "이전 연구 모델",
+      "eadLabel": "EAD",
+      "eadBadge": "실배포 설계",
       "items": [
         {
           "category": "카메라",
-          "research": "3대",
-          "ead": "전방위"
+          "research": "전방 3대",
+          "ead": "전방위 멀티캠"
+        },
+        {
+          "category": "LiDAR",
+          "research": "지원",
+          "ead": "LiDAR 융합 제공"
         },
         {
           "category": "Perception Range",
           "research": "전방 32m",
-          "ead": "전방위"
+          "ead": "360°, 전방 80m"
         },
         {
           "category": "설계 기준",
@@ -80,16 +94,22 @@
         }
       ]
     },
-    "encoder": {
-      "title": "인코더 (Encoder)",
-      "description": "인코더 Concept 설명이 들어갑니다.",
-      "videoUrl": null
+    "architecture": {
+      "title": "모델 구조",
+      "description": "EAD는 전방위 카메라와 LiDAR 입력을 통합 인코더로 처리하고, E2E 디코더가 인식부터 경로 계획까지 하나의 네트워크에서 수행합니다."
     },
-    "decoder": {
-      "title": "디코더 (Decoder)",
-      "description": "디코더 Concept 설명이 들어갑니다.",
-      "videoUrl": null
-    }
+    "demos": [
+      {
+        "title": "Real-world Demo",
+        "description": "실제 도로 환경에서의 E2E 자율주행 시연 영상입니다.",
+        "videoUrl": null
+      },
+      {
+        "title": "Simulation Closed-loop Demo",
+        "description": "CARLA 시뮬레이션 환경에서의 폐쇄 루프 주행 시연 영상입니다.",
+        "videoUrl": null
+      }
+    ]
   },
   "notice": {
     "sectionTitle": "공지사항",
@@ -97,9 +117,14 @@
     "sectionSubtitle": "EAD 프로젝트의 최신 소식",
     "items": [
       {
-        "date": "2024-01-01",
-        "title": "EAD v1.0 개발 완료",
-        "content": "EAD v1.0의 개발이 완료되었습니다."
+        "date": "2026-04-06",
+        "title": "EAD v1.0 공식 발표 예정",
+        "content": "EAD v1.0 모델과 데이터셋의 공식 발표가 예정되어 있습니다."
+      },
+      {
+        "date": "2026-03-19",
+        "title": "FMTC 2026 발표",
+        "content": "FMTC 2026에서 EAD 프로젝트의 비전과 기술적 접근 방식을 발표하였습니다."
       }
     ]
   },
@@ -108,14 +133,15 @@
     "sectionTag": "CONTRIBUTORS",
     "sectionSubtitle": "EAD 프로젝트에 기여하는 사람들",
     "members": [
-      {
-        "name": "홍길동",
-        "role": "Project Lead"
-      },
-      {
-        "name": "김철수",
-        "role": "Researcher"
-      }
+      { "name": "최준원", "role": "Project Lead" },
+      { "name": "김정호", "role": "Researcher" },
+      { "name": "방건호", "role": "Researcher" },
+      { "name": "백근주", "role": "Researcher" },
+      { "name": "오지용", "role": "Researcher" },
+      { "name": "유승훈", "role": "Researcher" },
+      { "name": "정원준", "role": "Researcher" },
+      { "name": "신홍재", "role": "Researcher" },
+      { "name": "이동영", "role": "Researcher" }
     ]
   },
   "alliance": {
@@ -123,17 +149,19 @@
     "sectionTag": "ALLIANCE",
     "sectionSubtitle": "EAD와 함께하는 파트너",
     "partners": [
-      { "name": "HL Klemove", "logo": null },
-      { "name": "A2Z", "logo": null },
-      { "name": "Rideflux", "logo": null },
-      { "name": "LG전자", "logo": null },
-      { "name": "노타", "logo": null }
+      { "name": "HL Klemove", "logo": "hl-klemove.svg" },
+      { "name": "LG전자", "logo": "lg.svg" },
+      { "name": "A2Z", "logo": "a2z.svg" },
+      { "name": "Nota AI", "logo": "nota.svg" },
+      { "name": "한양대학교", "logo": "hanyang.svg" },
+      { "name": "GIST", "logo": "gist.svg" }
     ]
   },
   "contact": {
     "sectionTitle": "연락처",
     "sectionTag": "CONTACT",
     "sectionSubtitle": "EAD 프로젝트에 대해 문의하세요",
+    "body": "EAD 프로젝트에 대한 문의, 협업 제안, 또는 Alliance 참여에 관심이 있으시다면 아래 연락처로 연락해 주세요. 서울대학교 ADR 연구실에서 운영하고 있으며, 이메일(contact@example.com)로 연락하시거나 GitHub(https://github.com/example/ead)에서 프로젝트를 확인하실 수 있습니다.",
     "email": "contact@example.com",
     "github": "https://github.com/example/ead",
     "address": "서울대학교 ADR 연구실"

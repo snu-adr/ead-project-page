@@ -1,0 +1,87 @@
+# src/data — CLAUDE.md
+
+## content.json 구조
+
+모든 UI 텍스트를 관리하는 중앙 데이터 파일. 컴포넌트에 한국어를 하드코딩하지 않고 이 파일에서 관리한다. 향후 `content-en.json` 추가로 다국어 전환 예정.
+
+### 필드 구조
+
+```
+hero
+ ├── title: string — 프로젝트명
+ ├── subtitle: string — 한 줄 소개
+ ├── affiliation: string — 소속
+ ├── description: string — 프로젝트 설명 (E2E 모델 언급 포함)
+ ├── highlights: string[] — 키워드 pill 뱃지 목록 (렌더링하지 않음)
+ └── stats: [{ value, label }] — 핵심 지표 (360° Perception, E2E Planning, 5+ Partners, v1.0 Release)
+
+roadmap
+ ├── sectionTitle: string
+ ├── sectionTag: string
+ ├── sectionSubtitle: string
+ └── versions: array
+      ├── version: string — "v1.0", "v2.0"
+      ├── status: string — "completed" | "upcoming"
+      ├── badge: string | null — 상태 배지 ("Coming Soon" 등)
+      ├── title: string — 버전 제목
+      ├── period: string — 기간
+      └── items: string[] — 세부 항목
+
+dataset
+ ├── sectionTitle: string
+ ├── sectionTag: string
+ ├── sectionSubtitle: string
+ ├── realworld: { title, description } — NAVSIM 벤치마크 언급
+ ├── closedloop: { title, description } — Bench2Drive 벤치마크 언급
+ └── future: { title, description } — 향후 계획 (In-house Dataset)
+
+model
+ ├── sectionTitle: string
+ ├── sectionTag: string
+ ├── sectionSubtitle: string
+ ├── comparison
+ │    ├── title: string
+ │    ├── researchLabel: string — "Previous Research"
+ │    ├── researchBadge: string — "이전 연구 모델"
+ │    ├── eadLabel: string — "EAD"
+ │    ├── eadBadge: string — "실배포 설계"
+ │    └── items: [{ category, research, ead }] — 카메라, LiDAR, Perception Range, Planning, 설계 기준
+ ├── architecture: { title, description } — 모델 구조 통합 패널
+ └── demos: [{ title, description, videoUrl }] — Real-world Demo, Simulation Closed-loop Demo
+
+notice
+ ├── sectionTitle: string
+ ├── sectionTag: string
+ ├── sectionSubtitle: string
+ └── items: [{ date, title, content }] — 날짜 내림차순 정렬
+
+contributors
+ ├── sectionTitle: string
+ ├── sectionTag: string
+ ├── sectionSubtitle: string
+ └── members: [{ name, role }] — Project Lead 1명 + Researcher 8명
+
+alliance
+ ├── sectionTitle: string
+ ├── sectionTag: string
+ ├── sectionSubtitle: string
+ └── partners: [{ name, logo }] — 6개 파트너 (마키 스크롤)
+
+contact
+ ├── sectionTitle: string
+ ├── sectionTag: string
+ ├── sectionSubtitle: string
+ ├── body: string — 줄글 형식 본문 (이메일/GitHub URL 포함)
+ ├── email: string
+ ├── github: string
+ └── address: string
+
+footer
+ └── copyright: string — 저작권 텍스트
+```
+
+### 새 섹션 추가 시 패턴
+
+1. content.json에 `sectionTitle`, `sectionTag`, `sectionSubtitle` 포함하는 최상위 키 추가
+2. 대응하는 컴포넌트에서 `import content from '../data/content.json'`
+3. `SectionTitle` 컴포넌트에 title/subtitle/tag 전달

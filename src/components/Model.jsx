@@ -6,10 +6,10 @@ import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Model.css';
 
 const Model = () => {
-  const { sectionTitle, sectionTag, sectionSubtitle, comparison, encoder, decoder } = content.model;
+  const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture, demos } = content.model;
   const refComparison = useScrollFadeIn();
-  const refEncoder = useScrollFadeIn();
-  const refDecoder = useScrollFadeIn();
+  const refArchitecture = useScrollFadeIn();
+  const refDemos = useScrollFadeIn();
 
   return (
     <div className="model-wrapper">
@@ -21,11 +21,11 @@ const Model = () => {
           <h3>{comparison.title}</h3>
 
           <div className="comparison-cards">
-            {/* Research card — muted style */}
+            {/* Previous Research card — muted style */}
             <div className="comparison-card comparison-card--research">
               <div className="comparison-card__header">
-                <span className="comparison-card__label">Research</span>
-                <span className="comparison-card__badge">기존 모델</span>
+                <span className="comparison-card__label">{comparison.researchLabel}</span>
+                <span className="comparison-card__badge">{comparison.researchBadge}</span>
               </div>
               <ul className="comparison-card__list">
                 {comparison.items.map((item, i) => (
@@ -47,8 +47,8 @@ const Model = () => {
             {/* EAD card — bright accent style */}
             <div className="comparison-card comparison-card--ead">
               <div className="comparison-card__header">
-                <span className="comparison-card__label">EAD</span>
-                <span className="comparison-card__badge">실배포 설계</span>
+                <span className="comparison-card__label">{comparison.eadLabel}</span>
+                <span className="comparison-card__badge">{comparison.eadBadge}</span>
               </div>
               <ul className="comparison-card__list">
                 {comparison.items.map((item, i) => (
@@ -62,16 +62,19 @@ const Model = () => {
           </div>
         </div>
 
-        <div className="model-section fade-in" ref={refEncoder}>
-          <h3>{encoder.title}</h3>
-          <p>{encoder.description}</p>
-          <VideoEmbed url={encoder.videoUrl} />
+        <div className="model-architecture fade-in" ref={refArchitecture}>
+          <h3>{architecture.title}</h3>
+          <p>{architecture.description}</p>
         </div>
 
-        <div className="model-section fade-in" ref={refDecoder}>
-          <h3>{decoder.title}</h3>
-          <p>{decoder.description}</p>
-          <VideoEmbed url={decoder.videoUrl} />
+        <div className="model-demos fade-in" ref={refDemos}>
+          {demos.map((demo, i) => (
+            <div key={i} className="model-demo">
+              <h4>{demo.title}</h4>
+              <p>{demo.description}</p>
+              <VideoEmbed url={demo.videoUrl} />
+            </div>
+          ))}
         </div>
       </section>
     </div>

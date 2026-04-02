@@ -1,0 +1,45 @@
+# src/components — CLAUDE.md
+
+## 컴포넌트 목록
+
+| 파일 | 역할 | content.json 키 |
+|------|------|-----------------|
+| Navbar.jsx | 고정 네비게이션 바, 모바일 햄버거 메뉴 | `hero.title`, 각 섹션의 `sectionTitle` |
+| Hero.jsx | 랜딩 히어로 섹션 (그라데이션 제목, 부제, 설명, stats, 스크롤 인디케이터). 레이더/glow 삭제됨. | `hero.*` |
+| RoadMap.jsx | 버전별 타임라인 (좌우 교대 레이아웃) | `roadmap.*` |
+| Dataset.jsx | 데이터셋 3카드: 실세계(NAVSIM) / 클로즈드루프(Bench2Drive) / 향후 계획 | `dataset.*` |
+| Model.jsx | 이전 연구 vs EAD 비교 카드 + 모델 구조 패널 + 데모 영상 2개 | `model.*` |
+| Notice.jsx | 공지사항 목록 (날짜순, 컴팩트) | `notice.*` |
+| Contributor.jsx | 기여자: Project Lead 별도 행 + Researcher 그리드 | `contributors.*` |
+| Alliance.jsx | 협력사 무한 마키 스크롤 (오른쪽→왼쪽) | `alliance.*` |
+| Contact.jsx | 연락처 줄글 형식 (이메일/GitHub 인라인 링크) | `contact.*` |
+| Footer.jsx | 하단 푸터 (저작권 텍스트) | `footer.*` |
+
+## 공통 패턴
+
+- 모든 섹션 컴포넌트는 props 없이 `content.json`에서 직접 데이터를 import
+- `SectionTitle` 공통 컴포넌트로 섹션 헤더 통일
+- `useScrollFadeIn` 훅으로 스크롤 페이드인 애니메이션 적용 (Hero, Navbar 제외)
+- `useStaggeredFadeIn` 훅으로 자식 요소 순차 페이드인 (Dataset, Contributor 등)
+- 각 컴포넌트의 CSS는 `src/styles/components/`에 동일 파일명으로 존재
+
+## 의존 관계
+
+```
+App.jsx
+ ├── Navbar.jsx
+ ├── Hero.jsx
+ ├── RoadMap.jsx ── common/SectionTitle.jsx
+ ├── Dataset.jsx ── common/SectionTitle.jsx (useStaggeredFadeIn + useScrollFadeIn)
+ ├── Model.jsx ─── common/SectionTitle.jsx, common/VideoEmbed.jsx
+ ├── Notice.jsx ── common/SectionTitle.jsx
+ ├── Contributor.jsx ── common/SectionTitle.jsx (useStaggeredFadeIn x2)
+ ├── Alliance.jsx ── common/SectionTitle.jsx (useScrollFadeIn)
+ ├── Contact.jsx ── common/SectionTitle.jsx (useScrollFadeIn)
+ └── Footer.jsx
+```
+
+## 커스텀 훅
+
+- `useScrollFadeIn` (`src/hooks/useScrollFadeIn.js`): IntersectionObserver 기반, 요소가 뷰포트에 진입하면 `visible` 클래스 추가. threshold 0.1, 한 번만 트리거.
+- `useStaggeredFadeIn` (`src/hooks/useStaggeredFadeIn.js`): IntersectionObserver 기반, 자식 요소에 순차적으로 `visible` 클래스 추가.

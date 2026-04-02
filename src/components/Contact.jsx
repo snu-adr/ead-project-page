@@ -1,36 +1,38 @@
 import React from 'react';
 import content from '../data/content.json';
 import SectionTitle from './common/SectionTitle';
-import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
+import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Contact.css';
 
 const Contact = () => {
-  const { sectionTitle, sectionTag, sectionSubtitle, email, github, address } = content.contact;
-  const ref = useStaggeredFadeIn();
+  const { sectionTitle, sectionTag, sectionSubtitle, body, email, github } = content.contact;
+  const ref = useScrollFadeIn();
 
   return (
     <section id="contact">
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} centered />
-      <div className="contact-grid stagger-fade-in" ref={ref}>
-        <div className="contact-card">
-          <span className="contact-icon">@</span>
-          <span className="contact-label">Email</span>
-          <span className="contact-value">
-            <a href={`mailto:${email}`}>{email}</a>
-          </span>
-        </div>
-        <div className="contact-card">
-          <span className="contact-icon">&lt;/&gt;</span>
-          <span className="contact-label">GitHub</span>
-          <span className="contact-value">
-            <a href={github} target="_blank" rel="noopener noreferrer">{github}</a>
-          </span>
-        </div>
-        <div className="contact-card">
-          <span className="contact-icon">&bull;</span>
-          <span className="contact-label">Address</span>
-          <span className="contact-value">{address}</span>
-        </div>
+      <div className="contact-prose fade-in" ref={ref}>
+        <p>
+          {body.split(email).map((part, i, arr) => (
+            <React.Fragment key={i}>
+              {part.includes(github) ? (
+                <>
+                  {part.split(github).map((subpart, j, subarr) => (
+                    <React.Fragment key={j}>
+                      {subpart}
+                      {j < subarr.length - 1 && (
+                        <a href={github} target="_blank" rel="noopener noreferrer">{github}</a>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </>
+              ) : part}
+              {i < arr.length - 1 && (
+                <a href={`mailto:${email}`}>{email}</a>
+              )}
+            </React.Fragment>
+          ))}
+        </p>
       </div>
     </section>
   );

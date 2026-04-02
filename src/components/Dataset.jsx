@@ -5,7 +5,7 @@ import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
 import '../styles/components/Dataset.css';
 
 const Dataset = () => {
-  const { sectionTitle, sectionTag, sectionSubtitle, realworld, closedloop } = content.dataset;
+  const { sectionTitle, sectionTag, sectionSubtitle, realworld, closedloop, inhouse } = content.dataset;
   const ref = useStaggeredFadeIn();
 
   return (
@@ -43,6 +43,26 @@ const Dataset = () => {
           <div className="dataset-card-body">
             <h3>{closedloop.title}</h3>
             <p>{closedloop.description}</p>
+          </div>
+        </div>
+
+        {/* In-house Dataset Card — upcoming, muted style */}
+        <div className="dataset-card dataset-card--upcoming dataset-card--full">
+          <span className="dataset-card-number">03</span>
+          {inhouse.badge && <span className="dataset-upcoming-badge">{inhouse.badge}</span>}
+          <div className="dataset-card-icon">
+            <div className="dataset-icon-future">
+              <div className="dataset-icon-future-arrow" />
+              <div className="dataset-icon-future-dots">
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
+          </div>
+          <div className="dataset-card-body">
+            <h3>{inhouse.title}</h3>
+            <p>{inhouse.description}</p>
           </div>
         </div>
       </div>
