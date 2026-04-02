@@ -23,7 +23,7 @@ const Contact = () => {
             <span className="contact-card-label">{emailLabel}</span>
             <span className="contact-card-value">{email}</span>
           </div>
-          <span className="contact-card-arrow">→</span>
+          <span className="contact-card-arrow" aria-hidden="true">→</span>
         </a>
         <a className="contact-card contact-card--github" href={github} target="_blank" rel="noopener noreferrer">
           <div className="contact-card-icon" aria-hidden="true">
@@ -35,7 +35,7 @@ const Contact = () => {
             <span className="contact-card-label">{githubLabel}</span>
             <span className="contact-card-value">{address}</span>
           </div>
-          <span className="contact-card-arrow">→</span>
+          <span className="contact-card-arrow" aria-hidden="true">→</span>
         </a>
       </div>
     </section>
