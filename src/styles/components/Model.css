@@ -402,8 +402,9 @@
 
 .model-flow-arrow {
   font-size: 1.4rem;
-  color: var(--color-text-muted);
+  color: rgba(56, 189, 248, 0.5);
   flex-shrink: 0;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
 }
 
 .model-flow-output {
