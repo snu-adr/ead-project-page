@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/EAD-project-page/static/css/main.074670bd.css",
-    "main.js": "/EAD-project-page/static/js/main.ddd076d9.js",
+    "main.css": "/EAD-project-page/static/css/main.817e55da.css",
+    "main.js": "/EAD-project-page/static/js/main.02d54c0e.js",
     "static/js/453.3b63644b.chunk.js": "/EAD-project-page/static/js/453.3b63644b.chunk.js",
     "index.html": "/EAD-project-page/index.html",
-    "main.074670bd.css.map": "/EAD-project-page/static/css/main.074670bd.css.map",
-    "main.ddd076d9.js.map": "/EAD-project-page/static/js/main.ddd076d9.js.map",
+    "static/media/hl-klemove.svg": "/EAD-project-page/static/media/hl-klemove.033ac7545d88edecbfdb.svg",
+    "static/media/hanyang.svg": "/EAD-project-page/static/media/hanyang.cd8b006c636c605a8034.svg",
+    "static/media/nota.svg": "/EAD-project-page/static/media/nota.950e3e62c541d6586723.svg",
+    "static/media/gist.svg": "/EAD-project-page/static/media/gist.55751305cae89bb02504.svg",
+    "static/media/a2z.svg": "/EAD-project-page/static/media/a2z.e47061e478713f6aa3ac.svg",
+    "static/media/snu.svg": "/EAD-project-page/static/media/snu.01cb9e6f834dff021e3b5570bd233a02.svg",
+    "static/media/lg.svg": "/EAD-project-page/static/media/lg.a4966e91c0a6994346e6.svg",
+    "main.817e55da.css.map": "/EAD-project-page/static/css/main.817e55da.css.map",
+    "main.02d54c0e.js.map": "/EAD-project-page/static/js/main.02d54c0e.js.map",
     "453.3b63644b.chunk.js.map": "/EAD-project-page/static/js/453.3b63644b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.074670bd.css",
-    "static/js/main.ddd076d9.js"
+    "static/css/main.817e55da.css",
+    "static/js/main.02d54c0e.js"
   ]
 }
