@@ -40,7 +40,7 @@ const Hero = () => {
         {stats && stats.length > 0 && (
           <div className="hero-stats">
             {stats.map((stat, i) => (
-              <div key={i} className="hero-stat">
+              <div key={stat.label} className="hero-stat">
                 <span className="hero-stat-value">{stat.value}</span>
                 <span className="hero-stat-label">{stat.label}</span>
               </div>

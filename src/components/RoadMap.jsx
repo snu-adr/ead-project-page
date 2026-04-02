@@ -25,7 +25,7 @@ const RoadMapEntry = ({ v, index }) => {
         <span className="roadmap-period">{v.period}</span>
         <ul className="roadmap-items">
           {v.items.map((item, i) => (
-            <li key={i}>{item}</li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
         {v.statusLabel && (

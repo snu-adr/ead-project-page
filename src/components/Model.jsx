@@ -28,8 +28,8 @@ const Model = () => {
                 <span className="comparison-card__badge">{comparison.researchBadge}</span>
               </div>
               <ul className="comparison-card__list">
-                {comparison.items.map((item, i) => (
-                  <li key={i} className="comparison-card__item">
+                {comparison.items.map((item) => (
+                  <li key={item.category} className="comparison-card__item">
                     <span className="comparison-card__category">{item.category}</span>
                     <span className="comparison-card__value">{item.research}</span>
                   </li>
@@ -51,8 +51,8 @@ const Model = () => {
                 <span className="comparison-card__badge">{comparison.eadBadge}</span>
               </div>
               <ul className="comparison-card__list">
-                {comparison.items.map((item, i) => (
-                  <li key={i} className="comparison-card__item">
+                {comparison.items.map((item) => (
+                  <li key={item.category} className="comparison-card__item">
                     <span className="comparison-card__category">{item.category}</span>
                     <span className="comparison-card__value">{item.ead}</span>
                   </li>
@@ -105,8 +105,8 @@ const Model = () => {
               </div>
               <p className="model-arch-panel-desc">{architecture.encoder.description}</p>
               <ul className="model-arch-panel-tasks">
-                {architecture.encoder.tasks.map((t, i) => (
-                  <li key={i}>{t}</li>
+                {architecture.encoder.tasks.map((t) => (
+                  <li key={t}>{t}</li>
                 ))}
               </ul>
             </div>
@@ -123,8 +123,8 @@ const Model = () => {
               </div>
               <p className="model-arch-panel-desc">{architecture.decoder.description}</p>
               <ul className="model-arch-panel-tasks">
-                {architecture.decoder.tasks.map((t, i) => (
-                  <li key={i}>{t}</li>
+                {architecture.decoder.tasks.map((t) => (
+                  <li key={t}>{t}</li>
                 ))}
               </ul>
             </div>
@@ -132,8 +132,8 @@ const Model = () => {
         </div>
 
         <div className="model-demos fade-in" ref={refDemos}>
-          {demos.map((demo, i) => (
-            <div key={i} className="model-demo">
+          {demos.map((demo) => (
+            <div key={demo.title} className="model-demo">
               <h4>{demo.title}</h4>
               <p>{demo.description}</p>
               <VideoEmbed url={demo.videoUrl} title={demo.title} placeholder={videoPlaceholder} />

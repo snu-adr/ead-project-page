@@ -13,7 +13,7 @@ const Notice = () => {
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="notice-list fade-in" ref={ref}>
         {items.map((item, i) => (
-          <div key={i} className={`notice-item${item.status === 'upcoming' ? ' notice-item--upcoming' : item.status === 'complete' ? ' notice-item--complete' : ''}`}>
+          <div key={item.date} className={`notice-item${item.status === 'upcoming' ? ' notice-item--upcoming' : item.status === 'complete' ? ' notice-item--complete' : ''}`}>
             <div className="notice-item-meta">
               <span className="notice-date">{item.date}</span>
               {item.badge && <span className={`notice-badge${item.status === 'complete' ? ' notice-badge--complete' : ''}`}>{item.badge}</span>}
