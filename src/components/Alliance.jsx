@@ -25,6 +25,7 @@ const Alliance = () => {
                     src={require(`../assets/logos/${partner.logo}`)}
                     alt={partner.name}
                     className="alliance-logo"
+                    loading="lazy"
                   />
                 ) : (
                   <span className="alliance-name">{partner.name}</span>
