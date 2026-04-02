@@ -80,6 +80,7 @@ const Navbar = () => {
                 href={item.href}
                 onClick={handleClick}
                 className={activeSection === item.href.slice(1) ? 'active' : ''}
+                aria-current={activeSection === item.href.slice(1) ? 'page' : undefined}
               >
                 {item.label}
               </a>
