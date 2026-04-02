@@ -276,12 +276,12 @@
 }
 
 .roadmap-entry.left::after {
-  right: calc(50% - 10px);
+  right: calc(50% + 10px);
   width: 30px;
 }
 
 .roadmap-entry.right::after {
-  left: calc(50% - 10px);
+  left: calc(50% + 10px);
   width: 30px;
   background: linear-gradient(
     90deg,
