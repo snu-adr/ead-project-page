@@ -47,6 +47,7 @@ const Navbar = () => {
           className={`navbar-toggle ${isOpen ? 'active' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"
+          aria-expanded={isOpen}
         >
           <span />
           <span />
