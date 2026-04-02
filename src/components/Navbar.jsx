@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import content from '../data/content.json';
 import '../styles/components/Navbar.css';
 
@@ -16,6 +16,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const toggleRef = useRef(null);
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    toggleRef.current?.focus();
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,11 +45,11 @@ const Navbar = () => {
     if (!isOpen) return;
     const handleOutsideClick = (e) => {
       if (!e.target.closest('.navbar')) {
-        setIsOpen(false);
+        closeMenu();
       }
     };
     const handleEscape = (e) => {
-      if (e.key === 'Escape') setIsOpen(false);
+      if (e.key === 'Escape') closeMenu();
     };
     document.addEventListener('click', handleOutsideClick);
     document.addEventListener('keydown', handleEscape);
@@ -54,7 +60,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   const handleClick = () => {
-    setIsOpen(false);
+    closeMenu();
   };
 
   return (
@@ -63,6 +69,7 @@ const Navbar = () => {
         <a className="navbar-logo" href="#hero">{content.hero.title}</a>
         <button
           type="button"
+          ref={toggleRef}
           className={`navbar-toggle ${isOpen ? 'active' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="내비게이션 메뉴 열기/닫기"
