@@ -82,14 +82,19 @@ styles/
 
 ## Model.css 구조
 
-- `.model-comparison`: Previous Research vs EAD 비교 카드 (5개 항목)
+- `.model-comparison`: Previous Research vs EAD 비교 카드 (4개 항목)
 - `.model-architecture`: 모델 구조 통합 패널 (accent left border)
+  - `.model-diagram-placeholder`: 모식도 이미지 준비 전 dashed border 플레이스홀더
+  - `.model-arch-panels`: ENCODER + DECODER 2열 패널 (flex row)
+  - `.model-arch-panel--encoder`: 시안 테마 (Object Detection, BEV Map Seg, Occupancy, Vector Map)
+  - `.model-arch-panel--decoder`: 퍼플 테마 (Planning, Safety Reasoning)
+  - `.model-arch-arrow`: ENCODER→DECODER 가로 화살표 (→, 모바일에서는 ↓)
 - `.model-demos`: 2열 그리드 — Real-world / Simulation 데모
 
 ## Contributor.css 구조
 
-- `.contributor-lead`: Project Lead 별도 행 (큰 아바타, accent 배경)
-- `.contributor-grid`: Researcher 그리드 (auto-fill, minmax 200px)
+- `.contributor-grid`: flex wrap + justify-content:center (9명, 5+4 자동 중앙 정렬)
+- `.contributor-card`: flex: 0 1 200px (고정 너비 200px, 수축 허용)
 
 ## Alliance.css 구조
 
@@ -98,4 +103,9 @@ styles/
 
 ## Contact.css 구조
 
+- `#contact`: padding 60px (기본 100px보다 축소 — 콘텐츠가 적어 여백 최적화)
 - `.contact-prose`: 줄글 형식, 이메일/GitHub 인라인 링크
+
+## Dataset.css 구조
+
+- `.dataset-benchmark-badge`: NAVSIM/Bench2Drive 배지 (시안 테두리, 카드 제목 아래 표시)
