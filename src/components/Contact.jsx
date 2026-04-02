@@ -12,7 +12,7 @@ const Contact = () => {
     <section id="contact" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} centered />
       <div className="contact-cards fade-in" ref={ref}>
-        <a className="contact-card contact-card--email" href={`mailto:${email}`}>
+        <a className="contact-card contact-card--email" href={`mailto:${email}`} aria-label={`이메일 보내기 — ${email}`}>
           <div className="contact-card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2" />
