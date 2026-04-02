@@ -80,13 +80,13 @@ const Model = () => {
             </div>
             <div className="model-flow-arrow" aria-hidden="true">→</div>
             <div className="model-flow-block model-flow-block--encoder">
-              <span className="model-flow-block-label">ENCODER</span>
-              <span className="model-flow-block-title">Perception</span>
+              <span className="model-flow-block-label">{architecture.encoder.label}</span>
+              <span className="model-flow-block-title">{architecture.encoder.title}</span>
             </div>
             <div className="model-flow-arrow" aria-hidden="true">→</div>
             <div className="model-flow-block model-flow-block--decoder">
-              <span className="model-flow-block-label">DECODER</span>
-              <span className="model-flow-block-title">Planning</span>
+              <span className="model-flow-block-label">{architecture.decoder.label}</span>
+              <span className="model-flow-block-title">{architecture.decoder.title}</span>
             </div>
             <div className="model-flow-arrow" aria-hidden="true">→</div>
             <div className="model-flow-output">
