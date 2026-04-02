@@ -401,6 +401,11 @@
 
 /* Mobile: single column layout */
 @media (max-width: 768px) {
+  /* Hide BEV car animations — layout shifts to single column, cars would overlap content */
+  .roadmap-bev {
+    display: none;
+  }
+
   .timeline-line {
     left: 16px;
   }
