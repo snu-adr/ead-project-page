@@ -115,6 +115,25 @@
   animation-play-state: paused;
 }
 
+/* ── Reduced Motion: stop marquee and hide duplicates ── */
+@media (prefers-reduced-motion: reduce) {
+  .alliance-marquee-track {
+    animation: none;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 0;
+  }
+
+  .alliance-marquee-track .alliance-marquee-item[aria-hidden="true"] {
+    display: none;
+  }
+
+  .alliance-marquee {
+    overflow: visible;
+  }
+}
+
 /* ── Responsive ── */
 
 @media (max-width: 768px) {
