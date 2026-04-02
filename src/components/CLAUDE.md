@@ -22,6 +22,9 @@
 - `useScrollFadeIn` 훅으로 스크롤 페이드인 애니메이션 적용 (Hero, Navbar 제외)
 - `useStaggeredFadeIn` 훅으로 자식 요소 순차 페이드인 (Dataset, Contributor 등)
 - 각 컴포넌트의 CSS는 `src/styles/components/`에 동일 파일명으로 존재
+- 자립적 콘텐츠 단위(공지사항 항목, 기여자 카드, 모델 데모)는 `<article>` 요소 사용
+- 장식 요소(timeline node, BEV 자동차, 스크롤 인디케이터 등)는 `aria-hidden="true"` 적용
+- Navbar: 모바일 메뉴 닫힐 때(Escape/외부클릭/링크클릭) `toggleRef`로 버튼에 포커스 복귀
 
 ## 의존 관계
 
