@@ -109,6 +109,7 @@ styles/
 
 - `.contributor-grid`: flex wrap + justify-content:center (9명, 5+4 자동 중앙 정렬)
 - `.contributor-card`: flex: 0 1 200px (고정 너비 200px, 수축 허용)
+- `@media (prefers-reduced-motion: reduce)`: lead 카드의 `lead-gradient` 배경 애니메이션을 정지하고 초기 위치(`background-position: 0% 50%`)에 고정
 
 ## Alliance.css 구조
 
