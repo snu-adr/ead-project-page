@@ -42,8 +42,15 @@ const Navbar = () => {
         setIsOpen(false);
       }
     };
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
     document.addEventListener('click', handleOutsideClick);
-    return () => document.removeEventListener('click', handleOutsideClick);
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener('keydown', handleEscape);
+    };
   }, [isOpen]);
 
   const handleClick = () => {
