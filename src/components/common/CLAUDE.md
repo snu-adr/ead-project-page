@@ -10,7 +10,7 @@
 |------|------|------|------|
 | `title` | string | O | 섹션 제목 |
 | `subtitle` | string | X | 섹션 부제 (없으면 렌더링 안 함) |
-| `tag` | string | X | 섹션 태그 레이블 (예: "ROADMAP", "MODEL") |
+| `tag` | string | X | 섹션 태그 레이블 (예: "ROADMAP", "MODEL") — `aria-hidden="true"` 적용 (section aria-label과 중복 방지) |
 | `centered` | bool | X | true이면 `section-title--centered` 클래스 추가 (중앙 정렬) |
 
 **사용처**: RoadMap, Dataset, Model, Notice, Contributor, Alliance, Contact (centered: Alliance, Contact)
