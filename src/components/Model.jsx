@@ -103,7 +103,7 @@ const Model = () => {
             <div className="model-arch-panel model-arch-panel--encoder">
               <div className="model-arch-panel-header">
                 <span className="model-arch-panel-label">{architecture.encoder.label}</span>
-                <span className="model-arch-panel-title">{architecture.encoder.title}</span>
+                <h4 className="model-arch-panel-title">{architecture.encoder.title}</h4>
               </div>
               <p className="model-arch-panel-desc">{architecture.encoder.description}</p>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
@@ -122,7 +122,7 @@ const Model = () => {
             <div className="model-arch-panel model-arch-panel--decoder">
               <div className="model-arch-panel-header">
                 <span className="model-arch-panel-label">{architecture.decoder.label}</span>
-                <span className="model-arch-panel-title">{architecture.decoder.title}</span>
+                <h4 className="model-arch-panel-title">{architecture.decoder.title}</h4>
               </div>
               <p className="model-arch-panel-desc">{architecture.decoder.description}</p>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
