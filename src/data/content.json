@@ -27,7 +27,8 @@
           "360° Perception 및 E2E Planning",
           "실제 배포 기준 설계"
         ],
-        "status": "completed"
+        "status": "completed",
+        "statusLabel": "출시 완료"
       },
       {
         "version": "v2.0",

@@ -28,8 +28,8 @@ const RoadMapEntry = ({ v, index }) => {
             <li key={i}>{item}</li>
           ))}
         </ul>
-        {v.status === 'completed' && (
-          <div className="roadmap-status-tag completed-tag">Completed</div>
+        {v.statusLabel && (
+          <div className="roadmap-status-tag completed-tag">{v.statusLabel}</div>
         )}
       </div>
     </div>
