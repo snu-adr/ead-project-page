@@ -93,6 +93,10 @@
   color: var(--color-accent);
 }
 
+.notice-item--upcoming:hover h3 {
+  color: var(--color-warning);
+}
+
 .notice-item p {
   color: var(--color-text-light);
   font-size: 0.95rem;
