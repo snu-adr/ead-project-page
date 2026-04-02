@@ -69,7 +69,7 @@ const Model = () => {
           <p>{architecture.description}</p>
 
           {/* Architecture flow diagram */}
-          <div className="model-flow-diagram" role="img" aria-label="Camera + LiDAR 입력 → ENCODER Perception → DECODER Planning → Trajectory 출력">
+          <div className="model-flow-diagram" role="img" aria-label={`${flowLabels.camera} + ${flowLabels.lidar} 입력 → ${architecture.encoder.label} ${architecture.encoder.title} → ${architecture.decoder.label} ${architecture.decoder.title} → ${flowLabels.trajectory} 출력`}>
             <div className="model-flow-inputs">
               <div className="model-flow-input-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M3 9a9 9 0 0 1 18 0M3 15a9 9 0 0 0 18 0"/></svg>

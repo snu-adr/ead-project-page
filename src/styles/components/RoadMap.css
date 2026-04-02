@@ -318,7 +318,7 @@
   opacity: 0;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  will-change: top, opacity;
+  will-change: opacity;
 }
 
 /* 좌측 차선 — 하행 */
