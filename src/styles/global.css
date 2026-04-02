@@ -127,7 +127,7 @@ section {
 
 .video-placeholder {
   width: 100%;
-  padding-top: 28%;
+  padding-top: 56.25%; /* 16:9 ratio */
   position: relative;
   background:
     linear-gradient(135deg, rgba(56, 189, 248, 0.03) 0%, rgba(167, 139, 250, 0.03) 100%);
