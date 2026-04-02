@@ -403,6 +403,18 @@
   }
 }
 
+/* ─── Reduced Motion: release will-change hints on disabled animations ─── */
+@media (prefers-reduced-motion: reduce) {
+  .bev-car {
+    will-change: auto;
+  }
+
+  .timeline-node.upcoming .timeline-node-inner {
+    animation: none;
+    will-change: auto;
+  }
+}
+
 /* Mobile: single column layout */
 @media (max-width: 768px) {
   /* Hide BEV car animations — layout shifts to single column, cars would overlap content */
