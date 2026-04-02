@@ -319,7 +319,8 @@
   .hero-subtitle,
   .hero-affiliation,
   .hero-description,
-  .hero-stats {
+  .hero-stats,
+  .hero-scroll-indicator {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
