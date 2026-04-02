@@ -259,6 +259,15 @@ section {
   html {
     scroll-behavior: auto;
   }
+
+  /* Make all scroll-triggered animations immediately visible — content
+     should never be hidden from users who prefer reduced motion */
+  .fade-in,
+  .stagger-fade-in > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* ─── Skip Link (keyboard accessibility) ─── */
