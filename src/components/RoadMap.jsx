@@ -13,7 +13,7 @@ const RoadMapEntry = ({ v, index }) => {
       className={`roadmap-entry ${isLeft ? 'left' : 'right'} fade-in`}
       ref={ref}
     >
-      <div className={`timeline-node ${v.status}`}>
+      <div className={`timeline-node ${v.status}`} aria-hidden="true">
         <div className="timeline-node-inner" />
       </div>
       <div className={`roadmap-card ${v.status}`}>
@@ -57,7 +57,7 @@ const RoadMap = () => {
       <section id="roadmap">
         <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
         <div className="roadmap-timeline">
-          <div className="timeline-line" />
+          <div className="timeline-line" aria-hidden="true" />
           {versions.map((v, index) => (
             <RoadMapEntry key={v.version} v={v} index={index} />
           ))}
