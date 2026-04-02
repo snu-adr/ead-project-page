@@ -85,7 +85,7 @@
 .contact-card-label {
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
