@@ -358,21 +358,7 @@
 }
 
 .model-flow-input-chip--optional {
-  background: rgba(56, 189, 248, 0.03);
-  border: 1px dashed rgba(56, 189, 248, 0.25);
-  opacity: 0.8;
-}
-
-.model-flow-optional-badge {
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  background: rgba(107, 114, 128, 0.15);
-  border: 1px solid rgba(107, 114, 128, 0.25);
-  border-radius: 4px;
-  padding: 1px 6px;
-  letter-spacing: 0.3px;
-  margin-left: 2px;
+  border-style: dashed;
 }
 
 .model-flow-input-chip svg {
@@ -514,7 +500,7 @@
   font-size: 0.88rem;
   color: var(--color-text-light);
   line-height: 1.7;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .model-arch-panel-tasks {

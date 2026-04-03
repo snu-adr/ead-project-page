@@ -79,7 +79,6 @@ const Model = () => {
               <div className="model-flow-input-chip model-flow-input-chip--optional">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="6" strokeDasharray="2 2"/><circle cx="12" cy="12" r="10" strokeDasharray="3 3"/></svg>
                 <span>{flowLabels.lidar}</span>
-                <span className="model-flow-optional-badge">{flowLabels.lidarOptional}</span>
               </div>
             </div>
             <div className="model-flow-arrow" aria-hidden="true">→</div>

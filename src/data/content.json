@@ -117,7 +117,7 @@
       "decoder": {
         "label": "DECODER",
         "title": "Planning",
-        "description": "Sparse World Model을 내부적으로 구성하여 미래 상황을 시뮬레이션합니다. 주변 에이전트의 움직임을 예측하고, 이를 바탕으로 최적 경로 계획과 Safety Reasoning을 End-to-End로 수행합니다.",
+        "description": "후보 경로들의 미래를 Sparse World Model로 시뮬레이션하여, Safety Reasoning을 통해 가장 안전한 경로를 선택합니다.",
         "tasks": [
           "주변 에이전트 예측 (Agent Prediction)",
           "세계 모델 시뮬레이션 (World Model Simulation)",
