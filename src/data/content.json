@@ -16,16 +16,17 @@
   "roadmap": {
     "sectionTitle": "로드맵",
     "sectionTag": "ROADMAP",
-    "sectionSubtitle": "v1.0 출시 완료 — v2.0은 더 크게 확장",
+    "sectionSubtitle": "실배포 기준으로 설계된 v1.0, 대규모 데이터로 확장하는 v2.0",
     "versions": [
       {
         "version": "v1.0",
         "title": "Foundation",
-        "period": "2026",
+        "period": "2026.4",
         "items": [
           "오픈소스 데이터셋 기반 훈련 및 검증",
           "전방위 카메라 + LiDAR 센서 구성",
-          "360° Perception 및 E2E Planning",
+          "360° Perception — Object Detection, Occupancy Prediction, BEV Map Segmentation, Vector Map Construction",
+          "E2E Planning — Agent Prediction, World Model Simulation, Safety Reasoning",
           "Camera-Only / LiDAR-Camera 두 가지 구성 제공",
           "실제 배포 기준 설계"
         ],
@@ -35,7 +36,7 @@
       {
         "version": "v2.0",
         "title": "Expansion",
-        "period": "미정",
+        "period": "2026.8",
         "items": [
           "자체 데이터 파이프라인 구축",
           "Large-scale Dataset 기반 E2E 모델 배포",
