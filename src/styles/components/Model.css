@@ -379,18 +379,50 @@
   gap: 6px;
   min-width: 220px;
   min-height: 180px;
+  position: relative;
+}
+
+/* 반사광 오버레이 — clip-path가 pseudo-element도 클리핑하므로 trapezoid 안에 적용됨 */
+.model-flow-block::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.04) 30%,
+    transparent 58%
+  );
+  pointer-events: none;
 }
 
 /* Encoder: 왼쪽이 넓고 오른쪽이 좁아지는 사다리꼴 */
 .model-flow-block--encoder {
-  background: rgba(56, 189, 248, 0.12);
+  background: linear-gradient(
+    145deg,
+    rgba(56, 189, 248, 0.32) 0%,
+    rgba(56, 189, 248, 0.08) 50%,
+    rgba(56, 189, 248, 0.18) 100%
+  );
   clip-path: polygon(0 0, 100% 18%, 100% 82%, 0 100%);
 }
 
 /* Decoder: 왼쪽이 좁고 오른쪽이 넓어지는 사다리꼴 */
 .model-flow-block--decoder {
-  background: rgba(167, 139, 250, 0.12);
+  background: linear-gradient(
+    145deg,
+    rgba(167, 139, 250, 0.32) 0%,
+    rgba(167, 139, 250, 0.08) 50%,
+    rgba(167, 139, 250, 0.18) 100%
+  );
   clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 82%);
+}
+
+/* Hover shimmer */
+.model-flow-block--encoder:hover,
+.model-flow-block--decoder:hover {
+  filter: brightness(1.15);
+  transition: filter 0.3s ease;
 }
 
 .model-flow-block-label {
