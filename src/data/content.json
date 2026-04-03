@@ -117,12 +117,12 @@
       "decoder": {
         "label": "DECODER",
         "title": "Planning",
-        "description": "후보 경로들의 미래를 Sparse World Model로 시뮬레이션하여, Safety Reasoning을 통해 가장 안전한 경로를 선택합니다.",
+        "description": "후보 경로들의 미래를 Sparse World Model로 시뮬레이션하여, Safety Filtering을 통해 가장 안전한 경로를 선택합니다.",
         "tasks": [
           "주변 에이전트 예측 (Agent Prediction)",
           "세계 모델 시뮬레이션 (World Model Simulation)",
           "경로 계획 (Trajectory Planning)",
-          "안전 추론 (Safety Reasoning)"
+          "안전 추론 (Safety Filtering)"
         ]
       }
     },
