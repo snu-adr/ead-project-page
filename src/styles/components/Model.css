@@ -328,7 +328,7 @@
   border: 1px solid var(--color-border);
   border-radius: 16px;
   background: rgba(56, 189, 248, 0.02);
-  padding: 48px 40px 32px;
+  padding: 56px 40px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -369,23 +369,30 @@
 }
 
 .model-flow-block {
-  padding: 20px 40px;
-  border-radius: 12px;
+  padding: 28px 44px;
+  border-radius: 0;
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  min-width: 160px;
+  min-width: 190px;
+  min-height: 150px;
 }
 
+/* Encoder: 왼쪽이 넓고 오른쪽이 좁아지는 사다리꼴 */
 .model-flow-block--encoder {
   background: rgba(56, 189, 248, 0.1);
-  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  clip-path: polygon(0 0, 100% 18%, 100% 82%, 0 100%);
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.2)) drop-shadow(0 0 1px rgba(56, 189, 248, 0.5));
 }
 
+/* Decoder: 왼쪽이 좁고 오른쪽이 넓어지는 사다리꼴 */
 .model-flow-block--decoder {
   background: rgba(167, 139, 250, 0.1);
-  border: 1.5px solid rgba(167, 139, 250, 0.35);
+  clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 82%);
+  filter: drop-shadow(0 0 6px rgba(167, 139, 250, 0.2)) drop-shadow(0 0 1px rgba(167, 139, 250, 0.5));
 }
 
 .model-flow-block-label {
