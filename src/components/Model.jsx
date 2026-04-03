@@ -93,7 +93,13 @@ const Model = () => {
             </div>
             <div className="model-flow-arrow" aria-hidden="true">→</div>
             <div className="model-flow-output">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M3 12h18M12 5l7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <path d="M3 19 C6 19 9 13 13 11 S19 7 22 5" strokeLinecap="round" strokeDasharray="2 2"/>
+                <path d="M20 3 L22 5 L20 7" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="3" cy="19" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="10.5" cy="13" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="18" cy="7.5" r="1.5" fill="currentColor" stroke="none"/>
+              </svg>
               <span>{flowLabels.trajectory}</span>
             </div>
             <div className="model-flow-caption">{architecture.diagramPlaceholder}</div>
