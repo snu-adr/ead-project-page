@@ -106,7 +106,7 @@
       "encoder": {
         "label": "ENCODER",
         "title": "Perception",
-        "description": "전방위 카메라 + LiDAR 입력을 통합하여 주변 환경을 구조화된 표현으로 변환합니다. Sparse World Model 개념을 차용합니다.",
+        "description": "전방위 카메라 + LiDAR 입력을 통합하여 주변 환경을 구조화된 표현으로 변환합니다.",
         "tasks": [
           "Object Detection",
           "BEV Map Segmentation",
@@ -117,9 +117,11 @@
       "decoder": {
         "label": "DECODER",
         "title": "Planning",
-        "description": "인코더 출력을 바탕으로 주행 경로 계획과 Safety Reasoning을 End-to-End로 수행합니다.",
+        "description": "Sparse World Model을 내부적으로 구성하여 미래 상황을 시뮬레이션합니다. 주변 에이전트의 움직임을 예측하고, 이를 바탕으로 최적 경로 계획과 Safety Reasoning을 End-to-End로 수행합니다.",
         "tasks": [
-          "경로 계획 (Planning)",
+          "주변 에이전트 예측 (Agent Prediction)",
+          "세계 모델 시뮬레이션 (World Model Simulation)",
+          "경로 계획 (Trajectory Planning)",
           "안전 추론 (Safety Reasoning)"
         ]
       }
@@ -128,6 +130,7 @@
     "flowLabels": {
       "camera": "Camera",
       "lidar": "LiDAR",
+      "lidarOptional": "선택",
       "trajectory": "Trajectory"
     },
     "demos": [

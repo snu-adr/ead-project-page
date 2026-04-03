@@ -7,6 +7,7 @@ import '../styles/components/Model.css';
 
 const Model = () => {
   const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture, demos, videoPlaceholder, flowLabels } = content.model;
+
   const refComparison = useScrollFadeIn();
   const refArchitecture = useScrollFadeIn();
   const refDemos = useScrollFadeIn();
@@ -69,15 +70,16 @@ const Model = () => {
           <p>{architecture.description}</p>
 
           {/* Architecture flow diagram */}
-          <div className="model-flow-diagram" role="img" aria-label={`${flowLabels.camera} + ${flowLabels.lidar} 입력 → ${architecture.encoder.label} ${architecture.encoder.title} → ${architecture.decoder.label} ${architecture.decoder.title} → ${flowLabels.trajectory} 출력`}>
+          <div className="model-flow-diagram" role="img" aria-label={`${flowLabels.camera} + ${flowLabels.lidar}(${flowLabels.lidarOptional}) 입력 → ${architecture.encoder.label} ${architecture.encoder.title} → ${architecture.decoder.label} ${architecture.decoder.title} → ${flowLabels.trajectory} 출력`}>
             <div className="model-flow-inputs">
               <div className="model-flow-input-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M3 9a9 9 0 0 1 18 0M3 15a9 9 0 0 0 18 0"/></svg>
                 <span>{flowLabels.camera}</span>
               </div>
-              <div className="model-flow-input-chip">
+              <div className="model-flow-input-chip model-flow-input-chip--optional">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="6" strokeDasharray="2 2"/><circle cx="12" cy="12" r="10" strokeDasharray="3 3"/></svg>
                 <span>{flowLabels.lidar}</span>
+                <span className="model-flow-optional-badge">{flowLabels.lidarOptional}</span>
               </div>
             </div>
             <div className="model-flow-arrow" aria-hidden="true">→</div>
