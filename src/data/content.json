@@ -25,7 +25,7 @@
         "items": [
           "오픈소스 데이터셋 기반 훈련 및 검증",
           "전방위 카메라 + LiDAR 센서 구성",
-          "다중 태스크 Perception 및 E2E Planning",
+          "멀티태스크 Perception · E2E Planning 풀 파이프라인 구현",
           "Camera-Only / LiDAR-Camera 두 가지 구성 제공",
           "실제 배포 기준 설계"
         ],
