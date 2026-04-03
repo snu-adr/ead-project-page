@@ -188,6 +188,11 @@
   gap: 12px;
 }
 
+.roadmap-version-row .roadmap-badge {
+  position: relative;
+  top: 4px;
+}
+
 .roadmap-version {
   font-size: 1.8rem;
   font-weight: 800;
