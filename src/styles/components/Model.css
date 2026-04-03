@@ -369,7 +369,7 @@
 }
 
 .model-flow-block {
-  padding: 28px 44px;
+  padding: 32px 52px;
   border-radius: 0;
   border: none;
   display: flex;
@@ -377,22 +377,20 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  min-width: 190px;
-  min-height: 150px;
+  min-width: 220px;
+  min-height: 180px;
 }
 
 /* Encoder: 왼쪽이 넓고 오른쪽이 좁아지는 사다리꼴 */
 .model-flow-block--encoder {
-  background: rgba(56, 189, 248, 0.1);
+  background: rgba(56, 189, 248, 0.12);
   clip-path: polygon(0 0, 100% 18%, 100% 82%, 0 100%);
-  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.2)) drop-shadow(0 0 1px rgba(56, 189, 248, 0.5));
 }
 
 /* Decoder: 왼쪽이 좁고 오른쪽이 넓어지는 사다리꼴 */
 .model-flow-block--decoder {
-  background: rgba(167, 139, 250, 0.1);
+  background: rgba(167, 139, 250, 0.12);
   clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 82%);
-  filter: drop-shadow(0 0 6px rgba(167, 139, 250, 0.2)) drop-shadow(0 0 1px rgba(167, 139, 250, 0.5));
 }
 
 .model-flow-block-label {
