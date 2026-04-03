@@ -18,10 +18,12 @@ const RoadMapEntry = ({ v, index }) => {
       </div>
       <div className={`roadmap-card ${v.status}`}>
         <h3 className="roadmap-card-title">
-          <span className="roadmap-version">{v.version}</span>
+          <span className="roadmap-version-row">
+            <span className="roadmap-version">{v.version}</span>
+            {v.badge && <span className="roadmap-badge">{v.badge}</span>}
+          </span>
           <span className="roadmap-title-text">{v.title}</span>
         </h3>
-        {v.badge && <span className="roadmap-badge">{v.badge}</span>}
         {/^\d{4}$/.test(v.period)
           ? <time className="roadmap-period" dateTime={v.period}>{v.period}</time>
           : <span className="roadmap-period">{v.period}</span>
