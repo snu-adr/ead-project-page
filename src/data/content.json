@@ -25,8 +25,8 @@
         "items": [
           "오픈소스 데이터셋 기반 훈련 및 검증",
           "전방위 카메라 + LiDAR 센서 구성",
-          "360° Perception — Object Detection, Occupancy Prediction, BEV Map Segmentation, Vector Map Construction",
-          "E2E Planning — Agent Prediction, World Model Simulation, Safety Reasoning",
+          "360° Perception (Object Detection · Occupancy Prediction 등 다중 태스크)",
+          "E2E Planning (World Model Simulation · Safety Reasoning)",
           "Camera-Only / LiDAR-Camera 두 가지 구성 제공",
           "실제 배포 기준 설계"
         ],
