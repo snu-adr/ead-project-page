@@ -108,10 +108,10 @@
         "title": "Perception",
         "description": "전방위 카메라 + LiDAR 입력을 통합하여 주변 환경을 구조화된 표현으로 변환합니다.",
         "tasks": [
-          "Object Detection",
-          "BEV Map Segmentation",
-          "Occupancy Prediction",
-          "Vector Map Construction"
+          "객체 탐지 (Object Detection)",
+          "BEV 맵 분할 (BEV Map Segmentation)",
+          "점유 예측 (Occupancy Prediction)",
+          "벡터 맵 구성 (Vector Map Construction)"
         ]
       },
       "decoder": {
