@@ -382,50 +382,63 @@
   position: relative;
 }
 
-/* 반사광: 각 블록의 "열린 면"에서 빛이 들어오는 느낌 */
+/* Shimmer sweep — 대각선 빛이 블록을 가로지름 */
 .model-flow-block::after {
   content: '';
   position: absolute;
-  inset: 0;
+  top: -50%;
+  left: -120%;
+  width: 55%;
+  height: 200%;
+  background: linear-gradient(
+    108deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.11) 50%,
+    transparent 80%
+  );
+  animation: block-shimmer 6s ease-in-out infinite;
   pointer-events: none;
 }
 
-/* Encoder: 왼쪽(넓은 입력면)이 밝고 오른쪽으로 갈수록 어두워짐 */
+.model-flow-block--decoder::after {
+  animation-delay: 2s;
+}
+
+@keyframes block-shimmer {
+  0%   { transform: translateX(0%); }
+  30%  { transform: translateX(650%); }
+  100% { transform: translateX(650%); }
+}
+
+/* Encoder: 그리드 텍스처 + 강한 코너 하이라이트 */
 .model-flow-block--encoder {
-  background: linear-gradient(
-    to right,
-    rgba(56, 189, 248, 0.30) 0%,
-    rgba(56, 189, 248, 0.14) 40%,
-    rgba(56, 189, 248, 0.05) 100%
-  );
+  background:
+    linear-gradient(rgba(56, 189, 248, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.045) 1px, transparent 1px),
+    radial-gradient(ellipse at 10% 15%, rgba(56, 189, 248, 0.45) 0%, transparent 55%),
+    linear-gradient(160deg, rgba(56, 189, 248, 0.12) 0%, rgba(10, 15, 26, 0.6) 60%, rgba(56, 189, 248, 0.08) 100%);
+  background-size: 22px 22px, 22px 22px, 100% 100%, 100% 100%;
   clip-path: polygon(0 0, 100% 18%, 100% 82%, 0 100%);
 }
 
-.model-flow-block--encoder::after {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.07) 0%,
-    transparent 50%
-  );
-}
-
-/* Decoder: 오른쪽(넓은 출력면)이 밝고 왼쪽으로 갈수록 어두워짐 */
+/* Decoder: 그리드 텍스처 + 강한 코너 하이라이트 */
 .model-flow-block--decoder {
-  background: linear-gradient(
-    to right,
-    rgba(167, 139, 250, 0.05) 0%,
-    rgba(167, 139, 250, 0.14) 60%,
-    rgba(167, 139, 250, 0.30) 100%
-  );
+  background:
+    linear-gradient(rgba(167, 139, 250, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.045) 1px, transparent 1px),
+    radial-gradient(ellipse at 10% 15%, rgba(167, 139, 250, 0.45) 0%, transparent 55%),
+    linear-gradient(160deg, rgba(167, 139, 250, 0.12) 0%, rgba(10, 15, 26, 0.6) 60%, rgba(167, 139, 250, 0.08) 100%);
+  background-size: 22px 22px, 22px 22px, 100% 100%, 100% 100%;
   clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 82%);
 }
 
-.model-flow-block--decoder::after {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.07) 0%,
-    transparent 50%
-  );
+/* 타이틀 텍스트 글로우 */
+.model-flow-block--encoder .model-flow-block-title {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+}
+
+.model-flow-block--decoder .model-flow-block-title {
+  text-shadow: 0 0 20px rgba(167, 139, 250, 0.7);
 }
 
 .model-flow-block-label {
@@ -477,15 +490,6 @@
   color: var(--color-text-muted);
   letter-spacing: 0.5px;
   opacity: 0.6;
-}
-
-/* --- Model Diagram Image (flow output) --- */
-.model-flow-diagram-img {
-  width: 140px;
-  height: 100px;
-  object-fit: contain;
-  border-radius: 8px;
-  flex-shrink: 0;
 }
 
 /* --- Encoder / Decoder Panels --- */
