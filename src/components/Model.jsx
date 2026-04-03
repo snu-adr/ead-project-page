@@ -3,6 +3,7 @@ import content from '../data/content.json';
 import SectionTitle from './common/SectionTitle';
 import VideoEmbed from './common/VideoEmbed';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
+import modelDiagram from '../assets/images/model-diagram.svg';
 import '../styles/components/Model.css';
 
 const Model = () => {
@@ -92,17 +93,11 @@ const Model = () => {
               <span className="model-flow-block-title">{architecture.decoder.title}</span>
             </div>
             <div className="model-flow-arrow" aria-hidden="true">→</div>
-            <div className="model-flow-output">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                <path d="M3 19 C6 18 8 6 21 6" strokeLinecap="round"/>
-                <path d="M19 4 L21 6 L19 8" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="3" cy="19" r="1.5" fill="currentColor" stroke="none"/>
-                <circle cx="9" cy="13" r="1.5" fill="currentColor" stroke="none"/>
-                <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" stroke="none"/>
-              </svg>
-              <span>{flowLabels.trajectory}</span>
-            </div>
-            <div className="model-flow-caption">{architecture.diagramPlaceholder}</div>
+            <img
+              src={modelDiagram}
+              alt="EAD 모델 구조 모식도"
+              className="model-flow-diagram-img"
+            />
           </div>
 
           {/* Encoder / Decoder panels */}
