@@ -216,7 +216,7 @@
   "contact": {
     "sectionTitle": "연락처",
     "sectionTag": "CONTACT",
-    "sectionSubtitle": "EAD 프로젝트에 대해 문의하세요",
+    "sectionSubtitle": "",
     "collaborationTitle": "함께 만드는 자율주행 생태계",
     "collaborationNote": "EAD는 국내 자율주행 기술 격차를 줄이기 위한 개방형 프로젝트입니다. 기업·연구자·개발자 모두의 연락을 환영하며, 각자 잘하는 영역에서 함께 기여할 수 있는 방법을 찾겠습니다.",
     "collaborationTopics": ["모델 코드 제공", "공동 연구", "데이터 협업", "Alliance 참여"],
