@@ -17,18 +17,27 @@
     "sectionTitle": "Overview",
     "sectionTag": "OVERVIEW",
     "sectionSubtitle": "An E2E autonomous driving project designed for real-world deployment",
-    "intro": "EAD (Evolutionary Autonomous Driving) is an E2E autonomous driving project led by SNU ADR Lab. While conventional research models focus on benchmark performance, EAD is designed with real-world deployment in mind. It delivers surround-view multi-camera + LiDAR fusion, 360° Perception, and End-to-End Planning in a single pipeline — in collaboration with industry partners including HL Klemove, LG Electronics, and A2Z.",
-    "demosTitle": "Model Demo",
+    "introLead": "An E2E autonomous driving model from SNU ADR Lab — built for real deployment, not just benchmarks.",
+    "introBody": "Surround-view multi-camera + LiDAR fusion enables 360° Perception, while a single pipeline handles everything from Perception to Planning. Built in collaboration with industry partners — HL Klemove, LG Electronics, A2Z — who handle data and hardware.",
+    "keyFeatures": [
+      { "label": "360° Perception" },
+      { "label": "E2E Planning" },
+      { "label": "LiDAR Fusion" },
+      { "label": "Deployment-Ready" },
+      { "label": "Open Source" }
+    ],
     "demos": [
       {
         "title": "Real-world Demo",
-        "description": "E2E autonomous driving demonstration on a real-world data benchmark.",
-        "videoUrl": null
+        "description": "E2E driving on the NAVSIM real-world benchmark",
+        "videoUrl": null,
+        "accent": "cyan"
       },
       {
         "title": "Simulation Closed-loop Demo",
-        "description": "Closed-loop driving demonstration in the CARLA simulation environment.",
-        "videoUrl": null
+        "description": "Closed-loop driving on CARLA-based Bench2Drive",
+        "videoUrl": null,
+        "accent": "purple"
       }
     ]
   },

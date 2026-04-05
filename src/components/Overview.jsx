@@ -9,7 +9,7 @@ import '../styles/components/Overview.css';
 
 const Overview = () => {
   const { content } = useLanguage();
-  const { sectionTitle, sectionTag, sectionSubtitle, intro, demosTitle, demos } = content.overview;
+  const { sectionTitle, sectionTag, sectionSubtitle, introLead, introBody, keyFeatures, demos } = content.overview;
   const videoPlaceholder = content.model.videoPlaceholder;
 
   const refIntro = useScrollFadeIn();
@@ -22,26 +22,33 @@ const Overview = () => {
 
   return (
     <section id="overview" aria-label={sectionTitle}>
+      <div className="overview-bg" aria-hidden="true" />
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
 
-      <p className="overview-intro fade-in" ref={refIntro}>
-        {intro}
-      </p>
+      <div className="overview-intro fade-in" ref={refIntro}>
+        <p className="overview-intro-lead">{introLead}</p>
+        <p className="overview-intro-body">{introBody}</p>
+        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
+        <ul className="overview-features" aria-label="핵심 특징" role="list">
+          {keyFeatures.map((f) => (
+            <li key={f.label} className="overview-feature-pill">{f.label}</li>
+          ))}
+        </ul>
+      </div>
 
       <div className="overview-demos fade-in" ref={refDemos}>
-        <h3 className="overview-demos-title">{demosTitle}</h3>
-        <div className="overview-demos-grid">
-          {demos.map((demo) => {
-            const url = demo.videoUrl || gifAssets[demo.title] || null;
-            return (
-              <article key={demo.title} className="overview-demo">
-                <h4>{demo.title}</h4>
+        {demos.map((demo) => {
+          const url = demo.videoUrl || gifAssets[demo.title] || null;
+          return (
+            <article key={demo.title} className={`overview-demo overview-demo--${demo.accent}`}>
+              <div className="overview-demo-header">
+                <h3>{demo.title}</h3>
                 <p>{demo.description}</p>
-                <VideoEmbed url={url} title={demo.title} placeholder={videoPlaceholder} />
-              </article>
-            );
-          })}
-        </div>
+              </div>
+              <VideoEmbed url={url} title={demo.title} placeholder={videoPlaceholder} />
+            </article>
+          );
+        })}
       </div>
     </section>
   );

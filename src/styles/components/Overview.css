@@ -3,77 +3,197 @@
    ============================================= */
 
 #overview {
-  padding-bottom: 80px;
+  position: relative;
+  padding-bottom: 100px;
+  overflow: hidden;
 }
 
-/* --- Intro paragraph --- */
+/* --- Subtle background glow --- */
+.overview-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 40% at 50% 20%, rgba(56, 189, 248, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* =============================================
+   Intro Block
+   ============================================= */
+
 .overview-intro {
-  max-width: 760px;
-  margin: 0 auto 60px;
-  font-size: 1.05rem;
-  line-height: 1.85;
-  color: var(--color-text-light);
+  max-width: 720px;
+  margin: 0 auto 72px;
   text-align: center;
+}
+
+/* Lead sentence — bright, larger */
+.overview-intro-lead {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 20px;
   letter-spacing: 0.2px;
 }
 
-/* --- Demos block --- */
-.overview-demos-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-text);
-  text-align: center;
-  margin-bottom: 28px;
-  letter-spacing: 0.3px;
+/* Body — softer */
+.overview-intro-body {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text-light);
+  margin-bottom: 32px;
+  letter-spacing: 0.1px;
 }
 
-.overview-demos-grid {
+/* =============================================
+   Key Feature Pills
+   ============================================= */
+
+.overview-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overview-feature-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.06);
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.overview-feature-pill::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.overview-feature-pill:hover {
+  border-color: rgba(56, 189, 248, 0.6);
+  background: rgba(56, 189, 248, 0.12);
+}
+
+/* =============================================
+   Demo Grid
+   ============================================= */
+
+.overview-demos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
 }
 
-/* --- Individual demo card --- */
+/* --- Demo card base --- */
 .overview-demo {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 16px;
-  padding: 24px;
-  transition: border-color 0.2s ease;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
 .overview-demo:hover {
-  border-color: var(--color-border-light);
+  transform: translateY(-2px);
 }
 
-.overview-demo h4 {
+/* Accent top border variants */
+.overview-demo--cyan {
+  border-top: 2px solid var(--color-accent);
+}
+
+.overview-demo--cyan:hover {
+  border-color: var(--color-accent);
+  border-top-color: var(--color-accent);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.08);
+}
+
+.overview-demo--purple {
+  border-top: 2px solid var(--color-accent-purple);
+}
+
+.overview-demo--purple:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  border-top-color: var(--color-accent-purple);
+  box-shadow: 0 8px 32px rgba(167, 139, 250, 0.08);
+}
+
+/* --- Demo card header --- */
+.overview-demo-header {
+  padding: 20px 24px 16px;
+}
+
+.overview-demo h3 {
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-text);
-  margin-bottom: 8px;
-  letter-spacing: 0.3px;
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+
+.overview-demo--cyan h3 {
+  color: var(--color-accent);
+}
+
+.overview-demo--purple h3 {
+  color: var(--color-accent-purple);
 }
 
 .overview-demo p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
-  margin-bottom: 16px;
-  line-height: 1.6;
+  line-height: 1.5;
+  margin: 0;
 }
 
-/* --- Responsive --- */
+/* VideoEmbed inside demo card — no padding wrapper needed */
+.overview-demo .video-embed,
+.overview-demo .video-placeholder {
+  border-radius: 0;
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
+
 @media (max-width: 768px) {
   #overview {
-    padding-bottom: 60px;
+    padding-bottom: 64px;
   }
 
   .overview-intro {
-    font-size: 0.95rem;
-    margin-bottom: 48px;
     text-align: left;
+    margin-bottom: 52px;
   }
 
-  .overview-demos-grid {
+  .overview-intro-lead {
+    font-size: 1.05rem;
+  }
+
+  .overview-intro-body {
+    font-size: 0.95rem;
+  }
+
+  .overview-features {
+    justify-content: flex-start;
+  }
+
+  .overview-demos {
     grid-template-columns: 1fr;
     gap: 20px;
   }
