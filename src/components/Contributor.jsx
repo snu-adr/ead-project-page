@@ -24,6 +24,7 @@ const enToKo = {
   'Geonho Bang': '방건호',
   'Jungho Kim': '김정호',
   'Keunjoo Baek': '백근주',
+  'Geunju Baek': '백근주',
   'Wonjun Jeong': '정원준',
   'Dongyoung Lee': '이동영',
   'Jiyong Oh': '오지용',

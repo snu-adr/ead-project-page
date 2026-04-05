@@ -63,7 +63,7 @@
 /* ── Researcher 3열 그리드 ── */
 .contributor-researcher-grid {
   display: grid;
-  grid-template-columns: repeat(3, 110px);
+  grid-template-columns: repeat(3, 120px);
   gap: 10px;
 }
 
@@ -75,7 +75,7 @@
   padding: 24px 16px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  width: 110px;
+  width: 120px;
 }
 
 .contributor-card:hover {
@@ -137,6 +137,7 @@
 .contributor-name-family {
   display: block;
   line-height: 1.4;
+  font-size: 0.82rem;
 }
 
 .contributor-card p {
