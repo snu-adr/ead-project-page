@@ -125,6 +125,18 @@ button {
   overflow: hidden;
 }
 
+.video-embed-gif {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-embed-gif img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .video-embed iframe {
   position: absolute;
   top: 0;

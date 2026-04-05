@@ -630,8 +630,8 @@
 
 /* --- Model Demos --- */
 .model-demos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -789,11 +789,6 @@
     border-right: 6px solid transparent;
     border-top: 8px solid rgba(167, 139, 250, 0.5);
     border-bottom: none;
-  }
-
-  .model-demos {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 
   .model-demo {
