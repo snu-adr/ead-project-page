@@ -35,6 +35,7 @@
   text-align: center;
   line-height: 1.8;
   max-width: 520px;
+  white-space: pre-line;
 }
 
 /* Topic tags */
