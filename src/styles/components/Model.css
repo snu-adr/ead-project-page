@@ -17,6 +17,7 @@
 .model-wrapper section {
   position: relative;
   z-index: 1;
+  padding-bottom: 60px;
 }
 
 .model-grid-bg {
@@ -270,7 +271,7 @@
 
 /* --- Model Architecture Panel --- */
 .model-architecture {
-  margin-bottom: 56px;
+  margin-bottom: 0;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-left: 3px solid var(--color-accent);
@@ -626,6 +627,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .model-demo {
