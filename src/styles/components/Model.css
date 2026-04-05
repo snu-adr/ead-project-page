@@ -483,6 +483,11 @@
   color: var(--color-accent-purple);
 }
 
+.model-flow-trajectory-img {
+  width: 64px;
+  height: auto;
+}
+
 .model-flow-caption {
   position: absolute;
   bottom: 8px;
