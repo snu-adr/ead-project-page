@@ -9,7 +9,7 @@ import '../styles/components/Overview.css';
 
 const Overview = () => {
   const { content } = useLanguage();
-  const { sectionTitle, sectionTag, sectionSubtitle, introLead, introBody, keyFeatures, demos } = content.overview;
+  const { sectionTitle, sectionTag, sectionSubtitle, introLead, introBody, demos } = content.overview;
   const videoPlaceholder = content.model.videoPlaceholder;
 
   const refIntro = useScrollFadeIn();
@@ -22,18 +22,12 @@ const Overview = () => {
 
   return (
     <section id="overview" aria-label={sectionTitle}>
-      <div className="overview-bg" aria-hidden="true" />
+      <div className="overview-radar" aria-hidden="true" />
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
 
       <div className="overview-intro fade-in" ref={refIntro}>
         <p className="overview-intro-lead">{introLead}</p>
         <p className="overview-intro-body">{introBody}</p>
-        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-        <ul className="overview-features" aria-label="핵심 특징" role="list">
-          {keyFeatures.map((f) => (
-            <li key={f.label} className="overview-feature-pill">{f.label}</li>
-          ))}
-        </ul>
       </div>
 
       <div className="overview-demos fade-in" ref={refDemos}>

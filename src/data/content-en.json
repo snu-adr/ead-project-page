@@ -19,13 +19,6 @@
     "sectionSubtitle": "An E2E autonomous driving project designed for real-world deployment",
     "introLead": "An E2E autonomous driving model from SNU ADR Lab — built for real deployment, not just benchmarks.",
     "introBody": "Surround-view multi-camera + LiDAR fusion enables 360° Perception, while a single pipeline handles everything from Perception to Planning. Built in collaboration with industry partners — HL Klemove, LG Electronics, A2Z — who handle data and hardware.",
-    "keyFeatures": [
-      { "label": "360° Perception" },
-      { "label": "E2E Planning" },
-      { "label": "LiDAR Fusion" },
-      { "label": "Deployment-Ready" },
-      { "label": "Open Source" }
-    ],
     "demos": [
       {
         "title": "Real-world Demo",

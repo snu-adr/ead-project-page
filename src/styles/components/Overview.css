@@ -8,12 +8,61 @@
   overflow: hidden;
 }
 
-/* --- Subtle background glow --- */
-.overview-bg {
+/* =============================================
+   Radar Background
+   ============================================= */
+
+.overview-radar {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+
+  /* Concentric scan rings via radial-gradient */
+  background-image:
+    radial-gradient(circle at center, transparent 17%, rgba(56, 189, 248, 0.07) 18%, transparent 19%),
+    radial-gradient(circle at center, transparent 35%, rgba(56, 189, 248, 0.055) 36%, transparent 37%),
+    radial-gradient(circle at center, transparent 53%, rgba(56, 189, 248, 0.04) 54%, transparent 55%),
+    radial-gradient(circle at center, transparent 71%, rgba(56, 189, 248, 0.025) 72%, transparent 73%),
+    radial-gradient(circle at center, transparent 88%, rgba(56, 189, 248, 0.015) 89%, transparent 90%);
+}
+
+/* Crosshair lines */
+.overview-radar::before {
+  content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 40% at 50% 20%, rgba(56, 189, 248, 0.04) 0%, transparent 70%);
-  pointer-events: none;
+  background:
+    linear-gradient(to right, transparent 49.94%, rgba(56, 189, 248, 0.06) 50%, transparent 50.06%),
+    linear-gradient(to bottom, transparent 49.94%, rgba(56, 189, 248, 0.06) 50%, transparent 50.06%);
+}
+
+/* Rotating sweep beam */
+.overview-radar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 280deg,
+    rgba(56, 189, 248, 0.03) 310deg,
+    rgba(56, 189, 248, 0.07) 355deg,
+    transparent 360deg
+  );
+  mask-image: radial-gradient(circle, black 88%, transparent 90%);
+  -webkit-mask-image: radial-gradient(circle, black 88%, transparent 90%);
+  animation: overview-radar-sweep 10s linear infinite;
+}
+
+@keyframes overview-radar-sweep {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* =============================================
@@ -21,12 +70,14 @@
    ============================================= */
 
 .overview-intro {
-  max-width: 720px;
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
   margin: 0 auto 72px;
   text-align: center;
 }
 
-/* Lead sentence — bright, larger */
+/* Lead sentence */
 .overview-intro-lead {
   font-size: 1.2rem;
   font-weight: 600;
@@ -36,57 +87,12 @@
   letter-spacing: 0.2px;
 }
 
-/* Body — softer */
+/* Body */
 .overview-intro-body {
   font-size: 1rem;
   line-height: 1.9;
   color: var(--color-text-light);
-  margin-bottom: 32px;
   letter-spacing: 0.1px;
-}
-
-/* =============================================
-   Key Feature Pills
-   ============================================= */
-
-.overview-features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.overview-feature-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 16px;
-  border-radius: 100px;
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  background: rgba(56, 189, 248, 0.06);
-  color: var(--color-accent);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.overview-feature-pill::before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  flex-shrink: 0;
-}
-
-.overview-feature-pill:hover {
-  border-color: rgba(56, 189, 248, 0.6);
-  background: rgba(56, 189, 248, 0.12);
 }
 
 /* =============================================
@@ -94,46 +100,46 @@
    ============================================= */
 
 .overview-demos {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: 28px;
 }
 
-/* --- Demo card base --- */
+/* Demo card base */
 .overview-demo {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 16px;
   overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .overview-demo:hover {
   transform: translateY(-2px);
 }
 
-/* Accent top border variants */
+/* Cyan variant */
 .overview-demo--cyan {
   border-top: 2px solid var(--color-accent);
 }
-
 .overview-demo--cyan:hover {
   border-color: var(--color-accent);
-  border-top-color: var(--color-accent);
   box-shadow: 0 8px 32px rgba(56, 189, 248, 0.08);
 }
 
+/* Purple variant */
 .overview-demo--purple {
   border-top: 2px solid var(--color-accent-purple);
 }
-
 .overview-demo--purple:hover {
-  border-color: rgba(167, 139, 250, 0.4);
-  border-top-color: var(--color-accent-purple);
+  border-color: rgba(167, 139, 250, 0.45);
   box-shadow: 0 8px 32px rgba(167, 139, 250, 0.08);
 }
 
-/* --- Demo card header --- */
+/* Demo card header */
 .overview-demo-header {
   padding: 20px 24px 16px;
 }
@@ -141,18 +147,12 @@
 .overview-demo h3 {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--color-text);
   margin-bottom: 6px;
   letter-spacing: 0.2px;
 }
 
-.overview-demo--cyan h3 {
-  color: var(--color-accent);
-}
-
-.overview-demo--purple h3 {
-  color: var(--color-accent-purple);
-}
+.overview-demo--cyan h3 { color: var(--color-accent); }
+.overview-demo--purple h3 { color: var(--color-accent-purple); }
 
 .overview-demo p {
   font-size: 0.85rem;
@@ -161,10 +161,20 @@
   margin: 0;
 }
 
-/* VideoEmbed inside demo card — no padding wrapper needed */
+/* VideoEmbed flush inside card */
 .overview-demo .video-embed,
 .overview-demo .video-placeholder {
   border-radius: 0;
+}
+
+/* =============================================
+   Reduced Motion
+   ============================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .overview-radar::after {
+    animation: none;
+  }
 }
 
 /* =============================================
@@ -174,6 +184,12 @@
 @media (max-width: 768px) {
   #overview {
     padding-bottom: 64px;
+  }
+
+  .overview-radar {
+    width: 500px;
+    height: 500px;
+    top: -20px;
   }
 
   .overview-intro {
@@ -187,10 +203,6 @@
 
   .overview-intro-body {
     font-size: 0.95rem;
-  }
-
-  .overview-features {
-    justify-content: flex-start;
   }
 
   .overview-demos {
