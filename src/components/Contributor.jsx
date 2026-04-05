@@ -28,35 +28,31 @@ const Contributor = () => {
     <section id="contributor" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
       <div className="contributor-rows fade-in" ref={ref}>
-        {/* Project Lead */}
-        {leadRows.map((row, i) => (
-          <div key={i} className="contributor-row">
-            <div className="contributor-grid">
+        <div className="contributor-teams">
+          {/* Project Lead — leftmost column */}
+          {leadRows.map((row, i) => (
+            <div key={`lead-${i}`} className="contributor-row contributor-row--lead">
               {row.members.map(member => <MemberCard key={member.name} member={member} />)}
             </div>
-          </div>
-        ))}
+          ))}
 
-        {/* Teams side by side */}
-        {teamRows.length > 0 && (
-          <div className="contributor-teams">
-            {teamRows.map((row, i) => {
-              const teamLeader = row.members.find(m => m.teamLead);
-              const researchers = row.members.filter(m => !m.teamLead);
-              return (
-                <div key={i} className="contributor-row">
-                  <p className="contributor-row-label">{row.rowLabel}</p>
-                  <div className="contributor-team-leader-wrapper">
-                    <MemberCard member={teamLeader} />
-                  </div>
-                  <div className="contributor-grid contributor-grid--researchers">
-                    {researchers.map(member => <MemberCard key={member.name} member={member} />)}
-                  </div>
+          {/* Teams */}
+          {teamRows.map((row, i) => {
+            const teamLeader = row.members.find(m => m.teamLead);
+            const researchers = row.members.filter(m => !m.teamLead);
+            return (
+              <div key={i} className="contributor-row">
+                <p className="contributor-row-label">{row.rowLabel}</p>
+                <div className="contributor-team-leader-wrapper">
+                  <MemberCard member={teamLeader} />
                 </div>
-              );
-            })}
-          </div>
-        )}
+                <div className="contributor-grid contributor-grid--researchers">
+                  {researchers.map(member => <MemberCard key={member.name} member={member} />)}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

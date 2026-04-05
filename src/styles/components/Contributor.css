@@ -39,8 +39,9 @@
   gap: 24px;
 }
 
-.contributor-rows > .contributor-row .contributor-grid {
-  grid-template-columns: 170px;
+/* Project Lead row — 세로 중앙 정렬 */
+.contributor-row--lead {
+  justify-content: center;
 }
 
 /* Team leader 래퍼 — 팀 내 중앙 정렬 */
