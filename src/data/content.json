@@ -217,10 +217,15 @@
     "sectionTitle": "연락처",
     "sectionTag": "CONTACT",
     "sectionSubtitle": "EAD 프로젝트에 대해 문의하세요",
-    "collaborationNote": "협업 또는 모델 코드 제공을 원하시는 분은 이메일로 연락 주세요.",
+    "collaborationTitle": "함께 만드는 자율주행 생태계",
+    "collaborationNote": "EAD는 국내 자율주행 기술 격차를 줄이기 위한 개방형 프로젝트입니다. 기업·연구자·개발자 모두의 연락을 환영하며, 각자 잘하는 영역에서 함께 기여할 수 있는 방법을 찾겠습니다.",
+    "collaborationTopics": ["모델 코드 제공", "공동 연구", "데이터 협업", "Alliance 참여"],
     "emailLabel": "이메일",
     "email": "junwchoi@snu.ac.kr",
-    "address": "서울대학교 ADR 연구실"
+    "addressLabel": "연구실",
+    "address": "서울대학교 ADR 연구실",
+    "addressDetail": "Autonomous Driving Research Lab",
+    "labUrl": "https://adr.snu.ac.kr"
   },
   "footer": {
     "copyright": "© 2026 EAD — Evolutionary Autonomous Driving. 서울대학교 ADR 연구실."
