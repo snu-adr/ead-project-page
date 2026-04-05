@@ -20,9 +20,9 @@ function App() {
         <Hero />
         <RoadMap />
         <div className="section-alt">
-          <Dataset />
+          <Model />
         </div>
-        <Model />
+        <Dataset />
         <div className="section-alt">
           <Notice />
         </div>

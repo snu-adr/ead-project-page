@@ -4,8 +4,8 @@ import '../styles/components/Navbar.css';
 
 const navItems = [
   { label: content.roadmap.sectionTitle, href: '#roadmap' },
-  { label: content.dataset.sectionTitle, href: '#dataset' },
   { label: content.model.sectionTitle, href: '#model' },
+  { label: content.dataset.sectionTitle, href: '#dataset' },
   { label: content.notice.sectionTitle, href: '#notice' },
   { label: content.contributors.sectionTitle, href: '#contributor' },
   { label: content.alliance.sectionTitle, href: '#alliance' },

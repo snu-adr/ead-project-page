@@ -1,27 +1,34 @@
 import React from 'react';
 import content from '../data/content.json';
 import SectionTitle from './common/SectionTitle';
-import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
+import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Contributor.css';
 
 const Contributor = () => {
-  const { sectionTitle, sectionTag, sectionSubtitle, members } = content.contributors;
-  const ref = useStaggeredFadeIn();
+  const { sectionTitle, sectionTag, sectionSubtitle, rows } = content.contributors;
+  const ref = useScrollFadeIn();
 
   return (
     <section id="contributor" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
-      <div className="contributor-grid stagger-fade-in" ref={ref}>
-        {members.map((member) => (
-          <article key={member.name} className={`contributor-card${member.lead ? ' contributor-card--lead' : ''}`}>
-            <div className="contributor-avatar-wrapper" aria-hidden="true">
-              <div className="contributor-avatar">
-                {member.name.charAt(0)}
-              </div>
+      <div className="contributor-rows fade-in" ref={ref}>
+        {rows.map((row, i) => (
+          <div key={i} className="contributor-row">
+            {row.rowLabel && <p className="contributor-row-label">{row.rowLabel}</p>}
+            <div className="contributor-grid">
+              {row.members.map((member) => (
+                <article key={member.name} className={`contributor-card${member.lead ? ' contributor-card--lead' : ''}`}>
+                  <div className="contributor-avatar-wrapper" aria-hidden="true">
+                    <div className="contributor-avatar">
+                      {member.name.charAt(0)}
+                    </div>
+                  </div>
+                  <h3>{member.name}</h3>
+                  <p>{member.role}</p>
+                </article>
+              ))}
             </div>
-            <h3>{member.name}</h3>
-            <p>{member.role}</p>
-          </article>
+          </div>
         ))}
       </div>
     </section>

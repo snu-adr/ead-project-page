@@ -84,7 +84,7 @@
         },
         {
           "category": "LiDAR",
-          "research": "지원",
+          "research": "미제공",
           "ead": "LiDAR 융합 제공"
         },
         {
@@ -101,7 +101,6 @@
     },
     "architecture": {
       "title": "모델 구조",
-      "description": "EAD는 인코더-디코더 구조로 설계됩니다. 인코더가 센서 데이터를 구조화된 환경 표현으로 변환하고, 디코더가 이를 바탕으로 주행 경로를 계획합니다.",
       "diagramPlaceholder": "모식도 준비 중",
       "encoder": {
         "label": "ENCODER",
@@ -171,40 +170,56 @@
     "sectionTitle": "기여자",
     "sectionTag": "CONTRIBUTORS",
     "sectionSubtitle": "서울대학교 ADR 연구실 연구팀",
-    "members": [
-      { "name": "최준원", "role": "Project Lead", "lead": true },
-      { "name": "김정호", "role": "Researcher" },
-      { "name": "방건호", "role": "Researcher" },
-      { "name": "백근주", "role": "Researcher" },
-      { "name": "오지용", "role": "Researcher" },
-      { "name": "유승훈", "role": "Researcher" },
-      { "name": "정원준", "role": "Researcher" },
-      { "name": "신홍재", "role": "Researcher" },
-      { "name": "이동영", "role": "Researcher" }
+    "rows": [
+      {
+        "rowLabel": null,
+        "members": [
+          { "name": "최준원", "role": "Project Lead", "lead": true }
+        ]
+      },
+      {
+        "rowLabel": "Team Perception",
+        "members": [
+          { "name": "방건호", "role": "Researcher" },
+          { "name": "백근주", "role": "Researcher" },
+          { "name": "정원준", "role": "Researcher" },
+          { "name": "이동영", "role": "Researcher" }
+        ]
+      },
+      {
+        "rowLabel": "Team Planning",
+        "members": [
+          { "name": "김정호", "role": "Researcher" },
+          { "name": "오지용", "role": "Researcher" },
+          { "name": "유승훈", "role": "Researcher" },
+          { "name": "신홍재", "role": "Researcher" }
+        ]
+      }
     ]
   },
   "alliance": {
-    "sectionTitle": "얼라이언스",
-    "sectionTag": "ALLIANCE",
-    "sectionSubtitle": "EAD와 함께하는 파트너",
+    "sectionTitle": "생태계",
+    "sectionTag": "ECOSYSTEM",
+    "sectionSubtitle": "EAD와 함께 국내 자율주행 생태계를 만드는 파트너",
     "partners": [
       { "name": "HL Klemove", "logo": "hl-klemove.svg" },
       { "name": "LG전자", "logo": "lg.svg" },
       { "name": "A2Z", "logo": "a2z.svg" },
       { "name": "Nota AI", "logo": "nota.svg" },
       { "name": "한양대학교", "logo": "hanyang.svg" },
-      { "name": "GIST", "logo": "gist.svg" }
+      { "name": "GIST", "logo": "gist.svg" },
+      { "name": "국민대학교", "logo": "kookmin.svg" },
+      { "name": "KAIST", "logo": "kaist.svg" },
+      { "name": "SUM", "logo": "sum.svg" }
     ]
   },
   "contact": {
     "sectionTitle": "연락처",
     "sectionTag": "CONTACT",
     "sectionSubtitle": "EAD 프로젝트에 대해 문의하세요",
-    "body": "EAD 프로젝트에 대한 문의, 협업 제안, 또는 Alliance 참여에 관심이 있으시다면 아래 연락처로 연락해 주세요. 서울대학교 ADR 연구실에서 운영하고 있으며, 이메일(contact@example.com)로 연락하시거나 GitHub(https://github.com/example/ead)에서 프로젝트를 확인하실 수 있습니다.",
+    "collaborationNote": "협업 또는 모델 코드 제공을 원하시는 분은 이메일로 연락 주세요.",
     "emailLabel": "이메일",
-    "githubLabel": "GitHub",
-    "email": "contact@example.com",
-    "github": "https://github.com/example/ead",
+    "email": "junwchoi@snu.ac.kr",
     "address": "서울대학교 ADR 연구실"
   },
   "footer": {

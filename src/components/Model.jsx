@@ -67,7 +67,6 @@ const Model = () => {
 
         <div className="model-architecture fade-in" ref={refArchitecture}>
           <h3>{architecture.title}</h3>
-          <p>{architecture.description}</p>
 
           {/* Architecture flow diagram */}
           <div className="model-flow-diagram" role="img" aria-label={`${flowLabels.camera} + ${flowLabels.lidar}(${flowLabels.lidarOptional}) 입력 → ${architecture.encoder.label} ${architecture.encoder.title} → ${architecture.decoder.label} ${architecture.decoder.title} → ${flowLabels.trajectory} 출력`}>
@@ -102,7 +101,6 @@ const Model = () => {
               </svg>
               <span>{flowLabels.trajectory}</span>
             </div>
-            <div className="model-flow-caption">{architecture.diagramPlaceholder}</div>
           </div>
 
           {/* Encoder / Decoder panels */}

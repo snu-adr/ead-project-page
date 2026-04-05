@@ -5,14 +5,21 @@
   padding-bottom: 60px;
 }
 
-/* Two-card layout */
+/* Card layout */
 .contact-cards {
   display: flex;
-  gap: 24px;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 760px;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 520px;
   margin: 0 auto;
+}
+
+.contact-note {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  text-align: center;
+  line-height: 1.6;
 }
 
 .contact-card {
