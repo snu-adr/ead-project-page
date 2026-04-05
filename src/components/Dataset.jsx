@@ -35,11 +35,10 @@ const Dataset = () => {
         <article className="dataset-card">
           <span className="dataset-card-number" aria-hidden="true">02</span>
           <div className="dataset-card-icon" aria-hidden="true">
-            <div className="dataset-icon-loop">
-              <div className="dataset-icon-loop-circle" />
-              <div className="dataset-icon-loop-arrow dataset-icon-loop-arrow--top" />
-              <div className="dataset-icon-loop-arrow dataset-icon-loop-arrow--bottom" />
-            </div>
+            <svg className="dataset-icon-loop" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path d="M 12 3 A 9 9 0 1 1 3 12" strokeLinecap="round"/>
+              <polyline points="1,10 3,12 5,10" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </div>
           <div className="dataset-card-body">
             <h3>{closedloop.title}</h3>
