@@ -135,7 +135,7 @@
     "demos": [
       {
         "title": "Real-world Demo",
-        "description": "실제 도로 환경에서의 E2E 자율주행 시연 영상입니다.",
+        "description": "실도로 데이터 기반 벤치마크에서의 E2E 자율주행 시연 영상입니다.",
         "videoUrl": null
       },
       {
