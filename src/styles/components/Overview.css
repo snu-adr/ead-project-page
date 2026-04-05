@@ -9,60 +9,16 @@
 }
 
 /* =============================================
-   Radar Background
+   Aurora Glow Background
    ============================================= */
 
-.overview-radar {
+.overview-glow {
   position: absolute;
-  width: 800px;
-  height: 800px;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
+  inset: 0;
   pointer-events: none;
-  z-index: 0;
-
-  /* Concentric scan rings via radial-gradient */
-  background-image:
-    radial-gradient(circle at center, transparent 17%, rgba(56, 189, 248, 0.07) 18%, transparent 19%),
-    radial-gradient(circle at center, transparent 35%, rgba(56, 189, 248, 0.055) 36%, transparent 37%),
-    radial-gradient(circle at center, transparent 53%, rgba(56, 189, 248, 0.04) 54%, transparent 55%),
-    radial-gradient(circle at center, transparent 71%, rgba(56, 189, 248, 0.025) 72%, transparent 73%),
-    radial-gradient(circle at center, transparent 88%, rgba(56, 189, 248, 0.015) 89%, transparent 90%);
-}
-
-/* Crosshair lines */
-.overview-radar::before {
-  content: '';
-  position: absolute;
-  inset: 0;
   background:
-    linear-gradient(to right, transparent 49.94%, rgba(56, 189, 248, 0.06) 50%, transparent 50.06%),
-    linear-gradient(to bottom, transparent 49.94%, rgba(56, 189, 248, 0.06) 50%, transparent 50.06%);
-}
-
-/* Rotating sweep beam */
-.overview-radar::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 280deg,
-    rgba(56, 189, 248, 0.03) 310deg,
-    rgba(56, 189, 248, 0.07) 355deg,
-    transparent 360deg
-  );
-  mask-image: radial-gradient(circle, black 88%, transparent 90%);
-  -webkit-mask-image: radial-gradient(circle, black 88%, transparent 90%);
-  animation: overview-radar-sweep 10s linear infinite;
-}
-
-@keyframes overview-radar-sweep {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+    radial-gradient(ellipse 60% 50% at 28% 35%, rgba(56, 189, 248, 0.22) 0%, rgba(56, 189, 248, 0.08) 40%, transparent 65%),
+    radial-gradient(ellipse 55% 45% at 74% 40%, rgba(167, 139, 250, 0.20) 0%, rgba(167, 139, 250, 0.06) 40%, transparent 65%);
 }
 
 /* =============================================
@@ -77,7 +33,6 @@
   text-align: center;
 }
 
-/* Lead sentence */
 .overview-intro-lead {
   font-size: 1.2rem;
   font-weight: 600;
@@ -87,7 +42,6 @@
   letter-spacing: 0.2px;
 }
 
-/* Body */
 .overview-intro-body {
   font-size: 1rem;
   line-height: 1.9;
@@ -108,7 +62,6 @@
   gap: 28px;
 }
 
-/* Demo card base */
 .overview-demo {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
@@ -121,7 +74,6 @@
   transform: translateY(-2px);
 }
 
-/* Cyan variant */
 .overview-demo--cyan {
   border-top: 2px solid var(--color-accent);
 }
@@ -130,7 +82,6 @@
   box-shadow: 0 8px 32px rgba(56, 189, 248, 0.08);
 }
 
-/* Purple variant */
 .overview-demo--purple {
   border-top: 2px solid var(--color-accent-purple);
 }
@@ -139,7 +90,6 @@
   box-shadow: 0 8px 32px rgba(167, 139, 250, 0.08);
 }
 
-/* Demo card header */
 .overview-demo-header {
   padding: 20px 24px 16px;
 }
@@ -161,20 +111,9 @@
   margin: 0;
 }
 
-/* VideoEmbed flush inside card */
 .overview-demo .video-embed,
 .overview-demo .video-placeholder {
   border-radius: 0;
-}
-
-/* =============================================
-   Reduced Motion
-   ============================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  .overview-radar::after {
-    animation: none;
-  }
 }
 
 /* =============================================
@@ -184,12 +123,6 @@
 @media (max-width: 768px) {
   #overview {
     padding-bottom: 64px;
-  }
-
-  .overview-radar {
-    width: 500px;
-    height: 500px;
-    top: -20px;
   }
 
   .overview-intro {
