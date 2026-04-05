@@ -168,6 +168,43 @@ a.contact-card:hover .contact-card-value {
   color: var(--color-text);
 }
 
+/* Copy button */
+.contact-copy-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 0 6px;
+}
+
+.contact-copy-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.contact-copy-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.contact-copy-btn--copied {
+  width: auto;
+  border-color: rgba(56, 189, 248, 0.4);
+  color: var(--color-accent);
+  background: rgba(56, 189, 248, 0.08);
+}
+
 /* Arrow */
 .contact-card-arrow {
   flex-shrink: 0;
