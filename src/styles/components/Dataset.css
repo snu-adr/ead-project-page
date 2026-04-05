@@ -123,18 +123,57 @@
   to   { transform: rotateY(60deg) rotateZ(360deg); }
 }
 
-/* ── Closed-loop icon: Circular arrow (↻) ── */
+/* ── Closed-loop icon: Cycle ── */
 .dataset-icon-loop {
-  width: 56px;
-  height: 56px;
-  color: var(--color-accent);
-  opacity: 0.75;
-  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.35));
-  transition: transform 0.6s ease;
+  position: relative;
+  width: 64px;
+  height: 64px;
 }
 
-.dataset-card:hover .dataset-icon-loop {
-  transform: rotate(360deg);
+.dataset-icon-loop-circle {
+  position: absolute;
+  inset: 0;
+  border: 2.5px dashed var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.55;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+/* Arrows on the loop */
+.dataset-icon-loop-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.dataset-icon-loop-arrow--top {
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid var(--color-accent);
+  filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.5));
+}
+
+.dataset-icon-loop-arrow--bottom {
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--color-accent);
+  filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.5));
+}
+
+/* Subtle rotation on hover */
+.dataset-card:hover .dataset-icon-loop-circle {
+  animation: loopSpin 6s linear infinite;
+}
+
+@keyframes loopSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* ── Card body (text content) ── */
