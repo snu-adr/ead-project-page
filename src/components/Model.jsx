@@ -5,6 +5,7 @@ import VideoEmbed from './common/VideoEmbed';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import trajectoryImg from '../assets/images/trajectory.svg';
 import demoB2dGif from '../assets/images/demo_b2d.gif';
+import demoRealworldGif from '../assets/images/demo_realworld.gif';
 import '../styles/components/Model.css';
 
 const Model = () => {
@@ -22,7 +23,7 @@ const Model = () => {
 
         <div className="model-demos fade-in" ref={refDemos}>
           {demos.map((demo) => {
-            const gifAssets = { 'Simulation Closed-loop Demo': demoB2dGif };
+            const gifAssets = { 'Real-world Demo': demoRealworldGif, 'Simulation Closed-loop Demo': demoB2dGif };
             const url = demo.videoUrl || gifAssets[demo.title] || null;
             return (
               <article key={demo.title} className="model-demo">
