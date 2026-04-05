@@ -207,9 +207,9 @@
       { "name": "A2Z", "logo": "a2z.png" },
       { "name": "Nota AI", "logo": "nota.png" },
       { "name": "한양대학교", "logo": "hanyang.png" },
-      { "name": "GIST", "logo": "gist.svg" },
+      { "name": "GIST", "logo": "gist.png" },
       { "name": "국민대학교", "logo": "kookmin.png" },
-      { "name": "KAIST", "logo": "kaist.png" },
+      { "name": "KAIST", "logo": "kaist.svg" },
       { "name": "SUM", "logo": "sum.png" }
     ]
   },
