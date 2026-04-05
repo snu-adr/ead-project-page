@@ -4,6 +4,7 @@ import SectionTitle from './common/SectionTitle';
 import VideoEmbed from './common/VideoEmbed';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import trajectoryImg from '../assets/images/trajectory.svg';
+import demoB2dGif from '../assets/images/demo_b2d.gif';
 import '../styles/components/Model.css';
 
 const Model = () => {
@@ -20,13 +21,17 @@ const Model = () => {
         <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
 
         <div className="model-demos fade-in" ref={refDemos}>
-          {demos.map((demo) => (
-            <article key={demo.title} className="model-demo">
-              <h3>{demo.title}</h3>
-              <p>{demo.description}</p>
-              <VideoEmbed url={demo.videoUrl} title={demo.title} placeholder={videoPlaceholder} />
-            </article>
-          ))}
+          {demos.map((demo) => {
+            const gifAssets = { 'Simulation Closed-loop Demo': demoB2dGif };
+            const url = demo.videoUrl || gifAssets[demo.title] || null;
+            return (
+              <article key={demo.title} className="model-demo">
+                <h3>{demo.title}</h3>
+                <p>{demo.description}</p>
+                <VideoEmbed url={url} title={demo.title} placeholder={videoPlaceholder} />
+              </article>
+            );
+          })}
         </div>
 
         <div className="model-comparison fade-in" ref={refComparison}>

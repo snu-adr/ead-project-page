@@ -9,6 +9,14 @@ const VideoEmbed = ({ url, title, placeholder }) => {
     );
   }
 
+  if (url.includes('.gif')) {
+    return (
+      <div className="video-embed">
+        <img src={url} alt={title} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
+      </div>
+    );
+  }
+
   return (
     <div className="video-embed">
       <iframe
