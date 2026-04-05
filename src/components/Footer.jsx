@@ -1,6 +1,6 @@
 import React from 'react';
 import content from '../data/content.json';
-import snuLogo from '../assets/logos/snu.svg';
+import snuLogo from '../assets/logos/snu.png';
 import '../styles/components/Footer.css';
 
 function Footer() {
