@@ -86,8 +86,8 @@
 
 /* ── Avatar ── */
 .contributor-avatar-wrapper {
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   padding: 2px;
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-purple));
@@ -153,8 +153,8 @@
 }
 
 .contributor-card--lead .contributor-avatar-wrapper {
-  width: 72px;
-  height: 72px;
+  width: 110px;
+  height: 110px;
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-purple), var(--color-accent));
   background-size: 200% 200%;
   animation: lead-gradient 4s ease infinite;
@@ -198,8 +198,8 @@
 }
 
 .contributor-card--team-lead .contributor-avatar-wrapper {
-  width: 60px;
-  height: 60px;
+  width: 88px;
+  height: 88px;
 }
 
 .contributor-card--team-lead .contributor-avatar {
