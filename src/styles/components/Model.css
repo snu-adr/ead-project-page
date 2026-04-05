@@ -677,26 +677,48 @@
 /* --- Responsive: 768px --- */
 @media (max-width: 768px) {
   .model-flow-diagram {
-    flex-direction: column;
-    align-items: center;
-    padding: 28px 16px 20px;
-    overflow: hidden;
-  }
-
-  .model-flow-diagram .model-flow-arrow {
-    transform: rotate(90deg);
+    padding: 20px 12px;
+    gap: 6px;
+    overflow-x: auto;
   }
 
   .model-flow-inputs {
-    flex-direction: row;
-    gap: 8px;
+    gap: 6px;
+  }
+
+  .model-flow-input-chip {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    gap: 6px;
   }
 
   .model-flow-block {
     min-width: 0;
-    width: 100%;
     padding: 20px 24px;
-    min-height: 120px;
+    min-height: 100px;
+  }
+
+  .model-flow-block-label {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+  }
+
+  .model-flow-block-title {
+    font-size: 0.95rem;
+  }
+
+  .model-flow-arrow {
+    font-size: 1.2rem;
+    padding: 0 2px;
+  }
+
+  .model-flow-output {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .model-flow-trajectory-img {
+    width: 52px;
   }
 
   .comparison-cards {

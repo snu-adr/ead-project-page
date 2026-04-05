@@ -316,13 +316,16 @@
 /* ─── Small screen: wrap stats to 2×2 at 480px ─── */
 @media (max-width: 480px) {
   .hero-stats {
-    flex-wrap: wrap;
-    gap: 16px 24px;
-    justify-content: center;
+    gap: 20px;
   }
 
-  .hero-stat {
-    flex: 0 0 calc(50% - 12px);
+  .hero-stat-value {
+    font-size: 1.1rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
   }
 }
 
