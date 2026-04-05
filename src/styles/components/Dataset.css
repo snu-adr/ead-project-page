@@ -147,7 +147,7 @@
 }
 
 .dataset-icon-loop-arrow--top {
-  top: -3px;
+  top: -5px;
   left: 50%;
   transform: translateX(-50%);
   border-top: 6px solid transparent;
@@ -157,7 +157,7 @@
 }
 
 .dataset-icon-loop-arrow--bottom {
-  bottom: -3px;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
   border-top: 6px solid transparent;
