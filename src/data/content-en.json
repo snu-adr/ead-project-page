@@ -32,8 +32,8 @@
   "overview": {
     "sectionTitle": "EAD Project",
     "sectionTag": "EAD PROJECT",
-    "sectionSubtitle": "An E2E autonomous driving project designed for real-world deployment",
-    "introLead": "We are gathering and releasing everything needed to get Korea's autonomous driving industry to the starting line.",
+    "sectionSubtitle": "Academia meets industry to build Korea's autonomous driving baseline",
+    "introLead": "Releasing everything Korea's autonomous driving industry needs to get started.",
     "introLines": [
       "Neither the lab alone nor companies alone can do it.",
       "Academia handles the model and technology, while industry handles data and hardware.",

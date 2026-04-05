@@ -133,6 +133,12 @@
   word-break: keep-all;
 }
 
+.contributor-name-given,
+.contributor-name-family {
+  display: block;
+  line-height: 1.4;
+}
+
 .contributor-card p {
   font-size: 0.68rem;
   color: var(--color-accent);
@@ -145,7 +151,7 @@
 
 /* ── Project Leader 카드 ── */
 .contributor-card--lead {
-  width: 180px;
+  min-width: 180px;
   padding: 32px 20px;
   background: linear-gradient(160deg, rgba(56, 189, 248, 0.08) 0%, rgba(167, 139, 250, 0.05) 100%);
   border-color: rgba(56, 189, 248, 0.3);
@@ -168,6 +174,7 @@
 .contributor-card--lead h3 {
   font-size: 1rem;
   margin-bottom: 8px;
+  white-space: nowrap;
 }
 
 .contributor-card--lead p {
@@ -191,7 +198,7 @@
 
 /* ── Team Leader 카드 ── */
 .contributor-card--team-lead {
-  width: 130px;
+  min-width: 130px;
   padding: 20px 14px;
   border-color: rgba(56, 189, 248, 0.2);
   background: linear-gradient(160deg, rgba(56, 189, 248, 0.04) 0%, rgba(167, 139, 250, 0.02) 100%);
@@ -208,6 +215,7 @@
 
 .contributor-card--team-lead h3 {
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .contributor-card--team-lead p {

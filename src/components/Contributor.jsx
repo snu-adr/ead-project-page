@@ -33,8 +33,17 @@ const enToKo = {
 
 const getPhoto = (name) => photoMap[name] || photoMap[enToKo[name]];
 
+const splitName = (name) => {
+  const idx = name.lastIndexOf(' ');
+  if (idx === -1) return null;
+  return { given: name.slice(0, idx), family: name.slice(idx + 1) };
+};
+
 const MemberCard = ({ member }) => {
   const photo = getPhoto(member.name);
+  const isResearcher = !member.lead && !member.teamLead;
+  const nameParts = isResearcher ? splitName(member.name) : null;
+
   return (
     <article className={`contributor-card${member.lead ? ' contributor-card--lead' : member.teamLead ? ' contributor-card--team-lead' : ''}`}>
       <div className="contributor-avatar-wrapper" aria-hidden="true">
@@ -43,7 +52,12 @@ const MemberCard = ({ member }) => {
           : <div className="contributor-avatar">{member.name.charAt(0)}</div>
         }
       </div>
-      <h3>{member.name}</h3>
+      <h3>
+        {nameParts
+          ? <><span className="contributor-name-given">{nameParts.given}</span><span className="contributor-name-family">{nameParts.family}</span></>
+          : member.name
+        }
+      </h3>
       <p>{member.role}</p>
     </article>
   );
