@@ -77,7 +77,7 @@
 }
 
 /* Per-logo size overrides */
-.alliance-logo[data-name="SUM"] { max-height: 56px; max-width: 200px; }
+.alliance-logo[data-name="SUM"] { max-height: 68px; max-width: 220px; }
 .alliance-logo[data-name="A2Z"] { max-height: 34px; }
 .alliance-logo[data-name="Nota AI"] { max-height: 32px; max-width: 140px; }
 .alliance-logo[data-name="KAIST"] { max-height: 34px; }
