@@ -21,38 +21,45 @@ const Contributor = () => {
   const { sectionTitle, sectionTag, sectionSubtitle, rows } = content.contributors;
   const ref = useScrollFadeIn();
 
-  const leadRows = rows.filter(r => !r.rowLabel);
+  const leadRow = rows.find(r => !r.rowLabel);
   const teamRows = rows.filter(r => r.rowLabel);
 
   return (
     <section id="contributor" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
-      <div className="contributor-rows fade-in" ref={ref}>
-        <div className="contributor-teams">
-          {/* Project Lead — leftmost column */}
-          {leadRows.map((row, i) => (
-            <div key={`lead-${i}`} className="contributor-row contributor-row--lead">
-              {row.members.map(member => <MemberCard key={member.name} member={member} />)}
-            </div>
-          ))}
+      <div className="contributor-layout fade-in" ref={ref}>
 
-          {/* Teams */}
+        {/* Project Leader — 세로 중앙 */}
+        {leadRow && (
+          <div className="contributor-lead-col">
+            {leadRow.members.map(member => (
+              <MemberCard key={member.name} member={member} />
+            ))}
+          </div>
+        )}
+
+        {/* 팀 패널들 */}
+        <div className="contributor-teams">
           {teamRows.map((row, i) => {
             const teamLeader = row.members.find(m => m.teamLead);
             const researchers = row.members.filter(m => !m.teamLead);
             return (
-              <div key={i} className="contributor-row">
-                <p className="contributor-row-label">{row.rowLabel}</p>
+              <div key={i} className="contributor-team-panel">
+                <p className="contributor-team-label">{row.rowLabel}</p>
                 <div className="contributor-team-leader-wrapper">
                   <MemberCard member={teamLeader} />
                 </div>
-                <div className="contributor-grid contributor-grid--researchers">
-                  {researchers.map(member => <MemberCard key={member.name} member={member} />)}
+                <div className="contributor-team-divider" aria-hidden="true" />
+                <div className="contributor-researcher-grid">
+                  {researchers.map(member => (
+                    <MemberCard key={member.name} member={member} />
+                  ))}
                 </div>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

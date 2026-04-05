@@ -3,93 +3,100 @@
   padding-bottom: 80px;
 }
 
-.contributor-rows {
+/* ── 전체 레이아웃: Project Leader + 팀 패널 ── */
+.contributor-layout {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.contributor-teams {
-  display: flex;
+  align-items: center;
   gap: 32px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
-.contributor-row {
+/* ── Project Leader 컬럼 ── */
+.contributor-lead-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── 팀 패널 컨테이너 ── */
+.contributor-teams {
+  display: flex;
+  gap: 20px;
+}
+
+/* ── 팀 패널 (배경 카드) ── */
+.contributor-team-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  background: linear-gradient(160deg, rgba(26, 34, 53, 0.7) 0%, rgba(17, 24, 39, 0.5) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 24px 20px 28px;
+  position: relative;
+  transition: border-color 0.3s;
 }
 
-.contributor-row-label {
-  font-size: 0.78rem;
+.contributor-team-panel:hover {
+  border-color: var(--color-border-light);
+}
+
+.contributor-team-label {
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-accent);
-  opacity: 0.7;
+  opacity: 0.6;
+  margin: 0;
 }
 
-/* Project Lead 단독 grid */
-.contributor-grid {
+/* 팀 리더와 리서처 사이 구분선 */
+.contributor-team-divider {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border-light), transparent);
+}
+
+/* ── Researcher 3열 그리드 ── */
+.contributor-researcher-grid {
   display: grid;
-  justify-content: center;
-  gap: 24px;
+  grid-template-columns: repeat(3, 110px);
+  gap: 10px;
 }
 
-/* Project Lead row — 세로 중앙 정렬 */
-.contributor-row--lead {
-  justify-content: center;
-}
-
-/* Team leader 래퍼 — 팀 내 중앙 정렬 */
-.contributor-team-leader-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-/* Researcher 3열 그리드 */
-.contributor-grid--researchers {
-  grid-template-columns: repeat(3, 130px);
-  gap: 12px;
-}
-
-.contributor-teams .contributor-card {
-  width: 130px;
-  padding: 20px 12px;
-}
-
+/* ── 공통 카드 ── */
 .contributor-card {
-  width: 170px;
   background: linear-gradient(160deg, var(--color-bg-card) 0%, rgba(167, 139, 250, 0.02) 100%);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 28px 24px;
+  border-radius: 14px;
+  padding: 24px 16px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  width: 110px;
 }
 
 .contributor-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.08), 0 2px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.07), 0 2px 8px rgba(0, 0, 0, 0.3);
   border-color: var(--color-border-light);
 }
 
-/* Gradient border wrapper for the avatar */
+/* ── Avatar ── */
 .contributor-avatar-wrapper {
-  width: 72px;
-  height: 72px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   padding: 2px;
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-purple));
-  margin: 0 auto 16px;
+  margin: 0 auto 12px;
   transition: box-shadow 0.3s ease;
 }
 
 .contributor-card:hover .contributor-avatar-wrapper {
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5), 0 0 40px rgba(167, 139, 250, 0.25);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4), 0 0 32px rgba(167, 139, 250, 0.2);
 }
 
 .contributor-card:hover .contributor-avatar {
@@ -105,71 +112,106 @@
   align-items: center;
   justify-content: center;
   color: var(--color-text-muted);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .contributor-card h3 {
-  font-size: 1.05rem;
+  font-size: 0.88rem;
   font-weight: 600;
   margin-bottom: 6px;
   color: var(--color-text);
+  word-break: keep-all;
 }
 
 .contributor-card p {
-  font-size: 0.8rem;
+  font-size: 0.68rem;
   color: var(--color-accent);
-  letter-spacing: 1px;
+  letter-spacing: 0;
   text-transform: uppercase;
-  font-weight: 500;
-  opacity: 0.7;
+  font-weight: 600;
+  opacity: 0.65;
+  white-space: nowrap;
 }
 
-/* Project Lead card — visually elevated */
+/* ── Project Leader 카드 ── */
 .contributor-card--lead {
+  width: 180px;
+  padding: 32px 20px;
   background: linear-gradient(160deg, rgba(56, 189, 248, 0.08) 0%, rgba(167, 139, 250, 0.05) 100%);
-  border-color: rgba(56, 189, 248, 0.35);
-  flex: 0 1 220px;
-}
-
-.contributor-card--lead:hover {
-  border-color: var(--color-accent);
-  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.15), 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.contributor-card--lead h3 {
-  color: var(--color-text);
-}
-
-.contributor-card--lead p {
-  opacity: 1;
-  color: var(--color-accent-purple);
+  border-color: rgba(56, 189, 248, 0.3);
+  border-radius: 16px;
 }
 
 .contributor-card--lead .contributor-avatar-wrapper {
+  width: 72px;
+  height: 72px;
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-purple), var(--color-accent));
   background-size: 200% 200%;
   animation: lead-gradient 4s ease infinite;
+  margin-bottom: 16px;
+}
+
+.contributor-card--lead .contributor-avatar {
+  font-size: 1.5rem;
+}
+
+.contributor-card--lead h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.contributor-card--lead p {
+  font-size: 0.72rem;
+  opacity: 1;
+  color: var(--color-accent-purple);
+  letter-spacing: 1px;
+}
+
+.contributor-card--lead:hover {
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.12), 0 0 0 1px rgba(56, 189, 248, 0.1);
+  transform: translateY(-4px);
 }
 
 @keyframes lead-gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Team Leader card — subtle accent, between lead and researcher */
+/* ── Team Leader 카드 ── */
 .contributor-card--team-lead {
-  border-color: rgba(56, 189, 248, 0.25);
-  background: linear-gradient(160deg, rgba(56, 189, 248, 0.05) 0%, rgba(167, 139, 250, 0.03) 100%);
+  width: 130px;
+  padding: 20px 14px;
+  border-color: rgba(56, 189, 248, 0.2);
+  background: linear-gradient(160deg, rgba(56, 189, 248, 0.04) 0%, rgba(167, 139, 250, 0.02) 100%);
+}
+
+.contributor-card--team-lead .contributor-avatar-wrapper {
+  width: 60px;
+  height: 60px;
+}
+
+.contributor-card--team-lead .contributor-avatar {
+  font-size: 1.25rem;
+}
+
+.contributor-card--team-lead h3 {
+  font-size: 0.9rem;
 }
 
 .contributor-card--team-lead p {
-  opacity: 1;
+  opacity: 0.9;
   color: var(--color-accent);
+  font-size: 0.65rem;
 }
 
-/* ─── Reduced Motion: freeze lead gradient animation ─── */
+.contributor-card--team-lead:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* ── Reduced Motion ── */
 @media (prefers-reduced-motion: reduce) {
   .contributor-card--lead .contributor-avatar-wrapper {
     animation: none;
@@ -177,47 +219,60 @@
   }
 }
 
+/* ── Mobile ── */
 @media (max-width: 768px) {
+  .contributor-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
   .contributor-teams {
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
+    width: 100%;
+    max-width: 480px;
   }
 
-  .contributor-grid--researchers {
+  .contributor-team-panel {
+    padding: 20px 16px 24px;
+  }
+
+  .contributor-researcher-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .contributor-teams .contributor-card {
-    width: auto;
-    padding: 16px 10px;
-  }
-
-  .contributor-rows > .contributor-row .contributor-grid {
-    grid-template-columns: 1fr;
-    max-width: 200px;
-    margin: 0 auto;
+    gap: 8px;
+    width: 100%;
   }
 
   .contributor-card {
     width: auto;
-    padding: 20px 16px;
+    padding: 16px 10px;
   }
 
-  .contributor-avatar-wrapper {
-    width: 56px;
-    height: 56px;
+  .contributor-card--lead {
+    width: 160px;
+    padding: 24px 16px;
   }
 
-  .contributor-avatar {
-    font-size: 1.1rem;
+  .contributor-card--team-lead {
+    width: 120px;
+    padding: 16px 12px;
   }
 
   .contributor-card h3 {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
 
   .contributor-card p {
-    font-size: 0.7rem;
+    font-size: 0.62rem;
+  }
+
+  .contributor-avatar-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contributor-avatar {
+    font-size: 1rem;
   }
 }
