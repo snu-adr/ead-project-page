@@ -1,22 +1,33 @@
 {
   "files": {
-    "main.css": "/EAD-project-page/static/css/main.dcb69a6b.css",
-    "main.js": "/EAD-project-page/static/js/main.723b1347.js",
+    "main.css": "/EAD-project-page/static/css/main.bb2ea922.css",
+    "main.js": "/EAD-project-page/static/js/main.a5481790.js",
     "static/js/453.3b63644b.chunk.js": "/EAD-project-page/static/js/453.3b63644b.chunk.js",
+    "static/media/demo_b2d.webm": "/EAD-project-page/static/media/demo_b2d.e41f0b5e58e032bbe8d6.webm",
+    "static/media/demo_realworld.webm": "/EAD-project-page/static/media/demo_realworld.b4fcc6364e9097b357db.webm",
+    "static/media/adr.png": "/EAD-project-page/static/media/adr.a66e53b8344cf278cbb8.png",
+    "static/media/nota.png": "/EAD-project-page/static/media/nota.b9e47fb53c280e58b8b3.png",
+    "static/media/kaist_old.svg": "/EAD-project-page/static/media/kaist_old.fa47fbacf1dd46e54e0c.svg",
+    "static/media/kaist.svg": "/EAD-project-page/static/media/kaist.5b2d1edd911e8a5cc5c8.svg",
+    "static/media/seoul_national_university.svg": "/EAD-project-page/static/media/seoul_national_university.e0ab3bf4a6fbdc51abea.svg",
+    "static/media/snu.svg": "/EAD-project-page/static/media/snu.e0ab3bf4a6fbdc51abea.svg",
+    "static/media/sum.png": "/EAD-project-page/static/media/sum.5a899dc45d415e679127.png",
+    "static/media/hl-klemove.svg": "/EAD-project-page/static/media/hl-klemove.bb09c127881d965a19b3.svg",
     "index.html": "/EAD-project-page/index.html",
+    "static/media/trajectory.svg": "/EAD-project-page/static/media/trajectory.2c7999d084a231e27a49a08794080a53.svg",
     "static/media/hanyang.svg": "/EAD-project-page/static/media/hanyang.871c99ecc4e61bbedd07.svg",
-    "static/media/hl-klemove.svg": "/EAD-project-page/static/media/hl-klemove.5fb3ec532f57a76c717a.svg",
+    "static/media/kookmin.svg": "/EAD-project-page/static/media/kookmin.7cd19eb401aa8dfd2c9f.svg",
     "static/media/lg.svg": "/EAD-project-page/static/media/lg.2d7be6030c8209a94fb3.svg",
     "static/media/nota.svg": "/EAD-project-page/static/media/nota.65f1af11e39ba917968a.svg",
     "static/media/gist.svg": "/EAD-project-page/static/media/gist.76264ebcfc8d7ecaae6a.svg",
     "static/media/a2z.svg": "/EAD-project-page/static/media/a2z.22bcd1262291be79fc31.svg",
-    "static/media/snu.svg": "/EAD-project-page/static/media/snu.01cb9e6f834dff021e3b5570bd233a02.svg",
-    "main.dcb69a6b.css.map": "/EAD-project-page/static/css/main.dcb69a6b.css.map",
-    "main.723b1347.js.map": "/EAD-project-page/static/js/main.723b1347.js.map",
+    "static/media/sum.svg": "/EAD-project-page/static/media/sum.907d62c063d22e9ef60f.svg",
+    "main.bb2ea922.css.map": "/EAD-project-page/static/css/main.bb2ea922.css.map",
+    "main.a5481790.js.map": "/EAD-project-page/static/js/main.a5481790.js.map",
     "453.3b63644b.chunk.js.map": "/EAD-project-page/static/js/453.3b63644b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcb69a6b.css",
-    "static/js/main.723b1347.js"
+    "static/css/main.bb2ea922.css",
+    "static/js/main.a5481790.js"
   ]
 }
