@@ -18,6 +18,16 @@ const Model = () => {
       <section id="model" aria-label={sectionTitle}>
         <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
 
+        <div className="model-demos fade-in" ref={refDemos}>
+          {demos.map((demo) => (
+            <article key={demo.title} className="model-demo">
+              <h3>{demo.title}</h3>
+              <p>{demo.description}</p>
+              <VideoEmbed url={demo.videoUrl} title={demo.title} placeholder={videoPlaceholder} />
+            </article>
+          ))}
+        </div>
+
         <div className="model-comparison fade-in" ref={refComparison}>
           <h3>{comparison.title}</h3>
 
@@ -63,16 +73,6 @@ const Model = () => {
               </ul>
             </div>
           </div>
-        </div>
-
-        <div className="model-demos fade-in" ref={refDemos}>
-          {demos.map((demo) => (
-            <article key={demo.title} className="model-demo">
-              <h3>{demo.title}</h3>
-              <p>{demo.description}</p>
-              <VideoEmbed url={demo.videoUrl} title={demo.title} placeholder={videoPlaceholder} />
-            </article>
-          ))}
         </div>
 
         <div className="model-architecture fade-in" ref={refArchitecture}>

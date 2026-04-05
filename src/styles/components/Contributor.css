@@ -26,14 +26,18 @@
 }
 
 .contributor-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 170px);
   justify-content: center;
   gap: 24px;
 }
 
+.contributor-row:first-child .contributor-grid {
+  grid-template-columns: 170px;
+}
+
 .contributor-card {
-  flex: 0 1 200px;
+  width: 170px;
   background: linear-gradient(160deg, var(--color-bg-card) 0%, rgba(167, 139, 250, 0.02) 100%);
   border: 1px solid var(--color-border);
   border-radius: 12px;
