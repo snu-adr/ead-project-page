@@ -48,8 +48,8 @@ const Contact = () => {
             </div>
             <div className="contact-card-body">
               <span className="contact-card-label">{emailLabel}</span>
-              <span className="contact-card-sub">{emailSub}</span>
-              <span className="contact-card-value">{email}</span>
+              <span className="contact-card-value">{emailSub}</span>
+              <span className="contact-card-sub">{email}</span>
             </div>
             <button
               className={`contact-copy-btn${copied ? ' contact-copy-btn--copied' : ''}`}
