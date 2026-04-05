@@ -680,6 +680,7 @@
     flex-direction: column;
     align-items: center;
     padding: 28px 16px 20px;
+    overflow: hidden;
   }
 
   .model-flow-diagram .model-flow-arrow {
@@ -689,6 +690,13 @@
   .model-flow-inputs {
     flex-direction: row;
     gap: 8px;
+  }
+
+  .model-flow-block {
+    min-width: 0;
+    width: 100%;
+    padding: 20px 24px;
+    min-height: 120px;
   }
 
   .comparison-cards {

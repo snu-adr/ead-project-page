@@ -142,8 +142,19 @@
 }
 
 @media (max-width: 768px) {
+  .contributor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .contributor-row:first-child .contributor-grid {
+    grid-template-columns: 1fr;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
   .contributor-card {
-    flex: 0 1 140px;
+    width: auto;
     padding: 20px 16px;
   }
 
@@ -162,9 +173,5 @@
 
   .contributor-card p {
     font-size: 0.7rem;
-  }
-
-  .contributor-card--lead {
-    flex: 0 1 160px;
   }
 }

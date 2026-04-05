@@ -317,12 +317,12 @@
 @media (max-width: 480px) {
   .hero-stats {
     flex-wrap: wrap;
-    gap: 16px 32px;
+    gap: 16px 24px;
     justify-content: center;
   }
 
   .hero-stat {
-    flex: 0 0 calc(50% - 16px);
+    flex: 0 0 calc(50% - 12px);
   }
 }
 
