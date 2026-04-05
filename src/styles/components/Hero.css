@@ -337,11 +337,15 @@
   .hero-subtitle,
   .hero-affiliation,
   .hero-description,
-  .hero-stats,
-  .hero-scroll-indicator {
+  .hero-stats {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .hero-scroll-indicator {
+    animation: none !important;
+    opacity: 1 !important;
   }
 
   /* Particles have staggered animation-delays (0s–4s): they would flash visible then
