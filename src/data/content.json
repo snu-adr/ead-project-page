@@ -17,8 +17,8 @@
     "sectionTitle": "개요",
     "sectionTag": "OVERVIEW",
     "sectionSubtitle": "실배포 기준으로 설계된 E2E 자율주행 프로젝트",
-    "introLead": "국내 자율주행 격차를 줄이기 위한, 서울대 ADR 연구실의 실배포 기준 E2E 자율주행 모델.",
-    "introBody": "전방위 멀티캠 + LiDAR 융합으로 360° Perception을 구현하고, Perception부터 Planning까지 단일 파이프라인으로 처리한다. HL Klemove·LG전자·A2Z 등 업계 파트너와 데이터·하드웨어 역할을 분담해 함께 만든다.",
+    "introLead": "자율주행의 출발선에 서는 데 필요한 것들을 모아 공개합니다.",
+    "introBody": "학계 혼자서는 할 수 없고, 산업계 혼자서도 어렵습니다. 학계가 모델과 기술을 맡고, 산업계가 데이터와 하드웨어를 맡습니다. 각자 잘하는 것을 나눠 만든 결과물을 국내 자율주행 업계 전체에 공개합니다.",
     "demos": [
       {
         "title": "Real-world Demo",
