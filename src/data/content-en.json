@@ -292,6 +292,14 @@
       {
         "name": "SUM",
         "logo": "sum.png"
+      },
+      {
+        "name": "Visionary",
+        "logo": "visionary.png"
+      },
+      {
+        "name": "Netropy",
+        "logo": "netropy.svg"
       }
     ]
   },
