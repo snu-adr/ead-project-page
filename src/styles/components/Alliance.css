@@ -82,6 +82,7 @@
 .alliance-logo[data-name="Nota AI"] { max-height: 32px; max-width: 140px; }
 .alliance-logo[data-name="KAIST"] { max-height: 34px; }
 .alliance-logo[data-name="LG전자"] { max-height: 36px; }
+.alliance-logo[data-name="Visionary"] { max-height: 28px; max-width: 120px; }
 
 .alliance-marquee-item:hover .alliance-logo {
   opacity: 1;
