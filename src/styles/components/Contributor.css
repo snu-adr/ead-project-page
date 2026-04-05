@@ -11,7 +11,7 @@
 
 .contributor-teams {
   display: flex;
-  gap: 40px;
+  gap: 24px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -39,9 +39,15 @@
   gap: 24px;
 }
 
-/* 팀 row 안에서는 2열 배치 */
+/* 팀 row 안에서는 4열 배치 (팀 2개 × 4열 = 한 줄 8명) */
 .contributor-teams .contributor-grid {
-  grid-template-columns: repeat(2, 170px);
+  grid-template-columns: repeat(4, 130px);
+  gap: 12px;
+}
+
+.contributor-teams .contributor-card {
+  width: 130px;
+  padding: 20px 12px;
 }
 
 .contributor-rows > .contributor-row .contributor-grid {
@@ -166,6 +172,12 @@
 
   .contributor-teams .contributor-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .contributor-teams .contributor-card {
+    width: auto;
+    padding: 16px 10px;
   }
 
   .contributor-rows > .contributor-row .contributor-grid {
