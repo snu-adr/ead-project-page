@@ -5,30 +5,48 @@
     "subtitle": "Evolutionary Autonomous Driving",
     "affiliation": "ADR Lab, Seoul National University",
     "description": "To bridge the technology gap in Korea's autonomous driving industry, SNU ADR Lab is releasing an End-to-End autonomous driving model and dataset designed for real-world deployment.",
-    "highlights": ["360° Camera", "Deployment-Ready", "Open Source"],
+    "highlights": [
+      "360° Camera",
+      "Deployment-Ready",
+      "Open Source"
+    ],
     "stats": [
-      { "value": "360°", "label": "Perception" },
-      { "value": "E2E", "label": "Planning" },
-      { "value": "5+", "label": "Partners" },
-      { "value": "v1.0", "label": "Release" }
+      {
+        "value": "360°",
+        "label": "Perception"
+      },
+      {
+        "value": "E2E",
+        "label": "Planning"
+      },
+      {
+        "value": "5+",
+        "label": "Partners"
+      },
+      {
+        "value": "v1.0",
+        "label": "Release"
+      }
     ]
   },
   "overview": {
-    "sectionTitle": "Overview",
+    "sectionTitle": "EAD Project",
     "sectionTag": "OVERVIEW",
     "sectionSubtitle": "An E2E autonomous driving project designed for real-world deployment",
     "introLead": "We are gathering and releasing everything needed to get Korea's autonomous driving industry to the starting line.",
-    "introBody": "Neither the lab alone nor companies alone can do it. Academia handles the model and technology, while industry handles data and hardware. What we build together will be released to the entire Korean autonomous driving community.",
+    "introLines": [
+      "Neither the lab alone nor companies alone can do it.",
+      "Academia handles the model and technology, while industry handles data and hardware.",
+      "What we build together will be released to the entire Korean autonomous driving community."
+    ],
     "demos": [
       {
         "title": "Real-world Demo",
-        "description": "E2E driving on the NAVSIM real-world benchmark",
         "videoUrl": null,
         "accent": "cyan"
       },
       {
         "title": "Simulation Closed-loop Demo",
-        "description": "Closed-loop driving on CARLA-based Bench2Drive",
         "videoUrl": null,
         "accent": "purple"
       }
@@ -98,10 +116,26 @@
       "eadLabel": "EAD",
       "eadBadge": "Deployment-Ready",
       "items": [
-        { "category": "Camera", "research": "3 Front Cameras", "ead": "Surround Multi-cam" },
-        { "category": "LiDAR", "research": "Not Supported", "ead": "LiDAR Fusion Available" },
-        { "category": "Perception Range", "research": "Front 32m", "ead": "360°, Front 80m" },
-        { "category": "Design Criteria", "research": "Benchmark Performance", "ead": "Real Deployment" }
+        {
+          "category": "Camera",
+          "research": "3 Front Cameras",
+          "ead": "Surround Multi-cam"
+        },
+        {
+          "category": "LiDAR",
+          "research": "Not Supported",
+          "ead": "LiDAR Fusion Available"
+        },
+        {
+          "category": "Perception Range",
+          "research": "Front 32m",
+          "ead": "360°, Front 80m"
+        },
+        {
+          "category": "Design Criteria",
+          "research": "Benchmark Performance",
+          "ead": "Real Deployment"
+        }
       ]
     },
     "architecture": {
@@ -165,25 +199,55 @@
       {
         "rowLabel": null,
         "members": [
-          { "name": "Prof. Jun Won Choi", "role": "Project Leader", "lead": true }
+          {
+            "name": "Prof. Jun Won Choi",
+            "role": "Project Leader",
+            "lead": true
+          }
         ]
       },
       {
         "rowLabel": "Team Perception",
         "members": [
-          { "name": "Geonho Bang", "role": "Team Leader", "teamLead": true },
-          { "name": "Geunju Baek", "role": "Researcher" },
-          { "name": "Wonjun Jeong", "role": "Researcher" },
-          { "name": "Dongyoung Lee", "role": "Researcher" }
+          {
+            "name": "Geonho Bang",
+            "role": "Team Leader",
+            "teamLead": true
+          },
+          {
+            "name": "Geunju Baek",
+            "role": "Researcher"
+          },
+          {
+            "name": "Wonjun Jeong",
+            "role": "Researcher"
+          },
+          {
+            "name": "Dongyoung Lee",
+            "role": "Researcher"
+          }
         ]
       },
       {
         "rowLabel": "Team Planning",
         "members": [
-          { "name": "Jungho Kim", "role": "Team Leader", "teamLead": true },
-          { "name": "Jiyong Oh", "role": "Researcher" },
-          { "name": "Seunghoon Yu", "role": "Researcher" },
-          { "name": "Hongjae Shin", "role": "Researcher" }
+          {
+            "name": "Jungho Kim",
+            "role": "Team Leader",
+            "teamLead": true
+          },
+          {
+            "name": "Jiyong Oh",
+            "role": "Researcher"
+          },
+          {
+            "name": "Seunghoon Yu",
+            "role": "Researcher"
+          },
+          {
+            "name": "Hongjae Shin",
+            "role": "Researcher"
+          }
         ]
       }
     ]
@@ -193,15 +257,42 @@
     "sectionTag": "ECOSYSTEM",
     "sectionSubtitle": "Partners building Korea's autonomous driving ecosystem together with EAD",
     "partners": [
-      { "name": "HL Klemove", "logo": "hl-klemove.svg" },
-      { "name": "LG Electronics", "logo": "lg.png" },
-      { "name": "A2Z", "logo": "a2z.png" },
-      { "name": "Nota AI", "logo": "nota.png" },
-      { "name": "Hanyang University", "logo": "hanyang.svg" },
-      { "name": "GIST", "logo": "gist.png" },
-      { "name": "Kookmin University", "logo": "kookmin.svg" },
-      { "name": "KAIST", "logo": "kaist.svg" },
-      { "name": "SUM", "logo": "sum.png" }
+      {
+        "name": "HL Klemove",
+        "logo": "hl-klemove.svg"
+      },
+      {
+        "name": "LG Electronics",
+        "logo": "lg.png"
+      },
+      {
+        "name": "A2Z",
+        "logo": "a2z.png"
+      },
+      {
+        "name": "Nota AI",
+        "logo": "nota.png"
+      },
+      {
+        "name": "Hanyang University",
+        "logo": "hanyang.svg"
+      },
+      {
+        "name": "GIST",
+        "logo": "gist.png"
+      },
+      {
+        "name": "Kookmin University",
+        "logo": "kookmin.svg"
+      },
+      {
+        "name": "KAIST",
+        "logo": "kaist.svg"
+      },
+      {
+        "name": "SUM",
+        "logo": "sum.png"
+      }
     ]
   },
   "contact": {
@@ -210,7 +301,12 @@
     "sectionSubtitle": "",
     "collaborationTitle": "Building Korea's Autonomous Driving Ecosystem Together",
     "collaborationNote": "We are looking for partners to build Korea's autonomous driving ecosystem together.\nModel code requests, collaboration proposals — all inquiries are welcome.",
-    "collaborationTopics": ["Model Code Access", "Joint Research", "Data Collaboration", "Alliance Membership"],
+    "collaborationTopics": [
+      "Model Code Access",
+      "Joint Research",
+      "Data Collaboration",
+      "Alliance Membership"
+    ],
     "emailLabel": "Email",
     "emailSub": "Prof. Jun Won Choi",
     "email": "junwchoi@snu.ac.kr",

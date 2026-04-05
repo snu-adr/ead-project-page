@@ -5,30 +5,48 @@
     "subtitle": "Evolutionary Autonomous Driving",
     "affiliation": "서울대학교 ADR 연구실",
     "description": "국내 자율주행 기술 격차를 줄이기 위해, 서울대 ADR 연구실이 실배포 기준으로 설계한 End-to-End 자율주행 모델과 데이터셋을 공개합니다.",
-    "highlights": ["전방위 카메라", "실배포 설계", "오픈소스"],
+    "highlights": [
+      "전방위 카메라",
+      "실배포 설계",
+      "오픈소스"
+    ],
     "stats": [
-      { "value": "360°", "label": "Perception" },
-      { "value": "E2E", "label": "Planning" },
-      { "value": "5+", "label": "Partners" },
-      { "value": "v1.0", "label": "Release" }
+      {
+        "value": "360°",
+        "label": "Perception"
+      },
+      {
+        "value": "E2E",
+        "label": "Planning"
+      },
+      {
+        "value": "5+",
+        "label": "Partners"
+      },
+      {
+        "value": "v1.0",
+        "label": "Release"
+      }
     ]
   },
   "overview": {
-    "sectionTitle": "개요",
+    "sectionTitle": "EAD 프로젝트",
     "sectionTag": "OVERVIEW",
     "sectionSubtitle": "실배포 기준으로 설계된 E2E 자율주행 프로젝트",
     "introLead": "자율주행의 출발선에 서는 데 필요한 것들을 모아 공개합니다.",
-    "introBody": "연구실 혼자서는 할 수 없고, 기업 혼자서도 어렵습니다. 학계가 모델과 기술을 맡고, 산업계가 데이터와 하드웨어를 맡습니다. 각자 잘하는 것을 나눠 만든 결과물을 국내 자율주행 업계 전체에 공개합니다.",
+    "introLines": [
+      "연구실 혼자서는 할 수 없고, 기업 혼자서도 어렵습니다.",
+      "학계가 모델과 기술을 맡고, 산업계가 데이터와 하드웨어를 맡습니다.",
+      "각자 잘하는 것을 나눠 만든 결과물을 국내 자율주행 업계 전체에 공개합니다."
+    ],
     "demos": [
       {
         "title": "Real-world Demo",
-        "description": "NAVSIM 실도로 벤치마크 기반 E2E 주행 시연",
         "videoUrl": null,
         "accent": "cyan"
       },
       {
         "title": "Simulation Closed-loop Demo",
-        "description": "CARLA 기반 Bench2Drive 폐쇄루프 주행 시연",
         "videoUrl": null,
         "accent": "purple"
       }
@@ -181,25 +199,55 @@
       {
         "rowLabel": null,
         "members": [
-          { "name": "최준원 교수", "role": "Project Leader", "lead": true }
+          {
+            "name": "최준원 교수",
+            "role": "Project Leader",
+            "lead": true
+          }
         ]
       },
       {
         "rowLabel": "Team Perception",
         "members": [
-          { "name": "방건호", "role": "Team Leader", "teamLead": true },
-          { "name": "백근주", "role": "Researcher" },
-          { "name": "정원준", "role": "Researcher" },
-          { "name": "이동영", "role": "Researcher" }
+          {
+            "name": "방건호",
+            "role": "Team Leader",
+            "teamLead": true
+          },
+          {
+            "name": "백근주",
+            "role": "Researcher"
+          },
+          {
+            "name": "정원준",
+            "role": "Researcher"
+          },
+          {
+            "name": "이동영",
+            "role": "Researcher"
+          }
         ]
       },
       {
         "rowLabel": "Team Planning",
         "members": [
-          { "name": "김정호", "role": "Team Leader", "teamLead": true },
-          { "name": "오지용", "role": "Researcher" },
-          { "name": "유승훈", "role": "Researcher" },
-          { "name": "신홍재", "role": "Researcher" }
+          {
+            "name": "김정호",
+            "role": "Team Leader",
+            "teamLead": true
+          },
+          {
+            "name": "오지용",
+            "role": "Researcher"
+          },
+          {
+            "name": "유승훈",
+            "role": "Researcher"
+          },
+          {
+            "name": "신홍재",
+            "role": "Researcher"
+          }
         ]
       }
     ]
@@ -209,15 +257,42 @@
     "sectionTag": "ECOSYSTEM",
     "sectionSubtitle": "EAD와 함께 국내 자율주행 생태계를 만드는 파트너",
     "partners": [
-      { "name": "HL Klemove", "logo": "hl-klemove.svg" },
-      { "name": "LG전자", "logo": "lg.png" },
-      { "name": "A2Z", "logo": "a2z.png" },
-      { "name": "Nota AI", "logo": "nota.png" },
-      { "name": "한양대학교", "logo": "hanyang.svg" },
-      { "name": "GIST", "logo": "gist.png" },
-      { "name": "국민대학교", "logo": "kookmin.svg" },
-      { "name": "KAIST", "logo": "kaist.svg" },
-      { "name": "SUM", "logo": "sum.png" }
+      {
+        "name": "HL Klemove",
+        "logo": "hl-klemove.svg"
+      },
+      {
+        "name": "LG전자",
+        "logo": "lg.png"
+      },
+      {
+        "name": "A2Z",
+        "logo": "a2z.png"
+      },
+      {
+        "name": "Nota AI",
+        "logo": "nota.png"
+      },
+      {
+        "name": "한양대학교",
+        "logo": "hanyang.svg"
+      },
+      {
+        "name": "GIST",
+        "logo": "gist.png"
+      },
+      {
+        "name": "국민대학교",
+        "logo": "kookmin.svg"
+      },
+      {
+        "name": "KAIST",
+        "logo": "kaist.svg"
+      },
+      {
+        "name": "SUM",
+        "logo": "sum.png"
+      }
     ]
   },
   "contact": {
@@ -226,7 +301,12 @@
     "sectionSubtitle": "",
     "collaborationTitle": "함께 만드는 한국 자율주행 생태계",
     "collaborationNote": "국내 자율주행 생태계를 함께 만들어 갈 파트너를 찾습니다.\n모델 코드 요청, 협업 제안 등 어떤 문의든 환영합니다.",
-    "collaborationTopics": ["모델 코드 제공", "공동 연구", "데이터 협업", "Alliance 참여"],
+    "collaborationTopics": [
+      "모델 코드 제공",
+      "공동 연구",
+      "데이터 협업",
+      "Alliance 참여"
+    ],
     "emailLabel": "이메일",
     "emailSub": "최준원 교수",
     "email": "junwchoi@snu.ac.kr",

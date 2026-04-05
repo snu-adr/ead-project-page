@@ -4,8 +4,21 @@
 
 #overview {
   position: relative;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 100px;
   overflow: hidden;
+}
+
+/* 섹션 타이틀 + 인트로는 기존 패딩 유지 */
+#overview .section-title,
+.overview-intro {
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =============================================
@@ -44,9 +57,17 @@
 
 .overview-intro-body {
   font-size: 1rem;
-  line-height: 1.9;
   color: var(--color-text-light);
   letter-spacing: 0.1px;
+}
+
+.overview-intro-body p {
+  line-height: 1.9;
+  margin: 0;
+}
+
+.overview-intro-body p + p {
+  margin-top: 8px;
 }
 
 /* =============================================
@@ -59,6 +80,11 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .overview-demo {
@@ -66,11 +92,11 @@
   border: 1px solid var(--color-border);
   border-radius: 16px;
   overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .overview-demo:hover {
-  transform: translateY(-2px);
+  border-left-color: var(--color-accent);
 }
 
 .overview-demo--cyan {
@@ -90,13 +116,13 @@
 }
 
 .overview-demo-header {
-  padding: 20px 24px 16px;
+  padding: 12px 24px 10px;
 }
 
 .overview-demo h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 6px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin: 0;
   letter-spacing: 0.2px;
 }
 

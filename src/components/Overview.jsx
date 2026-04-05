@@ -9,7 +9,7 @@ import '../styles/components/Overview.css';
 
 const Overview = () => {
   const { content } = useLanguage();
-  const { sectionTitle, sectionTag, sectionSubtitle, introLead, introBody, demos } = content.overview;
+  const { sectionTitle, sectionTag, sectionSubtitle, introLead, introLines, demos } = content.overview;
   const videoPlaceholder = content.model.videoPlaceholder;
 
   const refIntro = useScrollFadeIn();
@@ -27,7 +27,11 @@ const Overview = () => {
 
       <div className="overview-intro fade-in" ref={refIntro}>
         <p className="overview-intro-lead">{introLead}</p>
-        <p className="overview-intro-body">{introBody}</p>
+        <div className="overview-intro-body">
+          {introLines.map((line, i) => (
+            <p key={i}>{line}</p>
+          ))}
+        </div>
       </div>
 
       <div className="overview-demos fade-in" ref={refDemos}>
@@ -37,7 +41,6 @@ const Overview = () => {
             <article key={demo.title} className={`overview-demo overview-demo--${demo.accent}`}>
               <div className="overview-demo-header">
                 <h3>{demo.title}</h3>
-                <p>{demo.description}</p>
               </div>
               <VideoEmbed url={url} title={demo.title} placeholder={videoPlaceholder} />
             </article>
