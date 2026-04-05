@@ -484,8 +484,9 @@
 }
 
 .model-flow-trajectory-img {
-  width: 64px;
+  width: 90px;
   height: auto;
+  margin-top: 8px;
 }
 
 .model-flow-caption {
