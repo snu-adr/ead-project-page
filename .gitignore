@@ -22,7 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-CLAUDE.md
+# Claude Code internals
+.claude/
 
 # Glance MCP sessions/screenshots
 .browser-sessions/
