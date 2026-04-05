@@ -4,8 +4,8 @@ import SectionTitle from './common/SectionTitle';
 import VideoEmbed from './common/VideoEmbed';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import trajectoryImg from '../assets/images/trajectory.svg';
-import demoB2dGif from '../assets/images/demo_b2d.gif';
-import demoRealworldGif from '../assets/images/demo_realworld.gif';
+import demoB2dGif from '../assets/images/demo_b2d.webm';
+import demoRealworldGif from '../assets/images/demo_realworld.webm';
 import '../styles/components/Model.css';
 
 const Model = () => {

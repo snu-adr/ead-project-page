@@ -131,7 +131,8 @@ button {
   overflow: hidden;
 }
 
-.video-embed-gif img {
+.video-embed-gif img,
+.video-embed-gif video {
   display: block;
   width: 100%;
   height: auto;

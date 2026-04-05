@@ -9,10 +9,12 @@ const VideoEmbed = ({ url, title, placeholder }) => {
     );
   }
 
-  if (url.includes('.gif')) {
+  if (url.includes('.gif') || url.includes('.webm') || url.includes('.mp4')) {
     return (
       <div className="video-embed-gif">
-        <img src={url} alt={title} />
+        <video autoPlay loop muted playsInline>
+          <source src={url} />
+        </video>
       </div>
     );
   }
