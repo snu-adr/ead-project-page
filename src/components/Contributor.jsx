@@ -4,17 +4,50 @@ import SectionTitle from './common/SectionTitle';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Contributor.css';
 
-const MemberCard = ({ member }) => (
-  <article className={`contributor-card${member.lead ? ' contributor-card--lead' : member.teamLead ? ' contributor-card--team-lead' : ''}`}>
-    <div className="contributor-avatar-wrapper" aria-hidden="true">
-      <div className="contributor-avatar">
-        {member.name.charAt(0)}
+/* 기여자 사진 맵 (이름 → 이미지) */
+const photoMap = {
+  '최준원': require('../assets/images/contributors/최준원.jpg'),
+  '최준원 교수': require('../assets/images/contributors/최준원.jpg'),
+  '방건호': require('../assets/images/contributors/방건호.jpg'),
+  '김정호': require('../assets/images/contributors/김정호.jpg'),
+  '백근주': require('../assets/images/contributors/백근주.jpg'),
+  '정원준': require('../assets/images/contributors/정원준.jpg'),
+  '이동영': require('../assets/images/contributors/이동영.jpg'),
+  '오지용': require('../assets/images/contributors/오지용.jpg'),
+  '유승훈': require('../assets/images/contributors/유승훈.jpg'),
+  '신홍재': require('../assets/images/contributors/신홍재.jpg'),
+};
+
+/* EN 이름 → KO 이름 역매핑 */
+const enToKo = {
+  'Prof. Jun Won Choi': '최준원',
+  'Geonho Bang': '방건호',
+  'Jungho Kim': '김정호',
+  'Keunjoo Baek': '백근주',
+  'Wonjun Jeong': '정원준',
+  'Dongyoung Lee': '이동영',
+  'Jiyong Oh': '오지용',
+  'Seunghoon Yu': '유승훈',
+  'Hongjae Shin': '신홍재',
+};
+
+const getPhoto = (name) => photoMap[name] || photoMap[enToKo[name]];
+
+const MemberCard = ({ member }) => {
+  const photo = getPhoto(member.name);
+  return (
+    <article className={`contributor-card${member.lead ? ' contributor-card--lead' : member.teamLead ? ' contributor-card--team-lead' : ''}`}>
+      <div className="contributor-avatar-wrapper" aria-hidden="true">
+        {photo
+          ? <img className="contributor-avatar-photo" src={photo} alt={member.name} />
+          : <div className="contributor-avatar">{member.name.charAt(0)}</div>
+        }
       </div>
-    </div>
-    <h3>{member.name}</h3>
-    <p>{member.role}</p>
-  </article>
-);
+      <h3>{member.name}</h3>
+      <p>{member.role}</p>
+    </article>
+  );
+};
 
 const Contributor = () => {
   const { content } = useLanguage();
