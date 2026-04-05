@@ -22,7 +22,6 @@ const Overview = () => {
 
   return (
     <section id="overview" aria-label={sectionTitle}>
-      <div className="overview-radar" aria-hidden="true" />
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
 
       <div className="overview-intro fade-in" ref={refIntro}>
