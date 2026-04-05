@@ -30,7 +30,7 @@
     ]
   },
   "overview": {
-    "sectionTitle": "EAD 프로젝트",
+    "sectionTitle": "EAD Project",
     "sectionTag": "EAD PROJECT",
     "sectionSubtitle": "학계와 산업계가 함께 만드는 국내 자율주행 베이스라인",
     "introLead": "자율주행의 출발선에 서는 데 필요한 것들을 모아 공개합니다.",
@@ -53,7 +53,7 @@
     ]
   },
   "roadmap": {
-    "sectionTitle": "로드맵",
+    "sectionTitle": "Roadmap",
     "sectionTag": "ROADMAP",
     "sectionSubtitle": "실배포 기준으로 설계된 v1.0, 대규모 데이터로 확장하는 v2.0",
     "versions": [
@@ -86,7 +86,7 @@
     ]
   },
   "dataset": {
-    "sectionTitle": "데이터셋",
+    "sectionTitle": "Dataset",
     "sectionTag": "DATASET",
     "sectionSubtitle": "실도로 + 시뮬레이션, 두 축에서 훈련 및 검증",
     "realworld": {
@@ -106,7 +106,7 @@
     }
   },
   "model": {
-    "sectionTitle": "모델",
+    "sectionTitle": "Model",
     "sectionTag": "MODEL",
     "sectionSubtitle": "실배포 기준으로 설계된 E2E 자율주행 모델",
     "comparison": {
@@ -173,7 +173,7 @@
     }
   },
   "notice": {
-    "sectionTitle": "공지사항",
+    "sectionTitle": "Notice",
     "sectionTag": "NOTICE",
     "sectionSubtitle": "EAD 프로젝트의 최신 소식",
     "items": [
@@ -192,7 +192,7 @@
     ]
   },
   "contributors": {
-    "sectionTitle": "기여자",
+    "sectionTitle": "Contributors",
     "sectionTag": "CONTRIBUTORS",
     "sectionSubtitle": "서울대학교 ADR 연구실 연구팀",
     "rows": [
@@ -253,7 +253,7 @@
     ]
   },
   "alliance": {
-    "sectionTitle": "생태계",
+    "sectionTitle": "Ecosystem",
     "sectionTag": "ECOSYSTEM",
     "sectionSubtitle": "EAD와 함께 국내 자율주행 생태계를 만드는 파트너",
     "partners": [
@@ -296,7 +296,7 @@
     ]
   },
   "contact": {
-    "sectionTitle": "연락처",
+    "sectionTitle": "Contact",
     "sectionTag": "CONTACT",
     "sectionSubtitle": "",
     "collaborationTitle": "함께 만드는 한국 자율주행 생태계",
