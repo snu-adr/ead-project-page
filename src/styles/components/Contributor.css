@@ -113,7 +113,7 @@
 }
 
 .contributor-card--lead h3 {
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 .contributor-card--lead p {
