@@ -153,7 +153,7 @@
       {
         "date": "2026-04-06",
         "title": "EAD v1.0 공개",
-        "content": "실배포 기준으로 설계된 E2E 자율주행 모델 EAD v1.0을 공개합니다. Camera-Only 및 LiDAR-Camera 두 가지 구성을 제공하며, NAVSIM 및 Bench2Drive 벤치마크에서 훈련·검증을 완료하였습니다."
+        "content": "실배포 기준으로 설계된 E2E 자율주행 모델 EAD v1.0을 공개합니다. Camera-Only 및 LiDAR-Camera 두 가지 구성을 제공하며, 공개 벤치마크 기반 훈련·검증을 완료하였습니다."
       },
       {
         "date": "2026-03-19",
