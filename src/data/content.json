@@ -178,7 +178,7 @@
       {
         "rowLabel": "Team Perception",
         "members": [
-          { "name": "방건호", "role": "Researcher" },
+          { "name": "방건호", "role": "Team Leader", "teamLead": true },
           { "name": "백근주", "role": "Researcher" },
           { "name": "정원준", "role": "Researcher" },
           { "name": "이동영", "role": "Researcher" }
@@ -187,7 +187,7 @@
       {
         "rowLabel": "Team Planning",
         "members": [
-          { "name": "김정호", "role": "Researcher" },
+          { "name": "김정호", "role": "Team Leader", "teamLead": true },
           { "name": "오지용", "role": "Researcher" },
           { "name": "유승훈", "role": "Researcher" },
           { "name": "신홍재", "role": "Researcher" }

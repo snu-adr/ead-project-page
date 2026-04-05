@@ -162,7 +162,7 @@
       {
         "rowLabel": "Team Perception",
         "members": [
-          { "name": "Geonho Bang", "role": "Researcher" },
+          { "name": "Geonho Bang", "role": "Team Leader", "teamLead": true },
           { "name": "Geunju Baek", "role": "Researcher" },
           { "name": "Wonjun Jeong", "role": "Researcher" },
           { "name": "Dongyoung Lee", "role": "Researcher" }
@@ -171,7 +171,7 @@
       {
         "rowLabel": "Team Planning",
         "members": [
-          { "name": "Jungho Kim", "role": "Researcher" },
+          { "name": "Jungho Kim", "role": "Team Leader", "teamLead": true },
           { "name": "Jiyong Oh", "role": "Researcher" },
           { "name": "Seunghoon Yu", "role": "Researcher" },
           { "name": "Hongjae Shin", "role": "Researcher" }

@@ -11,7 +11,7 @@
 
 .contributor-teams {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -32,26 +32,32 @@
   opacity: 0.7;
 }
 
+/* Project Lead 단독 grid */
 .contributor-grid {
   display: grid;
-  grid-template-columns: repeat(4, 170px);
   justify-content: center;
   gap: 24px;
 }
 
-/* 팀 row 안에서는 4열 배치 (팀 2개 × 4열 = 한 줄 8명) */
-.contributor-teams .contributor-grid {
-  grid-template-columns: repeat(4, 130px);
+.contributor-rows > .contributor-row .contributor-grid {
+  grid-template-columns: 170px;
+}
+
+/* Team leader 래퍼 — 팀 내 중앙 정렬 */
+.contributor-team-leader-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Researcher 3열 그리드 */
+.contributor-grid--researchers {
+  grid-template-columns: repeat(3, 130px);
   gap: 12px;
 }
 
 .contributor-teams .contributor-card {
   width: 130px;
   padding: 20px 12px;
-}
-
-.contributor-rows > .contributor-row .contributor-grid {
-  grid-template-columns: 170px;
 }
 
 .contributor-card {
@@ -151,6 +157,17 @@
   100% { background-position: 0% 50%; }
 }
 
+/* Team Leader card — subtle accent, between lead and researcher */
+.contributor-card--team-lead {
+  border-color: rgba(56, 189, 248, 0.25);
+  background: linear-gradient(160deg, rgba(56, 189, 248, 0.05) 0%, rgba(167, 139, 250, 0.03) 100%);
+}
+
+.contributor-card--team-lead p {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
 /* ─── Reduced Motion: freeze lead gradient animation ─── */
 @media (prefers-reduced-motion: reduce) {
   .contributor-card--lead .contributor-avatar-wrapper {
@@ -165,14 +182,9 @@
     gap: 32px;
   }
 
-  .contributor-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .contributor-teams .contributor-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .contributor-grid--researchers {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 
   .contributor-teams .contributor-card {
