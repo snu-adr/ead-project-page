@@ -1,10 +1,11 @@
 import React from 'react';
-import content from '../data/content.json';
+import { useLanguage } from '../contexts/LanguageContext';
 import SectionTitle from './common/SectionTitle';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Contributor.css';
 
 const Contributor = () => {
+  const { content } = useLanguage();
   const { sectionTitle, sectionTag, sectionSubtitle, rows } = content.contributors;
   const ref = useScrollFadeIn();
 

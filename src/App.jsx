@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/global.css';
+import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import RoadMap from './components/RoadMap';
@@ -11,10 +12,13 @@ import Alliance from './components/Alliance';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-function App() {
+function AppInner() {
+  const { lang } = useLanguage();
+  const skipLabel = lang === 'ko' ? '주요 콘텐츠로 건너뛰기' : 'Skip to main content';
+
   return (
     <div className="App">
-      <a href="#main-content" className="skip-link">주요 콘텐츠로 건너뛰기</a>
+      <a href="#main-content" className="skip-link">{skipLabel}</a>
       <Navbar />
       <main id="main-content">
         <Hero />
@@ -35,6 +39,14 @@ function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppInner />
+    </LanguageProvider>
   );
 }
 

@@ -90,6 +90,43 @@
   background: var(--color-accent);
 }
 
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: 1px solid var(--color-border-light);
+  border-radius: 20px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--color-text-muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.navbar-lang-toggle:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.navbar-lang-toggle span.active {
+  color: var(--color-accent);
+}
+
+.navbar-lang-sep {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
 .navbar-toggle {
   display: none;
   background: none;
@@ -122,6 +159,11 @@
 @media (max-width: 768px) {
   .navbar-toggle {
     display: block;
+  }
+
+  .navbar-lang-toggle {
+    font-size: 0.75rem;
+    padding: 3px 8px;
   }
 
   .navbar-links {

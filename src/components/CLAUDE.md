@@ -17,7 +17,11 @@
 
 ## 공통 패턴
 
-- 모든 섹션 컴포넌트는 props 없이 `content.json`에서 직접 데이터를 import
+- 모든 섹션 컴포넌트는 props 없이 `useLanguage()` 훅으로 content 데이터에 접근
+  ```jsx
+  const { content } = useLanguage(); // content.json 또는 content-en.json
+  ```
+  > ❌ `import content from '../data/content.json'` 직접 import 사용 금지
 - `SectionTitle` 공통 컴포넌트로 섹션 헤더 통일
 - `useScrollFadeIn` 훅으로 스크롤 페이드인 애니메이션 적용 (Hero, Navbar 제외)
 - `useStaggeredFadeIn` 훅으로 자식 요소 순차 페이드인 (Dataset, Contributor 등)
@@ -55,3 +59,4 @@ App.jsx
 
 - `useScrollFadeIn` (`src/hooks/useScrollFadeIn.js`): IntersectionObserver 기반, 요소가 뷰포트에 진입하면 `visible` 추가, 벗어나면 제거 (양방향 트리거). threshold 0.1.
 - `useStaggeredFadeIn` (`src/hooks/useStaggeredFadeIn.js`): IntersectionObserver 기반, 자식 요소에 순차적으로 `visible` 클래스 추가. 한 번만 트리거 (unobserve 호출). threshold 파라미터 지원.
+- `useLanguage` (`src/contexts/LanguageContext.jsx`): 언어 상태(lang), content 객체, toggleLang 함수 반환.

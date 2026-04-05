@@ -1,5 +1,5 @@
 import React from 'react';
-import content from '../data/content.json';
+import { useLanguage } from '../contexts/LanguageContext';
 import SectionTitle from './common/SectionTitle';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/RoadMap.css';
@@ -29,7 +29,7 @@ const RoadMapEntry = ({ v, index }) => {
           : <span className="roadmap-period">{v.period}</span>
         }
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-        <ul className="roadmap-items" role="list" aria-label={`${v.version} ${v.title} 주요 기능`}>
+        <ul className="roadmap-items" role="list" aria-label={`${v.version} ${v.title}`}>
           {v.items.map((item) => (
             <li key={item}>{item}</li>
           ))}
@@ -43,6 +43,7 @@ const RoadMapEntry = ({ v, index }) => {
 };
 
 const RoadMap = () => {
+  const { content } = useLanguage();
   const { sectionTitle, sectionTag, sectionSubtitle, versions } = content.roadmap;
 
   return (

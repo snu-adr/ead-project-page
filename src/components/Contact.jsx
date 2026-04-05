@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import content from '../data/content.json';
+import { useLanguage } from '../contexts/LanguageContext';
 import SectionTitle from './common/SectionTitle';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Contact.css';
 
 const Contact = () => {
+  const { lang, content } = useLanguage();
   const {
     sectionTitle, sectionTag, sectionSubtitle,
     collaborationTitle, collaborationNote, collaborationTopics,
@@ -30,7 +31,7 @@ const Contact = () => {
         <div className="contact-intro">
           <h3 className="contact-intro-title">{collaborationTitle}</h3>
           <p className="contact-note">{collaborationNote}</p>
-          <ul className="contact-topics" aria-label="협업 유형">
+          <ul className="contact-topics" aria-label={lang === 'ko' ? '협업 유형' : 'Collaboration types'}>
             {collaborationTopics.map((topic) => (
               <li key={topic} className="contact-topic-tag">{topic}</li>
             ))}
@@ -39,7 +40,7 @@ const Contact = () => {
 
         <div className="contact-cards">
           {/* Email */}
-          <a className="contact-card contact-card--email" href={`mailto:${email}`} aria-label={`이메일 보내기 — ${email}`}>
+          <a className="contact-card contact-card--email" href={`mailto:${email}`} aria-label={lang === 'ko' ? `이메일 보내기 — ${email}` : `Send email — ${email}`}>
             <div className="contact-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -54,9 +55,9 @@ const Contact = () => {
             <button
               className={`contact-copy-btn${copied ? ' contact-copy-btn--copied' : ''}`}
               onClick={handleCopyEmail}
-              aria-label="이메일 복사"
+              aria-label={lang === 'ko' ? '이메일 복사' : 'Copy email'}
             >
-              {copied ? '복사됨!' : (
+              {copied ? (lang === 'ko' ? '복사됨!' : 'Copied!') : (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="9" y="9" width="13" height="13" rx="2" />
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
@@ -66,7 +67,7 @@ const Contact = () => {
           </a>
 
           {/* Lab website */}
-          <a className="contact-card contact-card--lab" href={labUrl} target="_blank" rel="noreferrer" aria-label={`${address} 웹사이트`}>
+          <a className="contact-card contact-card--lab" href={labUrl} target="_blank" rel="noreferrer" aria-label={lang === 'ko' ? `${address} 웹사이트` : `${address} website`}>
             <div className="contact-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" />

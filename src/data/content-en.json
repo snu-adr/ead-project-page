@@ -1,0 +1,216 @@
+{
+  "hero": {
+    "title": "EAD",
+    "sectionLabel": "EAD Project Introduction",
+    "subtitle": "Evolutionary Autonomous Driving",
+    "affiliation": "ADR Lab, Seoul National University",
+    "description": "To bridge the technology gap in Korea's autonomous driving industry, SNU ADR Lab is releasing an End-to-End autonomous driving model and dataset designed for real-world deployment.",
+    "highlights": ["360° Camera", "Deployment-Ready", "Open Source"],
+    "stats": [
+      { "value": "360°", "label": "Perception" },
+      { "value": "E2E", "label": "Planning" },
+      { "value": "5+", "label": "Partners" },
+      { "value": "v1.0", "label": "Release" }
+    ]
+  },
+  "roadmap": {
+    "sectionTitle": "Roadmap",
+    "sectionTag": "ROADMAP",
+    "sectionSubtitle": "v1.0 designed for real-world deployment, v2.0 scaling with large-scale data",
+    "versions": [
+      {
+        "version": "v1.0",
+        "title": "Foundation",
+        "period": "2026.4",
+        "items": [
+          "Training and validation on open-source datasets",
+          "Surround-view camera + LiDAR sensor configuration",
+          "Full pipeline: multi-task Perception & E2E Planning",
+          "Two configurations: Camera-Only / LiDAR-Camera",
+          "Designed for real-world deployment"
+        ],
+        "status": "completed",
+        "statusLabel": "Released"
+      },
+      {
+        "version": "v2.0",
+        "title": "Expansion",
+        "period": "2026.8",
+        "items": [
+          "In-house data pipeline",
+          "Large-scale dataset-based E2E model release",
+          "VLM (Vision-Language Model) integration"
+        ],
+        "status": "upcoming",
+        "badge": "Coming Soon"
+      }
+    ]
+  },
+  "dataset": {
+    "sectionTitle": "Dataset",
+    "sectionTag": "DATASET",
+    "sectionSubtitle": "Trained and validated on both real-world and simulation data",
+    "realworld": {
+      "title": "Real-world Dataset",
+      "badge": "NAVSIM",
+      "description": "A dataset collected from real-world road environments. The model is trained and evaluated using the NAVSIM benchmark."
+    },
+    "closedloop": {
+      "title": "Closed-loop Dataset",
+      "badge": "Bench2Drive",
+      "description": "A closed-loop evaluation dataset based on the CARLA simulator. The Bench2Drive benchmark provides evaluation quality equivalent to real driving environments."
+    },
+    "inhouse": {
+      "title": "In-house Dataset",
+      "description": "Real-world driving data collected through our own data pipeline. We plan to build large-scale training data optimized for Korean road environments in collaboration with Alliance partners.",
+      "badge": "Coming Soon"
+    }
+  },
+  "model": {
+    "sectionTitle": "Model",
+    "sectionTag": "MODEL",
+    "sectionSubtitle": "An E2E autonomous driving model designed for real-world deployment",
+    "comparison": {
+      "title": "Comparison with Previous Research Models",
+      "researchLabel": "Previous Research",
+      "researchBadge": "Research Models",
+      "eadLabel": "EAD",
+      "eadBadge": "Deployment-Ready",
+      "items": [
+        { "category": "Camera", "research": "3 Front Cameras", "ead": "Surround Multi-cam" },
+        { "category": "LiDAR", "research": "Not Supported", "ead": "LiDAR Fusion Available" },
+        { "category": "Perception Range", "research": "Front 32m", "ead": "360°, Front 80m" },
+        { "category": "Design Criteria", "research": "Benchmark Performance", "ead": "Real Deployment" }
+      ]
+    },
+    "architecture": {
+      "title": "Model Architecture",
+      "diagramPlaceholder": "Architecture Diagram Coming Soon",
+      "encoder": {
+        "label": "ENCODER",
+        "title": "Perception",
+        "description": "Integrates surround-view camera + LiDAR inputs to transform the surrounding environment into a structured representation.",
+        "tasks": [
+          "Object Detection",
+          "BEV Map Segmentation",
+          "Occupancy Prediction",
+          "Vector Map Construction"
+        ]
+      },
+      "decoder": {
+        "label": "DECODER",
+        "title": "Planning",
+        "description": "Simulates the future of candidate trajectories using a Sparse World Model, then selects the safest path through Safety Assessment.",
+        "tasks": [
+          "Agent Prediction",
+          "World Model Simulation",
+          "Trajectory Planning",
+          "Safety Assessment"
+        ]
+      }
+    },
+    "videoPlaceholder": "Demo video coming soon",
+    "flowLabels": {
+      "camera": "Camera",
+      "lidar": "LiDAR",
+      "lidarOptional": "Optional",
+      "trajectory": "Trajectory"
+    },
+    "demos": [
+      {
+        "title": "Real-world Demo",
+        "description": "E2E autonomous driving demonstration on a real-world data benchmark.",
+        "videoUrl": null
+      },
+      {
+        "title": "Simulation Closed-loop Demo",
+        "description": "Closed-loop driving demonstration in the CARLA simulation environment.",
+        "videoUrl": null
+      }
+    ]
+  },
+  "notice": {
+    "sectionTitle": "Notice",
+    "sectionTag": "NOTICE",
+    "sectionSubtitle": "Latest news from the EAD project",
+    "items": [
+      {
+        "date": "2026-04-06",
+        "title": "EAD v1.0 Release",
+        "content": "We are releasing EAD v1.0, an E2E autonomous driving model designed for real-world deployment. Two configurations are available — Camera-Only and LiDAR-Camera — with training and validation completed on public benchmarks."
+      },
+      {
+        "date": "2026-03-19",
+        "status": "complete",
+        "badge": "Done",
+        "title": "FMTC 2026 Presentation",
+        "content": "The EAD project's vision and technical approach were presented at FMTC 2026."
+      }
+    ]
+  },
+  "contributors": {
+    "sectionTitle": "Contributors",
+    "sectionTag": "CONTRIBUTORS",
+    "sectionSubtitle": "Research team at SNU ADR Lab",
+    "rows": [
+      {
+        "rowLabel": null,
+        "members": [
+          { "name": "Junwon Choi", "role": "Project Lead", "lead": true }
+        ]
+      },
+      {
+        "rowLabel": "Team Perception",
+        "members": [
+          { "name": "Geonho Bang", "role": "Researcher" },
+          { "name": "Geunju Baek", "role": "Researcher" },
+          { "name": "Wonjun Jeong", "role": "Researcher" },
+          { "name": "Dongyoung Lee", "role": "Researcher" }
+        ]
+      },
+      {
+        "rowLabel": "Team Planning",
+        "members": [
+          { "name": "Jeongho Kim", "role": "Researcher" },
+          { "name": "Jiyong Oh", "role": "Researcher" },
+          { "name": "Seunghoon Yoo", "role": "Researcher" },
+          { "name": "Hongjae Shin", "role": "Researcher" }
+        ]
+      }
+    ]
+  },
+  "alliance": {
+    "sectionTitle": "Ecosystem",
+    "sectionTag": "ECOSYSTEM",
+    "sectionSubtitle": "Partners building Korea's autonomous driving ecosystem together with EAD",
+    "partners": [
+      { "name": "HL Klemove", "logo": "hl-klemove.svg" },
+      { "name": "LG Electronics", "logo": "lg.png" },
+      { "name": "A2Z", "logo": "a2z.png" },
+      { "name": "Nota AI", "logo": "nota.png" },
+      { "name": "Hanyang University", "logo": "hanyang.png" },
+      { "name": "GIST", "logo": "gist.png" },
+      { "name": "Kookmin University", "logo": "kookmin.png" },
+      { "name": "KAIST", "logo": "kaist.svg" },
+      { "name": "SUM", "logo": "sum.png" }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Contact",
+    "sectionTag": "CONTACT",
+    "sectionSubtitle": "",
+    "collaborationTitle": "Building Korea's Autonomous Driving Ecosystem Together",
+    "collaborationNote": "We are looking for partners to build Korea's autonomous driving ecosystem together.\nModel code requests, collaboration proposals — all inquiries are welcome.",
+    "collaborationTopics": ["Model Code Access", "Joint Research", "Data Collaboration", "Alliance Membership"],
+    "emailLabel": "Email",
+    "emailSub": "Prof. Junwon Choi",
+    "email": "junwchoi@snu.ac.kr",
+    "addressLabel": "Lab",
+    "address": "SNU ADR Lab",
+    "addressDetail": "Artificial Intelligence & Autonomous Driving Lab",
+    "labUrl": "https://adr.snu.ac.kr"
+  },
+  "footer": {
+    "copyright": "© 2026 EAD — Evolutionary Autonomous Driving. ADR Lab, Seoul National University."
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import content from '../data/content.json';
+import { useLanguage } from '../contexts/LanguageContext';
 import SectionTitle from './common/SectionTitle';
 import VideoEmbed from './common/VideoEmbed';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
@@ -9,6 +9,7 @@ import demoRealworldGif from '../assets/images/demo_realworld.webm';
 import '../styles/components/Model.css';
 
 const Model = () => {
+  const { content } = useLanguage();
   const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture, demos, videoPlaceholder, flowLabels } = content.model;
 
   const refComparison = useScrollFadeIn();
@@ -46,7 +47,7 @@ const Model = () => {
                 <span className="comparison-card__badge">{comparison.researchBadge}</span>
               </div>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-              <ul className="comparison-card__list" role="list" aria-label={`${comparison.researchLabel} 항목`}>
+              <ul className="comparison-card__list" role="list" aria-label={comparison.researchLabel}>
                 {comparison.items.map((item) => (
                   <li key={item.category} className="comparison-card__item">
                     <span className="comparison-card__category">{item.category}</span>
@@ -70,7 +71,7 @@ const Model = () => {
                 <span className="comparison-card__badge">{comparison.eadBadge}</span>
               </div>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-              <ul className="comparison-card__list" role="list" aria-label={`${comparison.eadLabel} 항목`}>
+              <ul className="comparison-card__list" role="list" aria-label={comparison.eadLabel}>
                 {comparison.items.map((item) => (
                   <li key={item.category} className="comparison-card__item">
                     <span className="comparison-card__category">{item.category}</span>

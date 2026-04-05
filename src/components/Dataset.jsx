@@ -1,10 +1,11 @@
 import React from 'react';
-import content from '../data/content.json';
+import { useLanguage } from '../contexts/LanguageContext';
 import SectionTitle from './common/SectionTitle';
 import useStaggeredFadeIn from '../hooks/useStaggeredFadeIn';
 import '../styles/components/Dataset.css';
 
 const Dataset = () => {
+  const { content } = useLanguage();
   const { sectionTitle, sectionTag, sectionSubtitle, realworld, closedloop, inhouse } = content.dataset;
   const ref = useStaggeredFadeIn();
 

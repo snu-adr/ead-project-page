@@ -2,7 +2,28 @@
 
 ## content.json 구조
 
-모든 UI 텍스트를 관리하는 중앙 데이터 파일. 컴포넌트에 한국어를 하드코딩하지 않고 이 파일에서 관리한다. 향후 `content-en.json` 추가로 다국어 전환 예정.
+모든 UI 텍스트를 관리하는 중앙 데이터 파일. 컴포넌트에 텍스트를 하드코딩하지 않고 이 파일에서 관리한다.
+
+## 다국어 파일
+
+| 파일 | 언어 | 설명 |
+|------|------|------|
+| `content.json` | 한국어 | 기본 언어 |
+| `content-en.json` | 영어 | 동일한 구조, 영문 번역 |
+
+두 파일은 **구조가 동일**하다. 새 필드를 추가할 때 두 파일을 모두 업데이트해야 한다.
+언어 전환은 `src/contexts/LanguageContext.jsx`에서 처리한다.
+
+### 컴포넌트에서 content 접근 방법
+
+```jsx
+import { useLanguage } from '../contexts/LanguageContext';
+
+const { content } = useLanguage();
+// content는 현재 언어에 따라 content.json 또는 content-en.json을 반환
+```
+
+> ❌ `import content from '../data/content.json'` — 직접 import 사용 금지 (언어 전환 불가)
 
 ### 필드 구조
 

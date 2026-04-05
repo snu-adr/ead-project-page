@@ -1,17 +1,18 @@
 import React from 'react';
-import content from '../data/content.json';
+import { useLanguage } from '../contexts/LanguageContext';
 import snuLogo from '../assets/logos/snu.png';
 import adrLogo from '../assets/logos/adr.png';
 import '../styles/components/Footer.css';
 
 function Footer() {
+  const { lang, content } = useLanguage();
   const { copyright } = content.footer;
 
   return (
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-logos">
-          <img src={snuLogo} alt="서울대학교" className="footer-snu-logo" loading="lazy" />
+          <img src={snuLogo} alt={lang === 'ko' ? '서울대학교' : 'Seoul National University'} className="footer-snu-logo" loading="lazy" />
           <img src={adrLogo} alt="ADR Lab" className="footer-adr-logo" loading="lazy" />
         </div>
         <span className="footer-logo" aria-hidden="true">{content.hero.title}</span>

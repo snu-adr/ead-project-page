@@ -1,8 +1,9 @@
 import React from 'react';
-import content from '../data/content.json';
+import { useLanguage } from '../contexts/LanguageContext';
 import '../styles/components/Hero.css';
 
 const Hero = () => {
+  const { lang, content } = useLanguage();
   const { title, sectionLabel, subtitle, affiliation, description, stats } = content.hero;
 
   return (
@@ -38,7 +39,7 @@ const Hero = () => {
         <p className="hero-description">{description}</p>
 
         {stats && stats.length > 0 && (
-          <dl className="hero-stats" aria-label="주요 지표">
+          <dl className="hero-stats" aria-label={lang === 'ko' ? '주요 지표' : 'Key metrics'}>
             {stats.map((stat) => (
               <div key={stat.label} className="hero-stat">
                 <dt className="hero-stat-label">{stat.label}</dt>

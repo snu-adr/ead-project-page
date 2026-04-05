@@ -1,10 +1,11 @@
 import React from 'react';
-import content from '../data/content.json';
+import { useLanguage } from '../contexts/LanguageContext';
 import SectionTitle from './common/SectionTitle';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import '../styles/components/Alliance.css';
 
 const Alliance = () => {
+  const { lang, content } = useLanguage();
   const { sectionTitle, sectionTag, sectionSubtitle, partners } = content.alliance;
   const ref = useScrollFadeIn();
 
@@ -14,7 +15,7 @@ const Alliance = () => {
       <div className="alliance-marquee-wrapper fade-in" ref={ref}>
         <div className="alliance-marquee-fade alliance-marquee-fade--left" aria-hidden="true" />
         <div className="alliance-marquee">
-          <div className="alliance-marquee-track" role="list" aria-label="협력사 목록">
+          <div className="alliance-marquee-track" role="list" aria-label={lang === 'ko' ? '협력사 목록' : 'Partner list'}>
             {partners.map((partner) => (
               <div key={partner.name} className="alliance-marquee-item" role="listitem">
                 {partner.logo ? (
