@@ -9,6 +9,13 @@
   gap: 40px;
 }
 
+.contributor-teams {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .contributor-row {
   display: flex;
   flex-direction: column;
@@ -32,7 +39,12 @@
   gap: 24px;
 }
 
-.contributor-row:first-child .contributor-grid {
+/* 팀 row 안에서는 2열 배치 */
+.contributor-teams .contributor-grid {
+  grid-template-columns: repeat(2, 170px);
+}
+
+.contributor-rows > .contributor-row .contributor-grid {
   grid-template-columns: 170px;
 }
 
@@ -142,12 +154,21 @@
 }
 
 @media (max-width: 768px) {
+  .contributor-teams {
+    flex-direction: column;
+    gap: 32px;
+  }
+
   .contributor-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
-  .contributor-row:first-child .contributor-grid {
+  .contributor-teams .contributor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contributor-rows > .contributor-row .contributor-grid {
     grid-template-columns: 1fr;
     max-width: 200px;
     margin: 0 auto;

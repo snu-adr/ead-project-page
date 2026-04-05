@@ -172,7 +172,7 @@
       {
         "rowLabel": null,
         "members": [
-          { "name": "최준원", "role": "Project Lead", "lead": true }
+          { "name": "최준원 교수", "role": "Project Lead", "lead": true }
         ]
       },
       {
@@ -204,9 +204,9 @@
       { "name": "LG전자", "logo": "lg.png" },
       { "name": "A2Z", "logo": "a2z.png" },
       { "name": "Nota AI", "logo": "nota.png" },
-      { "name": "한양대학교", "logo": "hanyang.png" },
+      { "name": "한양대학교", "logo": "hanyang.svg" },
       { "name": "GIST", "logo": "gist.png" },
-      { "name": "국민대학교", "logo": "kookmin.png" },
+      { "name": "국민대학교", "logo": "kookmin.svg" },
       { "name": "KAIST", "logo": "kaist.svg" },
       { "name": "SUM", "logo": "sum.png" }
     ]

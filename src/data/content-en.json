@@ -156,7 +156,7 @@
       {
         "rowLabel": null,
         "members": [
-          { "name": "Junwon Choi", "role": "Project Lead", "lead": true }
+          { "name": "Prof. Jun Won Choi", "role": "Project Lead", "lead": true }
         ]
       },
       {
@@ -171,9 +171,9 @@
       {
         "rowLabel": "Team Planning",
         "members": [
-          { "name": "Jeongho Kim", "role": "Researcher" },
+          { "name": "Jungho Kim", "role": "Researcher" },
           { "name": "Jiyong Oh", "role": "Researcher" },
-          { "name": "Seunghoon Yoo", "role": "Researcher" },
+          { "name": "Seunghoon Yu", "role": "Researcher" },
           { "name": "Hongjae Shin", "role": "Researcher" }
         ]
       }
@@ -188,9 +188,9 @@
       { "name": "LG Electronics", "logo": "lg.png" },
       { "name": "A2Z", "logo": "a2z.png" },
       { "name": "Nota AI", "logo": "nota.png" },
-      { "name": "Hanyang University", "logo": "hanyang.png" },
+      { "name": "Hanyang University", "logo": "hanyang.svg" },
       { "name": "GIST", "logo": "gist.png" },
-      { "name": "Kookmin University", "logo": "kookmin.png" },
+      { "name": "Kookmin University", "logo": "kookmin.svg" },
       { "name": "KAIST", "logo": "kaist.svg" },
       { "name": "SUM", "logo": "sum.png" }
     ]
@@ -203,7 +203,7 @@
     "collaborationNote": "We are looking for partners to build Korea's autonomous driving ecosystem together.\nModel code requests, collaboration proposals — all inquiries are welcome.",
     "collaborationTopics": ["Model Code Access", "Joint Research", "Data Collaboration", "Alliance Membership"],
     "emailLabel": "Email",
-    "emailSub": "Prof. Junwon Choi",
+    "emailSub": "Prof. Jun Won Choi",
     "email": "junwchoi@snu.ac.kr",
     "addressLabel": "Lab",
     "address": "SNU ADR Lab",
