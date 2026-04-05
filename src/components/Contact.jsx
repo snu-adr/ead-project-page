@@ -8,7 +8,7 @@ const Contact = () => {
   const {
     sectionTitle, sectionTag, sectionSubtitle,
     collaborationTitle, collaborationNote, collaborationTopics,
-    emailLabel, email,
+    emailLabel, emailSub, email,
     addressLabel, address, addressDetail, labUrl,
   } = content.contact;
   const ref = useScrollFadeIn();
@@ -48,6 +48,7 @@ const Contact = () => {
             </div>
             <div className="contact-card-body">
               <span className="contact-card-label">{emailLabel}</span>
+              <span className="contact-card-sub">{emailSub}</span>
               <span className="contact-card-value">{email}</span>
             </div>
             <button

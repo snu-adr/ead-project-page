@@ -221,6 +221,7 @@
     "collaborationNote": "국내 자율주행 생태계를 함께 만들어 갈 파트너를 찾습니다.\n모델 코드 요청, 협업 제안 등 어떤 문의든 환영합니다.",
     "collaborationTopics": ["모델 코드 제공", "공동 연구", "데이터 협업", "Alliance 참여"],
     "emailLabel": "이메일",
+    "emailSub": "최준원 교수",
     "email": "junwchoi@snu.ac.kr",
     "addressLabel": "연구실",
     "address": "서울대학교 ADR 연구실",
