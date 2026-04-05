@@ -10,6 +10,7 @@ styles/
     ├── Hero.css
     ├── RoadMap.css
     ├── Dataset.css
+    ├── Overview.css
     ├── Model.css
     ├── Notice.css
     ├── Contributor.css
@@ -114,9 +115,16 @@ styles/
 
 ## Contributor.css 구조
 
-- `.contributor-grid`: flex wrap + justify-content:center (9명, 5+4 자동 중앙 정렬)
-- `.contributor-card`: flex: 0 1 200px (고정 너비 200px, 수축 허용)
+- `.contributor-layout`: flex row — 왼쪽 `.contributor-lead-col` (Project Leader) + 오른쪽 `.contributor-teams` (Team 패널들)
+- `.contributor-team-panel`: 팀 단위 카드 (background gradient + border + border-radius 20px). 내부: 팀 라벨 → Team Leader 카드 → `.contributor-team-divider` → 3열 researcher grid
+- `.contributor-team-divider`: 가로 구분선 (gradient transparent→border-light→transparent)
+- `.contributor-researcher-grid`: `grid-template-columns: repeat(3, 110px)` — 리서처 3명 배치
+- 카드 크기 3단계: lead=180px/72px avatar, team-lead=130px/60px avatar, researcher=110px/56px avatar
+- `.contributor-card--lead`: 애니메이션 그라데이션 avatar (lead-gradient 4s), purple role text, accent 계열 border
+- `.contributor-card--team-lead`: 약한 시안 border, 90% opacity role text
+- `.contributor-card p`: `letter-spacing: 0; white-space: nowrap` — "RESEARCHER" 텍스트가 110px 카드에서 줄바꿈되지 않도록
 - `@media (prefers-reduced-motion: reduce)`: lead 카드의 `lead-gradient` 배경 애니메이션을 정지하고 초기 위치(`background-position: 0% 50%`)에 고정
+- `@media (max-width: 768px)`: layout → flex-direction:column, teams → flex-direction:column
 
 ## Alliance.css 구조
 

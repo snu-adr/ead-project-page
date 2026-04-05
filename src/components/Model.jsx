@@ -1,40 +1,22 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import SectionTitle from './common/SectionTitle';
-import VideoEmbed from './common/VideoEmbed';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import trajectoryImg from '../assets/images/trajectory.svg';
-import demoB2dGif from '../assets/images/demo_b2d.webm';
-import demoRealworldGif from '../assets/images/demo_realworld.webm';
 import '../styles/components/Model.css';
 
 const Model = () => {
   const { content } = useLanguage();
-  const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture, demos, videoPlaceholder, flowLabels } = content.model;
+  const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture, flowLabels } = content.model;
 
   const refComparison = useScrollFadeIn();
   const refArchitecture = useScrollFadeIn();
-  const refDemos = useScrollFadeIn();
 
   return (
     <div className="model-wrapper">
       <div className="model-grid-bg" aria-hidden="true" />
       <section id="model" aria-label={sectionTitle}>
         <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
-
-        <div className="model-demos fade-in" ref={refDemos}>
-          {demos.map((demo) => {
-            const gifAssets = { 'Real-world Demo': demoRealworldGif, 'Simulation Closed-loop Demo': demoB2dGif };
-            const url = demo.videoUrl || gifAssets[demo.title] || null;
-            return (
-              <article key={demo.title} className="model-demo">
-                <h3>{demo.title}</h3>
-                <p>{demo.description}</p>
-                <VideoEmbed url={url} title={demo.title} placeholder={videoPlaceholder} />
-              </article>
-            );
-          })}
-        </div>
 
         <div className="model-comparison fade-in" ref={refComparison}>
           <h3>{comparison.title}</h3>

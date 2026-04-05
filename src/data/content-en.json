@@ -13,6 +13,25 @@
       { "value": "v1.0", "label": "Release" }
     ]
   },
+  "overview": {
+    "sectionTitle": "Overview",
+    "sectionTag": "OVERVIEW",
+    "sectionSubtitle": "An E2E autonomous driving project designed for real-world deployment",
+    "intro": "EAD (Evolutionary Autonomous Driving) is an E2E autonomous driving project led by SNU ADR Lab. While conventional research models focus on benchmark performance, EAD is designed with real-world deployment in mind. It delivers surround-view multi-camera + LiDAR fusion, 360° Perception, and End-to-End Planning in a single pipeline — in collaboration with industry partners including HL Klemove, LG Electronics, and A2Z.",
+    "demosTitle": "Model Demo",
+    "demos": [
+      {
+        "title": "Real-world Demo",
+        "description": "E2E autonomous driving demonstration on a real-world data benchmark.",
+        "videoUrl": null
+      },
+      {
+        "title": "Simulation Closed-loop Demo",
+        "description": "Closed-loop driving demonstration in the CARLA simulation environment.",
+        "videoUrl": null
+      }
+    ]
+  },
   "roadmap": {
     "sectionTitle": "Roadmap",
     "sectionTag": "ROADMAP",
@@ -115,19 +134,7 @@
       "lidar": "LiDAR",
       "lidarOptional": "Optional",
       "trajectory": "Trajectory"
-    },
-    "demos": [
-      {
-        "title": "Real-world Demo",
-        "description": "E2E autonomous driving demonstration on a real-world data benchmark.",
-        "videoUrl": null
-      },
-      {
-        "title": "Simulation Closed-loop Demo",
-        "description": "Closed-loop driving demonstration in the CARLA simulation environment.",
-        "videoUrl": null
-      }
-    ]
+    }
   },
   "notice": {
     "sectionTitle": "Notice",

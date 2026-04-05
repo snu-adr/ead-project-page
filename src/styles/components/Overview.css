@@ -1,0 +1,80 @@
+/* =============================================
+   Overview Section
+   ============================================= */
+
+#overview {
+  padding-bottom: 80px;
+}
+
+/* --- Intro paragraph --- */
+.overview-intro {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--color-text-light);
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+/* --- Demos block --- */
+.overview-demos-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 28px;
+  letter-spacing: 0.3px;
+}
+
+.overview-demos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+/* --- Individual demo card --- */
+.overview-demo {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: border-color 0.2s ease;
+}
+
+.overview-demo:hover {
+  border-color: var(--color-border-light);
+}
+
+.overview-demo h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.overview-demo p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  #overview {
+    padding-bottom: 60px;
+  }
+
+  .overview-intro {
+    font-size: 0.95rem;
+    margin-bottom: 48px;
+    text-align: left;
+  }
+
+  .overview-demos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

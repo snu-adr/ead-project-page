@@ -28,6 +28,14 @@ const { content } = useLanguage();
 ### 필드 구조
 
 ```
+overview
+ ├── sectionTitle: string — "개요" / "Overview"
+ ├── sectionTag: string — "OVERVIEW"
+ ├── sectionSubtitle: string
+ ├── intro: string — 1단락 소개 텍스트
+ ├── demosTitle: string — 데모 섹션 소제목
+ └── demos: [{ title, description, videoUrl }] — Real-world Demo, Simulation Closed-loop Demo (model.demos에서 이동)
+
 hero
  ├── title: string — 프로젝트명
  ├── sectionLabel: string — `<section>` aria-label (스크린 리더용 섹션 식별자)
@@ -75,9 +83,9 @@ model
  │    ├── diagramPlaceholder: string — "모식도 준비 중" (이미지 삽입 예정)
  │    ├── encoder: { label, title, description, tasks[] } — ENCODER/Perception 패널
  │    └── decoder: { label, title, description, tasks[] } — DECODER/Planning 패널
- ├── videoPlaceholder: string — 영상 준비 중 플레이스홀더 텍스트 (VideoEmbed에 전달)
- ├── flowLabels: { camera, lidar, trajectory } — 아키텍처 플로우 다이어그램 레이블
- └── demos: [{ title, description, videoUrl }] — Real-world Demo, Simulation Closed-loop Demo
+ ├── videoPlaceholder: string — 영상 준비 중 플레이스홀더 텍스트 (Overview.jsx의 VideoEmbed에 전달)
+ └── flowLabels: { camera, lidar, trajectory } — 아키텍처 플로우 다이어그램 레이블
+ (demos 필드는 overview.demos로 이동됨)
 
 notice
  ├── sectionTitle: string
@@ -91,7 +99,12 @@ contributors
  ├── sectionTitle: string
  ├── sectionTag: string
  ├── sectionSubtitle: string
- └── members: [{ name, role, lead? }] — Project Lead 1명(`lead: true`) + Researcher 8명
+ └── rows: [{ rowLabel, members }]
+      rowLabel: null → Project Leader 행, string → 팀 이름 (Team Perception / Team Planning)
+      members: [{ name, role, lead?, teamLead? }]
+        lead: true → Project Leader (왼쪽 큰 카드)
+        teamLead: true → Team Leader (팀 패널 상단 카드)
+        없음 → Researcher (3열 그리드 카드)
 
 alliance
  ├── sectionTitle: string

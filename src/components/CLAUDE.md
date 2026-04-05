@@ -6,11 +6,12 @@
 |------|------|-----------------|
 | Navbar.jsx | 고정 네비게이션 바, 모바일 햄버거 메뉴 | `hero.title`, 각 섹션의 `sectionTitle` |
 | Hero.jsx | 랜딩 히어로 섹션 (그라데이션 제목, 부제, 설명, stats, 스크롤 인디케이터). 레이더/glow 삭제됨. | `hero.*` |
+| Overview.jsx | 프로젝트 개요 섹션 (소개 1단락 + 데모 영상 2개). Hero 직후 위치. | `overview.*`, `model.videoPlaceholder` |
 | RoadMap.jsx | 버전별 타임라인 (좌우 교대 레이아웃) | `roadmap.*` |
 | Dataset.jsx | 데이터셋 3카드: 실세계(NAVSIM) / 클로즈드루프(Bench2Drive) / 향후 계획 | `dataset.*` |
-| Model.jsx | 이전 연구 vs EAD 비교 카드 + 모델 구조 패널 + 데모 영상 2개 | `model.*` |
+| Model.jsx | 이전 연구 vs EAD 비교 카드 + 모델 구조 패널 (데모 영상은 Overview로 이동됨) | `model.*` (demos 제외) |
 | Notice.jsx | 공지사항 목록 (날짜순, 컴팩트) | `notice.*` |
-| Contributor.jsx | 기여자: flex wrap 그리드 (9명), Project Lead 카드만 시안 테마로 시각 강조 | `contributors.*` |
+| Contributor.jsx | 기여자: Project Leader 왼쪽 + Team Perception/Planning 패널 나란히. 각 팀: Team Leader 카드 + 구분선 + 3-column researcher grid. `MemberCard` 내부 컴포넌트로 카드 렌더링. | `contributors.*` |
 | Alliance.jsx | 협력사 무한 마키 스크롤 (오른쪽→왼쪽). partners를 두 번 렌더링: 첫 번째는 `role="listitem"` 실제 항목, 두 번째는 `aria-hidden="true"` 복사본. 트랙에 `role="list" aria-label="협력사 목록"` | `alliance.*` |
 | Contact.jsx | 연락처 — 이메일/GitHub 두 개의 클릭 가능 카드 레이아웃 (중앙 정렬) | `contact.*` |
 | Footer.jsx | 하단 푸터 (저작권 텍스트) | `footer.*` |
@@ -45,9 +46,10 @@
 App.jsx
  ├── Navbar.jsx
  ├── Hero.jsx
+ ├── Overview.jsx ─ common/SectionTitle.jsx, common/VideoEmbed.jsx
  ├── RoadMap.jsx ── common/SectionTitle.jsx
  ├── Dataset.jsx ── common/SectionTitle.jsx (useStaggeredFadeIn + useScrollFadeIn)
- ├── Model.jsx ─── common/SectionTitle.jsx, common/VideoEmbed.jsx
+ ├── Model.jsx ─── common/SectionTitle.jsx
  ├── Notice.jsx ── common/SectionTitle.jsx
  ├── Contributor.jsx ── common/SectionTitle.jsx (useStaggeredFadeIn)
  ├── Alliance.jsx ── common/SectionTitle.jsx (useScrollFadeIn)

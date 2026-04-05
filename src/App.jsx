@@ -3,6 +3,7 @@ import './styles/global.css';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Overview from './components/Overview';
 import RoadMap from './components/RoadMap';
 import Dataset from './components/Dataset';
 import Model from './components/Model';
@@ -22,6 +23,7 @@ function AppInner() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <Overview />
         <RoadMap />
         <div className="section-alt">
           <Model />
