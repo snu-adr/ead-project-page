@@ -22,6 +22,7 @@ const Alliance = () => {
                     src={require(`../assets/logos/${partner.logo}`)}
                     alt={partner.name}
                     className="alliance-logo"
+                    data-name={partner.name}
                     loading="lazy"
                   />
                 ) : (
@@ -37,6 +38,7 @@ const Alliance = () => {
                     src={require(`../assets/logos/${partner.logo}`)}
                     alt=""
                     className="alliance-logo"
+                    data-name={partner.name}
                     loading="lazy"
                   />
                 ) : (
