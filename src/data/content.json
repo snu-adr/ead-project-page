@@ -256,52 +256,7 @@
     "sectionTitle": "Ecosystem",
     "sectionTag": "ECOSYSTEM",
     "sectionSubtitle": "EAD와 함께 국내 자율주행 생태계를 만드는 파트너",
-    "partners": [
-      {
-        "name": "HL Klemove",
-        "logo": "hl-klemove.svg"
-      },
-      {
-        "name": "LG전자",
-        "logo": "lg.png"
-      },
-      {
-        "name": "A2Z",
-        "logo": "a2z.png"
-      },
-      {
-        "name": "Nota AI",
-        "logo": "nota.png"
-      },
-      {
-        "name": "한양대학교",
-        "logo": "hanyang.svg"
-      },
-      {
-        "name": "GIST",
-        "logo": "gist.png"
-      },
-      {
-        "name": "국민대학교",
-        "logo": "kookmin.svg"
-      },
-      {
-        "name": "KAIST",
-        "logo": "kaist.svg"
-      },
-      {
-        "name": "SUM",
-        "logo": "sum.png"
-      },
-      {
-        "name": "Visionary",
-        "logo": "visionary.png"
-      },
-      {
-        "name": "Netropy",
-        "logo": "netropy.svg"
-      }
-    ]
+    "partners": []
   },
   "contact": {
     "sectionTitle": "Contact",
