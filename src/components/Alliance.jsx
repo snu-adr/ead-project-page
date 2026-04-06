@@ -9,8 +9,6 @@ const Alliance = () => {
   const { sectionTitle, sectionTag, sectionSubtitle, partners } = content.alliance;
   const ref = useScrollFadeIn();
 
-  if (!partners || partners.length === 0) return null;
-
   return (
     <section id="alliance" aria-label={sectionTitle}>
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} centered />
