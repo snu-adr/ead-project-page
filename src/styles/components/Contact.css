@@ -60,6 +60,125 @@
   letter-spacing: 0.3px;
 }
 
+/* Primary CTA — EAD download form */
+.contact-download {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 24px 28px;
+  background:
+    linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(167, 139, 250, 0.08) 100%),
+    var(--color-bg-card);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--color-text);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-download::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 200% at 0% 0%, rgba(56, 189, 248, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.contact-download:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 12px 36px rgba(56, 189, 248, 0.16);
+}
+
+.contact-download:hover::before {
+  opacity: 1;
+}
+
+.contact-download-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18) 0%, rgba(167, 139, 250, 0.18) 100%);
+  color: var(--color-accent);
+}
+
+.contact-download-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.contact-download-body {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.contact-download-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.contact-download-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.contact-download-note {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.contact-download-cta {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-purple) 100%);
+  color: #0a0f1a;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.contact-download-cta svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.contact-download:hover .contact-download-cta {
+  filter: brightness(1.08);
+}
+
+.contact-download:hover .contact-download-cta svg {
+  transform: translateX(3px);
+}
+
 /* Card row */
 .contact-cards {
   display: flex;
@@ -226,5 +345,17 @@ a.contact-card:hover .contact-card-arrow {
 
   .contact-card {
     max-width: none;
+  }
+
+  .contact-download {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .contact-download-cta {
+    align-self: stretch;
+    justify-content: center;
   }
 }

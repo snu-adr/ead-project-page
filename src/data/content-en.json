@@ -256,7 +256,24 @@
     "sectionTitle": "Ecosystem",
     "sectionTag": "ECOSYSTEM",
     "sectionSubtitle": "Partners building Korea's autonomous driving ecosystem together with EAD",
-    "partners": []
+    "partners": [
+      {
+        "name": "LG Electronics",
+        "logo": "lg.png"
+      },
+      {
+        "name": "Rideflux",
+        "logo": "rideflux.png"
+      },
+      {
+        "name": "Kakao Mobility",
+        "logo": "kakao-mobility.svg"
+      },
+      {
+        "name": "Nota AI",
+        "logo": "nota.png"
+      }
+    ]
   },
   "contact": {
     "sectionTitle": "Contact",
@@ -270,6 +287,11 @@
       "Data Collaboration",
       "Alliance Membership"
     ],
+    "downloadLabel": "Download",
+    "downloadTitle": "Request EAD Download",
+    "downloadNote": "Apply to access the EAD model code and dataset by filling out the form below.",
+    "downloadCta": "Open Application Form",
+    "downloadUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe1OI6oRUtwLyhkvCFIyGZR6SduIKDk__HXRayJQo7V65a_Cw/viewform",
     "emailLabel": "Email",
     "emailSub": "Prof. Jun Won Choi",
     "email": "junwchoi@snu.ac.kr",

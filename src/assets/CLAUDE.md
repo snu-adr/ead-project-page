@@ -22,13 +22,12 @@ assets/
 ## 현재 파일 목록
 
 ### logos/
-- `hl-klemove.svg` — HL Klemove (텍스트 SVG 플레이스홀더)
-- `lg.svg` — LG전자 (텍스트 SVG 플레이스홀더)
-- `a2z.svg` — A2Z (텍스트 SVG 플레이스홀더)
-- `nota.svg` — Nota AI (텍스트 SVG 플레이스홀더)
-- `hanyang.svg` — 한양대학교 (텍스트 SVG 플레이스홀더)
-- `gist.svg` — GIST (텍스트 SVG 플레이스홀더)
-- `snu.svg` — 서울대학교 (푸터용)
+- `lg.png` — LG전자 (Ecosystem 사용 중)
+- `rideflux.png` — 라이드플럭스 (Ecosystem 사용 중, rideflux.com 공식 로고 756x187)
+- `kakao-mobility.svg` — 카카오모빌리티 (Ecosystem 사용 중, kakaomobility.com 공식 SVG)
+- `nota.png` — Nota AI (Ecosystem 사용 중)
+- `manifest.json` — logo-fetcher 결과 매니페스트
+- 그 외 `*.png/*.svg` — 이전 Ecosystem 후보 로고 보관 (a2z, gist, hanyang, hl-klemove, kaist, kookmin, sum, snu, netropy, visionary 등)
 
 ### images/
 - (비어 있음 — 모델 모식도 이미지 추가 예정)

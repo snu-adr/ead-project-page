@@ -138,8 +138,9 @@ styles/
 ## Contact.css 구조
 
 - `#contact`: padding 60px (기본 100px보다 축소 — 콘텐츠가 적어 여백 최적화)
+- `.contact-download`: 풀와이드 다운로드 CTA 배너 (시안→퍼플 그라데이션 보더/배경, hover translateY -3px). 좌측 아이콘 + 가운데 텍스트(label/title/note) + 우측 그라데이션 CTA 버튼. 768px 이하: column stack + CTA 버튼 풀폭.
 - `.contact-cards`: 중앙 정렬 flex 컨테이너 (max-width: 760px), 두 카드 래핑
-- `.contact-card`: 이메일/GitHub 클릭 카드 (이메일=시안 테마, GitHub=퍼플 테마)
+- `.contact-card`: 이메일/연구실 클릭 카드 (이메일=시안 테마, 연구실=퍼플 테마)
 - `.contact-card-icon`, `.contact-card-label`, `.contact-card-value`, `.contact-card-arrow`: 카드 내부 요소
 
 ## RoadMap.css 구조

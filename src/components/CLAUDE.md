@@ -13,7 +13,7 @@
 | Notice.jsx | 공지사항 목록 (날짜순, 컴팩트) | `notice.*` |
 | Contributor.jsx | 기여자: Project Leader 왼쪽 + Team Perception/Planning 패널 나란히. 각 팀: Team Leader 카드 + 구분선 + 3-column researcher grid. `MemberCard` 내부 컴포넌트로 카드 렌더링. | `contributors.*` |
 | Alliance.jsx | 협력사 무한 마키 스크롤 (오른쪽→왼쪽). partners를 두 번 렌더링: 첫 번째는 `role="listitem"` 실제 항목, 두 번째는 `aria-hidden="true"` 복사본. 트랙에 `role="list" aria-label="협력사 목록"` | `alliance.*` |
-| Contact.jsx | 연락처 — 이메일/GitHub 두 개의 클릭 가능 카드 레이아웃 (중앙 정렬) | `contact.*` |
+| Contact.jsx | 연락처 — Download 폼 CTA(상단 풀와이드 배너) + 이메일/연구실 카드 2열 (중앙 정렬). Download 카드는 외부 구글 폼 링크. | `contact.*` |
 | Footer.jsx | 하단 푸터 (저작권 텍스트) | `footer.*` |
 
 ## 공통 패턴

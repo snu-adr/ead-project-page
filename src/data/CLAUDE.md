@@ -110,18 +110,27 @@ alliance
  ├── sectionTitle: string
  ├── sectionTag: string
  ├── sectionSubtitle: string
- └── partners: [{ name, logo }] — 6개 파트너 (마키 스크롤)
+ └── partners: [{ name, logo }] — 마키 스크롤. 로고 사이즈는 Alliance.css의 `[data-name="..."]` 셀렉터로 개별 조정.
 
 contact
  ├── sectionTitle: string
  ├── sectionTag: string
  ├── sectionSubtitle: string
- ├── body: string — 줄글 형식 본문 (이메일/GitHub URL 포함)
- ├── emailLabel: string — 이메일 카드 라벨 (기본: "이메일")
- ├── githubLabel: string — GitHub 카드 라벨 (기본: "GitHub")
- ├── email: string
- ├── github: string
- └── address: string
+ ├── collaborationTitle: string — intro 영역 타이틀
+ ├── collaborationNote: string — intro 영역 본문 (줄바꿈은 \n, white-space: pre-line)
+ ├── collaborationTopics: string[] — 협업 유형 pill tag 목록
+ ├── downloadLabel: string — Download 카드 상단 라벨 (예: "Download")
+ ├── downloadTitle: string — Download 카드 제목 (예: "EAD 다운로드 신청")
+ ├── downloadNote: string — Download 카드 설명
+ ├── downloadCta: string — Download 카드 CTA 버튼 텍스트
+ ├── downloadUrl: string — 구글 폼 URL (외부 링크, 새 창)
+ ├── emailLabel: string — 이메일 카드 라벨 (기본: "이메일" / "Email")
+ ├── emailSub: string — 이메일 수신자 표시명 (예: "최준원 교수")
+ ├── email: string — 이메일 주소
+ ├── addressLabel: string — 연구실 카드 라벨
+ ├── address: string — 연구실 이름
+ ├── addressDetail: string — 연구실 영문 풀네임
+ └── labUrl: string — 연구실 웹사이트 URL
 
 footer
  └── copyright: string — 저작권 텍스트

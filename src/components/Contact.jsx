@@ -9,6 +9,7 @@ const Contact = () => {
   const {
     sectionTitle, sectionTag, sectionSubtitle,
     collaborationTitle, collaborationNote, collaborationTopics,
+    downloadLabel, downloadTitle, downloadNote, downloadCta, downloadUrl,
     emailLabel, emailSub, email,
     addressLabel, address, addressDetail, labUrl,
   } = content.contact;
@@ -37,6 +38,35 @@ const Contact = () => {
             ))}
           </ul>
         </div>
+
+        {/* Primary CTA — EAD download form */}
+        <a
+          className="contact-download"
+          href={downloadUrl}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={lang === 'ko' ? `${downloadTitle} — 새 창에서 열기` : `${downloadTitle} — opens in new tab`}
+        >
+          <div className="contact-download-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3v12" />
+              <path d="m7 10 5 5 5-5" />
+              <path d="M5 21h14" />
+            </svg>
+          </div>
+          <div className="contact-download-body">
+            <span className="contact-download-label">{downloadLabel}</span>
+            <h3 className="contact-download-title">{downloadTitle}</h3>
+            <p className="contact-download-note">{downloadNote}</p>
+          </div>
+          <span className="contact-download-cta" aria-hidden="true">
+            {downloadCta}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </span>
+        </a>
 
         <div className="contact-cards">
           {/* Email */}
