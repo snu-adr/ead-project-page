@@ -1,14 +1,13 @@
 {
   "files": {
     "main.css": "/EAD-project-page/static/css/main.60c18df2.css",
-    "main.js": "/EAD-project-page/static/js/main.d94dde90.js",
+    "main.js": "/EAD-project-page/static/js/main.dfbd9dc5.js",
     "static/js/453.3b63644b.chunk.js": "/EAD-project-page/static/js/453.3b63644b.chunk.js",
     "static/media/demo_b2d.webm": "/EAD-project-page/static/media/demo_b2d.e41f0b5e58e032bbe8d6.webm",
     "static/media/demo_realworld.webm": "/EAD-project-page/static/media/demo_realworld.b4fcc6364e9097b357db.webm",
     "static/media/adr.png": "/EAD-project-page/static/media/adr.a66e53b8344cf278cbb8.png",
     "static/media/nota.png": "/EAD-project-page/static/media/nota.b9e47fb53c280e58b8b3.png",
     "static/media/kookmin.svg": "/EAD-project-page/static/media/kookmin.0404dcd7ff09c41d4507.svg",
-    "static/media/rideflux.png": "/EAD-project-page/static/media/rideflux.8454c44b4a768d293fb8.png",
     "static/media/hanyang.svg": "/EAD-project-page/static/media/hanyang.8db9303bf13e9042b182.svg",
     "static/media/정원준.jpg": "/EAD-project-page/static/media/정원준.2c1340b4a3f8cb1c981e.jpg",
     "static/media/백근주.jpg": "/EAD-project-page/static/media/백근주.d2d19e3574a8f204be54.jpg",
@@ -16,6 +15,7 @@
     "static/media/유승훈.jpg": "/EAD-project-page/static/media/유승훈.282b9c563a0da2aed154.jpg",
     "static/media/방건호.jpg": "/EAD-project-page/static/media/방건호.61965836618f75538012.jpg",
     "static/media/kaist.svg": "/EAD-project-page/static/media/kaist.5b2d1edd911e8a5cc5c8.svg",
+    "static/media/rideflux.png": "/EAD-project-page/static/media/rideflux.b7718c6e7c27e4ccd857.png",
     "static/media/신홍재.jpg": "/EAD-project-page/static/media/신홍재.b81d43f7947814b5ba7f.jpg",
     "static/media/오지용.jpg": "/EAD-project-page/static/media/오지용.6637a0072e52513a7a45.jpg",
     "static/media/김정호.jpg": "/EAD-project-page/static/media/김정호.24577ea47a92b6f258fa.jpg",
@@ -24,7 +24,7 @@
     "static/media/snu.svg": "/EAD-project-page/static/media/snu.e0ab3bf4a6fbdc51abea.svg",
     "static/media/sum.png": "/EAD-project-page/static/media/sum.5a899dc45d415e679127.png",
     "static/media/netropy.svg": "/EAD-project-page/static/media/netropy.9be1379811552d9f7adc.svg",
-    "static/media/kakao-mobility.svg": "/EAD-project-page/static/media/kakao-mobility.6bf901535c9d50dca767.svg",
+    "static/media/kakao-mobility.svg": "/EAD-project-page/static/media/kakao-mobility.45067799e33267212aca.svg",
     "static/media/hl-klemove.svg": "/EAD-project-page/static/media/hl-klemove.bb09c127881d965a19b3.svg",
     "index.html": "/EAD-project-page/index.html",
     "static/media/trajectory.svg": "/EAD-project-page/static/media/trajectory.2c7999d084a231e27a49a08794080a53.svg",
@@ -34,11 +34,11 @@
     "static/media/a2z.svg": "/EAD-project-page/static/media/a2z.22bcd1262291be79fc31.svg",
     "static/media/sum.svg": "/EAD-project-page/static/media/sum.907d62c063d22e9ef60f.svg",
     "main.60c18df2.css.map": "/EAD-project-page/static/css/main.60c18df2.css.map",
-    "main.d94dde90.js.map": "/EAD-project-page/static/js/main.d94dde90.js.map",
+    "main.dfbd9dc5.js.map": "/EAD-project-page/static/js/main.dfbd9dc5.js.map",
     "453.3b63644b.chunk.js.map": "/EAD-project-page/static/js/453.3b63644b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.60c18df2.css",
-    "static/js/main.d94dde90.js"
+    "static/js/main.dfbd9dc5.js"
   ]
 }
