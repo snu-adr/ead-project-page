@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/EAD-project-page/static/css/main.60c18df2.css",
-    "main.js": "/EAD-project-page/static/js/main.dfbd9dc5.js",
+    "main.css": "/EAD-project-page/static/css/main.a0804974.css",
+    "main.js": "/EAD-project-page/static/js/main.680b1beb.js",
     "static/js/453.3b63644b.chunk.js": "/EAD-project-page/static/js/453.3b63644b.chunk.js",
     "static/media/demo_b2d.webm": "/EAD-project-page/static/media/demo_b2d.e41f0b5e58e032bbe8d6.webm",
     "static/media/demo_realworld.webm": "/EAD-project-page/static/media/demo_realworld.b4fcc6364e9097b357db.webm",
@@ -24,7 +24,7 @@
     "static/media/snu.svg": "/EAD-project-page/static/media/snu.e0ab3bf4a6fbdc51abea.svg",
     "static/media/sum.png": "/EAD-project-page/static/media/sum.5a899dc45d415e679127.png",
     "static/media/netropy.svg": "/EAD-project-page/static/media/netropy.9be1379811552d9f7adc.svg",
-    "static/media/kakao-mobility.svg": "/EAD-project-page/static/media/kakao-mobility.45067799e33267212aca.svg",
+    "static/media/kakao-mobility.svg": "/EAD-project-page/static/media/kakao-mobility.2309ffb92c286d7c41ae.svg",
     "static/media/hl-klemove.svg": "/EAD-project-page/static/media/hl-klemove.bb09c127881d965a19b3.svg",
     "index.html": "/EAD-project-page/index.html",
     "static/media/trajectory.svg": "/EAD-project-page/static/media/trajectory.2c7999d084a231e27a49a08794080a53.svg",
@@ -33,12 +33,12 @@
     "static/media/gist.svg": "/EAD-project-page/static/media/gist.76264ebcfc8d7ecaae6a.svg",
     "static/media/a2z.svg": "/EAD-project-page/static/media/a2z.22bcd1262291be79fc31.svg",
     "static/media/sum.svg": "/EAD-project-page/static/media/sum.907d62c063d22e9ef60f.svg",
-    "main.60c18df2.css.map": "/EAD-project-page/static/css/main.60c18df2.css.map",
-    "main.dfbd9dc5.js.map": "/EAD-project-page/static/js/main.dfbd9dc5.js.map",
+    "main.a0804974.css.map": "/EAD-project-page/static/css/main.a0804974.css.map",
+    "main.680b1beb.js.map": "/EAD-project-page/static/js/main.680b1beb.js.map",
     "453.3b63644b.chunk.js.map": "/EAD-project-page/static/js/453.3b63644b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60c18df2.css",
-    "static/js/main.dfbd9dc5.js"
+    "static/css/main.a0804974.css",
+    "static/js/main.680b1beb.js"
   ]
 }
