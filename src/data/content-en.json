@@ -289,7 +289,7 @@
     ],
     "downloadLabel": "Download",
     "downloadTitle": "Request EAD Code Access",
-    "downloadNote": "Apply to access the EAD model code by filling out the form below.",
+    "downloadNote": "To request EAD model code access, click the Open Application Form button to fill out and submit the form.",
     "downloadCta": "Open Application Form",
     "downloadUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe1OI6oRUtwLyhkvCFIyGZR6SduIKDk__HXRayJQo7V65a_Cw/viewform",
     "emailLabel": "Email",

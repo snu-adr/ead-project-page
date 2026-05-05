@@ -289,7 +289,7 @@
     ],
     "downloadLabel": "Download",
     "downloadTitle": "EAD 코드 사용 신청",
-    "downloadNote": "EAD 모델 코드 사용을 신청하시려면 아래 폼을 작성해 주세요.",
+    "downloadNote": "EAD 모델 코드 사용을 신청하시려면 신청서 작성하기 버튼을 눌러 신청서를 작성·제출해 주세요.",
     "downloadCta": "신청서 작성하기",
     "downloadUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe1OI6oRUtwLyhkvCFIyGZR6SduIKDk__HXRayJQo7V65a_Cw/viewform",
     "emailLabel": "이메일",
