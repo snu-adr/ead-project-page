@@ -64,10 +64,12 @@ npm start
 
 ```bash
 npm run build         # build/ 폴더 생성 (로컬 검증용)
-npm run deploy        # gh-pages 브랜치에 푸시 → GitHub Pages 갱신
+npm run deploy        # main 푸시 → 빌드 → gh-pages 브랜치에 푸시 → GitHub Pages 갱신
 ```
 
-> `deploy`는 `predeploy`가 자동으로 `build`를 실행하므로 별도로 빌드를 부를 필요 없다.
+> `deploy`는 `predeploy`가 자동으로 `git push origin main && npm run build` 를 실행한다.
+> 즉, **`npm run deploy` 한 번이면 소스코드(main)와 배포본(gh-pages)이 항상 함께 올라간다.**
+> 배포 전에 commit은 직접 해야 한다 (uncommitted 변경은 push 대상이 아니라 사이트에만 반영되므로).
 
 ---
 
@@ -175,7 +177,7 @@ src/
 |--------|------|
 | `npm start` | 개발 서버 (localhost:3000) |
 | `npm run build` | 프로덕션 빌드 → `build/` |
-| `npm run deploy` | GitHub Pages 배포 |
+| `npm run deploy` | main 푸시 + 빌드 + GitHub Pages 배포 (한 번에) |
 | `npm test` | 테스트 (현재 사용 안 함) |
 
 ---
