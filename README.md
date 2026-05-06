@@ -14,7 +14,7 @@
 - **Node.js 18 LTS 이상** (CRA 5 + React 19 호환)
 - **npm 9+** (Node.js 설치 시 동봉)
 
-### Node.js 설치 (nvm 권장)
+### Node.js 설치 — Linux / macOS (nvm 권장)
 
 시스템 환경 격리를 위해 `conda`가 아닌 `nvm`을 사용한다.
 
@@ -27,6 +27,54 @@ nvm install 20
 nvm use 20
 node -v   # v20.x 확인
 ```
+
+### Node.js 설치 — Windows
+
+세 가지 옵션 중 하나를 선택한다. **WSL을 가장 권장한다** (위 Linux 가이드를 그대로 사용할 수 있고, 빌드 도구와의 호환성이 가장 좋다).
+
+#### 옵션 A. WSL (Windows Subsystem for Linux) — 권장
+
+PowerShell을 **관리자 권한으로** 열고:
+
+```powershell
+wsl --install -d Ubuntu
+```
+
+설치 후 재부팅 → Ubuntu 실행 → 사용자 계정 생성 → 위의 **Linux/macOS 가이드를 그대로 따른다**.
+VS Code를 쓰면 [WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)을 설치해 WSL 안의 폴더를 직접 열 수 있다.
+
+#### 옵션 B. nvm-windows (Node 버전 전환이 필요한 경우)
+
+[nvm-windows Releases](https://github.com/coreybutler/nvm-windows/releases)에서 `nvm-setup.exe`를 받아 설치한 뒤, **PowerShell을 관리자 권한으로** 열고:
+
+```powershell
+nvm install 20.11.0
+nvm use 20.11.0
+node -v
+```
+
+> nvm-windows는 Linux용 nvm과 별개 프로젝트라 정확한 버전 번호(`20` ❌ → `20.11.0` ✅)를 요구한다.
+
+#### 옵션 C. Node.js 공식 설치 파일 (가장 간단)
+
+[nodejs.org](https://nodejs.org)에서 **20 LTS** 설치 파일(`.msi`)을 받아 실행한다. 설치 마법사에서 기본값 그대로 진행하면 된다.
+
+```powershell
+node -v   # v20.x 확인
+npm -v
+```
+
+> 설치 후 PowerShell 창을 새로 열어야 PATH가 반영된다.
+
+#### Windows 공통 주의사항
+
+- **PowerShell** 또는 **Windows Terminal** 사용을 권장 (cmd도 동작은 함)
+- Git이 없다면 [Git for Windows](https://git-scm.com/download/win) 설치 (`git clone` 사용)
+- 줄바꿈 자동 변환 문제를 피하려면 clone 전에 한 번:
+  ```powershell
+  git config --global core.autocrlf input
+  ```
+- 이후의 `npm install`, `npm start` 등 npm 명령어는 Linux/macOS와 **동일하게** 동작한다
 
 ### 의존성 설치
 
@@ -172,3 +220,5 @@ src/
 - **localhost:3000 접속 안 됨**: VS Code Remote-SSH의 PORTS 탭에서 3000 포트가 forwarded 되어 있는지 확인.
 - **영어 모드에서 텍스트가 비어있음**: `content-en.json` 에 해당 키가 빠져 있을 가능성. 두 파일의 구조를 비교한다.
 - **배포 후 페이지가 404**: `package.json` 의 `homepage` 필드와 GitHub Pages 설정 (`Settings → Pages → Source: gh-pages branch`) 확인.
+- **(Windows) `npm` 명령어가 인식 안 됨**: PowerShell 창을 새로 연다. 그래도 안 되면 시스템 환경 변수 PATH에 Node 설치 경로(보통 `C:\Program Files\nodejs\`)가 있는지 확인.
+- **(Windows) `npm install` 중 권한 오류 / 줄바꿈 경고**: 관리자 권한 PowerShell로 재시도. 줄바꿈은 `git config --global core.autocrlf input` 설정 후 다시 clone.
