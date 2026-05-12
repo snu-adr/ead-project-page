@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/EAD-project-page/static/css/main.18a796e5.css",
-    "main.js": "/EAD-project-page/static/js/main.a77ea32c.js",
-    "static/js/453.3b63644b.chunk.js": "/EAD-project-page/static/js/453.3b63644b.chunk.js",
+    "main.css": "/EAD-project-page/static/css/main.bf4df3b3.css",
+    "main.js": "/EAD-project-page/static/js/main.000d01ec.js",
+    "static/js/453.ebb744a4.chunk.js": "/EAD-project-page/static/js/453.ebb744a4.chunk.js",
     "static/media/demo_b2d.webm": "/EAD-project-page/static/media/demo_b2d.e41f0b5e58e032bbe8d6.webm",
     "static/media/demo_realworld.webm": "/EAD-project-page/static/media/demo_realworld.b4fcc6364e9097b357db.webm",
+    "static/media/model_architecture.png": "/EAD-project-page/static/media/model_architecture.c54fa4661e48d439d643.png",
     "static/media/adr.png": "/EAD-project-page/static/media/adr.a66e53b8344cf278cbb8.png",
     "static/media/nota.png": "/EAD-project-page/static/media/nota.b9e47fb53c280e58b8b3.png",
     "static/media/kookmin.svg": "/EAD-project-page/static/media/kookmin.0404dcd7ff09c41d4507.svg",
@@ -27,18 +28,17 @@
     "static/media/kakao-mobility.svg": "/EAD-project-page/static/media/kakao-mobility.2309ffb92c286d7c41ae.svg",
     "static/media/hl-klemove.svg": "/EAD-project-page/static/media/hl-klemove.bb09c127881d965a19b3.svg",
     "index.html": "/EAD-project-page/index.html",
-    "static/media/trajectory.svg": "/EAD-project-page/static/media/trajectory.2c7999d084a231e27a49a08794080a53.svg",
     "static/media/lg.svg": "/EAD-project-page/static/media/lg.2d7be6030c8209a94fb3.svg",
     "static/media/nota.svg": "/EAD-project-page/static/media/nota.65f1af11e39ba917968a.svg",
     "static/media/gist.svg": "/EAD-project-page/static/media/gist.76264ebcfc8d7ecaae6a.svg",
     "static/media/a2z.svg": "/EAD-project-page/static/media/a2z.22bcd1262291be79fc31.svg",
     "static/media/sum.svg": "/EAD-project-page/static/media/sum.907d62c063d22e9ef60f.svg",
-    "main.18a796e5.css.map": "/EAD-project-page/static/css/main.18a796e5.css.map",
-    "main.a77ea32c.js.map": "/EAD-project-page/static/js/main.a77ea32c.js.map",
-    "453.3b63644b.chunk.js.map": "/EAD-project-page/static/js/453.3b63644b.chunk.js.map"
+    "main.bf4df3b3.css.map": "/EAD-project-page/static/css/main.bf4df3b3.css.map",
+    "main.000d01ec.js.map": "/EAD-project-page/static/js/main.000d01ec.js.map",
+    "453.ebb744a4.chunk.js.map": "/EAD-project-page/static/js/453.ebb744a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18a796e5.css",
-    "static/js/main.a77ea32c.js"
+    "static/css/main.bf4df3b3.css",
+    "static/js/main.000d01ec.js"
   ]
 }
