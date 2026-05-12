@@ -4,7 +4,7 @@
     "sectionLabel": "EAD Project Introduction",
     "subtitle": "Evolutionary Autonomous Driving",
     "affiliation": "ADR Lab, Seoul National University",
-    "description": "To bridge the technology gap in Korea's autonomous driving industry, SNU ADR Lab is releasing an End-to-End autonomous driving model and dataset designed for real-world deployment.",
+    "description": "Aiming to establish a reference End-to-End autonomous driving model for commercial deployment in Korea, progressively evolving through open collaboration with academia and industry.",
     "highlights": [
       "360° Camera",
       "Deployment-Ready",
@@ -20,7 +20,7 @@
         "label": "Planning"
       },
       {
-        "value": "5+",
+        "value": "4+",
         "label": "Partners"
       },
       {
@@ -32,12 +32,11 @@
   "overview": {
     "sectionTitle": "EAD Project",
     "sectionTag": "EAD PROJECT",
-    "sectionSubtitle": "Academia meets industry to build Korea's autonomous driving baseline",
-    "introLead": "Releasing everything Korea's autonomous driving industry needs to get started.",
+    "sectionSubtitle": "A reference E2E model for real-world deployment",
+    "introLead": "A reference End-to-End autonomous driving model, built for real-world deployment.",
     "introLines": [
-      "Neither the lab alone nor companies alone can do it.",
-      "Academia handles the model and technology, while industry handles data and hardware.",
-      "What we build together will be released as a baseline for the entire Korean autonomous driving industry."
+      "EAD provides a shared technical baseline that industry can adopt, adapt, and build on.",
+      "It evolves progressively through open collaboration with academia and industry."
     ],
     "demos": [
       {
@@ -78,33 +77,43 @@
   "roadmap": {
     "sectionTitle": "Roadmap",
     "sectionTag": "ROADMAP",
-    "sectionSubtitle": "v1.0 designed for real-world deployment, v2.0 scaling with large-scale data",
+    "sectionSubtitle": "Key milestones from public-dataset baseline to Korea-collected data",
     "versions": [
       {
         "version": "v1.0",
-        "title": "Foundation",
-        "period": "2026.4",
+        "title": "Released",
+        "period": "April 2026",
         "items": [
-          "Training and validation on open-source datasets",
-          "Surround-view camera + LiDAR sensor configuration",
-          "Full pipeline: multi-task Perception & E2E Planning",
-          "Two configurations: Camera-Only / LiDAR-Camera",
-          "Designed for real-world deployment"
+          "Trained on public datasets including Navsim and Bench2Drive",
+          "Supports both camera-only and camera + LiDAR configurations",
+          "Provides 360° perception with up to 80 m front-view perception range"
         ],
         "status": "completed",
         "statusLabel": "Released"
       },
       {
         "version": "v2.0",
-        "title": "Expansion",
-        "period": "2026.8",
+        "title": "Ongoing",
+        "period": "October 2026",
         "items": [
-          "In-house data pipeline",
-          "Large-scale dataset-based E2E model release",
-          "VLM (Vision-Language Model) integration"
+          "Trained on the large-scale NVIDIA dataset",
+          "Development of data pipeline and data curation",
+          "Training of the EAD v2.0 model",
+          "Support VLA reasoning",
+          "Support neural simulator for evaluation"
         ],
         "status": "upcoming",
-        "badge": "Coming Soon"
+        "badge": "Ongoing"
+      },
+      {
+        "version": "v3.0",
+        "title": "Planned",
+        "period": "TBD",
+        "items": [
+          "To be trained on large-scale data collected in Korea"
+        ],
+        "status": "upcoming",
+        "badge": "Planned"
       }
     ]
   },
@@ -166,8 +175,8 @@
       "diagramPlaceholder": "Architecture Diagram Coming Soon",
       "encoder": {
         "label": "ENCODER",
-        "title": "Perception",
-        "description": "Integrates surround-view camera + LiDAR inputs to transform the surrounding environment into a structured representation.",
+        "title": "Scene Encoder",
+        "description": "Transforms surround-view camera and LiDAR inputs into a structured scene representation through view transformation and temporal fusion.",
         "tasks": [
           "Object Detection",
           "BEV Map Segmentation",
@@ -177,8 +186,8 @@
       },
       "decoder": {
         "label": "DECODER",
-        "title": "Planning",
-        "description": "Simulates the future of candidate trajectories using a Sparse World Model, then selects the safest path through Safety Assessment.",
+        "title": "Action Decoder",
+        "description": "Encodes the ego state and rolls out a Sparse World Model to select safe actions through Safety Reasoning over both dynamic and static scenes.",
         "tasks": [
           "Agent Prediction",
           "World Model Simulation",

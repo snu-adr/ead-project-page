@@ -4,7 +4,7 @@
     "sectionLabel": "EAD 프로젝트 소개",
     "subtitle": "Evolutionary Autonomous Driving",
     "affiliation": "서울대학교 ADR 연구실",
-    "description": "국내 자율주행 기술 격차를 줄이기 위해, 서울대 ADR 연구실이 실배포 기준으로 설계한 End-to-End 자율주행 모델과 데이터셋을 공개합니다.",
+    "description": "국내 상용 배포를 목표로 하는 레퍼런스 End-to-End 자율주행 모델 구축을 지향하며, 학계와 산업계의 열린 협력을 통해 점진적으로 발전시켜 갑니다.",
     "highlights": [
       "전방위 카메라",
       "실배포 설계",
@@ -20,7 +20,7 @@
         "label": "Planning"
       },
       {
-        "value": "5+",
+        "value": "4+",
         "label": "Partners"
       },
       {
@@ -32,12 +32,11 @@
   "overview": {
     "sectionTitle": "EAD Project",
     "sectionTag": "EAD PROJECT",
-    "sectionSubtitle": "학계와 산업계가 함께 만드는 국내 자율주행 베이스라인",
-    "introLead": "자율주행의 출발선에 서는 데 필요한 것들을 모아 공개합니다.",
+    "sectionSubtitle": "실배포를 위한 레퍼런스 End-to-End 자율주행 모델",
+    "introLead": "실배포를 위해 만들어진 레퍼런스 End-to-End 자율주행 모델입니다.",
     "introLines": [
-      "국내 자율주행 업계는 학계와 산업계 모두 각자의 자리에서 분투하고 있습니다.",
-      "EAD는 그 경계를 넘어, 기술과 현장 경험이 함께 쌓이는 공동의 토대를 만들고자 합니다.",
-      "모델과 데이터셋을 공개하는 것은 끝이 아니라 시작입니다 — 함께 성장하는 국내 자율주행 생태계의 첫 걸음입니다."
+      "산업계가 가져다 쓰고, 각자 환경에 맞게 발전시킬 수 있는 공유된 기술 베이스라인을 제공합니다.",
+      "학계와 산업계의 열린 협력을 통해 점진적으로 발전해 갑니다."
     ],
     "demos": [
       {
@@ -78,33 +77,43 @@
   "roadmap": {
     "sectionTitle": "Roadmap",
     "sectionTag": "ROADMAP",
-    "sectionSubtitle": "실배포 기준으로 설계된 v1.0, 대규모 데이터로 확장하는 v2.0",
+    "sectionSubtitle": "공개 데이터셋에서 시작해 국내 취득 데이터로 확장",
     "versions": [
       {
         "version": "v1.0",
-        "title": "Foundation",
-        "period": "2026.4",
+        "title": "Released",
+        "period": "2026년 4월",
         "items": [
-          "오픈소스 데이터셋 기반 훈련 및 검증",
-          "전방위 카메라 + LiDAR 센서 구성",
-          "멀티태스크 Perception · E2E Planning 풀 파이프라인 구현",
-          "Camera-Only / LiDAR-Camera 두 가지 구성 제공",
-          "실제 배포 기준 설계"
+          "Navsim, Bench2Drive 등 공개 데이터셋으로 학습",
+          "카메라 단독 / 카메라 + LiDAR 두 가지 구성 모두 지원",
+          "360° 인지, 전방 최대 80m 인지 범위 제공"
         ],
         "status": "completed",
         "statusLabel": "출시 완료"
       },
       {
         "version": "v2.0",
-        "title": "Expansion",
-        "period": "2026.8",
+        "title": "Ongoing",
+        "period": "목표: 2026년 10월",
         "items": [
-          "자체 데이터 파이프라인 구축",
-          "Large-scale Dataset 기반 E2E 모델 배포",
-          "VLM (Vision-Language Model) 통합"
+          "대규모 NVIDIA 데이터셋으로 학습",
+          "데이터 파이프라인 및 데이터 큐레이션 개발",
+          "EAD v2.0 모델 학습",
+          "VLA reasoning 지원",
+          "평가용 Neural simulator 지원"
         ],
         "status": "upcoming",
-        "badge": "Coming Soon"
+        "badge": "진행 중"
+      },
+      {
+        "version": "v3.0",
+        "title": "Planned",
+        "period": "미정",
+        "items": [
+          "국내에서 취득한 대규모 데이터로 학습 예정"
+        ],
+        "status": "upcoming",
+        "badge": "계획"
       }
     ]
   },
@@ -166,24 +175,23 @@
       "diagramPlaceholder": "모식도 준비 중",
       "encoder": {
         "label": "ENCODER",
-        "title": "Perception",
-        "description": "전방위 카메라 + LiDAR 입력을 통합하여 주변 환경을 구조화된 표현으로 변환합니다.",
+        "title": "Scene Encoder",
+        "description": "전방위 카메라와 LiDAR 입력을 View Transformer와 Temporal Fusion을 거쳐 구조화된 장면 표현으로 변환합니다.",
         "tasks": [
-          "객체 탐지 (Object Detection)",
-          "BEV 맵 분할 (BEV Map Segmentation)",
-          "점유 예측 (Occupancy Prediction)",
-          "벡터 맵 구성 (Vector Map Construction)"
+          "View Transformer",
+          "Temporal Fusion",
+          "출력: Map / Object Kinematics / Occupancy / Miscellaneous"
         ]
       },
       "decoder": {
         "label": "DECODER",
-        "title": "Planning",
-        "description": "후보 경로들의 미래를 Sparse World Model로 시뮬레이션하여, Safety Assessment을 통해 가장 안전한 경로를 선택합니다.",
+        "title": "Action Decoder",
+        "description": "Ego 상태를 인코딩하고 Sparse World Model을 통해 미래를 펼친 뒤, 동적·정적 장면에 대한 Safety Reasoning으로 안전한 행동을 결정합니다.",
         "tasks": [
-          "주변 에이전트 예측 (Agent Prediction)",
-          "세계 모델 시뮬레이션 (World Model Simulation)",
-          "경로 계획 (Trajectory Planning)",
-          "안전 추론 (Safety Assessment)"
+          "Ego State Encoding",
+          "Sparse World Model",
+          "Safety Reasoning — Dynamic Scene",
+          "Safety Reasoning — Static Scene"
         ]
       }
     },
