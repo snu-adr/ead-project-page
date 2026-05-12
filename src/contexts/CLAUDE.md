@@ -34,5 +34,5 @@ const MyComponent = () => {
 
 ### 기본값
 
-- 기본 언어: `'ko'` (한국어)
+- 기본 언어: `'en'` (영어). 사용자 요청으로 영어 only 모드 — Navbar의 언어 토글 UI는 제거됨. `content.json`(한국어)과 `toggleLang` 함수는 향후 복원을 위해 유지. 한글 사이트로 되돌리려면 이 파일의 `useState` 기본값만 `'ko'`로 바꾸고 Navbar에 토글 UI를 복원하면 됨.
 - 새로고침 시 초기화 (localStorage 저장 없음)

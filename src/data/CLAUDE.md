@@ -34,7 +34,19 @@ overview
  ├── sectionSubtitle: string
  ├── intro: string — 1단락 소개 텍스트
  ├── demosTitle: string — 데모 섹션 소제목
- └── demos: [{ title, description, videoUrl }] — Real-world Demo, Simulation Closed-loop Demo (model.demos에서 이동)
+ ├── demos: [{ title, description, videoUrl }] — Real-world Demo, Simulation Closed-loop Demo (model.demos에서 이동)
+ └── performance — 벤치마크 결과 블록 (데모 아래 표 2개)
+      ├── heading: string — 블록 타이틀 (예: "Benchmark Results")
+      ├── subheading: string — 한 줄 부제
+      └── tables: array (현재 NAVSIM / Bench2Drive 2개)
+           ├── label: string — 표 헤더 ("NAVSIM (Open-loop)" 등)
+           ├── accent: "cyan" | "purple" — perf-table--{accent} 클래스로 색 결정
+           ├── columns: string[] — 헤더 셀 라벨 (첫 컬럼은 모델)
+           ├── rows: array
+           │    ├── model: string — 모델 식별자 (monospace로 표시)
+           │    ├── config: string — 모델 변형 설명 (LiDAR + Camera 등)
+           │    └── values: string[] — columns 개수보다 1 적음 (첫 컬럼은 model)
+           └── footnote: string — 표 하단 캡션 (출처/제외된 지표 등)
 
 hero
  ├── title: string — 프로젝트명

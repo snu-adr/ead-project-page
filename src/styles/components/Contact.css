@@ -78,7 +78,6 @@
   text-decoration: none;
   color: var(--color-text);
   overflow: hidden;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .contact-download::before {
@@ -88,17 +87,6 @@
   background: radial-gradient(120% 200% at 0% 0%, rgba(56, 189, 248, 0.12) 0%, transparent 50%);
   pointer-events: none;
   opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.contact-download:hover {
-  transform: translateY(-3px);
-  border-color: rgba(56, 189, 248, 0.55);
-  box-shadow: 0 12px 36px rgba(56, 189, 248, 0.16);
-}
-
-.contact-download:hover::before {
-  opacity: 1;
 }
 
 .contact-download-icon {
@@ -164,21 +152,11 @@
   letter-spacing: 0.2px;
   border-radius: 10px;
   white-space: nowrap;
-  transition: filter 0.2s ease, transform 0.2s ease;
 }
 
 .contact-download-cta svg {
   width: 16px;
   height: 16px;
-  transition: transform 0.2s ease;
-}
-
-.contact-download:hover .contact-download-cta {
-  filter: brightness(1.08);
-}
-
-.contact-download:hover .contact-download-cta svg {
-  transform: translateX(3px);
 }
 
 /* Card row */
@@ -201,29 +179,10 @@
   border-radius: 16px;
   text-decoration: none;
   color: var(--color-text);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 a.contact-card {
   cursor: pointer;
-}
-
-a.contact-card:hover {
-  transform: translateY(-3px);
-}
-
-.contact-card--email:hover {
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 10px 32px rgba(56, 189, 248, 0.08);
-}
-
-.contact-card--lab:hover {
-  border-color: rgba(167, 139, 250, 0.4);
-  box-shadow: 0 10px 32px rgba(167, 139, 250, 0.08);
-}
-
-.contact-card--lab:hover .contact-card-arrow {
-  color: var(--color-accent-purple);
 }
 
 /* Icon */
@@ -276,17 +235,12 @@ a.contact-card:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.2s ease;
 }
 
 .contact-card-sub {
   font-size: 0.78rem;
   color: var(--color-text-muted);
   margin-top: 2px;
-}
-
-a.contact-card:hover .contact-card-value {
-  color: var(--color-text);
 }
 
 /* Copy button */
@@ -302,7 +256,6 @@ a.contact-card:hover .contact-card-value {
   border-radius: 8px;
   color: var(--color-text-muted);
   cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
   font-size: 0.72rem;
   font-weight: 600;
   white-space: nowrap;
@@ -312,11 +265,6 @@ a.contact-card:hover .contact-card-value {
 .contact-copy-btn svg {
   width: 15px;
   height: 15px;
-}
-
-.contact-copy-btn:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
 }
 
 .contact-copy-btn--copied {
@@ -331,12 +279,6 @@ a.contact-card:hover .contact-card-value {
   flex-shrink: 0;
   font-size: 1.1rem;
   color: var(--color-text-muted);
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-a.contact-card:hover .contact-card-arrow {
-  transform: translateX(4px);
-  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {

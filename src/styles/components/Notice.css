@@ -10,15 +10,7 @@
   border-left: 3px solid var(--color-accent);
   border-radius: 12px;
   padding: 16px 24px 16px 28px;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
-}
-
-.notice-item:hover {
-  transform: translateX(6px);
-  border-left-color: var(--color-accent-hover);
-  box-shadow: -4px 0 16px rgba(56, 189, 248, 0.08),
-              0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .notice-item-meta {
@@ -56,12 +48,6 @@
   border-left-color: var(--color-warning);
 }
 
-.notice-item--upcoming:hover {
-  border-left-color: var(--color-warning-hover);
-  box-shadow: -4px 0 16px rgba(249, 115, 22, 0.1),
-              0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
 .notice-badge--complete {
   color: var(--color-accent);
   background: rgba(56, 189, 248, 0.1);
@@ -73,27 +59,11 @@
   opacity: 0.8;
 }
 
-.notice-item--complete:hover {
-  border-left-color: var(--color-accent-hover);
-  box-shadow: -4px 0 16px rgba(56, 189, 248, 0.08),
-              0 4px 12px rgba(0, 0, 0, 0.2);
-  opacity: 1;
-}
-
 .notice-item h3 {
   font-size: 1.05rem;
   font-weight: 600;
   margin-bottom: 4px;
   color: var(--color-text);
-  transition: color 0.3s ease;
-}
-
-.notice-item:hover h3 {
-  color: var(--color-accent);
-}
-
-.notice-item--upcoming:hover h3 {
-  color: var(--color-warning);
 }
 
 .notice-item p {
@@ -110,9 +80,5 @@
 @media (max-width: 768px) {
   .notice-item {
     padding: 20px 20px 20px 24px;
-  }
-
-  .notice-item:hover {
-    transform: translateX(4px);
   }
 }

@@ -20,17 +20,6 @@ const Hero = () => {
         <div className="hero-road-dash" />
       </div>
 
-      {/* 플로팅 파티클 */}
-      <div className="hero-particles" aria-hidden="true">
-        <div className="hero-particle hero-particle--1" />
-        <div className="hero-particle hero-particle--2" />
-        <div className="hero-particle hero-particle--3" />
-        <div className="hero-particle hero-particle--4" />
-        <div className="hero-particle hero-particle--5" />
-        <div className="hero-particle hero-particle--6" />
-      </div>
-
-
       <div className="hero-content">
         <h1 className="hero-title">{title}</h1>
         <p className="hero-subtitle">{subtitle}</p>
@@ -51,11 +40,6 @@ const Hero = () => {
       </div>
 
       <div className="hero-bottom-fade" aria-hidden="true" />
-
-      <div className="hero-scroll-indicator" aria-hidden="true">
-        <span className="hero-scroll-text">Scroll</span>
-        <div className="hero-scroll-line" />
-      </div>
     </section>
   );
 };

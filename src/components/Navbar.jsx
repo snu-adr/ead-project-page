@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import '../styles/components/Navbar.css';
 
 const Navbar = () => {
-  const { lang, content, toggleLang } = useLanguage();
+  const { lang, content } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(() => window.scrollY > 50);
   const [activeSection, setActiveSection] = useState('');
@@ -92,17 +92,6 @@ const Navbar = () => {
         </ul>
 
         <div className="navbar-right">
-          <button
-            type="button"
-            className="navbar-lang-toggle"
-            onClick={toggleLang}
-            aria-label={lang === 'ko' ? '영어로 전환' : 'Switch to Korean'}
-          >
-            <span className={lang === 'ko' ? 'active' : ''}>한</span>
-            <span className="navbar-lang-sep" aria-hidden="true">/</span>
-            <span className={lang === 'en' ? 'active' : ''}>EN</span>
-          </button>
-
           <button
             type="button"
             ref={toggleRef}

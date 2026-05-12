@@ -65,22 +65,20 @@ styles/
 
 ## 공통 클래스 (global.css)
 
-- `.fade-in` / `.fade-in.visible`: 스크롤 페이드인 애니메이션
-- `.stagger-fade-in` / `.stagger-fade-in.visible`: 자식 요소 순차 페이드인
 - `.video-embed`: 16:9 비율 영상 임베드 (padding-top: 56.25%)
 - `.video-placeholder`: 16:9 비율 플레이스홀더 (padding-top: 56.25%, 플레이 아이콘 + 텍스트 중앙 배치)
 - `.card`: 카드 스타일 (배경, 테두리, 패딩, 라운드)
 - `section`: `scroll-margin-top: var(--nav-height)` — 앵커 이동 시 네비게이션 바가 섹션 헤더를 가리지 않도록
 - `:focus-visible`: 키보드 네비게이션 포커스 스타일 (2px 시안 outline, offset 3px)
 - `::-webkit-scrollbar` / `scrollbar-width`: 다크 테마 커스텀 스크롤바 (6px, thin)
-- `@media (prefers-reduced-motion: reduce)`: 모션 민감도 사용자 지원 — 모든 animation/transition 비활성화 + `.fade-in`, `.stagger-fade-in > *` 요소를 즉시 표시 (`opacity: 1 !important`, `transform: none !important`) — 콘텐츠가 절대 숨겨지지 않도록 보장
+- `@media (prefers-reduced-motion: reduce)`: 모션 민감도 사용자 지원 — 모든 animation/transition 비활성화
 
 ## 스타일 컨벤션
 
 - 다크 테마 기반
 - backdrop-filter blur로 유리(frosted glass) 효과 (Navbar)
-- hover 시 부드러운 transition (0.2s~0.6s)
-- Alliance: 무한 마키 스크롤 (CSS animation, hover 시 일시정지)
+- hover 인터랙션은 사용하지 않음 (사용자 요청으로 전 컴포넌트에서 `:hover`/`:focus-within` 규칙 및 그에 딸린 `transition` 속성을 모두 제거함)
+- Alliance: 무한 마키 스크롤 (CSS animation, 일시정지 없이 항상 흐름)
 - 컴포넌트 CSS 파일명은 JSX 파일명과 동일 (PascalCase)
 - **한국어 letter-spacing 규칙**: 한국어 텍스트에 `letter-spacing` 을 적용 시 최대 `0.5px`로 제한. 그 이상(1.5px 등)이면 한글 글자 사이가 시각적으로 분리돼 가독성이 크게 떨어짐. 영문 전용 라벨(ENCODER, DECODER, VS 등)은 2px 이상 허용.
 
@@ -92,8 +90,7 @@ styles/
 - `.hero-road`: 도로 원근 비주얼 (차선 4개 + 중앙 점선), glow/레이더 삭제됨
 - `.hero-title`: gradient text (시안→화이트→퍼플, background-clip: text)
 - `.hero-stats`: 핵심 지표 4개 (Perception, Planning, Partners, Release) — `<dl>` 태그로 변경, `.hero-stat-value { order: 1 }` + `.hero-stat-label { order: 2 }` 로 DOM 순서(dt→dd)와 시각 순서(값→레이블)를 분리
-- `.hero-scroll-line`: `will-change: transform, opacity` (scrollLine 2s infinite 애니메이션)
-- `@media (prefers-reduced-motion: reduce)` (Hero.css): `.hero-title`, `.hero-subtitle`, `.hero-affiliation`, `.hero-description`, `.hero-stats`, **`.hero-scroll-indicator`** 에 `animation: none !important; opacity: 1 !important` — animation-delay 때문에 1s 지연 없이 즉시 표시되도록 보장. `.hero-scroll-line { will-change: auto }` — 애니메이션 비활성 시 GPU 컴포지터 레이어 해제
+- `@media (prefers-reduced-motion: reduce)` (Hero.css): `.hero-title`, `.hero-subtitle`, `.hero-affiliation`, `.hero-description`, `.hero-stats` 에 `animation: none !important; opacity: 1 !important` — animation-delay 때문에 지연 없이 즉시 표시되도록 보장
 
 ## Navbar.css 구조
 
@@ -130,23 +127,29 @@ styles/
 
 - `.alliance-marquee-wrapper`: 카드 배경 + 좌우 페이드
 - `.alliance-marquee-track`: 무한 스크롤 (25s linear infinite), `will-change: transform` 적용
-- hover 및 `focus-within` 시 애니메이션 일시정지 (키보드 접근성)
 - `.alliance-name`: `letter-spacing: 0.5px` (한국어 파트너명 포함으로 Korean letter-spacing 규칙 준수, `text-transform: uppercase` 없음)
 - 모바일 반응형: `.alliance-name`에 명시적 `font-size: 1.1rem` 적용 — 부모(`alliance-marquee-item`)의 font-size를 자식이 상속하지 않는 문제 해결
 - `@media (prefers-reduced-motion: reduce)`: 마키 애니메이션 제거 + `[aria-hidden="true"]` 복사본 `display: none` + `.alliance-marquee { overflow: visible }` — 글로벌 reduced-motion 규칙만으로는 트랙이 `-50%` 위치에 고정되어 절반이 사라지는 버그를 방지
 
+## Overview.css 성능 표
+
+- `.overview-performance`: 데모 아래 벤치마크 표 컨테이너 (max-width 1200px, 중앙 정렬)
+- `.overview-performance-grid`: 2열 그리드, 768px 이하 1열
+- `.perf-table`: 표 카드. `--cyan` / `--purple` modifier로 상단 보더와 라벨 색상 변경
+- `.perf-table table`: `font-variant-numeric: tabular-nums` 적용 — 숫자 자릿수 정렬
+- `.perf-model`: monospace 모델 식별자 (`EAD_navsim_LC` 등). `.perf-config`: 보조 설명 라벨 (작은 회색)
+- `.perf-footnote`: 표 하단 캡션 (어두운 배경 strip)
+
 ## Contact.css 구조
 
 - `#contact`: padding 60px (기본 100px보다 축소 — 콘텐츠가 적어 여백 최적화)
-- `.contact-download`: 풀와이드 다운로드 CTA 배너 (시안→퍼플 그라데이션 보더/배경, hover translateY -3px). 좌측 아이콘 + 가운데 텍스트(label/title/note) + 우측 그라데이션 CTA 버튼. 768px 이하: column stack + CTA 버튼 풀폭.
+- `.contact-download`: 풀와이드 다운로드 CTA 배너 (시안→퍼플 그라데이션 보더/배경). 좌측 아이콘 + 가운데 텍스트(label/title/note) + 우측 그라데이션 CTA 버튼. 768px 이하: column stack + CTA 버튼 풀폭.
 - `.contact-cards`: 중앙 정렬 flex 컨테이너 (max-width: 760px), 두 카드 래핑
 - `.contact-card`: 이메일/연구실 클릭 카드 (이메일=시안 테마, 연구실=퍼플 테마)
 - `.contact-card-icon`, `.contact-card-label`, `.contact-card-value`, `.contact-card-arrow`: 카드 내부 요소
 
 ## RoadMap.css 구조
 
-- `.roadmap-bev`: 배경 BEV 자동차 컨테이너, `contain: layout style` 적용 (top 애니메이션 레이아웃 영향 격리)
-- `.bev-car`: CSS-only 탑뷰 바운딩 박스, 6개 (하행 3 + 상행 3), `aria-hidden="true"`, `will-change: opacity` 적용 (`top`은 layout 속성으로 GPU compositing 불가, opacity만 힌트 적용)
 - `.roadmap-card-title`: `display: flex; flex-direction: column` — 내부에 `.roadmap-version` (v1.0 등)과 `.roadmap-title-text` (Foundation 등)이 수직 배치. 두 요소를 하나의 `<h3>` 안에 포함하여 스크린리더가 "v1.0 Foundation"으로 읽도록 함
 
 ## Dataset.css 구조

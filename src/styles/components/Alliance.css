@@ -73,7 +73,6 @@
   width: auto;
   height: auto;
   opacity: 0.85;
-  transition: opacity 0.3s ease;
 }
 
 /* Per-logo size overrides */
@@ -89,22 +88,12 @@
 .alliance-logo[data-name="Kakao Mobility"] { max-height: 26px; max-width: 180px; }
 .alliance-logo[data-name="Visionary"] { max-height: 28px; max-width: 120px; }
 
-.alliance-marquee-item:hover .alliance-logo {
-  opacity: 1;
-}
-
 /* Text fallback */
 .alliance-name {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--color-text);
   letter-spacing: 0.5px;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.alliance-marquee-item:hover .alliance-name {
-  color: var(--color-accent);
-  text-shadow: 0 0 24px rgba(56, 189, 248, 0.35);
 }
 
 /* Separator dot between items */
@@ -119,12 +108,6 @@
   right: -2px;
   top: 50%;
   transform: translateY(-50%);
-}
-
-/* Pause on hover or keyboard focus inside */
-.alliance-marquee-wrapper:hover .alliance-marquee-track,
-.alliance-marquee-wrapper:focus-within .alliance-marquee-track {
-  animation-play-state: paused;
 }
 
 /* ── Reduced Motion: stop marquee and hide duplicates ── */

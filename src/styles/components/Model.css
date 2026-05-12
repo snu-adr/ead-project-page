@@ -66,7 +66,6 @@
   border-radius: 16px;
   padding: 0;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* --- Card Header --- */
@@ -104,7 +103,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 18px 28px;
-  transition: background 0.2s ease;
 }
 
 .comparison-card__category {
@@ -151,10 +149,6 @@
   border-top: none;
 }
 
-.comparison-card--research .comparison-card__item:hover {
-  background: rgba(255, 255, 255, 0.02);
-}
-
 .comparison-card--research .comparison-card__category {
   color: var(--color-text-muted);
 }
@@ -181,14 +175,6 @@
     inset 0 1px 0 rgba(56, 189, 248, 0.1);
 }
 
-.comparison-card--ead:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 60px rgba(56, 189, 248, 0.1),
-    inset 0 1px 0 rgba(56, 189, 248, 0.15);
-}
-
 .comparison-card--ead .comparison-card__header {
   background: rgba(56, 189, 248, 0.06);
   border-bottom: 1px solid rgba(56, 189, 248, 0.15);
@@ -211,10 +197,6 @@
 
 .comparison-card--ead .comparison-card__item:first-child {
   border-top: none;
-}
-
-.comparison-card--ead .comparison-card__item:hover {
-  background: rgba(56, 189, 248, 0.04);
 }
 
 .comparison-card--ead .comparison-card__category {
@@ -280,19 +262,6 @@
   box-shadow:
     0 4px 24px rgba(0, 0, 0, 0.3),
     0 1px 3px rgba(0, 0, 0, 0.2);
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
-}
-
-.model-architecture:hover {
-  border-color: var(--color-border-light);
-  border-left-color: var(--color-accent);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 24px rgba(56, 189, 248, 0.06);
-  transform: translateY(-2px);
 }
 
 .model-architecture h3 {
@@ -381,34 +350,6 @@
   min-width: 220px;
   min-height: 180px;
   position: relative;
-}
-
-/* Shimmer sweep — 대각선 빛이 블록을 가로지름 */
-.model-flow-block::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -120%;
-  width: 55%;
-  height: 200%;
-  background: linear-gradient(
-    108deg,
-    transparent 20%,
-    rgba(255, 255, 255, 0.11) 50%,
-    transparent 80%
-  );
-  animation: block-shimmer 6s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.model-flow-block--decoder::after {
-  animation-delay: 2s;
-}
-
-@keyframes block-shimmer {
-  0%   { transform: translateX(0%); }
-  30%  { transform: translateX(650%); }
-  100% { transform: translateX(650%); }
 }
 
 /* Encoder: 그리드 텍스처 + 강한 코너 하이라이트 */
@@ -643,14 +584,6 @@
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.model-demo:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 24px rgba(56, 189, 248, 0.06);
 }
 
 .model-demo h3 {

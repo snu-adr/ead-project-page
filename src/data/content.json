@@ -50,7 +50,30 @@
         "videoUrl": null,
         "accent": "purple"
       }
-    ]
+    ],
+    "performance": {
+      "heading": "벤치마크 결과",
+      "tables": [
+        {
+          "label": "NAVSIM (오픈루프)",
+          "accent": "cyan",
+          "columns": ["Sensor Config", "PDMS", "NC", "DAC"],
+          "rows": [
+            { "config": "라이다 + 카메라", "values": ["0.9012", "0.9927", "0.9749"] },
+            { "config": "카메라 전용", "values": ["0.8944", "0.9888", "0.9714"] }
+          ]
+        },
+        {
+          "label": "Bench2Drive (클로즈드루프)",
+          "accent": "purple",
+          "columns": ["Sensor Config", "Driving Score", "Success Rate"],
+          "rows": [
+            { "config": "라이다 + 카메라", "values": ["65.97", "36.36"] },
+            { "config": "카메라 전용", "values": ["60.11", "32.72"] }
+          ]
+        }
+      ]
+    }
   },
   "roadmap": {
     "sectionTitle": "Roadmap",

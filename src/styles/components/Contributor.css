@@ -36,11 +36,6 @@
   border-radius: 20px;
   padding: 24px 20px 28px;
   position: relative;
-  transition: border-color 0.3s;
-}
-
-.contributor-team-panel:hover {
-  border-color: var(--color-border-light);
 }
 
 .contributor-team-label {
@@ -74,14 +69,7 @@
   border-radius: 14px;
   padding: 24px 16px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   width: 120px;
-}
-
-.contributor-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.07), 0 2px 8px rgba(0, 0, 0, 0.3);
-  border-color: var(--color-border-light);
 }
 
 /* ── Avatar ── */
@@ -92,15 +80,6 @@
   padding: 2px;
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-purple));
   margin: 0 auto 12px;
-  transition: box-shadow 0.3s ease;
-}
-
-.contributor-card:hover .contributor-avatar-wrapper {
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4), 0 0 32px rgba(167, 139, 250, 0.2);
-}
-
-.contributor-card:hover .contributor-avatar {
-  color: var(--color-accent);
 }
 
 .contributor-avatar {
@@ -185,12 +164,6 @@
   letter-spacing: 1px;
 }
 
-.contributor-card--lead:hover {
-  border-color: rgba(56, 189, 248, 0.55);
-  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.12), 0 0 0 1px rgba(56, 189, 248, 0.1);
-  transform: translateY(-4px);
-}
-
 @keyframes lead-gradient {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
@@ -223,10 +196,6 @@
   opacity: 0.9;
   color: var(--color-accent);
   font-size: 0.65rem;
-}
-
-.contributor-card--team-lead:hover {
-  border-color: rgba(56, 189, 248, 0.4);
 }
 
 /* ── Reduced Motion ── */

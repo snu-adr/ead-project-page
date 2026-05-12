@@ -112,7 +112,7 @@
   background: linear-gradient(to bottom, rgba(56, 189, 248, 0.0) 0%, rgba(56, 189, 248, 0.12) 50%, rgba(56, 189, 248, 0.0) 100%);
 }
 
-/* 중앙 점선 — 소실점에서 하단으로 */
+/* 중앙 점선 — 소실점에서 하단으로 (정지) */
 .hero-road-dash {
   position: absolute;
   top: 46%;
@@ -129,44 +129,6 @@
   );
   mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,1) 100%);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,1) 100%);
-  animation: roadDash 1.5s linear infinite;
-}
-
-@keyframes roadDash {
-  from { background-position: 0 0; }
-  to { background-position: 0 40px; }
-}
-
-
-/* ─── 플로팅 파티클 ─── */
-.hero-particles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.hero-particle {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: rgba(56, 189, 248, 0.6);
-  animation: particleFloat linear infinite;
-  will-change: transform, opacity;
-}
-
-.hero-particle--1 { left: 15%; top: 30%; animation-duration: 8s; animation-delay: 0s; }
-.hero-particle--2 { left: 75%; top: 20%; animation-duration: 10s; animation-delay: 1s; width: 2px; height: 2px; }
-.hero-particle--3 { left: 40%; top: 70%; animation-duration: 7s; animation-delay: 2s; }
-.hero-particle--4 { left: 85%; top: 60%; animation-duration: 9s; animation-delay: 3s; width: 2px; height: 2px; }
-.hero-particle--5 { left: 25%; top: 80%; animation-duration: 11s; animation-delay: 1.5s; }
-.hero-particle--6 { left: 60%; top: 40%; animation-duration: 8.5s; animation-delay: 4s; width: 2px; height: 2px; }
-
-@keyframes particleFloat {
-  0% { opacity: 0; transform: translateY(0) translateX(0); }
-  10% { opacity: 0.7; }
-  90% { opacity: 0.7; }
-  100% { opacity: 0; transform: translateY(-80px) translateX(20px); }
 }
 
 /* ─── 콘텐츠 영역 ─── */
@@ -279,41 +241,6 @@
   order: 2;
 }
 
-/* ─── 스크롤 다운 인디케이터 (라인 스타일) ─── */
-.hero-scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  animation: heroFadeUp 0.8s ease-out 1s both;
-}
-
-.hero-scroll-text {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: var(--color-text-muted);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.hero-scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--color-accent), transparent);
-  animation: scrollLine 2s ease-in-out infinite;
-  will-change: transform, opacity;
-}
-
-@keyframes scrollLine {
-  0% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
-  50% { opacity: 1; transform: scaleY(1); }
-  100% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
-}
-
 /* ─── Small screen: wrap stats to 2×2 at 480px ─── */
 @media (max-width: 480px) {
   .hero-stats {
@@ -344,28 +271,10 @@
     transform: none !important;
   }
 
-  .hero-scroll-indicator {
-    animation: none !important;
-    opacity: 1 !important;
-  }
-
-  /* Particles have staggered animation-delays (0s–4s): they would flash visible then
-     vanish at unpredictable times. Keep them permanently hidden and release GPU layers. */
-  .hero-particle {
-    animation: none !important;
-    opacity: 0 !important;
-    will-change: auto;
-  }
-
   /* Fog glow: keep at full opacity (no animated pulse), release GPU layer */
   .hero::before {
     animation: none !important;
     opacity: 1 !important;
-    will-change: auto;
-  }
-
-  /* Scroll line: animation stops in 0.01ms — release GPU compositor layer */
-  .hero-scroll-line {
     will-change: auto;
   }
 }
