@@ -30,14 +30,9 @@
     ]
   },
   "overview": {
-    "sectionTitle": "EAD Project",
-    "sectionTag": "EAD PROJECT",
-    "sectionSubtitle": "실배포를 위한 레퍼런스 End-to-End 자율주행 모델",
-    "introLead": "실배포를 위해 만들어진 레퍼런스 End-to-End 자율주행 모델입니다.",
-    "introLines": [
-      "산업계가 가져다 쓰고, 각자 환경에 맞게 발전시킬 수 있는 공유된 기술 베이스라인을 제공합니다.",
-      "학계와 산업계의 열린 협력을 통해 점진적으로 발전해 갑니다."
-    ],
+    "sectionTitle": "Demo",
+    "sectionTag": "DEMO",
+    "sectionSubtitle": "실도로 및 클로즈드루프 데모",
     "demos": [
       {
         "title": "Real-world Demo",

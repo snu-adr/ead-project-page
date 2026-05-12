@@ -10,8 +10,8 @@ const Navbar = () => {
   const toggleRef = useRef(null);
 
   const navItems = [
-    { label: content.overview.sectionTitle, href: '#overview' },
     { label: content.roadmap.sectionTitle, href: '#roadmap' },
+    { label: content.overview.sectionTitle, href: '#overview' },
     { label: content.model.sectionTitle, href: '#model' },
     { label: content.dataset.sectionTitle, href: '#dataset' },
     { label: content.notice.sectionTitle, href: '#notice' },

@@ -30,14 +30,9 @@
     ]
   },
   "overview": {
-    "sectionTitle": "EAD Project",
-    "sectionTag": "EAD PROJECT",
-    "sectionSubtitle": "A reference E2E model for real-world deployment",
-    "introLead": "A reference End-to-End autonomous driving model, built for real-world deployment.",
-    "introLines": [
-      "EAD provides a shared technical baseline that industry can adopt, adapt, and build on.",
-      "It evolves progressively through open collaboration with academia and industry."
-    ],
+    "sectionTitle": "Demo",
+    "sectionTag": "DEMO",
+    "sectionSubtitle": "Real-world and closed-loop demonstrations",
     "demos": [
       {
         "title": "Real-world Demo",
@@ -175,10 +170,10 @@
         "title": "Scene Encoder",
         "description": "Transforms surround-view camera and LiDAR inputs into a structured scene representation through view transformation and temporal fusion.",
         "tasks": [
-          "Object Detection",
-          "BEV Map Segmentation",
+          "Map Construction",
+          "Object Kinematics Prediction",
           "Occupancy Prediction",
-          "Vector Map Construction"
+          "Miscellaneous"
         ]
       },
       "decoder": {
@@ -186,7 +181,7 @@
         "title": "Action Decoder",
         "description": "Encodes the ego state and rolls out a Sparse World Model to select safe actions through Safety Reasoning over both dynamic and static scenes.",
         "tasks": [
-          "Agent Prediction",
+          "Agent Motion Prediction",
           "World Model Simulation",
           "Trajectory Planning",
           "Safety Assessment"

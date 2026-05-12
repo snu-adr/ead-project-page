@@ -23,8 +23,8 @@ function AppInner() {
       <Navbar />
       <main id="main-content">
         <Hero />
-        <Overview />
         <RoadMap />
+        <Overview />
         <div className="section-alt">
           <Model />
         </div>

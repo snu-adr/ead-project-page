@@ -292,7 +292,33 @@
   line-height: 1.8;
 }
 
-/* --- Architecture Flow Diagram --- */
+/* --- Architecture Diagram (image) --- */
+.model-architecture-figure {
+  margin: 28px 0 32px;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: rgba(56, 189, 248, 0.02);
+  display: flex;
+  justify-content: center;
+}
+
+.model-architecture-image {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .model-architecture-figure {
+    padding: 8px;
+    margin: 20px 0 24px;
+  }
+}
+
+/* --- Architecture Flow Diagram (legacy, no longer used) --- */
 .model-flow-diagram {
   margin: 36px 0;
   border: 1px solid var(--color-border);
@@ -455,13 +481,13 @@
 }
 
 .model-arch-panel--encoder {
-  background: rgba(56, 189, 248, 0.05);
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: rgba(167, 139, 250, 0.05);
+  border: 1px solid rgba(167, 139, 250, 0.2);
 }
 
 .model-arch-panel--decoder {
-  background: rgba(167, 139, 250, 0.05);
-  border: 1px solid rgba(167, 139, 250, 0.2);
+  background: rgba(56, 189, 248, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 .model-arch-panel-header {
@@ -480,15 +506,15 @@
 }
 
 .model-arch-panel--encoder .model-arch-panel-label {
-  color: var(--color-accent);
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-}
-
-.model-arch-panel--decoder .model-arch-panel-label {
   color: var(--color-accent-purple);
   background: rgba(167, 139, 250, 0.1);
   border: 1px solid rgba(167, 139, 250, 0.25);
+}
+
+.model-arch-panel--decoder .model-arch-panel-label {
+  color: var(--color-accent);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
 }
 
 .model-arch-panel-title {
@@ -528,7 +554,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: var(--color-accent-purple);
   opacity: 0.7;
 }
 
@@ -540,7 +566,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--color-accent-purple);
+  background: var(--color-accent);
   opacity: 0.7;
 }
 

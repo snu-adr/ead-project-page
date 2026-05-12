@@ -9,10 +9,9 @@ import '../styles/components/Overview.css';
 
 const Overview = () => {
   const { content } = useLanguage();
-  const { sectionTitle, sectionTag, sectionSubtitle, introLead, introLines, demos, performance } = content.overview;
+  const { sectionTitle, sectionTag, sectionSubtitle, demos, performance } = content.overview;
   const videoPlaceholder = content.model.videoPlaceholder;
 
-  const refIntro = useScrollFadeIn();
   const refDemos = useScrollFadeIn();
   const refPerf = useScrollFadeIn();
 
@@ -25,15 +24,6 @@ const Overview = () => {
     <section id="overview" aria-label={sectionTitle}>
       <div className="overview-glow" aria-hidden="true" />
       <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
-
-      <div className="overview-intro fade-in" ref={refIntro}>
-        <p className="overview-intro-lead">{introLead}</p>
-        <div className="overview-intro-body">
-          {introLines.map((line, i) => (
-            <p key={i}>{line}</p>
-          ))}
-        </div>
-      </div>
 
       <div className="overview-demos fade-in" ref={refDemos}>
         {demos.map((demo) => {
