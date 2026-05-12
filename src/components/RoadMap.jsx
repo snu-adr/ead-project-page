@@ -22,14 +22,13 @@ const RoadMapEntry = ({ v, index }) => {
             <span className="roadmap-version">{v.version}</span>
             {v.badge && <span className="roadmap-badge">{v.badge}</span>}
           </span>
-          <span className="roadmap-title-text">{v.title}</span>
         </h3>
         {/^\d{4}$/.test(v.period)
           ? <time className="roadmap-period" dateTime={v.period}>{v.period}</time>
           : <span className="roadmap-period">{v.period}</span>
         }
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-        <ul className="roadmap-items" role="list" aria-label={`${v.version} ${v.title}`}>
+        <ul className="roadmap-items" role="list" aria-label={`${v.version}${v.badge ? ' ' + v.badge : ''}`}>
           {v.items.map((item) => (
             <li key={item}>{item}</li>
           ))}

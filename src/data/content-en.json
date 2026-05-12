@@ -77,23 +77,21 @@
   "roadmap": {
     "sectionTitle": "Roadmap",
     "sectionTag": "ROADMAP",
-    "sectionSubtitle": "Key milestones from public-dataset baseline to Korea-collected data",
+    "sectionSubtitle": "Progressively evolving across releases",
     "versions": [
       {
         "version": "v1.0",
-        "title": "Released",
+        "badge": "Released",
         "period": "April 2026",
         "items": [
           "Trained on public datasets including Navsim and Bench2Drive",
           "Supports both camera-only and camera + LiDAR configurations",
           "Provides 360° perception with up to 80 m front-view perception range"
         ],
-        "status": "completed",
-        "statusLabel": "Released"
+        "status": "completed"
       },
       {
         "version": "v2.0",
-        "title": "Ongoing",
         "period": "October 2026",
         "items": [
           "Trained on the large-scale NVIDIA dataset",
@@ -107,7 +105,6 @@
       },
       {
         "version": "v3.0",
-        "title": "Planned",
         "period": "TBD",
         "items": [
           "To be trained on large-scale data collected in Korea"
