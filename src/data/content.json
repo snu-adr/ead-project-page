@@ -69,6 +69,31 @@
       ]
     }
   },
+  "keyMilestones": {
+    "sectionTitle": "Key Milestones",
+    "sectionTag": "KEY MILESTONES",
+    "sectionSubtitle": "",
+    "items": [
+      {
+        "version": "EAD v1.0",
+        "status": "출시됨",
+        "tone": "completed",
+        "note": "Navsim, Bench2Drive 등 공개 데이터셋으로 학습"
+      },
+      {
+        "version": "EAD v2.0",
+        "status": "진행 중",
+        "tone": "ongoing",
+        "note": "NVIDIA 데이터셋과 대규모 데이터 큐레이션으로 개발 중"
+      },
+      {
+        "version": "EAD v3.0",
+        "status": "계획",
+        "tone": "planned",
+        "note": "국내에서 취득한 대규모 자체 주행 데이터로 학습 예정"
+      }
+    ]
+  },
   "roadmap": {
     "sectionTitle": "Roadmap",
     "sectionTag": "ROADMAP",
@@ -97,15 +122,6 @@
         ],
         "status": "upcoming",
         "badge": "진행 중"
-      },
-      {
-        "version": "v3.0",
-        "period": "미정",
-        "items": [
-          "국내에서 취득한 대규모 데이터로 학습 예정"
-        ],
-        "status": "upcoming",
-        "badge": "계획"
       }
     ]
   },

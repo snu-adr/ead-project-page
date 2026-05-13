@@ -52,6 +52,14 @@
   opacity: 0.5;
 }
 
+.footer-logo-img {
+  display: block;
+  height: 48px;
+  width: auto;
+  opacity: 0.8;
+  transform: translateY(-4px);
+}
+
 .footer-copyright {
   font-size: 0.8rem;
   color: var(--color-text-muted);

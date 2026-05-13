@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import eadLogo from '../assets/logos/ead_logo_icon.png';
 import '../styles/components/Navbar.css';
 
 const Navbar = () => {
@@ -10,6 +11,7 @@ const Navbar = () => {
   const toggleRef = useRef(null);
 
   const navItems = [
+    { label: content.keyMilestones.sectionTitle, href: '#milestones' },
     { label: content.roadmap.sectionTitle, href: '#roadmap' },
     { label: content.overview.sectionTitle, href: '#overview' },
     { label: content.model.sectionTitle, href: '#model' },
@@ -73,7 +75,9 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`} aria-label={lang === 'ko' ? '주요 내비게이션' : 'Main navigation'}>
       <div className="navbar-container">
-        <a className="navbar-logo" href="#hero">{content.hero.title}</a>
+        <a className="navbar-logo" href="#hero" aria-label={content.hero.title}>
+          <img src={eadLogo} alt="" className="navbar-logo-img" />
+        </a>
 
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
         <ul id="navbar-menu" className={`navbar-links ${isOpen ? 'open' : ''}`} role="list">

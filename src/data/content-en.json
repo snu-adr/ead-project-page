@@ -69,6 +69,31 @@
       ]
     }
   },
+  "keyMilestones": {
+    "sectionTitle": "Key Milestones",
+    "sectionTag": "KEY MILESTONES",
+    "sectionSubtitle": "",
+    "items": [
+      {
+        "version": "EAD v1.0",
+        "status": "Released",
+        "tone": "completed",
+        "note": "Trained on public datasets including Navsim and Bench2Drive"
+      },
+      {
+        "version": "EAD v2.0",
+        "status": "Ongoing",
+        "tone": "ongoing",
+        "note": "Being developed using the NVIDIA dataset with large-scale data curation"
+      },
+      {
+        "version": "EAD v3.0",
+        "status": "Planned",
+        "tone": "planned",
+        "note": "To be trained on large-scale private driving datasets collected in Korea"
+      }
+    ]
+  },
   "roadmap": {
     "sectionTitle": "Roadmap",
     "sectionTag": "ROADMAP",
@@ -97,15 +122,6 @@
         ],
         "status": "upcoming",
         "badge": "Ongoing"
-      },
-      {
-        "version": "v3.0",
-        "period": "TBD",
-        "items": [
-          "To be trained on large-scale data collected in Korea"
-        ],
-        "status": "upcoming",
-        "badge": "Planned"
       }
     ]
   },

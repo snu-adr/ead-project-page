@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import eadLogo from '../assets/logos/ead_logo.png';
 import '../styles/components/Hero.css';
 
 const Hero = () => {
@@ -21,8 +22,9 @@ const Hero = () => {
       </div>
 
       <div className="hero-content">
-        <h1 className="hero-title">{title}</h1>
-        <p className="hero-subtitle">{subtitle}</p>
+        <h1 className="hero-title">
+          <img src={eadLogo} alt={title} className="hero-logo" />
+        </h1>
         {affiliation && <p className="hero-affiliation">{affiliation}</p>}
         <div className="hero-divider" aria-hidden="true" />
         <p className="hero-description">{description}</p>
