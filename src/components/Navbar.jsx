@@ -11,7 +11,6 @@ const Navbar = () => {
   const toggleRef = useRef(null);
 
   const navItems = [
-    { label: content.keyMilestones.sectionTitle, href: '#milestones' },
     { label: content.roadmap.sectionTitle, href: '#roadmap' },
     { label: content.overview.sectionTitle, href: '#overview' },
     { label: content.model.sectionTitle, href: '#model' },

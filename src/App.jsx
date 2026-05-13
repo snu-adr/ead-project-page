@@ -3,7 +3,6 @@ import './styles/global.css';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import KeyMilestones from './components/KeyMilestones';
 import Overview from './components/Overview';
 import RoadMap from './components/RoadMap';
 import Dataset from './components/Dataset';
@@ -24,7 +23,6 @@ function AppInner() {
       <Navbar />
       <main id="main-content">
         <Hero />
-        <KeyMilestones />
         <RoadMap />
         <Overview />
         <div className="section-alt">

@@ -114,7 +114,7 @@
         "version": "v2.0",
         "period": "목표: 2026년 10월",
         "items": [
-          "대규모 NVIDIA 데이터셋으로 학습",
+          "NVIDIA 데이터셋과 대규모 데이터 큐레이션으로 개발 중",
           "데이터 파이프라인 및 데이터 큐레이션 개발",
           "EAD v2.0 모델 학습",
           "VLA reasoning 지원",
@@ -122,6 +122,15 @@
         ],
         "status": "upcoming",
         "badge": "진행 중"
+      },
+      {
+        "version": "v3.0",
+        "period": "미정",
+        "items": [
+          "국내에서 취득한 대규모 자체 주행 데이터로 학습 예정"
+        ],
+        "status": "upcoming",
+        "badge": "계획"
       }
     ]
   },

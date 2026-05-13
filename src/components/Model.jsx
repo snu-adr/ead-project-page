@@ -7,9 +7,8 @@ import '../styles/components/Model.css';
 
 const Model = () => {
   const { content } = useLanguage();
-  const { sectionTitle, sectionTag, sectionSubtitle, comparison, architecture } = content.model;
+  const { sectionTitle, sectionTag, sectionSubtitle, architecture } = content.model;
 
-  const refComparison = useScrollFadeIn();
   const refArchitecture = useScrollFadeIn();
 
   return (
@@ -17,53 +16,6 @@ const Model = () => {
       <div className="model-grid-bg" aria-hidden="true" />
       <section id="model" aria-label={sectionTitle}>
         <SectionTitle title={sectionTitle} subtitle={sectionSubtitle} tag={sectionTag} />
-
-        <div className="model-comparison fade-in" ref={refComparison}>
-          <h3>{comparison.title}</h3>
-
-          <div className="comparison-cards" role="group" aria-label={comparison.title}>
-            {/* Previous Research card — muted style */}
-            <div className="comparison-card comparison-card--research">
-              <div className="comparison-card__header">
-                <h4 className="comparison-card__label">{comparison.researchLabel}</h4>
-                <span className="comparison-card__badge">{comparison.researchBadge}</span>
-              </div>
-              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-              <ul className="comparison-card__list" role="list" aria-label={comparison.researchLabel}>
-                {comparison.items.map((item) => (
-                  <li key={item.category} className="comparison-card__item">
-                    <span className="comparison-card__category">{item.category}</span>
-                    <span className="comparison-card__value">{item.research}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* VS divider */}
-            <div className="comparison-vs" aria-hidden="true">
-              <div className="comparison-vs__line" />
-              <span className="comparison-vs__text">VS</span>
-              <div className="comparison-vs__line" />
-            </div>
-
-            {/* EAD card — bright accent style */}
-            <div className="comparison-card comparison-card--ead">
-              <div className="comparison-card__header">
-                <h4 className="comparison-card__label">{comparison.eadLabel}</h4>
-                <span className="comparison-card__badge">{comparison.eadBadge}</span>
-              </div>
-              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-              <ul className="comparison-card__list" role="list" aria-label={comparison.eadLabel}>
-                {comparison.items.map((item) => (
-                  <li key={item.category} className="comparison-card__item">
-                    <span className="comparison-card__category">{item.category}</span>
-                    <span className="comparison-card__value">{item.ead}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
 
         <div className="model-architecture fade-in" ref={refArchitecture}>
           <h3>{architecture.title}</h3>

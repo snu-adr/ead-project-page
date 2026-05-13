@@ -114,7 +114,7 @@
         "version": "v2.0",
         "period": "October 2026",
         "items": [
-          "Trained on the large-scale NVIDIA dataset",
+          "Being developed using the NVIDIA dataset with large-scale data curation",
           "Development of data pipeline and data curation",
           "Training of the EAD v2.0 model",
           "Support VLA reasoning",
@@ -122,6 +122,15 @@
         ],
         "status": "upcoming",
         "badge": "Ongoing"
+      },
+      {
+        "version": "v3.0",
+        "period": "TBD",
+        "items": [
+          "To be trained on large-scale private driving datasets collected in Korea"
+        ],
+        "status": "upcoming",
+        "badge": "Planned"
       }
     ]
   },
