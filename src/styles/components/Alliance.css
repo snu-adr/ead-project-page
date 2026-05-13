@@ -49,12 +49,12 @@
 /* Per-logo size overrides */
 .alliance-logo[data-name="SUM"] { max-height: 68px; max-width: 220px; }
 .alliance-logo[data-name="A2Z"] { max-height: 34px; }
-.alliance-logo[data-name="Nota AI"] { max-height: 32px; max-width: 140px; }
+.alliance-logo[data-name="Nota AI"] { max-height: 26px; max-width: 120px; }
 .alliance-logo[data-name="KAIST"] { max-height: 34px; }
 .alliance-logo[data-name="LG전자"],
 .alliance-logo[data-name="LG Electronics"] { max-height: 36px; }
 .alliance-logo[data-name="라이드플럭스"],
-.alliance-logo[data-name="Rideflux"] { max-height: 32px; max-width: 150px; }
+.alliance-logo[data-name="Rideflux"] { max-height: 40px; max-width: 180px; }
 .alliance-logo[data-name="카카오모빌리티"],
 .alliance-logo[data-name="Kakao Mobility"] { max-height: 26px; max-width: 180px; }
 .alliance-logo[data-name="Visionary"] { max-height: 28px; max-width: 120px; }
