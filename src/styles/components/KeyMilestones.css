@@ -19,7 +19,7 @@
 .milestones-stepper::before {
   content: '';
   position: absolute;
-  top: 45px;
+  top: 43px;
   left: 16.67%;
   right: 16.67%;
   height: 2px;
@@ -40,12 +40,14 @@
 
 /* Node */
 .milestone-node {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--color-accent);
-  border: 3px solid var(--color-bg);
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.45);
+  box-shadow:
+    0 0 16px rgba(56, 189, 248, 0.55),
+    0 0 40px rgba(56, 189, 248, 0.3),
+    0 0 80px rgba(56, 189, 248, 0.15);
   position: relative;
   z-index: 1;
   margin-bottom: 18px;
@@ -53,12 +55,18 @@
 
 .milestone-step--ongoing .milestone-node {
   background: var(--color-accent);
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.55), 0 0 0 6px rgba(56, 189, 248, 0.12);
+  box-shadow:
+    0 0 20px rgba(56, 189, 248, 0.65),
+    0 0 50px rgba(56, 189, 248, 0.35),
+    0 0 100px rgba(56, 189, 248, 0.2);
 }
 
 .milestone-step--planned .milestone-node {
   background: var(--color-accent-purple);
-  box-shadow: 0 0 16px rgba(167, 139, 250, 0.45);
+  box-shadow:
+    0 0 16px rgba(167, 139, 250, 0.55),
+    0 0 40px rgba(167, 139, 250, 0.3),
+    0 0 80px rgba(167, 139, 250, 0.15);
 }
 
 /* Labels */
@@ -102,10 +110,6 @@
   color: var(--color-text-light);
   line-height: 1.55;
   max-width: 42ch;
-}
-
-.milestone-step--planned .milestone-note {
-  color: var(--color-text-muted);
 }
 
 /* ── Responsive: stack vertically on narrow screens ── */
