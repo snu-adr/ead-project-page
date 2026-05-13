@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/EAD-project-page/static/css/main.e5d71d73.css",
+    "main.css": "/EAD-project-page/static/css/main.e5572610.css",
     "main.js": "/EAD-project-page/static/js/main.e2643979.js",
     "static/js/453.ebb744a4.chunk.js": "/EAD-project-page/static/js/453.ebb744a4.chunk.js",
     "static/media/demo_b2d.webm": "/EAD-project-page/static/media/demo_b2d.e41f0b5e58e032bbe8d6.webm",
@@ -35,12 +35,12 @@
     "static/media/gist.svg": "/EAD-project-page/static/media/gist.76264ebcfc8d7ecaae6a.svg",
     "static/media/a2z.svg": "/EAD-project-page/static/media/a2z.22bcd1262291be79fc31.svg",
     "static/media/sum.svg": "/EAD-project-page/static/media/sum.907d62c063d22e9ef60f.svg",
-    "main.e5d71d73.css.map": "/EAD-project-page/static/css/main.e5d71d73.css.map",
+    "main.e5572610.css.map": "/EAD-project-page/static/css/main.e5572610.css.map",
     "main.e2643979.js.map": "/EAD-project-page/static/js/main.e2643979.js.map",
     "453.ebb744a4.chunk.js.map": "/EAD-project-page/static/js/453.ebb744a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5d71d73.css",
+    "static/css/main.e5572610.css",
     "static/js/main.e2643979.js"
   ]
 }
