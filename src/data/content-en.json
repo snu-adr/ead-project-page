@@ -138,21 +138,12 @@
     "sectionTitle": "Dataset",
     "sectionTag": "DATASET",
     "sectionSubtitle": "Trained and validated on both real-world and simulation data",
-    "realworld": {
-      "title": "Real-world Dataset",
-      "badge": "NAVSIM",
-      "description": "A dataset collected from real-world road environments. The model is trained and evaluated using the NAVSIM benchmark."
-    },
-    "closedloop": {
-      "title": "Closed-loop Dataset",
-      "badge": "Bench2Drive",
-      "description": "A closed-loop evaluation dataset based on the CARLA simulator. The Bench2Drive benchmark provides evaluation quality equivalent to real driving environments."
-    },
-    "inhouse": {
-      "title": "In-house Dataset",
-      "description": "Real-world driving data collected through our own data pipeline. We plan to build large-scale training data optimized for Korean road environments in collaboration with Alliance partners.",
-      "badge": "Coming Soon"
-    }
+    "items": [
+      { "name": "NAVSIM",      "tags": ["Real-world", "Open-loop", "v1.0"] },
+      { "name": "Bench2Drive", "tags": ["Simulation", "Closed-loop", "v1.0"] },
+      { "name": "NVIDIA",      "tags": ["Diverse", "Large-scale", "v2.0"], "tone": "interim" },
+      { "name": "Private",     "tags": ["Korea", "Self-collected", "v3.0"], "tone": "planned" }
+    ]
   },
   "model": {
     "sectionTitle": "Model",

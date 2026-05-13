@@ -138,21 +138,12 @@
     "sectionTitle": "Dataset",
     "sectionTag": "DATASET",
     "sectionSubtitle": "실도로 + 시뮬레이션, 두 축에서 훈련 및 검증",
-    "realworld": {
-      "title": "Real-world 데이터셋",
-      "badge": "NAVSIM",
-      "description": "실제 도로 환경에서 취득한 데이터셋입니다. NAVSIM 벤치마크를 기반으로 모델을 훈련하고 검증합니다."
-    },
-    "closedloop": {
-      "title": "Closed-loop 데이터셋",
-      "badge": "Bench2Drive",
-      "description": "CARLA 시뮬레이터 기반의 폐쇄 루프 평가 데이터셋입니다. Bench2Drive 벤치마크를 통해 실제 주행 환경과 동등한 수준의 평가를 수행합니다."
-    },
-    "inhouse": {
-      "title": "In-house 데이터셋",
-      "description": "자체 데이터 파이프라인을 통해 직접 취득하는 실도로 주행 데이터셋입니다. 대규모 데이터를 기반으로 모델을 고도화하고, 국내 도로 환경에 최적화된 학습 데이터를 구축합니다.",
-      "badge": "Coming Soon"
-    }
+    "items": [
+      { "name": "NAVSIM",      "tags": ["실도로", "Open-loop", "v1.0"] },
+      { "name": "Bench2Drive", "tags": ["시뮬레이션", "Closed-loop", "v1.0"] },
+      { "name": "NVIDIA",      "tags": ["다양성", "대규모", "v2.0"], "tone": "interim" },
+      { "name": "Private",     "tags": ["국내", "자체 취득", "v3.0"], "tone": "planned" }
+    ]
   },
   "model": {
     "sectionTitle": "Model",
