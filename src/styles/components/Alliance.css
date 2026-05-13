@@ -1,4 +1,4 @@
-/* ── Alliance Section — Marquee ── */
+/* ── Alliance / Ecosystem Section — static grid (no scrolling) ── */
 
 #alliance {
   padding-top: 60px;
@@ -7,52 +7,24 @@
 
 .alliance-marquee-wrapper {
   position: relative;
-  overflow: hidden;
   margin-top: 12px;
-  padding: 32px 0;
+  padding: 32px 24px;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 16px;
 }
 
-/* Edge fades */
-.alliance-marquee-fade {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 120px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.alliance-marquee-fade--left {
-  left: 0;
-  background: linear-gradient(90deg, var(--color-bg-card) 0%, transparent 100%);
-}
-
-.alliance-marquee-fade--right {
-  right: 0;
-  background: linear-gradient(270deg, var(--color-bg-card) 0%, transparent 100%);
-}
-
-/* Marquee container */
 .alliance-marquee {
-  overflow: hidden;
+  overflow: visible;
 }
 
-/* Scrolling track */
+/* Partner row — centered, wraps on narrow screens */
 .alliance-marquee-track {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0;
-  width: max-content;
-  animation: marqueeScroll 25s linear infinite;
-  will-change: transform;
-}
-
-@keyframes marqueeScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  justify-content: center;
+  gap: 24px 0;
 }
 
 /* Individual partner item */
@@ -62,7 +34,6 @@
   justify-content: center;
   padding: 12px 40px;
   white-space: nowrap;
-  cursor: default;
   position: relative;
 }
 
@@ -96,7 +67,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Separator dot between items */
+/* Separator dot between items (skip the last in each visual row) */
 .alliance-marquee-item::after {
   content: '';
   display: inline-block;
@@ -110,28 +81,11 @@
   transform: translateY(-50%);
 }
 
-/* ── Reduced Motion: stop marquee and hide duplicates ── */
-@media (prefers-reduced-motion: reduce) {
-  .alliance-marquee-track {
-    animation: none;
-    width: auto;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px 0;
-    will-change: auto;
-  }
-
-  .alliance-marquee-track .alliance-marquee-item[aria-hidden="true"] {
-    display: none;
-  }
-
-  .alliance-marquee {
-    overflow: visible;
-  }
+.alliance-marquee-item:last-child::after {
+  display: none;
 }
 
 /* ── Responsive ── */
-
 @media (max-width: 768px) {
   .alliance-marquee-item {
     padding: 10px 24px;
@@ -139,13 +93,5 @@
 
   .alliance-name {
     font-size: 1.1rem;
-  }
-
-  .alliance-marquee-fade {
-    width: 60px;
-  }
-
-  .alliance-marquee-track {
-    animation-duration: 20s;
   }
 }
