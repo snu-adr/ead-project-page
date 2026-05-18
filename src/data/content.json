@@ -297,6 +297,10 @@
     "sectionSubtitle": "EAD와 함께 국내 자율주행 생태계를 만드는 파트너",
     "partners": [
       {
+        "name": "HL Klemove",
+        "logo": "hl-klemove.svg"
+      },
+      {
         "name": "LG전자",
         "logo": "lg.png"
       },

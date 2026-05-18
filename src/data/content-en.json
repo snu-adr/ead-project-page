@@ -298,6 +298,10 @@
     "sectionSubtitle": "Partners building Korea's autonomous driving ecosystem together with EAD",
     "partners": [
       {
+        "name": "HL Klemove",
+        "logo": "hl-klemove.svg"
+      },
+      {
         "name": "LG Electronics",
         "logo": "lg.png"
       },
